@@ -1,0 +1,2 @@
+G:\ITZ\ITZB2B\ITZB2B\obj\Debug\ITZB2B.Resources.resources
+G:\ITZ\ITZB2B\ITZB2B\obj\Debug\ITZB2B.vbproj.GenerateResource.Cache

@@ -1,0 +1,106 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: basic.css 257 2010-07-27 23:06:56Z emartin24 $
+ */
+
+#basic-modal-content
+{
+	display: none;
+}
+#basic-modal-content1
+{
+	display: none;
+}
+#basic-modal-content2
+{
+	display: none;
+}
+
+/* Overlay display: none; */
+#simplemodal-overlay
+{
+	background-color: #000;
+	cursor: wait;
+}
+#simplemodal-container
+{
+	color: #000000;
+    top: 115px!important;
+	background-color: #fff;
+	 
+	margin-left: 50%;
+	margin-right: 50%;
+	padding: 20px;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	height: auto;
+}
+#simplemodal-container .simplemodal-data
+{
+	padding: 8px;
+}
+#simplemodal-container code
+{
+	background: #141414;
+	border-left: 3px solid #65B43D;
+	color: #bbb;
+	display: block;
+	
+	margin-bottom: 12px;
+	padding: 4px 6px 6px;
+}
+#simplemodal-container a
+{
+	color: #ddd;
+}
+#simplemodal-container a.modalCloseImg
+{
+	background: url(../Images/closebox.png) no-repeat;
+	width: 25px;
+	height: 29px;
+	display: inline;
+	z-index: 3200;
+	position: absolute;
+	top: -15px;
+	right: -16px;
+	cursor: pointer;
+}
+#simplemodal-container h3
+{
+	color: #84b8d9;
+}
+
+.buttontopup
+{
+	width: 106px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	background: url(../Images/closebox.png);
+	cursor: pointer;
+	border: none;
+}
+
+.text
+{
+	font-family: arial, Helvetica, sans-serif;
+	
+}
+.ITZ
+{
+	font-family: 'Trebuchet MS';
+	
+	font-weight: bold;
+	color: #006600;
+	text-decoration: underline;
+}

@@ -1,0 +1,213 @@
+﻿Imports Microsoft.VisualBasic
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Text
+Imports System.Threading.Tasks
+
+Namespace PaymentGateway
+    Public Class PaymentGatewayShared
+        'Required parameters
+        Public Property OrderID() As String
+            Get
+                Return m_OrderID
+            End Get
+            Set(ByVal value As String)
+                m_OrderID = Value
+            End Set
+        End Property
+        Private m_OrderID As String
+        Public Property AmountPaid() As Double
+            Get
+                Return m_AmountPaid
+            End Get
+            Set(ByVal value As Double)
+                m_AmountPaid = Value
+            End Set
+        End Property
+        Private m_AmountPaid As Double
+        Public Property ProductInfo() As String
+            Get
+                Return m_ProductInfo
+            End Get
+            Set(ByVal value As String)
+                m_ProductInfo = Value
+            End Set
+        End Property
+        Private m_ProductInfo As String
+        Public Property FirstName() As String
+            Get
+                Return m_FirstName
+            End Get
+            Set(ByVal value As String)
+                m_FirstName = Value
+            End Set
+        End Property
+        Private m_FirstName As String
+        Public Property Emailid() As String
+            Get
+                Return m_Emailid
+            End Get
+            Set(ByVal value As String)
+                m_Emailid = Value
+            End Set
+        End Property
+        Private m_Emailid As String
+        Public Property Phone() As String
+            Get
+                Return m_Phone
+            End Get
+            Set(ByVal value As String)
+                m_Phone = Value
+            End Set
+        End Property
+        Private m_Phone As String
+
+        '''////Option parameters
+
+        Public Property LastName() As String
+            Get
+                Return m_LastName
+            End Get
+            Set(ByVal value As String)
+                m_LastName = Value
+            End Set
+        End Property
+        Private m_LastName As String
+        Public Property PaymentDate() As DateTime
+            Get
+                Return m_PaymentDate
+            End Get
+            Set(ByVal value As DateTime)
+                m_PaymentDate = Value
+            End Set
+        End Property
+        Private m_PaymentDate As DateTime
+        Public Property TransactionID() As String
+            Get
+                Return m_TransactionID
+            End Get
+            Set(ByVal value As String)
+                m_TransactionID = Value
+            End Set
+        End Property
+        Private m_TransactionID As String
+        Public Property PaymentStatus() As PaymentStatus
+            Get
+                Return m_PaymentStatus
+            End Get
+            Set(ByVal value As PaymentStatus)
+                m_PaymentStatus = Value
+            End Set
+        End Property
+        Private m_PaymentStatus As PaymentStatus
+        Public Property RedirectUrl() As String
+            Get
+                Return m_RedirectUrl
+            End Get
+            Set(ByVal value As String)
+                m_RedirectUrl = Value
+            End Set
+        End Property
+        Private m_RedirectUrl As String
+        Public Property DeductedAmount() As Double
+            Get
+                Return m_DeductedAmount
+            End Get
+            Set(ByVal value As Double)
+                m_DeductedAmount = Value
+            End Set
+        End Property
+        Private m_DeductedAmount As Double
+        Public Property SysIP() As String
+            Get
+                Return m_SysIP
+            End Get
+            Set(ByVal value As String)
+                m_SysIP = Value
+            End Set
+        End Property
+        Private m_SysIP As String
+        Public Property OutputForm() As String
+            Get
+                Return m_OutputForm
+            End Get
+            Set(ByVal value As String)
+                m_OutputForm = Value
+            End Set
+        End Property
+        Private m_OutputForm As String
+    End Class
+
+
+    Public Enum PaymentStatus
+        Success
+        Failure
+        Requested
+    End Enum
+
+    Public Class PGCredentialsShared
+        Public Property Provider() As String
+            Get
+                Return m_Provider
+            End Get
+            Set(ByVal value As String)
+                m_Provider = Value
+            End Set
+        End Property
+        Private m_Provider As String
+        Public Property ProviderUrl() As String
+            Get
+                Return m_ProviderUrl
+            End Get
+            Set(ByVal value As String)
+                m_ProviderUrl = Value
+            End Set
+        End Property
+        Private m_ProviderUrl As String
+        Public Property SuccessUrl() As String
+            Get
+                Return m_SuccessUrl
+            End Get
+            Set(ByVal value As String)
+                m_SuccessUrl = Value
+            End Set
+        End Property
+        Private m_SuccessUrl As String
+        Public Property FailureUrl() As String
+            Get
+                Return m_FailureUrl
+            End Get
+            Set(ByVal value As String)
+                m_FailureUrl = Value
+            End Set
+        End Property
+        Private m_FailureUrl As String
+        Public Property Merchant_Key() As String
+            Get
+                Return m_Merchant_Key
+            End Get
+            Set(ByVal value As String)
+                m_Merchant_Key = Value
+            End Set
+        End Property
+        Private m_Merchant_Key As String
+        Public Property Merchant_Pswd() As String
+            Get
+                Return m_Merchant_Pswd
+            End Get
+            Set(ByVal value As String)
+                m_Merchant_Pswd = Value
+            End Set
+        End Property
+        Private m_Merchant_Pswd As String
+        Public Property HashSequence() As String
+            Get
+                Return m_HashSequence
+            End Get
+            Set(ByVal value As String)
+                m_HashSequence = Value
+            End Set
+        End Property
+        Private m_HashSequence As String
+    End Class
+End Namespace

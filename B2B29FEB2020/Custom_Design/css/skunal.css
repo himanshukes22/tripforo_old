@@ -1,0 +1,182 @@
+﻿
+.fd-h {
+    width: 100%;
+    /*float: left;*/
+    padding-left: 2%;
+    font-size: 18px;
+    color: #000;
+    height: 50px;
+    line-height: 50px;
+    /*background: #2c529d;*/
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+
+
+
+
+
+.fd-l1 {
+    width: 100%;
+    float: left;
+}
+
+.bor {
+    float: left;
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    background: #ffffff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px 0 #c8c8c8;
+    -moz-box-shadow: 0 2px 4px 0 #c8c8c8;
+    box-shadow: 0 2px 4px 0 #c8c8c8;
+    margin-bottom: 15px;
+}
+
+.bg-man {
+    background: #f8f6f6;
+}
+
+.fd-h1 {
+    width: 100%;
+    float: left;
+    padding-left: 2%;
+    font-size: 18px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    background: #2c529d;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.tr-c {
+    width: 96%;
+    float: left;
+    margin: 0 2%;
+}
+
+.fd-11 {
+    width: 70.5%;
+    float: left;
+}
+
+.prc-mm {
+    width: 100%;
+    float: left;
+    background: #2c529d;
+    color:#fff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.prc-h {
+    width: 63%;
+    padding-left: 3%;
+    float: left;
+    font-size: 18px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+
+.prc-h2 {
+    /*width: 13%;*/
+    padding-left: 3%;
+    float: left;
+    font-size: 13px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+}
+
+.prc-h3 {
+    /*width: 9%;*/
+    float: left;
+    font-size: 13px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+}
+
+.prc-h4 {
+    /*width: 9%;*/
+    float: left;
+    font-size: 13px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+}
+
+.prm {
+    width: 100%;
+    float: left;
+}
+
+.pr {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #e5e3e3;
+}
+
+.pr-l {
+    width: 52%;
+    cursor: pointer;
+    padding-left: 4%;
+    float: left;
+    color: #1a1a1a;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.pr-r {
+    width: 48%;
+    padding-right: 2%;
+    float: right;
+}
+
+
+.pr-r span {
+    float: right;
+    color: #1a1a1a;
+    font-size: 13px;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-left: 3%;
+}
+
+.pr-l1 {
+    width: 52%;
+    padding-left: 4%;
+    float: left;
+    color: #d63b05;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.con {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.fd-r {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+.tr-c {
+    width: 96%;
+    float: left;
+    margin: 0 2%;
+}

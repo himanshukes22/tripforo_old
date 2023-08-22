@@ -1,0 +1,730 @@
+﻿
+<?xml version="1.0" encoding="UTF-8" ?>
+- <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  - <soapenv:Body>
+    - <SubmitXmlResponse xmlns="http://webservices.galileo.com">
+      - <SubmitXmlResult>
+        - <FareQuoteFlightSpecific_23 xmlns="">
+          - <FareInfo>
+            - <RespHeader>
+              <UniqueKey>0000</UniqueKey>
+              <CRTOutput>N</CRTOutput>
+              <ErrMsg>N</ErrMsg>
+              <AgntAlert>N</AgntAlert>
+              <SmartParsedData>N</SmartParsedData>
+              <NextGenInd>Y</NextGenInd>
+              <Spares1>NNN</Spares1>
+              <FQSOnlyItin>N</FQSOnlyItin>
+              <HostUse14>N</HostUse14>
+              <IFQLastF0>N</IFQLastF0>
+              <IFQLastFQ>N</IFQLastFQ>
+              <IFQLastD>N</IFQLastD>
+              <IFQLastB>N</IFQLastB>
+              <IFQLastV>N</IFQLastV>
+              <HostUse20>N</HostUse20>
+              <AppInd1>N</AppInd1>
+              <AppInd2>N</AppInd2>
+              <AppInd3>N</AppInd3>
+              <AppInd4>N</AppInd4>
+              <AppInd5>N</AppInd5>
+              <AppInd6>N</AppInd6>
+              <AppInd7>N</AppInd7>
+              <AppInd8>N</AppInd8>
+              <AppInd9>N</AppInd9>
+              <AppInd10>Y</AppInd10>
+              <AppInd11>N</AppInd11>
+              <AppInd12>N</AppInd12>
+              <AppInd13>N</AppInd13>
+              <AppInd14>1</AppInd14>
+              <AppInd15>N</AppInd15>
+              <AppInd16>N</AppInd16>
+            </RespHeader>
+            - <ItinSeg>
+              <UniqueKey>0001</UniqueKey>
+              <AirV>9W</AirV>
+              <FltNum>352</FltNum>
+              <StartDt>20180801</StartDt>
+              <StartPt>DEL</StartPt>
+              <EndPt>BOM</EndPt>
+              <SegType>0</SegType>
+              <DayDifferential>0</DayDifferential>
+              <NoStopAtBoardPt>N</NoStopAtBoardPt>
+              <BreakInJrny>N</BreakInJrny>
+              <BreakNoDirectService>N</BreakNoDirectService>
+              <FictitiousPt>N</FictitiousPt>
+              <MoreDistantPt>N</MoreDistantPt>
+              <FQSGenFictitiousPt>N</FQSGenFictitiousPt>
+              <StartCityNotPrevOffCity>N</StartCityNotPrevOffCity>
+              <Spare1>N</Spare1>
+              <StartTm>1330</StartTm>
+              <EndTm>1545</EndTm>
+              <BIC>W</BIC>
+              <Spare2>NNNNNNNN</Spare2>
+              <Spare3>100</Spare3>
+              <Mile>708</Mile>
+              <IntlStartCity>Y</IntlStartCity>
+              <IntlEndCity>Y</IntlEndCity>
+              <PtToPtAvail>N</PtToPtAvail>
+              <Spare4>NNNNN</Spare4>
+              <AvailLinkStatus>M</AvailLinkStatus>
+              <AvailSource>S</AvailSource>
+              <BookingCabinClsSeg>Y</BookingCabinClsSeg>
+            </ItinSeg>
+            - <SegRelatedInfo>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <RelSegNum>1</RelSegNum>
+              <NotValidBeforeDt>20180801</NotValidBeforeDt>
+              <NotValidAfterDt>20180801</NotValidAfterDt>
+              <Stopover />
+              <FIC>W2IPOH</FIC>
+              <TkDesignator />
+              <BagInfo>1PC</BagInfo>
+              - <Fare>
+                - <![CDATA[ 
+    1280
+  ]]>
+              </Fare>
+              <HostUseOnly54>1</HostUseOnly54>
+              <HostUseOnly55>1</HostUseOnly55>
+              <HostUseOnly56>1</HostUseOnly56>
+              <FareCabinClsSeg>E</FareCabinClsSeg>
+              <FlownMile>00708</FlownMile>
+              <MaxPermittedMile>00000</MaxPermittedMile>
+              <HostUseOnly76>N</HostUseOnly76>
+              <PFOverrideWaivers>N</PFOverrideWaivers>
+              <FlatFQ>N</FlatFQ>
+              <PermittedDiscFare>N</PermittedDiscFare>
+              <PFQuoted>N</PFQuoted>
+              <Spare1>NNN</Spare1>
+              <NetFareFIC>W2IPOH</NetFareFIC>
+              <TkFareFIC>W2IPOH</TkFareFIC>
+              <SellPCCSellAuthority />
+              <SellPCCTkAuthority />
+              <SellIATASellAuthority />
+              <SellIATATkAuthority />
+              <TkDesignatorCat35 />
+              <CAT35BagInd>N</CAT35BagInd>
+              <Spare2 />
+              <ProviderPCC>00V</ProviderPCC>
+              <ProviderIATANum>1431912</ProviderIATANum>
+              <TkPsgrFareFIC>W2IPOH</TkPsgrFareFIC>
+              - <TkAuditorFareAmt>
+                - <![CDATA[ 
+    0.00
+  ]]>
+              </TkAuditorFareAmt>
+            </SegRelatedInfo>
+            - <Surcharge>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <ISGRIRelatedSecItinSegNum>1</ISGRIRelatedSecItinSegNum>
+              <Type>5</Type>
+              <CumulativeNumStops>0</CumulativeNumStops>
+              <Amt>100</Amt>
+              <Currency>INR</Currency>
+              <DecPos>0</DecPos>
+            </Surcharge>
+            - <RulesInfo>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <FareNum>1</FareNum>
+              <FareRuleInfo>Y</FareRuleInfo>
+              <PermittedDisc>N</PermittedDisc>
+              <DiscAdultFare>N</DiscAdultFare>
+              <GenFare>N</GenFare>
+              <NetFare>N</NetFare>
+              <FareRestricted>N</FareRestricted>
+              <NGGFIntlInd>Y</NGGFIntlInd>
+              <Spare1>N</Spare1>
+              <StartPt>DEL</StartPt>
+              <EndPt>BOM</EndPt>
+              <FirstTravDt>20180801</FirstTravDt>
+              <AirV>9W</AirV>
+              <FIC>W2IPOH</FIC>
+              <TotFareComponent>1280</TotFareComponent>
+              <Currency>INR</Currency>
+              <DecPos>0</DecPos>
+              <FareAmt>1180</FareAmt>
+              <RuleSupplierID>0</RuleSupplierID>
+              <RuleNumOrdinal>00F9E6</RuleNumOrdinal>
+              <FareTariffNum>012E</FareTariffNum>
+              <RuleTextOrdinalNum>C3E2</RuleTextOrdinalNum>
+              <RulesApply>Y</RulesApply>
+              <RtesApply>Y</RtesApply>
+              <NoRulesExist>N</NoRulesExist>
+              <Spare2>NNNNN</Spare2>
+              <DBInd>N</DBInd>
+              <HostUseOnly91>N</HostUseOnly91>
+              <PFQuoted>N</PFQuoted>
+              <Spare3>YNNNN</Spare3>
+              <DBID />
+              - <FareRuleInfoYQual>
+                <GlobDirOrdinal>EH</GlobDirOrdinal>
+                <HIFCity1 />
+                <HIFCity2 />
+                <MileSurchargeRtgInd>7</MileSurchargeRtgInd>
+                <FlownMileComponent>0</FlownMileComponent>
+                <MPMComponent>0</MPMComponent>
+                <DifBetween>0</DifBetween>
+                <ExtraMileCity1 />
+                <ExtraMileCity2 />
+                <ExtraMileCity3 />
+                <OTWTransportingAirV>9W</OTWTransportingAirV>
+                <ComponentAirV1 />
+                <ComponentAirV2 />
+                <Key>NADT9WCS00899979E</Key>
+              </FareRuleInfoYQual>
+            </RulesInfo>
+            - <GenQuoteDetails>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <QuoteType>G</QuoteType>
+              <LastTkDt>20180731</LastTkDt>
+              <QuoteDt>20180731</QuoteDt>
+              <IntlSaleInd />
+              <BaseFareCurrency>INR</BaseFareCurrency>
+              <BaseFareAmt>1280</BaseFareAmt>
+              <LowestOrNUCFare>0</LowestOrNUCFare>
+              <BaseDecPos>0</BaseDecPos>
+              <EquivCurrency />
+              <EquivAmt>0</EquivAmt>
+              <EquivDecPos>0</EquivDecPos>
+              <TotCurrency>INR</TotCurrency>
+              <TotAmt>2901</TotAmt>
+              <TotDecPos>0</TotDecPos>
+              <ITNum />
+              <RteBasedQuote>Y</RteBasedQuote>
+              <M0>N</M0>
+              <M5>N</M5>
+              <M10>N</M10>
+              <M15>N</M15>
+              <M20>N</M20>
+              <M25>N</M25>
+              <Spare1>N</Spare1>
+              <PrivFQd>N</PrivFQd>
+              <PFOverrides>N</PFOverrides>
+              <FlatFQd>N</FlatFQd>
+              <DirMinApplied>N</DirMinApplied>
+              <VATIncInd>N</VATIncInd>
+              <PenApplies>Y</PenApplies>
+              <Spare2>N</Spare2>
+              <QuoteBasis>N</QuoteBasis>
+              - <TaxDataAry>
+                - <TaxData>
+                  <Country>IN</Country>
+                  <Amt>00000012</Amt>
+                </TaxData>
+                - <TaxData>
+                  <Country>K3</Country>
+                  <Amt>00000130</Amt>
+                </TaxData>
+                - <TaxData>
+                  <Country>WO</Country>
+                  <Amt>00000154</Amt>
+                </TaxData>
+                - <TaxData>
+                  <Country>YQ</Country>
+                  <Amt>00001200</Amt>
+                </TaxData>
+                - <TaxData>
+                  <Country>YR</Country>
+                  <Amt>00000125</Amt>
+                </TaxData>
+              </TaxDataAry>
+            </GenQuoteDetails>
+            - <PsgrTypes>
+              <UniqueKey>0001</UniqueKey>
+              <PICReq>ADT</PICReq>
+              <QueryAmt>0</QueryAmt>
+              <QueryIATAFmt>N</QueryIATAFmt>
+              <QueryApolloFmt>Y</QueryApolloFmt>
+              <PercentQuery>N</PercentQuery>
+              <AmtQuery>N</AmtQuery>
+              <AgeQuery>N</AgeQuery>
+              <ReqReturnedPIC>Y</ReqReturnedPIC>
+              <QuoteOnlyPICReq>N</QuoteOnlyPICReq>
+              <HasDiscData>N</HasDiscData>
+              <RespPIC>ADT</RespPIC>
+              <RespAmt>0</RespAmt>
+              <RespIATAFmt>N</RespIATAFmt>
+              <RespATPCOFmt>N</RespATPCOFmt>
+              <PercentResp>N</PercentResp>
+              <AmtResp>N</AmtResp>
+              <AgeResp>N</AgeResp>
+              <PFCsApply>N</PFCsApply>
+              <NPFReq>N</NPFReq>
+              <Spare1>N</Spare1>
+              <PICPsgrs>1</PICPsgrs>
+              <PsgrNum>1</PsgrNum>
+            </PsgrTypes>
+            - <BaggDispInfo>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <BaggType>A</BaggType>
+              <PsgrType>ADT</PsgrType>
+              <StartPt>DEL</StartPt>
+              <EndPt>BOM</EndPt>
+              <BaggAllwnceVal>1</BaggAllwnceVal>
+              <BaggAllwnceUnit>P</BaggAllwnceUnit>
+              <Vnd>9W</Vnd>
+              <Spare />
+              <BaggTripStartSegNum>1</BaggTripStartSegNum>
+              <BaggTripEndSegNum>1</BaggTripEndSegNum>
+              <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/9W</URL>
+            </BaggDispInfo>
+            - <BaggDispFQandFQBB>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <BaggNum>1</BaggNum>
+              - <BaggFee>
+                - <![CDATA[ 
+       0
+  ]]>
+              </BaggFee>
+              <Currency>INR</Currency>
+              <WtDimension>UPTO33LB/15KG AND UPTO62LI/158LCM</WtDimension>
+              <BaggTripStartSegNum>1</BaggTripStartSegNum>
+              <BaggTripEndSegNum>1</BaggTripEndSegNum>
+            </BaggDispFQandFQBB>
+            - <BaggDispFQandFQBB>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <BaggNum>2</BaggNum>
+              <BaggFee>99999999</BaggFee>
+              <Currency />
+              <WtDimension>BAGGAGE CHARGES DATA NOT AVAILABLE</WtDimension>
+              <BaggTripStartSegNum>1</BaggTripStartSegNum>
+              <BaggTripEndSegNum>1</BaggTripEndSegNum>
+            </BaggDispFQandFQBB>
+            - <BaggDispInfo>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <BaggType>B</BaggType>
+              <PsgrType>ADT</PsgrType>
+              <StartPt>DEL</StartPt>
+              <EndPt>BOM</EndPt>
+              <BaggAllwnceVal>1</BaggAllwnceVal>
+              <BaggAllwnceUnit>P</BaggAllwnceUnit>
+              <Vnd>9W</Vnd>
+              <Spare />
+              <BaggTripStartSegNum>1</BaggTripStartSegNum>
+              <BaggTripEndSegNum>1</BaggTripEndSegNum>
+            </BaggDispInfo>
+            - <BaggDispFQandFQBB>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <BaggNum>1</BaggNum>
+              - <BaggFee>
+                - <![CDATA[ 
+       0
+  ]]>
+              </BaggFee>
+              <Currency>INR</Currency>
+              <WtDimension>UPTO15LB/7KG AND UPTO45LI/115LCM</WtDimension>
+              <BaggTripStartSegNum>1</BaggTripStartSegNum>
+              <BaggTripEndSegNum>1</BaggTripEndSegNum>
+            </BaggDispFQandFQBB>
+            - <ExtendedQuoteInformation>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <ETkInd>Y</ETkInd>
+              <PaperTkInd>N</PaperTkInd>
+              <PlatingInd>Y</PlatingInd>
+              <NetFareInd>N</NetFareInd>
+              <TkFareInd>N</TkFareInd>
+              <LLPFQuoted>N</LLPFQuoted>
+              <CommUnresolved>N</CommUnresolved>
+              <DataRetQuote>N</DataRetQuote>
+              <FareIT>N</FareIT>
+              <BagInd>N</BagInd>
+              <TkDesignator>N</TkDesignator>
+              <FareBT>N</FareBT>
+              <FiledNetFare>N</FiledNetFare>
+              <NTypeComm>N</NTypeComm>
+              <Spare1>NN</Spare1>
+              <NetFareCrncy />
+              <NetFareAmt>0</NetFareAmt>
+              <NetFareNumDecs>0</NetFareNumDecs>
+              <EquivNetFareCrcy />
+              <EquivNetFareAmt>0</EquivNetFareAmt>
+              <EquivNumDecs>0</EquivNumDecs>
+              <TotNetCrcy />
+              <TotNetAmt>0</TotNetAmt>
+              <TotNetNumDecs>0</TotNetNumDecs>
+              <TkFareCrcy />
+              <TkFareAmt>0</TkFareAmt>
+              <TkNumDecs>0</TkNumDecs>
+              <EquivTkCrncy />
+              <EquivTkAmt>0</EquivTkAmt>
+              <EquivTkNumDecs>0</EquivTkNumDecs>
+              <TotTkCrncy />
+              <TotTkAmt>0</TotTkAmt>
+              <TotTkNumDecs>0</TotTkNumDecs>
+              <CrncyBaseFareTkPsgrCoupon />
+              <TkPsgrCouponAmt>0</TkPsgrCouponAmt>
+              <TkPsgrCouponNumDecs>0</TkPsgrCouponNumDecs>
+              <EquivCrncyTkPsgrCoupon />
+              <EquivAmtTkPsgrCoupon>0</EquivAmtTkPsgrCoupon>
+              <EquivNumDecsTkPsgrCoupon>0</EquivNumDecsTkPsgrCoupon>
+              <TotCrncyTkPsgrCoupon />
+              <TotAmtTkPsgrCoupon>0</TotAmtTkPsgrCoupon>
+              <TotNumDecsTkPsgrCoupon>0</TotNumDecsTkPsgrCoupon>
+              <MethodType />
+              <Type />
+              <CARCode />
+              <ValueCode />
+              <TkPCC>5D0F</TkPCC>
+              <TkPCCIATANum>9999999</TkPCCIATANum>
+              <SellingPCC>00V</SellingPCC>
+              <SellingIATANum>1431912</SellingIATANum>
+              <TkPCCTkAuthority>N</TkPCCTkAuthority>
+              <TkPCCSellAuthority>N</TkPCCSellAuthority>
+              <SellPCCTkAuthority>N</SellPCCTkAuthority>
+              <SellPCCSellAuthority>N</SellPCCSellAuthority>
+              <Spare2>NNNN</Spare2>
+            </ExtendedQuoteInformation>
+            - <JrnyType>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <NumJrnyItems>1</NumJrnyItems>
+              <CircTrip>N</CircTrip>
+              <RT>N</RT>
+              <OW>Y</OW>
+              <OpenJaw>N</OpenJaw>
+              <RndWorld>N</RndWorld>
+              <Spare1>NNN</Spare1>
+              <NumFareComponents>1</NumFareComponents>
+              <HIF>N</HIF>
+              <StopSurcharge>N</StopSurcharge>
+              <NotesApply>N</NotesApply>
+              <NoBankBuyRateHeld>N</NoBankBuyRateHeld>
+              <Spare2>NNNN</Spare2>
+            </JrnyType>
+            - <CityIndInfo>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <FareNum>1</FareNum>
+              - <CityIndAry>
+                - <CityInd>
+                  <Mandatory-NoStopover>N</Mandatory-NoStopover>
+                  <MandatoryRtePt>N</MandatoryRtePt>
+                  <CityWI1stLevelSideTrip>N</CityWI1stLevelSideTrip>
+                  <CityWI2ndLevelSideTrip>N</CityWI2ndLevelSideTrip>
+                  <AllowOpenJawBreak>N</AllowOpenJawBreak>
+                  <SurfaceSectorInc>N</SurfaceSectorInc>
+                  <SurfaceSectorExc>N</SurfaceSectorExc>
+                  <SysGenFictitiousPt>N</SysGenFictitiousPt>
+                  <NegMileExcMPMReductionPt>N</NegMileExcMPMReductionPt>
+                  <RIOSAOMileCity>N</RIOSAOMileCity>
+                  <UnspecExtraMileAllow>N</UnspecExtraMileAllow>
+                  <SouthAtlanticMileCity>N</SouthAtlanticMileCity>
+                  <ClassDifferential>N</ClassDifferential>
+                  <IguassuFallsMileCity>N</IguassuFallsMileCity>
+                  <Spare1>NN</Spare1>
+                </CityInd>
+                - <CityInd>
+                  <Mandatory-NoStopover>N</Mandatory-NoStopover>
+                  <MandatoryRtePt>N</MandatoryRtePt>
+                  <CityWI1stLevelSideTrip>N</CityWI1stLevelSideTrip>
+                  <CityWI2ndLevelSideTrip>N</CityWI2ndLevelSideTrip>
+                  <AllowOpenJawBreak>N</AllowOpenJawBreak>
+                  <SurfaceSectorInc>N</SurfaceSectorInc>
+                  <SurfaceSectorExc>N</SurfaceSectorExc>
+                  <SysGenFictitiousPt>N</SysGenFictitiousPt>
+                  <NegMileExcMPMReductionPt>N</NegMileExcMPMReductionPt>
+                  <RIOSAOMileCity>N</RIOSAOMileCity>
+                  <UnspecExtraMileAllow>N</UnspecExtraMileAllow>
+                  <SouthAtlanticMileCity>N</SouthAtlanticMileCity>
+                  <ClassDifferential>N</ClassDifferential>
+                  <IguassuFallsMileCity>N</IguassuFallsMileCity>
+                  <Spare1>NN</Spare1>
+                </CityInd>
+              </CityIndAry>
+            </CityIndInfo>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>6</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>1</MsgType>
+              <Lang>0</Lang>
+              <Text>NON ENDO</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>0</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>6</MsgType>
+              <Lang>0</Lang>
+              <Text>01 NVB01AUG/NVA01AUG</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>1006</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>2</MsgType>
+              <Lang>0</Lang>
+              <Text>LAST DATE TO PURCHASE TICKET: 31JUL18</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>1170</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>2</MsgType>
+              <Lang>0</Lang>
+              <Text>TICKETING AGENCY 5D0F</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>1171</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>2</MsgType>
+              <Lang>0</Lang>
+              <Text>DEFAULT PLATING CARRIER 9W</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>1028</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>2</MsgType>
+              <Lang>0</Lang>
+              <Text>FARE HAS A PLATING CARRIER RESTRICTION</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>1026</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>2</MsgType>
+              <Lang>0</Lang>
+              <Text>E-TKT REQUIRED</Text>
+            </InfoMsg>
+            - <InfoMsg>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <MsgNum>1174</MsgNum>
+              <AppNum>0</AppNum>
+              <MsgType>2</MsgType>
+              <Lang>0</Lang>
+              <Text>TICKETING FEES MAY APPLY</Text>
+            </InfoMsg>
+            - <RsvnRules>
+              <UniqueKey>0</UniqueKey>
+              <Spare1>NNN</Spare1>
+              <HoursMin>N</HoursMin>
+              <DaysMin>N</DaysMin>
+              <MonthsMin>N</MonthsMin>
+              <OccurIndMin>N</OccurIndMin>
+              <SameDayMin>N</SameDayMin>
+              <Spare2>NNNNNNNN</Spare2>
+              <TmDOWMin>0</TmDOWMin>
+              <NumOccurMin>0</NumOccurMin>
+              <FareComponent>1</FareComponent>
+              <Spare3 />
+              <Spare4>NNN</Spare4>
+              <HoursMax>N</HoursMax>
+              <DaysMax>N</DaysMax>
+              <MonthsMax>N</MonthsMax>
+              <OccurIndMax>N</OccurIndMax>
+              <SameDayMax>N</SameDayMax>
+              <StartIndMax>N</StartIndMax>
+              <CompletionInd>N</CompletionInd>
+              <Spare5>NNNNNN</Spare5>
+              <TmDOWMax>0</TmDOWMax>
+              <NumOccurMax>0</NumOccurMax>
+              <Spare6 />
+              <Spare7>NNN</Spare7>
+              <NoRsvn>N</NoRsvn>
+              <AdvRsvnOnlyIfTk>Y</AdvRsvnOnlyIfTk>
+              <AdvRsvnAnyTm>N</AdvRsvnAnyTm>
+              <AdvRsvnHrs>N</AdvRsvnHrs>
+              <AdvRsvnDays>N</AdvRsvnDays>
+              <AdvRsvnMonths>N</AdvRsvnMonths>
+              <AdvRsvnEarliestTm>N</AdvRsvnEarliestTm>
+              <AdvRsvnLatestTm>N</AdvRsvnLatestTm>
+              <AdvRsvnWaived>N</AdvRsvnWaived>
+              <AdvRsvnDataExists>N</AdvRsvnDataExists>
+              <AdvRsvnEndItem>N</AdvRsvnEndItem>
+              <Spare8>NN</Spare8>
+              <Spare9>NNN</Spare9>
+              <AdvTkEarliestTm>N</AdvTkEarliestTm>
+              <AdvTkLatestTm>N</AdvTkLatestTm>
+              <AdvTkRsvnHrs>N</AdvTkRsvnHrs>
+              <AdvTkRsvnDays>N</AdvTkRsvnDays>
+              <AdvTkRsvnMonths>N</AdvTkRsvnMonths>
+              <AdvTkStartHrs>N</AdvTkStartHrs>
+              <AdvTkStartDays>N</AdvTkStartDays>
+              <AdvTkStartMonths>N</AdvTkStartMonths>
+              <AdvTkWaived>N</AdvTkWaived>
+              <AdvTkAnyTm>Y</AdvTkAnyTm>
+              <AdvTkEndItem>N</AdvTkEndItem>
+              <Spare10>NN</Spare10>
+              <AdvRsvnTm>0</AdvRsvnTm>
+              <AdvTkRsvnTm>0</AdvTkRsvnTm>
+              <AdvTkStartTm>0</AdvTkStartTm>
+              <Spare11 />
+              <Spare12>NNNN</Spare12>
+              <EarliestRsvnDtPresent>N</EarliestRsvnDtPresent>
+              <EarliestTkDtPresent>N</EarliestTkDtPresent>
+              <LatestRsvnDtPresent>N</LatestRsvnDtPresent>
+              <LatestTkDtPresent>N</LatestTkDtPresent>
+              <Spare13>NNNNNNNN</Spare13>
+              <EarliestRsvnDt />
+              <EarliestTkDt />
+              <LatestRsvnDt />
+              <LatestTkDt />
+              <Spare14 />
+              - <PenFeeAry>
+                - <PenFee>
+                  <DepRequired>N</DepRequired>
+                  <DepNonRef>N</DepNonRef>
+                  <TkNonRef>N</TkNonRef>
+                  <AirVFee>N</AirVFee>
+                  <Cancellation>Y</Cancellation>
+                  <FailConfirmSpace>N</FailConfirmSpace>
+                  <ItinChg>N</ItinChg>
+                  <ReplaceTk>N</ReplaceTk>
+                  <Applicable>Y</Applicable>
+                  <ApplicableTo>Y</ApplicableTo>
+                  <Spare15>YNNNNN</Spare15>
+                  <Amt>4200.0</Amt>
+                  <Type>D</Type>
+                  <Currency>INR</Currency>
+                  <Spare16>NNNNNNNN</Spare16>
+                  <Spare17 />
+                </PenFee>
+                - <PenFee>
+                  <DepRequired>N</DepRequired>
+                  <DepNonRef>N</DepNonRef>
+                  <TkNonRef>N</TkNonRef>
+                  <AirVFee>N</AirVFee>
+                  <Cancellation>N</Cancellation>
+                  <FailConfirmSpace>N</FailConfirmSpace>
+                  <ItinChg>Y</ItinChg>
+                  <ReplaceTk>N</ReplaceTk>
+                  <Applicable>Y</Applicable>
+                  <ApplicableTo>Y</ApplicableTo>
+                  <Spare15>YNNNNN</Spare15>
+                  <Amt>3900.0</Amt>
+                  <Type>D</Type>
+                  <Currency>INR</Currency>
+                  <Spare16>NNNNNNNN</Spare16>
+                  <Spare17 />
+                </PenFee>
+              </PenFeeAry>
+              <Cat0>N</Cat0>
+              <Cat1>N</Cat1>
+              <Cat2>N</Cat2>
+              <Cat3>N</Cat3>
+              <Cat4>Y</Cat4>
+              <Cat5>Y</Cat5>
+              <Cat6>N</Cat6>
+              <Cat7>N</Cat7>
+              <Cat8>Y</Cat8>
+              <Cat9>N</Cat9>
+              <Cat10>Y</Cat10>
+              <Cat11>N</Cat11>
+              <Cat12>N</Cat12>
+              <Cat13>N</Cat13>
+              <Cat14>Y</Cat14>
+              <Cat15>Y</Cat15>
+              <Cat16>Y</Cat16>
+              <Cat17>N</Cat17>
+              <Cat18>Y</Cat18>
+              <Cat19>N</Cat19>
+              <Cat20>N</Cat20>
+              <Cat21>N</Cat21>
+              <Cat22>N</Cat22>
+              <Cat23>N</Cat23>
+              <Cat24>N</Cat24>
+              <Cat25>N</Cat25>
+              <Cat26>N</Cat26>
+              <Cat27>N</Cat27>
+              <Cat28>N</Cat28>
+              <Cat29>N</Cat29>
+              <Cat30>N</Cat30>
+              <Cat31>N</Cat31>
+              <RestrictiveDt>20180731</RestrictiveDt>
+              <SurchargeAmt>100</SurchargeAmt>
+              <NotUSACity>Y</NotUSACity>
+              <Spare18>NNNNNNN</Spare18>
+              <MissingRules>N</MissingRules>
+              <Spare19>NNNNNNN</Spare19>
+              <Spare20 />
+            </RsvnRules>
+            - <FareConstruction>
+              <UniqueKey>0001</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <FareConstructText>DEL 9W BOM Q100 1180W2IPOH INR1280END</FareConstructText>
+            </FareConstruction>
+            - <SellStructFareConstruct>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <FareConstruction>1ADEL,1B9W,1ABOM,4BQ100,4A1180,1CW2IPOH,3E0101,1EINR,4F1280,1FEND</FareConstruction>
+            </SellStructFareConstruct>
+            - <SellFareConstruct>
+              <UniqueKey>1</UniqueKey>
+              <QuoteNum>1</QuoteNum>
+              <FareConstruction>DEL 9W BOM Q100 1180 INR1280END</FareConstruction>
+            </SellFareConstruct>
+            - <NewBICSegMapping>
+              <UniqueKey>0</UniqueKey>
+              - <BICInfoAry>
+                - <BICInfo>
+                  <BIC>W</BIC>
+                  <AppliesToSeg1>Y</AppliesToSeg1>
+                  <AppliesToSeg2>N</AppliesToSeg2>
+                  <AppliesToSeg3>N</AppliesToSeg3>
+                  <AppliesToSeg4>N</AppliesToSeg4>
+                  <AppliesToSeg5>N</AppliesToSeg5>
+                  <AppliesToSeg6>N</AppliesToSeg6>
+                  <AppliesToSeg7>N</AppliesToSeg7>
+                  <AppliesToSeg8>N</AppliesToSeg8>
+                  <AppliesToSeg9>N</AppliesToSeg9>
+                  <AppliesToSeg10>N</AppliesToSeg10>
+                  <AppliesToSeg11>N</AppliesToSeg11>
+                  <AppliesToSeg12>N</AppliesToSeg12>
+                  <AppliesToSeg13>N</AppliesToSeg13>
+                  <AppliesToSeg14>N</AppliesToSeg14>
+                  <AppliesToSeg15>N</AppliesToSeg15>
+                  <AppliesToSeg16>N</AppliesToSeg16>
+                </BICInfo>
+              </BICInfoAry>
+            </NewBICSegMapping>
+            - <PrevBICSegMapping>
+              <UniqueKey>0000</UniqueKey>
+              - <BICInfoAry>
+                - <BICInfo>
+                  <BIC>W</BIC>
+                  <AppliesToSeg1>Y</AppliesToSeg1>
+                  <AppliesToSeg2>N</AppliesToSeg2>
+                  <AppliesToSeg3>N</AppliesToSeg3>
+                  <AppliesToSeg4>N</AppliesToSeg4>
+                  <AppliesToSeg5>N</AppliesToSeg5>
+                  <AppliesToSeg6>N</AppliesToSeg6>
+                  <AppliesToSeg7>N</AppliesToSeg7>
+                  <AppliesToSeg8>N</AppliesToSeg8>
+                  <AppliesToSeg9>N</AppliesToSeg9>
+                  <AppliesToSeg10>N</AppliesToSeg10>
+                  <AppliesToSeg11>N</AppliesToSeg11>
+                  <AppliesToSeg12>N</AppliesToSeg12>
+                  <AppliesToSeg13>N</AppliesToSeg13>
+                  <AppliesToSeg14>N</AppliesToSeg14>
+                  <AppliesToSeg15>N</AppliesToSeg15>
+                  <AppliesToSeg16>N</AppliesToSeg16>
+                </BICInfo>
+              </BICInfoAry>
+            </PrevBICSegMapping>
+          </FareInfo>
+        </FareQuoteFlightSpecific_23>
+      </SubmitXmlResult>
+    </SubmitXmlResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
+

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Response ResponseReference="REF_P_010_32179-271-969684117505094">
+  <ResponseDetails Language="en">
+    <SearchBookingResponse>
+      <Bookings />
+    </SearchBookingResponse>
+  </ResponseDetails>
+</Response>

@@ -1,0 +1,534 @@
+﻿Imports System.Text
+Imports System.Data
+Partial Class Hotel_HtlFareDetails
+    Inherits System.Web.UI.Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            Dim str As New StringBuilder()
+            Dim week As Integer = 1
+            Dim discounts As Double = Convert.ToDouble(Request.QueryString("TotalDiscount"))
+            Dim roomNightlyRate As String() = Request.QueryString("PerNightRate").Split("/"c)
+            Dim checkins As DateTime = Convert.ToDateTime(Session("sCheckIn1"))
+
+            If Request.QueryString("Provider") = "GTA" Then
+                Dim NoofNight As Integer = Convert.ToInt32(Request.QueryString("NoofNight"))
+                Dim DiscPernight As Double = 0, GTAPerRoomNight As Double = 0
+                DiscPernight = Math.Round(discounts / NoofNight, 1)
+                GTAPerRoomNight = Math.Round(Convert.ToDouble(Request.QueryString("RoomTotal")) / NoofNight, 1)
+
+                For i As Integer = 0 To NoofNight - 1
+                    Dim sCheckIn As String = checkins.Day & " " & checkins.ToString("MMM")
+                    Dim strDayPrice As String = ""
+                    If DiscPernight > 0 Then
+                        strDayPrice = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn & "</td></tr><tr><td style='border:none;'>INR " & GTAPerRoomNight.ToString() & "</td></tr><tr><td style='border:none;' class='cut' >INR " & DiscPernight.ToString() & "</td></tr></table>"
+                    Else
+                        strDayPrice = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn & "</td></tr><tr><td style='border:none;'>INR " & GTAPerRoomNight.ToString() & "</td></tr><tr><td style='border:none;' ></td></tr></table>"
+                    End If
+
+                    If week = 1 Then
+                        Select Case checkins.DayOfWeek.ToString
+                            Case "Sunday"
+                                SUNDAY.InnerHtml = strDayPrice
+                                SUNDAY.BgColor = "#F5F5F5"
+                            Case "Monday"
+                                MONDAY.InnerHtml = strDayPrice
+                                MONDAY.BgColor = "#F5F5F5"
+                            Case "Tuesday"
+                                TUESDAY.InnerHtml = strDayPrice
+                                TUESDAY.BgColor = "#F5F5F5"
+                            Case "Wednesday"
+                                WEDNESDAY.InnerHtml = strDayPrice
+                                WEDNESDAY.BgColor = "#F5F5F5"
+                            Case "Thursday"
+                                THURSDAY.InnerHtml = strDayPrice
+                                THURSDAY.BgColor = "#F5F5F5"
+                            Case "Friday"
+                                FRIDAY.InnerHtml = strDayPrice
+                                FRIDAY.BgColor = "#F5F5F5"
+                            Case "Saturday"
+                                SATURDAY.InnerHtml = strDayPrice
+                                SATURDAY.BgColor = "#F5F5F5"
+                                week = week + 1
+                                weeks2.Visible = True
+                                GoTo AfterIFGTA
+                        End Select
+                    End If
+                    If week = 2 Then
+                        Select Case checkins.DayOfWeek.ToString
+                            Case "Sunday"
+                                SUNDAY2.InnerHtml = strDayPrice
+                                SUNDAY2.BgColor = "#F5F5F5"
+                            Case "Monday"
+                                MONDAY2.InnerHtml = strDayPrice
+                                MONDAY2.BgColor = "#F5F5F5"
+                            Case "Tuesday"
+                                TUESDAY2.InnerHtml = strDayPrice
+                                TUESDAY2.BgColor = "#F5F5F5"
+                            Case "Wednesday"
+                                WEDNESDAY2.InnerHtml = strDayPrice
+                                WEDNESDAY2.BgColor = "#F5F5F5"
+                            Case "Thursday"
+                                THURSDAY2.InnerHtml = strDayPrice
+                                THURSDAY2.BgColor = "#F5F5F5"
+                            Case "Friday"
+                                FRIDAY2.InnerHtml = strDayPrice
+                                FRIDAY2.BgColor = "#F5F5F5"
+                            Case "Saturday"
+                                SATURDAY2.InnerHtml = strDayPrice
+                                SATURDAY2.BgColor = "#F5F5F5"
+                                week = week + 1
+                                weeks3.Visible = True
+                                GoTo AfterIFGTA
+                        End Select
+                    End If
+                    If week = 3 Then
+                        Select Case checkins.DayOfWeek.ToString
+                            Case "Sunday"
+                                SUNDAY3.InnerHtml = strDayPrice
+                                SUNDAY3.BgColor = "#F5F5F5"
+                            Case "Monday"
+                                MONDAY3.InnerHtml = strDayPrice
+                                MONDAY3.BgColor = "#F5F5F5"
+                            Case "Tuesday"
+                                TUESDAY3.InnerHtml = strDayPrice
+                                TUESDAY3.BgColor = "#F5F5F5"
+                            Case "Wednesday"
+                                WEDNESDAY3.InnerHtml = strDayPrice
+                                WEDNESDAY3.BgColor = "#F5F5F5"
+                            Case "Thursday"
+                                THURSDAY3.InnerHtml = strDayPrice
+                                THURSDAY3.BgColor = "#F5F5F5"
+                            Case "Friday"
+                                FRIDAY3.InnerHtml = strDayPrice
+                                FRIDAY3.BgColor = "#F5F5F5"
+                            Case "Saturday"
+                                SATURDAY3.InnerHtml = strDayPrice
+                                SATURDAY3.BgColor = "#F5F5F5"
+                        End Select
+                    End If
+AfterIFGTA:
+
+                    checkins = checkins.AddDays(1)
+                Next
+            ElseIf Request.QueryString("Provider") = "TG" Then
+                Dim discountRate As String() = Regex.Split(Request.QueryString("DisCount"), "/")
+                For i As Integer = 0 To roomNightlyRate.Length - 2
+                    Dim sCheckIn As String = checkins.Day & " " & checkins.ToString("MMM")
+                    Dim strDayPrice As String = ""
+                    If discounts > 0 Then
+                        strDayPrice = ("<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn & "</td></tr><tr><td style='border:none;'>INR ") + roomNightlyRate(i) & "</td></tr><tr><td style='border:none;' class='cut' >INR " & discountRate(i) & "</td></tr></table>"
+                    Else
+                        strDayPrice = ("<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn & "</td></tr><tr><td style='border:none;'>INR ") + roomNightlyRate(i) & "</td></tr><tr><td style='border:none;' ></td></tr></table>"
+                    End If
+
+                    If week = 1 Then
+                        Select Case checkins.DayOfWeek.ToString
+                            Case "Sunday"
+                                SUNDAY.InnerHtml = strDayPrice
+                                SUNDAY.BgColor = "#F5F5F5"
+                            Case "Monday"
+                                MONDAY.InnerHtml = strDayPrice
+                                MONDAY.BgColor = "#F5F5F5"
+                            Case "Tuesday"
+                                TUESDAY.InnerHtml = strDayPrice
+                                TUESDAY.BgColor = "#F5F5F5"
+                            Case "Wednesday"
+                                WEDNESDAY.InnerHtml = strDayPrice
+                                WEDNESDAY.BgColor = "#F5F5F5"
+                            Case "Thursday"
+                                THURSDAY.InnerHtml = strDayPrice
+                                THURSDAY.BgColor = "#F5F5F5"
+                            Case "Friday"
+                                FRIDAY.InnerHtml = strDayPrice
+                                FRIDAY.BgColor = "#F5F5F5"
+                            Case "Saturday"
+                                SATURDAY.InnerHtml = strDayPrice
+                                SATURDAY.BgColor = "#F5F5F5"
+                                week = week + 1
+                                weeks2.Visible = True
+                                GoTo AfterIF
+                        End Select
+                    End If
+                    If week = 2 Then
+                        Select Case checkins.DayOfWeek.ToString
+                            Case "Sunday"
+                                SUNDAY2.InnerHtml = strDayPrice
+                                SUNDAY2.BgColor = "#F5F5F5"
+                            Case "Monday"
+                                MONDAY2.InnerHtml = strDayPrice
+                                MONDAY2.BgColor = "#F5F5F5"
+                            Case "Tuesday"
+                                TUESDAY2.InnerHtml = strDayPrice
+                                TUESDAY2.BgColor = "#F5F5F5"
+                            Case "Wednesday"
+                                WEDNESDAY2.InnerHtml = strDayPrice
+                                WEDNESDAY2.BgColor = "#F5F5F5"
+                            Case "Thursday"
+                                THURSDAY2.InnerHtml = strDayPrice
+                                THURSDAY2.BgColor = "#F5F5F5"
+                            Case "Friday"
+                                FRIDAY2.InnerHtml = strDayPrice
+                                FRIDAY2.BgColor = "#F5F5F5"
+                            Case "Saturday"
+                                SATURDAY2.InnerHtml = strDayPrice
+                                SATURDAY2.BgColor = "#F5F5F5"
+                                week = week + 1
+                                weeks3.Visible = True
+                                GoTo AfterIF
+                        End Select
+                    End If
+                    If week = 3 Then
+                        Select Case checkins.DayOfWeek.ToString
+                            Case "Sunday"
+                                SUNDAY3.InnerHtml = strDayPrice
+                                SUNDAY3.BgColor = "#F5F5F5"
+                            Case "Monday"
+                                MONDAY3.InnerHtml = strDayPrice
+                                MONDAY3.BgColor = "#F5F5F5"
+                            Case "Tuesday"
+                                TUESDAY3.InnerHtml = strDayPrice
+                                TUESDAY3.BgColor = "#F5F5F5"
+                            Case "Wednesday"
+                                WEDNESDAY3.InnerHtml = strDayPrice
+                                WEDNESDAY3.BgColor = "#F5F5F5"
+                            Case "Thursday"
+                                THURSDAY3.InnerHtml = strDayPrice
+                                THURSDAY3.BgColor = "#F5F5F5"
+                            Case "Friday"
+                                FRIDAY3.InnerHtml = strDayPrice
+                                FRIDAY3.BgColor = "#F5F5F5"
+                            Case "Saturday"
+                                SATURDAY3.InnerHtml = strDayPrice
+                                SATURDAY3.BgColor = "#F5F5F5"
+                        End Select
+                    End If
+AfterIF:
+                    checkins = checkins.AddDays(1)
+                Next
+            End If
+            str.Append("<table align='center'><tr><td></td></tr><tr><td>Room Rate for " & Request.QueryString("NoofNight") & " Night: </td><td>INR ")
+            If discounts > 0 Then
+                str.Append(Request.QueryString("TotalDiscount") + "</td></tr>")
+                str.Append("<tr><td>Total Discount: </td><td>-INR " & (discounts - Convert.ToDouble(Request.QueryString("RoomTotal"))).ToString() & "</td></tr>")
+            Else
+                str.Append(Request.QueryString("RoomTotal") + "</td></tr>")
+            End If
+            str.Append("<tr class='bld'><td>Total Price : </td><td>INR " & Request.QueryString("RoomTotal") & "</td></tr>")
+
+            Dim AgencyType As String = ""
+            If Session("User_Type").ToString() = "AGENT" Then
+                AgencyType = Session("AGTY").ToString()
+            Else
+                AgencyType = Session("User_Type").ToString()
+            End If
+            'Commision Calculation
+            Dim HTLST As New HotelDAL.HotelDA()
+            Dim commisiondt As DataTable = HTLST.GetDetailsPageCommision(Request.QueryString("Country"), Request.QueryString("City"), Request.QueryString("Star"), Session("UID").ToString(), AgencyType, Convert.ToDecimal(Request.QueryString("RoomTotal")) - Convert.ToDecimal(Request.QueryString("AgtMrk"))).Tables(0)
+            str.Append("<tr><td>")
+            str.Append("<table>")
+            str.Append("<tr><td>Commision : </td><td> - INR " + commisiondt.Rows(0)("CommisionAmt").ToString() + "</td></tr>")
+            str.Append("<tr><td>Markups : </td><td> - INR " + Request.QueryString("AgtMrk") + "</td></tr>")
+            str.Append("<tr class='bld'><td>Net Cost : </td><td>INR " + commisiondt.Rows(0)("TotalAmount").ToString() + "</td></tr>")
+            str.Append("</table></td></tr>")
+            str.Append("</table>")
+            PriceBreakups.Text = str.ToString()
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "Page_Load")
+        End Try
+    End Sub
+    '    Protected Sub DesiyaFarebreakups()
+    '        Try
+    '            Dim NoofRoom As Integer = CType(Request.QueryString("Noofroom"), Integer)
+    '            'Dim noofNight As Integer = CType(Request.QueryString("Night"), Integer)
+    '            Dim TotalPriceRoomNight As Integer = 0
+    '            Dim week As Integer = 1
+    '            Dim checkins As Date = CDate(Session("sCheckIn1").ToString())
+    '            Dim discountRate() As String
+    '            Dim roomNightlyRate() As String = Request.QueryString("PerNightRate").Split("/")
+    '            For i As Integer = 0 To roomNightlyRate.Length - 2
+    '                Dim sCheckIn() As String = Split(Left(checkins.ToString, checkins.ToString.IndexOf("12:00:00")), "-")
+    '                'Dim sCheckIn1 As String = sCheckIn(1) & " " & Left(MonthName(sCheckIn(0).Trim), 3)
+    '                Dim sCheckIn1 As String = sCheckIn(0) & " " & sCheckIn(1)
+    '                Dim strDayPrice As String = ""
+    '                If Request.QueryString("DisCount") <> "" Then
+    '                    discountRate = Split(Request.QueryString("DisCount"), "/")
+    '                    strDayPrice = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn1 & "</td></tr><tr><td style='border:none;'>INR " & (CType(roomNightlyRate(i), Integer) * NoofRoom).ToString() & "</td></tr><tr><td style='border:none;' class='cut' >INR " & (CType(discountRate(i), Integer) * NoofRoom).ToString() & "</td></tr></table>"
+    '                Else
+    '                    strDayPrice = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn1 & "</td></tr><tr><td style='border:none;'>INR " & (CType(roomNightlyRate(i), Integer)).ToString() & "</td></tr><tr><td style='border:none;' ></td></tr></table>"
+    '                End If
+
+    '                If week = 1 Then
+    '                    Select Case checkins.DayOfWeek.ToString
+    '                        Case "Sunday"
+    '                            SUNDAY.InnerHtml = strDayPrice
+    '                            SUNDAY.BgColor = "#F5F5F5"
+    '                        Case "Monday"
+    '                            MONDAY.InnerHtml = strDayPrice
+    '                            MONDAY.BgColor = "#F5F5F5"
+    '                        Case "Tuesday"
+    '                            TUESDAY.InnerHtml = strDayPrice
+    '                            TUESDAY.BgColor = "#F5F5F5"
+    '                        Case "Wednesday"
+    '                            WEDNESDAY.InnerHtml = strDayPrice
+    '                            WEDNESDAY.BgColor = "#F5F5F5"
+    '                        Case "Thursday"
+    '                            THURSDAY.InnerHtml = strDayPrice
+    '                            THURSDAY.BgColor = "#F5F5F5"
+    '                        Case "Friday"
+    '                            FRIDAY.InnerHtml = strDayPrice
+    '                            FRIDAY.BgColor = "#F5F5F5"
+    '                        Case "Saturday"
+    '                            SATURDAY.InnerHtml = strDayPrice
+    '                            SATURDAY.BgColor = "#F5F5F5"
+    '                            week = week + 1
+    '                            weeks2.Visible = True
+    '                            GoTo AfterIF
+    '                    End Select
+    '                End If
+    '                If week = 2 Then
+    '                    Select Case checkins.DayOfWeek.ToString
+    '                        Case "Sunday"
+    '                            SUNDAY2.InnerHtml = strDayPrice
+    '                            SUNDAY2.BgColor = "#F5F5F5"
+    '                        Case "Monday"
+    '                            MONDAY2.InnerHtml = strDayPrice
+    '                            MONDAY2.BgColor = "#F5F5F5"
+    '                        Case "Tuesday"
+    '                            TUESDAY2.InnerHtml = strDayPrice
+    '                            TUESDAY2.BgColor = "#F5F5F5"
+    '                        Case "Wednesday"
+    '                            WEDNESDAY2.InnerHtml = strDayPrice
+    '                            WEDNESDAY2.BgColor = "#F5F5F5"
+    '                        Case "Thursday"
+    '                            THURSDAY2.InnerHtml = strDayPrice
+    '                            THURSDAY2.BgColor = "#F5F5F5"
+    '                        Case "Friday"
+    '                            FRIDAY2.InnerHtml = strDayPrice
+    '                            FRIDAY2.BgColor = "#F5F5F5"
+    '                        Case "Saturday"
+    '                            SATURDAY2.InnerHtml = strDayPrice
+    '                            SATURDAY2.BgColor = "#F5F5F5"
+    '                            week = week + 1
+    '                            weeks3.Visible = True
+    '                            GoTo AfterIF
+    '                    End Select
+    '                End If
+    '                If week = 3 Then
+    '                    Select Case checkins.DayOfWeek.ToString
+    '                        Case "Sunday"
+    '                            SUNDAY3.InnerHtml = strDayPrice
+    '                            SUNDAY3.BgColor = "#F5F5F5"
+    '                        Case "Monday"
+    '                            MONDAY3.InnerHtml = strDayPrice
+    '                            MONDAY3.BgColor = "#F5F5F5"
+    '                        Case "Tuesday"
+    '                            TUESDAY3.InnerHtml = strDayPrice
+    '                            TUESDAY3.BgColor = "#F5F5F5"
+    '                        Case "Wednesday"
+    '                            WEDNESDAY3.InnerHtml = strDayPrice
+    '                            WEDNESDAY3.BgColor = "#F5F5F5"
+    '                        Case "Thursday"
+    '                            THURSDAY3.InnerHtml = strDayPrice
+    '                            THURSDAY3.BgColor = "#F5F5F5"
+    '                        Case "Friday"
+    '                            FRIDAY3.InnerHtml = strDayPrice
+    '                            FRIDAY3.BgColor = "#F5F5F5"
+    '                        Case "Saturday"
+    '                            SATURDAY3.InnerHtml = strDayPrice
+    '                            SATURDAY3.BgColor = "#F5F5F5"
+    '                    End Select
+    '                End If
+    'AfterIF:
+
+    '                checkins = checkins.AddDays(1)
+    '                TotalPriceRoomNight = TotalPriceRoomNight + CType(roomNightlyRate(i), Integer)
+    '            Next
+    '            'Dim discounts As Integer
+    '            'Dim str As StringBuilder = New StringBuilder()
+    '            'str.Append("<table align='center'><tr><td></td></tr><tr><td>Room Rate for " & noofNight & " Night: </td><td>INR ")
+    '            'If Request.QueryString("TotalDiscount") > 0 Then
+    '            '    str.Append(Request.QueryString("TotalDiscount") & "</td></tr>")
+    '            '    discounts = CType(Request.QueryString("TotalDiscount"), Integer) - TotalPriceRoomNight
+    '            '    str.Append("<tr><td>Total Discount: </td><td>-INR " & discounts & "</td></tr>")
+    '            '    If Request.QueryString("Tax") <> "0" Then
+    '            '        str.Append("<tr><td>Total Tax : </td><td>INR " & CType(Request.QueryString("Tax"), Integer) & "</td></tr>")
+    '            '    End If
+    '            '    If Request.QueryString("GuestCharge") <> "0" Then
+    '            '        str.Append("<tr><td>Extra Guest Charge</td><td>INR " & CType(Request.QueryString("GuestCharge"), Integer) & "</td></tr>")
+    '            '    End If
+    '            'Else
+    '            '    str.Append(TotalPriceRoomNight & "</td></tr>")
+    '            '    If Request.QueryString("Tax") <> "0" Then
+    '            '        str.Append("<tr><td>Total Tax : </td><td>INR " & CType(Request.QueryString("Tax"), Integer) & "</td></tr>")
+    '            '    End If
+    '            '    If Request.QueryString("GuestCharge") <> "0" Then
+    '            '        str.Append("<tr><td>Extra Guest Charge</td><td>INR " & CType(Request.QueryString("GuestCharge"), Integer) & "</td></tr>")
+    '            '    End If
+
+    '            'End If
+
+    '            'str.Append("<tr style='font-weight:bold;'><td>Total Price : </td><td>INR " & Request.QueryString("RoomTotal") & "</td></tr>")
+    '            'str.Append("</table>")
+    '            'PriceBreakups.Text = str.ToString
+
+    '        Catch ex As Exception
+    '            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "")
+    '        End Try
+    '    End Sub
+    '    Protected Sub GTAFarebreakups()
+    '        Try
+    '            Dim noofNight As Integer = CType(Request.QueryString("Night"), Integer)
+    '            Dim TotalPriceRoomNight As Integer = 0
+    '            Dim week As Integer = 1
+    '            Dim DiscPernight As Double = 0
+    '            Dim checkins As Date = CDate(Session("sCheckIn1").ToString())
+    '            Dim pernight As Double = Math.Round(CType(Request.QueryString("RoomTotal"), Double) / noofNight, 1)
+    '            If (CType(Request.QueryString("DisCount"), Double) > 0) Then
+    '                DiscPernight = Math.Round(CType(Request.QueryString("DisCount"), Double) / noofNight, 1)
+    '            End If
+    '            'Dim DiscPernight As Double = CType(Request.QueryString("DisCount"), Double) / noofNight
+    '            For i As Integer = 0 To noofNight - 1
+    '                Dim sCheckIn() As String = Split(Left(checkins.ToString, checkins.ToString.IndexOf("12:00:00")), "-")
+    '                Dim sCheckIn1 As String = sCheckIn(0) & " " & sCheckIn(1)
+    '                'Dim sCheckIn1 As String = sCheckIn(1) & " " & Left(MonthName(sCheckIn(0).Trim), 3)
+    '                'Dim strDayPrice As String = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn1 & "</td></tr><tr><td style='border:none;'>INR " & pernight & "</td></tr><tr><td style='border:none;' ></td></tr></table>"
+    '                Dim strDayPrice As String = ""
+    '                If DiscPernight > 0 Then
+    '                    strDayPrice = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn1 & "</td></tr><tr><td style='border:none;'>INR " & pernight.ToString() & "</td></tr><tr><td style='border:none;' class='cut' >INR " & DiscPernight.ToString() & "</td></tr></table>"
+    '                Else
+    '                    strDayPrice = "<table style='border:none;'><tr><td style='border:none;'>" & sCheckIn1 & "</td></tr><tr><td style='border:none;'>INR " & pernight.ToString() & "</td></tr><tr><td style='border:none;' ></td></tr></table>"
+    '                End If
+    '                If week = 1 Then
+    '                    Select Case checkins.DayOfWeek.ToString
+    '                        Case "Sunday"
+    '                            SUNDAY.InnerHtml = strDayPrice
+    '                            SUNDAY.BgColor = "#F5F5F5"
+    '                        Case "Monday"
+    '                            MONDAY.InnerHtml = strDayPrice
+    '                            MONDAY.BgColor = "#F5F5F5"
+    '                        Case "Tuesday"
+    '                            TUESDAY.InnerHtml = strDayPrice
+    '                            TUESDAY.BgColor = "#F5F5F5"
+    '                        Case "Wednesday"
+    '                            WEDNESDAY.InnerHtml = strDayPrice
+    '                            WEDNESDAY.BgColor = "#F5F5F5"
+    '                        Case "Thursday"
+    '                            THURSDAY.InnerHtml = strDayPrice
+    '                            THURSDAY.BgColor = "#F5F5F5"
+    '                        Case "Friday"
+    '                            FRIDAY.InnerHtml = strDayPrice
+    '                            FRIDAY.BgColor = "#F5F5F5"
+    '                        Case "Saturday"
+    '                            SATURDAY.InnerHtml = strDayPrice
+    '                            SATURDAY.BgColor = "#F5F5F5"
+    '                            week = week + 1
+    '                            weeks2.Visible = True
+    '                            GoTo AfterIF
+    '                    End Select
+    '                End If
+    '                If week = 2 Then
+    '                    Select Case checkins.DayOfWeek.ToString
+    '                        Case "Sunday"
+    '                            SUNDAY2.InnerHtml = strDayPrice
+    '                            SUNDAY2.BgColor = "#F5F5F5"
+    '                        Case "Monday"
+    '                            MONDAY2.InnerHtml = strDayPrice
+    '                            MONDAY2.BgColor = "#F5F5F5"
+    '                        Case "Tuesday"
+    '                            TUESDAY2.InnerHtml = strDayPrice
+    '                            TUESDAY2.BgColor = "#F5F5F5"
+    '                        Case "Wednesday"
+    '                            WEDNESDAY2.InnerHtml = strDayPrice
+    '                            WEDNESDAY2.BgColor = "#F5F5F5"
+    '                        Case "Thursday"
+    '                            THURSDAY2.InnerHtml = strDayPrice
+    '                            THURSDAY2.BgColor = "#F5F5F5"
+    '                        Case "Friday"
+    '                            FRIDAY2.InnerHtml = strDayPrice
+    '                            FRIDAY2.BgColor = "#F5F5F5"
+    '                        Case "Saturday"
+    '                            SATURDAY2.InnerHtml = strDayPrice
+    '                            SATURDAY2.BgColor = "#F5F5F5"
+    '                            week = week + 1
+    '                            weeks3.Visible = True
+    '                            GoTo AfterIF
+    '                    End Select
+    '                End If
+    '                If week = 3 Then
+    '                    Select Case checkins.DayOfWeek.ToString
+    '                        Case "Sunday"
+    '                            SUNDAY3.InnerHtml = strDayPrice
+    '                            SUNDAY3.BgColor = "#F5F5F5"
+    '                        Case "Monday"
+    '                            MONDAY3.InnerHtml = strDayPrice
+    '                            MONDAY3.BgColor = "#F5F5F5"
+    '                        Case "Tuesday"
+    '                            TUESDAY3.InnerHtml = strDayPrice
+    '                            TUESDAY3.BgColor = "#F5F5F5"
+    '                        Case "Wednesday"
+    '                            WEDNESDAY3.InnerHtml = strDayPrice
+    '                            WEDNESDAY3.BgColor = "#F5F5F5"
+    '                        Case "Thursday"
+    '                            THURSDAY3.InnerHtml = strDayPrice
+    '                            THURSDAY3.BgColor = "#F5F5F5"
+    '                        Case "Friday"
+    '                            FRIDAY3.InnerHtml = strDayPrice
+    '                            FRIDAY3.BgColor = "#F5F5F5"
+    '                        Case "Saturday"
+    '                            SATURDAY3.InnerHtml = strDayPrice
+    '                            SATURDAY3.BgColor = "#F5F5F5"
+    '                    End Select
+    '                End If
+    'AfterIF:
+
+    '                checkins = checkins.AddDays(1)
+    '            Next
+
+    '            'Dim str As StringBuilder = New StringBuilder()
+    '            'str.Append("<table width='92%' ><tr><td colspan='3' style='font-weight:bold;font-size:20px;'>Room wise fare breakups</td></tr>")
+    '            'Dim roomNightlyRate() As String = Request.QueryString("PerNightRate").Split("/")
+    '            'For k As Integer = 0 To roomNightlyRate.Length - 2
+    '            '    Dim roomTypeRate() As String = roomNightlyRate(k).Split("-")
+    '            '    Dim strRoomType As String = ""
+    '            '    Select Case roomTypeRate(0)
+    '            '        Case "SB"
+    '            '            strRoomType = "Single Room:"
+    '            '        Case "DB"
+    '            '            strRoomType = "Double  Room:"
+    '            '        Case "TB"
+    '            '            strRoomType = "Twin Room:"
+    '            '        Case "TR"
+    '            '            strRoomType = "Triple Room:"
+    '            '        Case "TS"
+    '            '            strRoomType = "Twin For Sole Use:"
+    '            '        Case "Q"
+    '            '            strRoomType = "Quad Room:"
+    '            '        Case "CT"
+    '            '            strRoomType = "Infant:"
+    '            '        Case "CH"
+    '            '            strRoomType = "Child:"
+    '            '    End Select
+    '            '    If (roomTypeRate(1) <> "0.00") Then
+    '            '        str.Append("<tr><td style='font-weight:bold;width:92px;'>" & roomTypeRate(1) & " " & strRoomType & "</td><td style='width:74px;'>" & roomTypeRate(1) & " * " & roomTypeRate(2) & "</td><td style='width:100px;'> = INR " & Math.Round((CType(roomTypeRate(1), Double) * CType(roomTypeRate(2), Integer)), 2) & "</td></tr>")
+    '            '    End If
+    '            'Next
+    '            'If Request.QueryString("DisCount") <> "0" Then
+    '            '    str.Append("<tr><td></td><td style='font-weight:bold;width:92px;'>&nbsp&nbspTotel Discount:</td><td style='width:74px;'>&nbsp&nbsp&nbsp&nbspINR " & CType(Request.QueryString("RoomTotal"), Double) - CType(Request.QueryString("DisCount"), Double) & "</td></tr>")
+    '            'End If
+    '            'If roomNightlyRate.Length > 2 Then
+    '            '    str.Append("<tr class='bld'><td></td><td  style='text-align:right;'>Total Price:&nbsp&nbsp&nbsp&nbsp</td><td>&nbsp&nbsp&nbspINR " & Request.QueryString("RoomTotal") & "</td></tr>")
+    '            'Else
+    '            '    If CType(Request.QueryString("DisCount"), Double) > 0 Then
+    '            '        str.Append("<tr class='bld'><td></td><td  style='text-align:right;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTotal Price:</td><td>&nbsp&nbsp&nbspINR " & Request.QueryString("RoomTotal") & "</td></tr>")
+    '            '    End If
+    '            'End If
+    '            'str.Append("</table>")
+    '            'PriceBreakups.Text = str.ToString()
+
+    '        Catch ex As Exception
+    '            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "")
+    '        End Try
+    '    End Sub
+
+End Class

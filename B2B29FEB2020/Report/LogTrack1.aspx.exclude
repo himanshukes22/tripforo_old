@@ -1,0 +1,162 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterAfterLogin.master" AutoEventWireup="false" CodeFile="LogTrack1.aspx.vb" Inherits="SprReports_LogTrack" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+      <link  href='<%=ResolveClientUrl("~/Styles/XMLDisplay.css")%>'  type="text/css" rel="stylesheet"/>
+          <script  type="text/javascript" src='<%=ResolveClientUrl("~/Scripts/XMLDisplay.js")%>'  ></script>
+      <script type="text/javascript">
+          function GetXMLDetails(DivName, XML_String) {
+               
+              $('#GetXML_Details').text(XML_String);
+             // LoadXMLString(DivName, XML_String);
+          }
+      </script>
+
+
+     <div>
+           <table border="1" style="width: 600px" >
+                <tr>
+            <td class="auto-style4" style="text-align: right">&nbsp;&nbsp;&nbsp; Order ID : <asp:TextBox ID="txt_orderid" runat="server"></asp:TextBox>
+            </td>
+            <td class="auto-style4" style="text-align: left">&nbsp; PNR No : <asp:TextBox ID="txt_pnrno" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+                      <tr>
+            <td class="auto-style4" style="text-align: center" colspan="2">
+                <asp:Button ID="btn_logtrack" runat="server" OnClick="btn_logtrack_Click" Text="Submit" Width="100px" />
+                <asp:Label ID="lbl_error" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+            </td>
+        </tr>
+           </table>
+       </div>
+        <asp:Panel ID="Panel1" runat="server">
+            <div>
+        <asp:DataList ID="DataList1" runat="server" BackColor="Gray" BorderColor="#666666"
+            BorderStyle="None" BorderWidth="2px" CellPadding="3" CellSpacing="2"
+            Font-Names="Verdana" Font-Size="Small" GridLines="Both" RepeatColumns="1" RepeatDirection="Horizontal"
+            Width="600px">
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#333333" Font-Bold="True" Font-Size="Large" ForeColor="White"
+                HorizontalAlign="Center" VerticalAlign="Middle" />
+            <HeaderTemplate>
+               Log Tracker</HeaderTemplate>
+            <ItemStyle BackColor="White" ForeColor="Black" BorderWidth="2px" />
+            <ItemTemplate>
+                <b>OrderId:</b>
+                <asp:Label ID="OrderId" runat="server" Text='<%# Eval("OrderId") %>'></asp:Label>
+                <br />
+                <b>Pnr No:</b>
+                <asp:Label ID="Pnr" runat="server" Text='<%# Eval("Pnr") %>'></asp:Label>
+                <br />
+                 <b>CreateDate:</b>
+                <asp:Label ID="CreateDate" runat="server" Text='<%# Eval("CreateDate") %>'></asp:Label>
+                <br />
+                <b>BookingDate:</b>
+                <asp:Label ID="BookingDate" runat="server" Text='<%# Eval("BookingDate") %>'></asp:Label>
+                <br />
+                 <b>Provider:</b>
+                <asp:Label ID="Provider" runat="server" Text='<%# Eval("Provider") %>'></asp:Label>
+                <br />
+                <b>SSReqequest:</b>
+                
+                <asp:Label ID="SSReqequest" runat="server" Text="SSReqequest" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("SSReq")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                <b>SSResponse:</b>  
+                <asp:Label ID="SSResponse" runat="server" Text="SSResponse" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("SSRes")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                 <b>PNRRTRequest:</b>  
+                <asp:Label ID="PNRRTRequest" runat="server" Text="PNRRTRequest" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNRRTReq")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+               <b>PNRRTResponse:</b>  
+                <asp:Label ID="PNRRTResponse" runat="server" Text="PNRRTResponse" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNRRTRes")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                <b>DOCPRDRequest:</b>  
+                <asp:Label ID="DOCPRDRequest" runat="server" Text="DOCPRDRequest" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("DOCPRDReq")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                <b>DOCPRDResponse:</b>  
+                <asp:Label ID="DOCPRDResponse" runat="server" Text="DOCPRDResponse" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("DOCPRDRes")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                <b>PNRRT2Request:</b>  
+                <asp:Label ID="PNRRT2Request" runat="server" Text="PNRRT2Request" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNRRT2Req")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                <b>PNRRT2Response:</b>  
+                <asp:Label ID="PNRRT2Response" runat="server" Text="PNRRT2Response" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNRRT2Res")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                 <b>SERequest:</b>  
+                <asp:Label ID="SERequest" runat="server" Text="SERequest" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("SEReq")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                 <b>SEResponse:</b>  
+                <asp:Label ID="SEResponse" runat="server" Text="SEResponse" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("SERes")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                  <b>PNBFRequest1:</b>  
+                <asp:Label ID="PNBFRequest1" runat="server" Text="PNBFRequest1" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNBFReq1")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                 <b>PNBFResponse1:</b>  
+                <asp:Label ID="PNBFResponse1" runat="server" Text="PNBFResponse1" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNBFRes1")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                  <b>PNBFRequest2:</b>  
+                <asp:Label ID="PNBFRequest2" runat="server" Text="PNBFRequest2" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNBFReq2")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                 <b>PNBFResponse2:</b>  
+                <asp:Label ID="PNBFResponse2" runat="server" Text="PNBFResponse2" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNBFRes2")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                <b>PNBFRequset3:</b>  
+                <asp:Label ID="PNBFRequset3" runat="server" Text="PNBFRequset3" OnClick='<%# Getval("GetXML_Details", Convert.ToString(Eval("PNBFReq3")))%>' style="cursor:pointer;" ></asp:Label>
+                <br />
+                 <b>PNBFResponse3:</b>  
+                <asp:Label ID="PNBFResponse3" runat="server" Text="PNBFResponse3" OnClick='<%#Getval("GetXML_Details", Convert.ToString(Eval("PNBFRes3"))) %>' style="cursor:pointer;" ></asp:Label>
+                <br />
+            </ItemTemplate>
+        </asp:DataList>
+               <div id="GetXML_Details" >
+               </div>
+    </div>
+        </asp:Panel>
+        <asp:Panel ID="Panel2" runat="server">
+        <div>
+        <asp:DataList ID="DataList2" runat="server" BackColor="Gray" BorderColor="#666666"
+            BorderStyle="None" BorderWidth="2px" CellPadding="3" CellSpacing="2"
+            Font-Names="Verdana" Font-Size="Small" GridLines="Both" RepeatColumns="1" RepeatDirection="Horizontal"
+            Width="600px">
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#333333" Font-Bold="True" Font-Size="Large" ForeColor="White"
+                HorizontalAlign="Center" VerticalAlign="Middle" />
+            <HeaderTemplate>
+               Log Tracker</HeaderTemplate>
+            <ItemStyle BackColor="White" ForeColor="Black" BorderWidth="2px" />
+            <ItemTemplate>
+                <b>OrderId:</b>
+                <asp:Label ID="OrderId" runat="server" Text='<%# Eval("OrderId") %>'></asp:Label>
+                <br />
+                <b>Pnr No:</b>
+                <asp:Label ID="PnrNo" runat="server" Text='<%# Eval("Pnr") %>'></asp:Label>
+                <br />
+                 <b>Provider:</b>
+                <asp:Label ID="Provider" runat="server" Text='<%# Eval("Provider") %>'></asp:Label>
+                <br />
+                 <b>BookingDate:</b>  
+                <asp:Label ID="BookingDate" runat="server" Text='<%# Eval("BookingDate") %>'></asp:Label>
+                <br />
+                 <b>Airline:</b>  
+                <asp:Label ID="Airline" runat="server" Text='<%# Eval("Airline") %>'></asp:Label>
+                <br />
+                <b>BookReq:</b>
+                </b><span class="BookReq" style="width:100%;"><%# Eval("SSReq")%></span><br />
+                <b>BookRes:</b>
+                </b><span class="BookReq"><%# Eval("SSRes")%></span><br />
+                <b>RepriceReq:</b>
+                </b><span class="RepriceReq"><%# Eval("PNRRTReq")%></span><br />
+                <b>RePriceRes:</b>
+                </b><span class="PNRRTRes"><%# Eval("PNRRTRes")%></span><br />
+                <b>Others:</b>  
+                <asp:Label ID="Others" runat="server" Text='<%# Eval("Others") %>'></asp:Label>
+                <br />
+                 <br />
+            </ItemTemplate>
+        </asp:DataList>
+            <div id="GetXML" >
+            </div>
+        </div>
+        </asp:Panel>
+
+</asp:Content>
+

@@ -1,0 +1,536 @@
+﻿Imports System.Data
+Imports System.Collections.Generic
+Imports System.Math
+Imports System.Web.Services
+Imports System.Xml.Linq
+Imports System.Linq
+Imports HotelShared
+Partial Class HtlDetails
+    Inherits System.Web.UI.Page
+    Dim Htlsearch As New HotelSearch()
+    Dim descHSTable As Hashtable
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            If Session("UID") Is Nothing Then
+                Response.Redirect("~/Login.aspx", False)
+            Else
+                If Not IsPostBack Then
+                    Htlsearch = CType(Session("HotelSearch"), HotelSearch)
+                    Dim htlCode As String = ""
+                    If Request.QueryString("bookedFail") = "bookedFail" Then
+                        lblError.Text = "The requested rooms are no longer available. Please search again for different room type or hotel"
+                        htlCode = Session("htlCode")
+                    Else
+                        htlCode = Request.QueryString("HtlCode")
+                        Session("htlCode") = htlCode
+                    End If
+                    Htlsearch.HtlCode = htlCode
+                    Htlsearch.HotelCityCode = Request.QueryString("CityCode")
+
+                    Dim sCheckIn() As String = Split(Htlsearch.CheckInDate, "-")
+                    Dim sCheckOut() As String = Split(Htlsearch.CheckOutDate, "-")
+                    Dim sCheckIn1 As String = sCheckIn(2) & " " & Left(MonthName(sCheckIn(1)), 3) & " " & sCheckIn(0)
+                    Dim sCheckOut1 As String = sCheckOut(2) & " " & Left(MonthName(sCheckOut(1)), 3) & " " & sCheckOut(0)
+                    Session("sCheckIn1") = sCheckIn1
+                    Session("sCheckOut1") = sCheckOut1
+                    htlcheckinlbl.Text = sCheckIn1
+                    htlcheckoutlbl.Text = sCheckOut1
+                    htlrmslbl.Text = Htlsearch.NoofRoom.ToString()
+                    htlguestslbl.Text = Htlsearch.TotAdt.ToString()
+                    LblAdt.Text = Htlsearch.TotChd.ToString()
+
+                    Dim HtlList As New List(Of HotelResult)
+                    HtlList = CType(Session("SearchResult"), List(Of HotelResult))
+                    HtlList = (From h In HtlList Where h.HotelCode = Htlsearch.HtlCode And h.HotelCityCode = Request.QueryString("CityCode")).ToList()
+                    If (HtlList.Count > 0) Then
+                        Htlsearch.StarRating = HtlList(0).StarRating
+                        Htlsearch.HotelName = HtlList(0).HotelName
+                        Htlsearch.ThumbImage = HtlList(0).HotelThumbnailImg
+                        Htlsearch.Provider = HtlList(0).Provider
+                        HtlImg.ImageUrl = HtlList(0).HotelThumbnailImg
+                    Else
+                        lblError.Text = "The requested Hotel are no longer available. Please Check different Hotel"
+                    End If
+
+                    Dim RommCompositResult As New RoomComposite
+                    Dim htlresp As New HotelBAL.HotelAvailabilitySearch()
+                    RommCompositResult = htlresp.SelectedHotelResponse(Htlsearch)
+
+                    Dim HtlList1 As New List(Of HotelResult)
+                    If CType(Session("OrgList"), List(Of HotelResult)) IsNot Nothing Then
+                        If (CType(Session("SearchResult"), List(Of HotelResult)).Count < CType(Session("OrgList"), List(Of HotelResult)).Count) Then
+                            HtlList1 = CType(Session("OrgList"), List(Of HotelResult))
+                            HtlList1 = (From h In HtlList1 Where h.HotelName = Request.QueryString("hGuid")).ToList()
+                        End If
+                    End If
+
+                    Dim RoomDetals As List(Of RoomList)
+                    If HtlList1.Count = 2 Then
+                        If Htlsearch.Provider = "TG" Then
+                            Htlsearch.Provider = "GTA"
+                            Htlsearch.HtlCode = HtlList1(1).HotelCode
+                        Else
+                            Htlsearch.Provider = "TG"
+                            Htlsearch.HtlCode = HtlList1(0).HotelCode
+                        End If
+
+                        Dim RommCompositResult1 As New RoomComposite
+                        RommCompositResult1 = htlresp.SelectedHotelResponse(Htlsearch)
+                        RoomDetals = RommCompositResult.RoomDetails.Union(RommCompositResult1.RoomDetails).ToList()
+                        RoomDetals = (From h In RoomDetals Order By h.TotalRoomrate Ascending).ToList()
+
+                        'RommCompositResult.SelectedHotelDetail = RommCompositResult1.SelectedHotelDetail
+                        RommCompositResult.RoomDetails = RoomDetals
+                        Session("SelectedHotelDetail") = RommCompositResult
+
+                        If Htlsearch.Provider = "TG" Then
+                            RommCompositResult.SelectedHotelDetail.HotelDescription = RommCompositResult1.SelectedHotelDetail.HotelDescription + RommCompositResult.SelectedHotelDetail.HotelDescription
+                            RommCompositResult.SelectedHotelDetail.HotelImage = RommCompositResult1.SelectedHotelDetail.HotelImage + RommCompositResult.SelectedHotelDetail.HotelImage
+                            RommCompositResult.SelectedHotelDetail.Attraction = RommCompositResult1.SelectedHotelDetail.Attraction + RommCompositResult.SelectedHotelDetail.Attraction
+                            RommCompositResult.SelectedHotelDetail.RoomAmenities = RommCompositResult1.SelectedHotelDetail.RoomAmenities + RommCompositResult.SelectedHotelDetail.RoomAmenities
+                            RommCompositResult.SelectedHotelDetail.HotelAmenities = RommCompositResult1.SelectedHotelDetail.HotelAmenities + RommCompositResult.SelectedHotelDetail.HotelAmenities
+                        Else
+                            RommCompositResult.SelectedHotelDetail.HotelDescription = RommCompositResult.SelectedHotelDetail.HotelDescription + RommCompositResult1.SelectedHotelDetail.HotelDescription
+                            RommCompositResult.SelectedHotelDetail.HotelImage = RommCompositResult.SelectedHotelDetail.HotelImage + RommCompositResult1.SelectedHotelDetail.HotelImage
+                            RommCompositResult.SelectedHotelDetail.Attraction = RommCompositResult.SelectedHotelDetail.Attraction + RommCompositResult1.SelectedHotelDetail.Attraction
+                            RommCompositResult.SelectedHotelDetail.RoomAmenities = RommCompositResult.SelectedHotelDetail.RoomAmenities + RommCompositResult1.SelectedHotelDetail.RoomAmenities
+                            RommCompositResult.SelectedHotelDetail.HotelAmenities = RommCompositResult.SelectedHotelDetail.HotelAmenities + RommCompositResult1.SelectedHotelDetail.HotelAmenities
+                        End If
+                    Else
+                        RoomDetals = (From h In RommCompositResult.RoomDetails Order By h.TotalRoomrate Ascending).ToList()
+                        'GTAHotels.Hotelresults.Union(TGHotels.Hotelresults).ToList();
+                        Session("SelectedHotelDetail") = RommCompositResult
+                        If Htlsearch.Provider = "GTA" Then
+                            'Show No of Room Updated
+                            If Htlsearch.ExtraRoom > 0 Then
+                                ClientScript.RegisterStartupScript(Page.GetType(), "Alert", "ShowRoomAlertMassage('" + Htlsearch.HotelName + " can not alowed 4 Adult and Child  in One Room, So we added one more " + Htlsearch.ExtraRoomType + ".');", True)
+                                htlrmslbl.Text = (Htlsearch.NoofRoom + Htlsearch.ExtraRoom).ToString()
+                            End If
+                            'Show No of Cot requested
+                            If Htlsearch.ExtraCot <> "0" Then
+                                cots.Visible = True
+                                cots1.Text = Htlsearch.ExtraCot
+                                ClientScript.RegisterStartupScript(Page.GetType(), "Alert", "ShowAlertMassage();", True)
+                            End If
+                        End If
+                    End If
+
+                    RoomDetailsPrice(RoomDetals)
+                    If Htlsearch.CountryCode = "IN" Then
+                        TGDisplayHtlDetailsNew(RommCompositResult.SelectedHotelDetail)
+                    Else
+                        GTAdisplayHtlDetails(RommCompositResult.SelectedHotelDetail)
+                        Htlsearch.HotelContactNo = RommCompositResult.SelectedHotelDetail.HotelContactNo
+                    End If
+                    Htlsearch.HotelName = HtlList(0).HotelName
+                    Dim logobj As New HotelBAL.HotelSendMail_Log()
+                    HtlNameLbl.Text = Htlsearch.HotelName
+                    HtlStrImg.Text = logobj.SetStars(Htlsearch.StarRating, Request.Url.Scheme + "://" + Request.Url.Authority)
+                    HtlImg.ImageUrl = Htlsearch.ThumbImage
+                    lblNRCount.Text = Htlsearch.NoofNight.ToString & " Night and " & Htlsearch.NoofRoom & " Room Rate"
+                    Session("HotelSearcDetailss") = Htlsearch
+                End If
+            End If
+        Catch ex As Exception
+            lblError.Text = ex.Message.ToString()
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlDetails_Page_Load")
+        End Try
+    End Sub
+    Private Sub RoomDetailsPrice(ByVal RoomsList As List(Of RoomList))
+        Dim strRoom As New StringBuilder()
+        Dim MarkupObj As New HotelBAL.HotelMarkups()
+        Try
+            strRoom.Append("<div><div style='float:left;width:70%;font-weight: bold;font-size:15px'>")
+            strRoom.Append("<div style='float:left;width:76%;'> Room Name and Inclusions </div> <div style='float:right;width:22%;'> Total room rates </div>")
+            strRoom.Append("</div></div>")
+            strRoom.Append("<div class='clear'></div><div>")
+            If RoomsList.Count > 0 Then
+                For i = 0 To RoomsList.Count - 1
+                    strRoom.Append("<div class='clear'></div><div class='maind1'>")
+                    strRoom.Append("<div style='float:left;width:70%;margin:11px 0 4px 11px;'>")
+                    strRoom.Append("<div style='float:left;width:76%;'>")
+                    strRoom.Append("<div style='font-weight: bold;'>" & RoomsList(i).RoomName.Replace("H/T/Lamp;", ", ") & "</div>")
+                    strRoom.Append("<div class='clear'></div>")
+                    If RoomsList(i).inclusions <> "" Then
+                        If RoomsList(i).Provider = "TG" Then
+                            strRoom.Append("<div>" & RoomsList(i).inclusions & "</div>")
+                        Else
+                            Dim inclu() As String = Split(RoomsList(i).inclusions, ",")
+                            strRoom.Append("<div>")
+                            If inclu.Length > 1 Then
+                                strRoom.Append(" Meals (" & inclu(0))
+                                For l As Integer = 1 To inclu.Length - 1
+                                    strRoom.Append(" and " & inclu(l))
+                                Next
+                                strRoom.Append(")")
+                            Else
+                                strRoom.Append(inclu(0))
+                            End If
+                            strRoom.Append("</div>")
+                        End If
+                    End If
+                    strRoom.Append("<div class='clear1'></div>")
+                    If RoomsList(i).discountMsg.Trim() <> "" Then
+                        strRoom.Append("<div class='Htldiscountrgt' style='background-color:#FFFFFF;' >" & RoomsList(i).discountMsg.Trim() & "</div>")
+                    End If
+                    strRoom.Append("</div>")
+
+                    strRoom.Append("<div style='float:left;width:22%;'><div style='float:left;width:85%;font-weight: bold;'>")
+                    If RoomsList(i).TotalRoomrate < RoomsList(i).DiscountAMT Then
+                        strRoom.Append("<div>  INR " & RoomsList(i).TotalRoomrate.ToString() & "</div>")
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("<div class='cut1'> INR " & RoomsList(i).DiscountAMT.ToString() & "</div>")
+                    Else
+                        strRoom.Append("<div>  INR " & RoomsList(i).TotalRoomrate.ToString() & "</div>")
+                    End If
+                    strRoom.Append("</div><div style='width:11%;float:right;'>")
+                    strRoom.Append("<a href='HtlFareDetails.aspx?RoomTotal=" & RoomsList(i).TotalRoomrate.ToString() & "&PerNightRate=" & RoomsList(i).MrkRateBreakups & "&NoofNight=" & Htlsearch.NoofNight & "&DisCount=" & RoomsList(i).DiscRoomrateBreakups & "&TotalDiscount=" & RoomsList(i).DiscountAMT & "&Provider=" & RoomsList(i).Provider & "&City=" & Htlsearch.SearchCity & "&Country=" & Htlsearch.Country & "&Star=" & Htlsearch.StarRating & "&AgtMrk=" & RoomsList(i).AgentMarkupAmt & "'")
+                    strRoom.Append("rel='lyteframe' rev='width: 461px; height: 247px; overflow:hidden;' target='_blank'")
+                    strRoom.Append("style='float:right;color: #004b91;'>")
+                    strRoom.Append("<img src='images/icon.jpg' height='15' width='15' title='Price Break Up' />")
+                    strRoom.Append("</a>")
+                    strRoom.Append("</div></div>")
+
+                    Dim PerRoom_PerNight As String = MarkupObj.roundtotal(RoomsList(i).TotalRoomrate / (Htlsearch.NoofRoom * Htlsearch.NoofNight)).ToString()
+                    strRoom.Append("</div>")
+                    strRoom.Append("<div style='float:right;width:28%'>")
+                    If RoomsList(i).Provider = "TG" Then
+                        strRoom.Append("<div Class='book' style='margin:11px 11px 0 0;' ><a style='color:#fff;' href='HotelCheckOut.aspx?&RoomCode=" & RoomsList(i).RoomTypeCode & "&pernit=" & PerRoom_PerNight & "&RoomRatePlan=" & RoomsList(i).RatePlanCode & "&RoomRPH=" & RoomsList(i).HotelCode & "'>Book</a></div>")
+                        strRoom.Append("<div class='lft'>")
+                        ' strRoom.Append("<div class='rgt'><span class='adult' title='Max " & RoomsList(i).maxAdult & " adult allow'>" & RoomsList(i).maxAdult & "</span> <span class='child' title='Max " & RoomsList(i).maxChild & " child allow'> " & RoomsList(i).maxChild & "</span></div>")
+                        'Cancellation Policy start
+                        strRoom.Append(" <div class='lft'> ")
+                        strRoom.Append(" <a href='javascript:void(0);' name='Room" + i.ToString() + "' id='Room" + i.ToString() + "' onclick='Cancellation(this.id)' >")
+                        strRoom.Append(" <span class='Cancellink'>Policies</span></a>")
+                        strRoom.Append("</div>")
+                        ''Cancellation Policy end 
+                        strRoom.Append("</div>")
+                        strRoom.Append("</div>")
+                        strRoom.Append("<div class='clear'></div>")
+                        'strRoom.Append("<div style='float:right;width:100%'>")
+                        'strRoom.Append("</div>")
+                        ''Cancellation Policy and Room Discription start
+                        strRoom.Append("<div class='clear'></div><div id ='CanRoom" & i.ToString() & "' style='padding:0 22px;display: none;'>")
+                        strRoom.Append("<div><span style='font-weight: bold;font-style:normal;font-size:13px;'>Cancellation Policy</span>" & RoomsList(i).CancelationPolicy & "</div>")
+                        strRoom.Append("<div class='clear1'></div>")
+                        If RoomsList(i).RoomDescription <> "" Then
+                            strRoom.Append("<div><strong>Room Description:</strong> " & RoomsList(i).RoomDescription & "</div>")
+                        End If
+                        strRoom.Append("</div>")
+                        ''Cancellation Policy and Room Discription end
+
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("</div>")
+
+                        If i = 0 Then
+                            HtlRate.Text = RoomsList(i).TotalRoomrate.ToString()
+                            HtlBookRate.InnerHtml = "<a href='HotelCheckOut.aspx?&RoomCode=" & RoomsList(i).RoomTypeCode & "&pernit=" & PerRoom_PerNight & "&RT=" & RoomsList(i).TotalRoomrate.ToString() & "&RoomRatePlan=" & RoomsList(i).RatePlanCode & "&RoomRPH=" & RoomsList(i).HotelCode & "'>Book</a>"
+                        End If
+                    Else
+                        strRoom.Append("<div Class='book' style='margin:11px 11px 0 0;' ><a  style='color:#fff;' href='HotelCheckOutInt.aspx?&RoomCode=" & RoomsList(i).RatePlanCode & "&pernit=" & PerRoom_PerNight & "&RoomRPH=" & RoomsList(i).HotelCode & "'>Book</a></div>")
+                        If (RoomsList(i).Smoking <> "") Then
+                            strRoom.Append("<div style='float:left;'>")
+                            If (RoomsList(i).Smoking = "true") Then
+                                strRoom.Append("Child share existing bedding")
+                            Else
+                                strRoom.Append("Child provid with extra bed")
+                            End If
+                            strRoom.Append("</div><div class='clear'></div>")
+                        End If
+
+                        'Room Discription Policy and link start
+                        strRoom.Append("<div style='float:left;'>")
+                        strRoom.Append("<a href='javascript:void(0);' name='Room" + i.ToString() + "' id='Room" + i.ToString() + "' onclick='Cancellation(this.id)' >")
+                        strRoom.Append("<span class='Cancellink'>Policies</span></a>")
+                        strRoom.Append("</div>")
+                        'Room Discription and Policy link end 
+                        strRoom.Append("</div>")
+
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("<div style='width:98%;  margin:11px;'>")
+                        'Essential Information start
+                        If RoomsList(i).EssentialInformation <> "" Then
+                            strRoom.Append("<div>" & RoomsList(i).EssentialInformation & "</div>")
+                            strRoom.Append("<div class='clear1'></div>")
+                        End If
+
+                        'Cancellation Policy and Room Discription Details start
+                        strRoom.Append("<div id ='CanRoom" & i.ToString() & "' style='display: none;'>")
+                        strRoom.Append("<div><span style='font-weight: bold;font-style:normal;font-size:13px;'>Cancellation Policies</span>" & RoomsList(i).CancelationPolicy & "</div>")
+                        strRoom.Append("<div class='clear1'></div>")
+                        If RoomsList(i).RoomDescription <> "" Then
+                            strRoom.Append("<div><strong>Room Description:</strong> " & RoomsList(i).RoomDescription & "</div>")
+                        End If
+                        strRoom.Append("</div>")
+                        'Cancellation Policy and Room Discription Details End
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("</div>")
+
+                        strRoom.Append("</div>")
+                        If i = 0 Then
+                            HtlRate.Text = RoomsList(i).TotalRoomrate.ToString()
+                            HtlBookRate.InnerHtml = "<a href='HotelCheckOutInt.aspx?&RoomCode=" & RoomsList(i).RatePlanCode & "&pernit=" & PerRoom_PerNight & "&RoomRPH=" & RoomsList(i).HotelCode & "'>Book</a>"
+                        End If
+                    End If
+
+                Next
+                strRoom.Append("</div>")
+            Else
+                lblError.Text = "The requested Hotel are no longer available. Please Check different Hotel"
+            End If
+            RoomRates.InnerHtml = strRoom.ToString()
+        Catch ex As Exception
+            lblError.Text = ex.Message.ToString()
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlDetails_RoomDetails")
+        End Try
+    End Sub
+    Private Sub TGDisplayHtlDetailsNew(ByVal HotelDetail As SelectedHotel)
+        Try
+            divdesc.InnerHtml = HotelDetail.HotelDescription
+            divfclt.InnerHtml = HotelDetail.HotelAmenities
+            roomPropertes.InnerHtml = HotelDetail.RoomAmenities
+            attraction.InnerHtml = HotelDetail.Attraction
+            HtlfirstImg.ImageUrl = HotelDetail.ThumbnailUrl
+            HotelImages.InnerHtml = HotelDetail.HotelImage
+            If HotelDetail.CheckInTime <> "" Then
+                Pliy.InnerHtml = "<strong>CHECKIN TIME: </strong>" & HotelDetail.CheckInTime & " &nbsp;&nbsp;&nbsp;&nbsp; <strong>CHECKOUT TIME: </strong>" & HotelDetail.CheckOutTime
+            End If
+            divAddress.InnerHtml = "<strong>ADDRESS: </strong>" & HotelDetail.HotelAddress
+            HtlLoc.InnerText = HotelDetail.HotelAddress
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlDetails_TGDisplayHtlDetailsNew")
+        End Try
+    End Sub
+
+    Private Sub GTAdisplayHtlDetails(ByVal HotelDetail As SelectedHotel)
+        Try
+            divdesc.InnerHtml = HotelDetail.HotelDescription
+            attraction.InnerHtml = HotelDetail.Attraction
+            Dim RoomfltList As New ArrayList
+            roomPropertes.InnerHtml = HotelDetail.RoomAmenities
+            divfclt.InnerHtml = HotelDetail.HotelAmenities
+            HotelImages.InnerHtml = HotelDetail.HotelImage
+            HtlfirstImg.ImageUrl = HotelDetail.ThumbnailUrl
+            HtlLoc.InnerText = HotelDetail.HotelAddress
+            divAddress.InnerHtml = "<strong>ADDRESS: </strong>" & HotelDetail.HotelAddress & "<br/><strong>Phone: </strong>" & HotelDetail.HotelContactNo
+            Pliy.Visible = False
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlDetails_GTAdisplayHtlDetails")
+        End Try
+    End Sub
+    Private Function CalculateServicetax(ByVal amt As Decimal, ByVal tax As Decimal) As Decimal
+        Return Math.Round(amt * (tax / 100), 0)
+    End Function
+
+    Private Sub TGRoomDetailsNew(ByVal RoomsList As List(Of RoomList))
+        Try
+            Dim strRoom As New StringBuilder()
+            strRoom.Append("<div><div style='float:left;width:70%;font-weight: bold;font-size:15px'>")
+            strRoom.Append("<div style='float:left;width:76%;'> Room Name and Inclusions </div> <div style='float:right;width:22%;'> Total room rates </div>")
+            strRoom.Append("</div></div>")
+            strRoom.Append("<div class='clear'></div><div>")
+            If Htlsearch.CountryCode = "IN" Then
+                If RoomsList.Count > 0 Then
+                    Dim htlmrk As New HotelBAL.HotelMarkups()
+                    For i = 0 To RoomsList.Count - 1
+                        Dim PerRoom_PerNight As String = htlmrk.roundtotal(RoomsList(i).TotalRoomrate / (Htlsearch.NoofRoom * Htlsearch.NoofNight)).ToString()
+
+                        strRoom.Append("<div class='maind1'>")
+                        strRoom.Append("<div style='float:left;width:70%;margin:11px 0 4px 11px;'>")
+                        strRoom.Append("<div style='float:left;width:76%;'>")
+                        strRoom.Append("<div style='font-weight: bold;'>" & RoomsList(i).RoomName.Replace("H/T/Lamp;", ", ") & "</div>")
+                        strRoom.Append("<div class='clear'></div>")
+                        If RoomsList(i).inclusions <> "" Then
+                            strRoom.Append("<div>" & RoomsList(i).inclusions & "</div>")
+                        End If
+                        strRoom.Append("<div class='clear1'></div>")
+                        If RoomsList(i).discountMsg.Trim() <> "" Then
+                            strRoom.Append("<div class='Htldiscountrgt' style='background-color:#FFFFFF;' >" & RoomsList(i).discountMsg.Trim() & "</div>")
+                        End If
+                        strRoom.Append("</div>")
+
+                        strRoom.Append("<div style='float:left;width:22%;'><div style='float:left;width:85%;font-weight: bold;'>")
+                        If RoomsList(i).TotalRoomrate < RoomsList(i).DiscountAMT Then
+                            strRoom.Append("<div>  INR " & RoomsList(i).TotalRoomrate.ToString() & "</div>")
+                            strRoom.Append("<div class='clear'></div>")
+                            strRoom.Append("<div class='cut1' > INR " & RoomsList(i).DiscountAMT.ToString() & "</div>")
+                        Else
+                            strRoom.Append("<div>  INR " & RoomsList(i).TotalRoomrate.ToString() & "</div>")
+                        End If
+                        strRoom.Append("</div><div style='width:11%;float:right;'>")
+                        strRoom.Append("<a href='HtlFareDetails.aspx?RoomTotal=" & RoomsList(i).TotalRoomrate.ToString() & "&PerNightRate=" & RoomsList(i).MrkRateBreakups & "&NoofNight=" & Htlsearch.NoofNight & "&DisCount=" & RoomsList(i).DiscRoomrateBreakups & "&TotalDiscount=" & RoomsList(i).DiscountAMT & "&Provider=TG'")
+                        strRoom.Append("rel='lyteframe' rev='width: 457px; height: 200px; overflow:hidden;' target='_blank'")
+                        strRoom.Append("style='float:right;color: #004b91;'>")
+                        strRoom.Append("<img src='images/icon.jpg' height='15' width='15' title='Price Break Up' />")
+                        strRoom.Append("</a>")
+                        strRoom.Append("</div>")
+                        strRoom.Append("</div>")
+
+                        strRoom.Append("</div>")
+                        strRoom.Append("<div style='float:right;width:28%'>")
+                        strRoom.Append("<div Class='book' style='margin:11px 11px 0 0;' ><a style='color:#fff;' href='HotelCheckOut.aspx?&RoomCode=" & RoomsList(i).RoomTypeCode & "&pernit=" & PerRoom_PerNight & "&RoomRatePlan=" & RoomsList(i).RatePlanCode & "&RoomRPH=" & RoomsList(i).HotelCode & "'>Book</a></div>")
+                        strRoom.Append("<div class='lft'>")
+                        strRoom.Append("<div style='float:left;'><span class='adult' title='Max " & RoomsList(i).maxAdult & " adult allow'>" & RoomsList(i).maxAdult & "</span> <span class='child' title='Max " & RoomsList(i).maxChild & " child allow'> " & RoomsList(i).maxChild & "</span></div>")
+                        'strRoom.Append("<div class='clear1'></div>")
+                        'Cancellation Policy start
+                        strRoom.Append(" <div class='rgt'> ")
+                        strRoom.Append(" <a href='javascript:void(0);' name='Room" + i.ToString() + "' id='Room" + i.ToString() + "' onclick='Cancellation(this.id)' >")
+                        strRoom.Append(" <span class='Cancellink'>Policies</span></a>")
+                        strRoom.Append("</div>")
+                        ''Cancellation Policy end 
+                        strRoom.Append("</div>")
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("</div>")
+
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("<div style='float:right;width:100%'>")
+
+                        ''Cancellation Policy Details start
+                        strRoom.Append("<div style='clear:both;'></div><div id ='CanRoom" & i.ToString() & "' style='padding:0 22px;display: none;' ><span style='font-weight: bold;font-style:normal;font-size:13px;'>Cancellation Policy</span>" & RoomsList(i).CancelationPolicy & "</div><div style='clear:both;'></div>")
+                        ''Cancellation Policy Details end
+                        strRoom.Append("</div>")
+                        strRoom.Append("<div style='clear:both;'></div>")
+                        strRoom.Append("</div>")
+                        If i = 0 Then
+                            HtlRate.Text = RoomsList(i).TotalRoomrate.ToString()
+                            HtlBookRate.InnerHtml = "<a href='HotelCheckOut.aspx?&RoomCode=" & RoomsList(i).RoomTypeCode & "&pernit=" & PerRoom_PerNight & "&RT=" & RoomsList(i).TotalRoomrate.ToString() & "&RoomRatePlan=" & RoomsList(i).RatePlanCode & "&RoomRPH=" & RoomsList(i).HotelCode & "'>Book</a>"
+                        End If
+                    Next
+                    strRoom.Append("</div>")
+                Else
+                    lblError.Text = "The requested Hotel are no longer available. Please Check different Hotel"
+                End If
+            End If
+            RoomRates.InnerHtml = strRoom.ToString()
+        Catch ex As Exception
+            lblError.Text = ex.Message.ToString()
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "")
+        End Try
+    End Sub
+
+    Private Sub GTARoomDetails(ByVal RoomsList As List(Of RoomList))
+        Dim strRoom As StringBuilder = New StringBuilder()
+        Dim MarkupObj As New HotelBAL.HotelMarkups()
+        Try
+            strRoom.Append("<div><div style='float:left;width:70%;font-weight: bold;font-size:15px'>")
+            strRoom.Append("<div style='float:left;width:76%;'> Room Name and Inclusions </div> <div style='float:right;width:22%;'> Total room rates </div>")
+            strRoom.Append("</div></div>")
+            strRoom.Append("<div class='clear'></div><div>")
+            If RoomsList.Count > 0 Then
+                For i = 0 To RoomsList.Count - 1
+                    strRoom.Append("<div class='clear'></div><div class='maind1'>")
+                    strRoom.Append("<div style='float:left;width:70%;margin:11px 0 4px 11px;'>")
+                    strRoom.Append("<div style='float:left;width:76%;'>")
+                    strRoom.Append("<div style='font-weight: bold;'>" & RoomsList(i).RoomName.Replace("H/T/Lamp;", ", ") & "</div>")
+                    strRoom.Append("<div class='clear'></div>")
+                    If RoomsList(i).inclusions <> "" Then
+                        Dim inclu() As String = Split(RoomsList(i).inclusions, ",")
+                        strRoom.Append("<div>")
+                        If inclu.Length > 1 Then
+                            strRoom.Append(" Meals (" & inclu(0))
+                            For l As Integer = 1 To inclu.Length - 1
+                                strRoom.Append(" and " & inclu(l))
+                            Next
+                            strRoom.Append(")")
+                        Else
+                            strRoom.Append(inclu(0))
+                        End If
+                        strRoom.Append("</div>")
+                    End If
+                    strRoom.Append("<div class='clear1'></div>")
+                    If RoomsList(i).discountMsg <> "" Then
+                        strRoom.Append("<div class='Htldiscountrgt' style='background-color:#FFFFFF;' >" & RoomsList(i).discountMsg & "</div>")
+                    End If
+                    strRoom.Append("</div>")
+
+                    strRoom.Append("<div style='float:left;width:22%;'><div style='float:left;width:85%;font-weight: bold;'>")
+                    If RoomsList(i).TotalRoomrate < RoomsList(i).DiscountAMT Then
+                        strRoom.Append("<div>  INR " & RoomsList(i).TotalRoomrate.ToString() & "</div>")
+                        strRoom.Append("<div class='clear'></div>")
+                        strRoom.Append("<div class='cut1'> INR " & RoomsList(i).DiscountAMT.ToString() & "</div>")
+                    Else
+                        strRoom.Append("<div>  INR " & RoomsList(i).TotalRoomrate.ToString() & "</div>")
+                    End If
+                    strRoom.Append("</div><div style='width:11%;float:right;'>")
+                    Dim PerRoom_PerNight As String = MarkupObj.roundtotal(RoomsList(i).TotalRoomrate / (Htlsearch.NoofRoom * Htlsearch.NoofNight)).ToString()
+
+                    strRoom.Append("<a href='HtlFareDetails.aspx?RoomTotal=" & RoomsList(i).TotalRoomrate.ToString() & "&PerNightRate=" & RoomsList(i).MrkRateBreakups & "&NoofNight=" & Htlsearch.NoofNight & "&DisCount=" & RoomsList(i).DiscRoomrateBreakups & "&TotalDiscount=" & RoomsList(i).DiscountAMT.ToString() & "&Provider=GTA'")
+                    strRoom.Append("rel='lyteframe' rev='width: 457px; height: 200px; overflow:hidden;' target='_blank'")
+                    strRoom.Append("style='float:right;color: #004b91;'>")
+                    strRoom.Append("<img src='images/icon.jpg' height='15' width='15' title='Price Break Up' />")
+                    strRoom.Append("</a>")
+                    strRoom.Append("</div></div>")
+
+                    strRoom.Append("</div>")
+                    strRoom.Append("<div style='float:right;width:28%'>")
+                    strRoom.Append("<div Class='book' style='margin:11px 11px 0 0;' ><a  style='color:#fff;' href='HotelCheckOutInt.aspx?&RoomCode=" & RoomsList(i).RatePlanCode & "&pernit=" & PerRoom_PerNight & "'>Book</a></div>")
+                    If (RoomsList(i).Smoking <> "") Then
+                        strRoom.Append("<div style='float:left;'>")
+                        If (RoomsList(i).Smoking = "true") Then
+                            strRoom.Append("Child share existing bedding")
+                        Else
+                            strRoom.Append("Child provid with extra bed")
+                        End If
+                        strRoom.Append("</div><div class='clear'></div>")
+                    End If
+
+                    'Room Discription Policy and link start
+                    strRoom.Append("<div style='float:left;'>")
+                    strRoom.Append("<a href='javascript:void(0);' name='Room" + i.ToString() + "' id='Room" + i.ToString() + "' onclick='Cancellation(this.id)' >")
+                    strRoom.Append("<span class='Cancellink'>Discription & Policies</span></a>")
+                    strRoom.Append("</div>")
+                    'Room Discription and Policy link end 
+                    strRoom.Append("</div>")
+
+                    strRoom.Append("<div class='clear'></div>")
+                    strRoom.Append("<div style='width:98%;  margin:11px;'>")
+                    'Essential Information start
+                    If RoomsList(i).EssentialInformation <> "" Then
+                        strRoom.Append("<div>" & RoomsList(i).EssentialInformation & "</div>")
+                        strRoom.Append("<div class='clear1'></div>")
+                    End If
+                    'Cancellation Policy and Room Discription Details start
+                    strRoom.Append("<div id ='CanRoom" & i.ToString() & "' style='display: none;'>")
+                    strRoom.Append("<div><span style='font-weight: bold;font-style:normal;font-size:13px;'>Cancellation Policies</span>" & RoomsList(i).CancelationPolicy & "</div>")
+                    strRoom.Append("<div class='clear1'></div>")
+                    strRoom.Append("<div><strong>Room Discription:</strong> " & RoomsList(i).RoomDescription & "</div>")
+                    strRoom.Append("</div>")
+                    'Cancellation Policy and Room Discription Details End
+                    strRoom.Append("<div class='clear'></div>")
+                    strRoom.Append("</div>")
+
+                    strRoom.Append("</div>")
+                    If i = 0 Then
+                        HtlRate.Text = RoomsList(i).TotalRoomrate.ToString()
+                        HtlBookRate.InnerHtml = "<a href='HotelCheckOutInt.aspx?&RoomCode=" & RoomsList(i).RatePlanCode & "&pernit=" & PerRoom_PerNight & "'>Book</a>"
+                    End If
+                Next
+                strRoom.Append("</div>")
+            Else
+                lblError.Text = "The requested Hotel are no longer available. Please Check different Hotel"
+            End If
+            RoomRates.InnerHtml = strRoom.ToString()
+        Catch ex As Exception
+            lblError.Text = ex.Message.ToString()
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, Session("UID").ToString())
+        End Try
+    End Sub
+ 
+
+    '  <WebMethod(EnableSession:=True)> _
+    'Public Shared Function CancellationPolicy(ByVal RoomPlan As String, ByVal RoomCode As String) As String
+    '      Dim HotelDetails As New HtlLibrary.Htl_Property
+    '      Try
+    '          HotelDetails = HttpContext.Current.Session("HotelDetailss")
+    '          HotelDetails.HtlRoomCode = RoomCode
+    '          HotelDetails.HtlRoomPlanCode = RoomPlan
+    '          Dim HoteltlRes As New HtlLibrary.Htl_Response
+    '          HotelDetails = HoteltlRes.GetHtlBookingAggr(HotelDetails)
+    '      Catch ex As Exception
+    '          HotelDAL.HotelDA.InsertHotelErrorLog(ex, "")
+    '          HotelDetails.Policy = ""
+    '      End Try
+    '      Return HttpUtility.HtmlDecode(HotelDetails.Policy)
+    '  End Function
+
+End Class

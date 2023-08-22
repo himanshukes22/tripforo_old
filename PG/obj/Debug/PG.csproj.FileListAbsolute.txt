@@ -1,0 +1,18 @@
+D:\Tripforo\PG\bin\Debug\PG.dll
+D:\Tripforo\PG\bin\Debug\PG.pdb
+D:\Tripforo\PG\bin\Debug\Newtonsoft.Json.dll
+D:\Tripforo\PG\bin\Debug\Newtonsoft.Json.xml
+D:\Tripforo\PG\obj\Debug\PG.csproj.CoreCompileInputs.cache
+D:\Tripforo\PG\obj\Debug\PG.csproj.CopyComplete
+D:\Tripforo\PG\obj\Debug\PG.dll
+D:\Tripforo\PG\obj\Debug\PG.pdb
+D:\Tripforo\PG\obj\Debug\PG.csproj.AssemblyReference.cache
+E:\Smriti Data\Tripforo\PG\bin\Debug\PG.dll
+E:\Smriti Data\Tripforo\PG\bin\Debug\PG.pdb
+E:\Smriti Data\Tripforo\PG\bin\Debug\Newtonsoft.Json.dll
+E:\Smriti Data\Tripforo\PG\bin\Debug\Newtonsoft.Json.xml
+E:\Smriti Data\Tripforo\PG\obj\Debug\PG.csprojAssemblyReference.cache
+E:\Smriti Data\Tripforo\PG\obj\Debug\PG.csproj.CoreCompileInputs.cache
+E:\Smriti Data\Tripforo\PG\obj\Debug\PG.csproj.CopyComplete
+E:\Smriti Data\Tripforo\PG\obj\Debug\PG.dll
+E:\Smriti Data\Tripforo\PG\obj\Debug\PG.pdb

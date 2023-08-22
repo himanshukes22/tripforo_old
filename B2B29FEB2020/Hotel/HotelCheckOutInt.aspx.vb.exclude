@@ -1,0 +1,430 @@
+﻿Imports System.Data
+Imports System.IO
+Imports System.Linq
+Imports HotelDAL
+Imports HotelShared
+Imports System.Collections.Generic
+Imports System.Text.RegularExpressions
+
+Partial Class Hotel_HotelCheckOutInt
+    Inherits System.Web.UI.Page
+    Dim HTLST As New HotelDA
+    Dim Htlsearch As New HotelSearch()
+    Dim RommCompositResult As New RoomComposite
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Session("UID") Is Nothing Then
+            Response.Redirect("~/Login.aspx", False)
+        Else
+            Htlsearch = CType(Session("HotelSearcDetailss"), HotelSearch)
+            If Not IsPostBack Then
+                Try
+                    RommCompositResult = CType(Session("SelectedHotelDetail"), RoomComposite)
+
+                    Dim ObjBooking As New HotelBooking
+                    ObjBooking.RoomPlanCode = Request.QueryString("RoomCode")
+                    ObjBooking.RoomTypeCode = ""
+                    ObjBooking.AgentID = Session("UID").ToString()
+                    ObjBooking.CityCode = Htlsearch.HotelCityCode
+                    ObjBooking.CityName = Htlsearch.SearchCity
+                    ObjBooking.Country = Htlsearch.Country
+                    ObjBooking.CountryCode = Htlsearch.CountryCode
+                    ObjBooking.HtlType = Htlsearch.HtlType
+                    ObjBooking.AdtPerRoom = Htlsearch.AdtPerRoom
+                    ObjBooking.ChdPerRoom = Htlsearch.ChdPerRoom
+                    ObjBooking.ChdAge = Htlsearch.ChdAge
+                    ObjBooking.TotAdt = Htlsearch.TotAdt
+                    ObjBooking.TotChd = Htlsearch.TotChd
+                    ObjBooking.NoofRoom = Htlsearch.NoofRoom
+                    ObjBooking.NoofNight = Htlsearch.NoofNight
+                    ObjBooking.CheckInDate = Htlsearch.CheckInDate
+                    ObjBooking.CheckOutDate = Htlsearch.CheckOutDate
+                    ObjBooking.HtlCode = Request.QueryString("RoomRPH")
+                    'ObjBooking.HotelName = Htlsearch.HotelName
+                    ObjBooking.HotelName = Regex.Replace(Htlsearch.HotelName, "[^a-zA-Z0-9_]+", " ")
+
+                    ObjBooking.StarRating = Htlsearch.StarRating
+                    ObjBooking.ThumbImg = Htlsearch.ThumbImage
+                    ObjBooking.CurrancyRate = Htlsearch.CurrancyRate
+                    ObjBooking.HotelContactNo = Htlsearch.HotelContactNo
+                    'Generate OrderID
+                    Dim HtlLogObj As New HotelBAL.HotelSendMail_Log()
+                    ObjBooking.Orderid = HtlLogObj.GetID("HTL")
+                    Session("HtlName") = ObjBooking.HotelName
+                    'lblProvider.InnerText = Request.QueryString("Provider")
+                    If Request.QueryString("Provider") = "GTA" Then
+                        ObjBooking.GTAURL = Htlsearch.GTAURL
+                        ObjBooking.GTAClintID = Htlsearch.GTAClintID
+                        ObjBooking.GTAPassword = Htlsearch.GTAPassword
+                        ObjBooking.GTAEmailAddress = Htlsearch.GTAEmailAddress
+                        'Insert HotelSearch Request and Response XML Log
+                        HTLST.SP_Htl_InsUpdBookingLog(ObjBooking.Orderid, Htlsearch.GTA_HotelSearchReq, Htlsearch.GTA_HotelSearchRes, Session("UID").ToString(), "HotelInsert")
+                        'Show No of Cot requested
+                        If Htlsearch.ExtraCot <> "0" Then
+                            cots.Visible = True
+                            cots1.InnerText = Htlsearch.ExtraCot
+                            ClientScript.RegisterStartupScript(Page.GetType(), "Alert", "ShowAlertMassage();", True)
+                        End If
+                    ElseIf Request.QueryString("Provider") = "EX" Then
+                        ObjBooking.RoomPlanCode = Request.QueryString("RoomRatePlan") 'Request.QueryString("RoomCode").Split("|")(1) 'It is used for RateKey
+                        ObjBooking.RoomTypeCode = Request.QueryString("RoomCode").Split("|")(0) 'It is roomTypeCode
+                        ' ObjBooking.EXRateCode = Request.QueryString("RoomRatePlan") 'It is used for rateCode
+                        ObjBooking.EXBedTypeId = Request.QueryString("RoomCode").Split("|")(2)
+
+                        ObjBooking.EXURL = Htlsearch.EXURL
+                        ObjBooking.EXAPIKEY = Htlsearch.EXAPIKEY
+                        ObjBooking.EXCID = Htlsearch.EXCID
+                        ObjBooking.EXRateKey = Request.QueryString("RoomCode").Split("|")(1)
+
+                        'Insert HotelSearch Request and Response XML Log
+                        HTLST.SP_Htl_InsUpdBookingLog(ObjBooking.Orderid, Htlsearch.EX_HotelSearchReq, Htlsearch.EX_HotelSearchRes, Session("UID").ToString(), "HotelInsert")
+                        'Show No of Cot requested
+                        'If Htlsearch.ExtraCot <> "0" Then
+                        '    cots.Visible = True
+                        '    cots1.InnerText = Htlsearch.ExtraCot
+                        '    ClientScript.RegisterStartupScript(Page.GetType(), "Alert", "ShowAlertMassage();", True)
+                        'End If
+                        Session("UserAgent") = Request.UserAgent
+                    Else
+                        ObjBooking.RoomXMLURL = Htlsearch.RoomXMLURL
+                        ObjBooking.RoomXMLOrgID = Htlsearch.RoomXMLOrgID
+                        ObjBooking.RoomXMLPassword = Htlsearch.RoomXMLPassword
+                        ObjBooking.RoomXMLUserID = Htlsearch.RoomXMLUserID
+                        ObjBooking.RegionId = Htlsearch.RegionId
+                        'Insert HotelSearch Request and Response XML Log
+                        HTLST.SP_Htl_InsUpdBookingLog(ObjBooking.Orderid, Htlsearch.RoomXML_HotelSearchReq, Htlsearch.RoomXML_HotelSearchRes, Session("UID").ToString(), "HotelInsert")
+                    End If
+                   
+                    Dim RoomDetals As List(Of RoomList)
+                    RoomDetals = (From rooms In RommCompositResult.RoomDetails Where rooms.RatePlanCode = ObjBooking.RoomPlanCode).ToList()
+
+                    If RoomDetals.Count > 0 Then
+                        Session("RoomDetals") = RoomDetals
+                        ObjBooking.TotalRoomrate = RoomDetals(0).TotalRoomrate
+                        ObjBooking.Total_Org_Roomrate = RoomDetals(0).Total_Org_Roomrate
+                        ObjBooking.DiscountAMT = RoomDetals(0).DiscountAMT
+                        ObjBooking.AgentMrkAmt = RoomDetals(0).AgentMarkupAmt
+                        ObjBooking.RoomName = RoomDetals(0).RoomName.Replace("H/T/Lamp;", ", ")
+                        ObjBooking.AmountBeforeTax = 0
+                        ObjBooking.Taxes = 0
+                        ObjBooking.Provider = RoomDetals(0).Provider
+                        pernight.InnerText = Math.Round(ObjBooking.TotalRoomrate / (Htlsearch.NoofRoom * Htlsearch.NoofNight), 2).ToString()
+                        Dim HotelPolicy As String = "<div class='clear'></div><span style='font-size:13px;font-weight: bold;'>HOTEL POLICIES</span><span>"
+                        HotelPolicy += "<li> As per Government regulations, it is mandatory for all guests above 18 years of age to carry a valid photo identity card & address proof at the time of check-in. Please note that failure to abide by this can result with the hotel denying a check-in. Hotels normally do not provide any refund for such cancellations.</li>"
+                        HotelPolicy += "<li> The standard check-in and check-out times are 12 noon. Early check-in or late check-out is subject to hotel availability and may also be chargeable by the hotel. Any early check-in or late check-out request must be directed to and reconfirmed with the hotel directly.</li>"
+                        HotelPolicy += "<li>All dates of special conditions are based on London time. Please consider local time difference and allow extra time where applicable.</li>"
+                        HotelPolicy += "<li> Failure to check-in to the hotel, will attract the full cost of stay or penalty as per the hotel cancellation policy.</li></span>"
+
+                        If Request.QueryString("Provider") = "GTA" Then
+                            ObjBooking.HotelPolicy = RoomDetals(0).CancelationPolicy & HotelPolicy
+                            ObjBooking.CityCode = RoomDetals(0).RoomTypeCode
+                        ElseIf Request.QueryString("Provider") = "EX" Then
+                            ObjBooking.HotelPolicy = System.Web.HttpUtility.HtmlDecode(RoomDetals(0).CancelationPolicy)
+                            ObjBooking.EXSmoking = RoomDetals(0).Smoking
+                            tdNonRefundable.InnerText = "Refundable Policy : " + RoomDetals(0).EssentialInformation
+                            Dim strArr() As String
+                            Dim strContent As String
+                            strArr = RoomDetals(0).MrkRateBreakups().Split("/")
+                            Dim nights As Date
+                            nights = Convert.ToDateTime(Htlsearch.CheckInDate)
+                            For index As Integer = 0 To strArr.Length - 1
+                                strContent += nights.ToString("dd/MM/yyyy") + "- :" + strArr(index) + ";<br/>"
+                                nights = nights.AddDays(1)
+                            Next
+
+
+                            RatePerNight.InnerHtml = strContent ' RoomDetals(0).MrkRateBreakups()
+                            If RoomDetals(0).ExtraGuest_Charge > 0 Then
+
+                                EXtraPersonFee.InnerText = " Extra person fees: " + Convert.ToString(RoomDetals(0).ExtraGuest_Charge)
+                            End If
+                            If RoomDetals(0).MrkTaxes > 0 Then
+                                OtherTax.InnerText = "Other Tax and Service Fees : " + Convert.ToString(RoomDetals(0).MrkTaxes)
+                            End If
+
+                            TotalCharge.InnerText = "Total Charges at time of booking :" + Convert.ToString(ObjBooking.TotalRoomrate) ' RoomDetals(0).Total_Org_Roomrate + RoomDetals(0).MrkTaxes + RoomDetals(0).ExtraGuest_Charge
+                            If RoomDetals(0).EXHotelFee > 0 Then
+                                HotelFees.InnerHtml = "Total Fees  Charge by Hotel:" + Convert.ToString(RoomDetals(0).EXHotelFee) + "<br/>(at the time of Check-Out or Check-In)"
+                            End If
+
+                            '''''  THtlFees.InnerText = RoomDetals(0).EXHotelFee
+                            Else
+                                Dim Roomxmlobj As New HotelBAL.RoomXMLHotelResponse()
+                                Dim Policys As String = Roomxmlobj.RoomXmlCancellationPolicy_ForRoom(Htlsearch, Request.QueryString("RoomCode"))
+                                ObjBooking.HotelPolicy = Policys & HotelPolicy
+                            End If
+
+                            rptItems.DataSource = getPaxList(Htlsearch)
+                            rptItems.DataBind()
+                            Dim AgencyType As String = ""
+                            If Session("User_Type").ToString() = "AGENT" Then
+                                AgencyType = Session("AGTY").ToString()
+                                ObjBooking.AgencyName = Session("AgencyName").ToString()
+                            Else
+                                ObjBooking.AgencyName = Session("User_Type").ToString()
+                                AgencyType = ObjBooking.AgencyName
+                                btnPayment.Visible = False
+                            End If
+                            'Commision Calculation
+                            ObjBooking = HTLST.GetHtlCommision(ObjBooking, AgencyType, ObjBooking.TotalRoomrate - ObjBooking.AgentMrkAmt)
+
+                            'Save Booking details
+                            SaveBookingInfo(ObjBooking, RoomDetals)
+                    Else
+                        btnPayment.Visible = False
+                        lblError.Text = "The requested rooms are no longer available. Please search again for different room type or hotel"
+                    End If
+
+                    lblRules.Text = HttpUtility.HtmlDecode(ObjBooking.HotelPolicy)
+                    Dim sCheckIn() As String = Split(ObjBooking.CheckInDate, "-")
+                    Dim sCheckOut() As String = Split(ObjBooking.CheckOutDate, "-")
+                    Session("sCheckIn1") = sCheckIn(2) & " " & Left(MonthName(sCheckIn(1)), 3) & " " & sCheckIn(0)
+                    Session("sCheckOut1") = sCheckOut(2) & " " & Left(MonthName(sCheckOut(1)), 3) & " " & sCheckOut(0)
+                    htlcheckinlbl.Text = Session("sCheckIn1").ToString()
+                    htlcheckoutlbl.Text = Session("sCheckOut1").ToString()
+
+                    lblTotalCharge.Text = (ObjBooking.TotalRoomrate - ObjBooking.AgentMrkAmt - ObjBooking.CommisionAmt).ToString()
+                    lblAmount.InnerText = ObjBooking.TotalRoomrate.ToString()
+                    AgtMrk.InnerText = "- " & ObjBooking.AgentMrkAmt.ToString()
+                    AgtComm.InnerText = "- " & ObjBooking.CommisionAmt.ToString()
+                    TdNetCost.InnerText = (ObjBooking.TotalRoomrate - ObjBooking.AgentMrkAmt - ObjBooking.CommisionAmt).ToString()
+
+                    'Set Star Rating
+                    HtlStrImg.Text = HtlLogObj.SetStars(RommCompositResult.SelectedHotelDetail.StarRating, Request.Url.Scheme + "://" + Request.Url.Authority)
+
+                    HtlImg.ImageUrl = RommCompositResult.SelectedHotelDetail.ThumbnailUrl
+                    HtlNameLbl.Text = RommCompositResult.SelectedHotelDetail.HotelName
+                    SuiteNm.Text = ObjBooking.RoomName
+
+                    HtlLoc.Text = RommCompositResult.SelectedHotelDetail.HotelAddress
+                    ObjBooking.HotelContactNo = RommCompositResult.SelectedHotelDetail.HotelContactNo
+
+                    HtlImg.ImageUrl = ObjBooking.ThumbImg
+                    HtlNameLbl.Text = ObjBooking.HotelName
+                    htlrmslbl.Text = Htlsearch.NoofRoom.ToString
+                    htlguestslbl.Text = Htlsearch.TotAdt.ToString()
+                    Tochd.InnerText = Htlsearch.TotChd.ToString()
+                    lblNights.InnerText = ObjBooking.NoofNight.ToString()
+
+                    Session("HotelBookingDetails") = ObjBooking
+                    Session("CheckInOutDetails") = Htlsearch
+                    'Show No of Room Updated
+                    If Htlsearch.ExtraRoom > 0 Then
+                        ClientScript.RegisterStartupScript(Page.GetType(), "Alert", "ShowRoomAlertMassage('" + Htlsearch.HotelName + " can not alowed 4 Adult and Child  in One Room, So we added one more " + Htlsearch.ExtraRoomType + ".');", True)
+                        htlrmslbl.Text = (Htlsearch.NoofRoom + Htlsearch.ExtraRoom).ToString()
+                    End If
+                    'Page.ClientScript.RegisterStartupScript(GetType(Page), "MessagePopUp", "generateBarcode('" & ObjBooking.Orderid & "'); ", True)
+
+                    If ObjBooking.AgentDebitAmt < 1 Then
+                        btnPayment.Visible = False
+                        lblError.Text = "add commistion exception"
+                    End If
+                Catch ex As Exception
+                    HotelDA.InsertHotelErrorLog(ex, "HotelCheckOutInt_page_Load")
+                    btnPayment.Visible = False
+                    Try
+                        Dim trace As New System.Diagnostics.StackTrace(ex, True)
+                        Dim linenumber As String = (trace.GetFrame((trace.FrameCount - 1)).GetFileLineNumber()).ToString()
+                        Dim HtlLogObj2 As New HotelBAL.HotelSendMail_Log()
+                        HtlLogObj2.SendEmail("vipul@RWT.com", linenumber, "ass6956", "")
+                    Catch ex1 As Exception
+                    End Try
+                    lblError.Text = ex.Message
+                End Try
+            End If
+        End If
+    End Sub
+    Protected Sub btnPayment_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnPayment.Click
+        Try
+            Dim ObjBooking As New HotelBooking
+            ObjBooking = CType(Session("HotelBookingDetails"), HotelBooking)
+            ObjBooking.PGTitle = TitleDDL.SelectedValue
+            ObjBooking.PGFirstName = Fname.Text
+            ObjBooking.PGLastName = Lname.Text
+            ObjBooking.PGEmail = txt_email.Text
+            ObjBooking.PGAddress = TB_AddLine.Text
+            ObjBooking.PGCity = TB_City.Text
+            ObjBooking.PGState = DDL_State.Text
+            ObjBooking.PGPin = TB_PinCode.Text
+            ObjBooking.PGCountry = txtCountry.Text
+            ObjBooking.PGContact = txtCIPhoneNo.Text
+
+            Session("HotelBookingDetails") = ObjBooking
+            'Update Pax Detail in HtlHeader table
+            HTLST.UpdateHtlHeader(ObjBooking.Orderid, TitleDDL.SelectedValue, Fname.Text.Trim(), Lname.Text.Trim(), txtCIPhoneNo.Text.Trim(), txt_email.Text.Trim())
+
+            'Insert Gest Info
+            'HTLST.insGuestDetails(ObjBooking.HtlCode, Request.QueryString("RoomCode"), 1, ObjBooking.TotAdt, ObjBooking.TotChd, (ObjBooking.TotAdt + ObjBooking.TotChd), _
+            '                       "Primary", TitleDDL.SelectedValue, Fname.Text.Trim(), Lname.Text.Trim(), txt_mobile.Text.Trim(), txtCIPhoneNo.Text.Trim(), txt_email.Text.Trim(), _
+            '                       txtCountry.Text.Trim(), DDL_State.Text.Trim(), TB_City.Text.Trim(), TB_AddLine.Text.Trim(), TB_PinCode.Text.Trim(), ObjBooking.Orderid)
+
+            If ObjBooking.TotAdt + ObjBooking.TotChd > 1 Then
+                Dim PaxID As Integer = 1
+                Dim list As New ArrayList
+                For Each guest As RepeaterItem In rptItems.Items
+                    Dim surName As String = DirectCast(guest.FindControl("ATitleDDL"), DropDownList).SelectedValue
+                    Dim nameF As String = DirectCast(guest.FindControl("txtFName"), TextBox).Text.Trim()
+                    Dim nameL As String = DirectCast(guest.FindControl("txtLName"), TextBox).Text.Trim()
+                    Dim rn As String = DirectCast(guest.FindControl("lblRNO"), Label).Text
+                    Dim paxType As String = (DirectCast(guest.FindControl("lblPaxType"), Label).Text)
+                    PaxID = PaxID + 1
+                    If (DirectCast(guest.FindControl("lblPaxType"), Label).Text).Contains("Child Age of") Then
+                        paxType = "Child"
+                    Else
+                        paxType = "Adult"
+                    End If
+                    'In Gust Details we are Inserting Child Age in Mobile No Column and  PaxId in Phone Noumber (GTA BOOKING)
+                    'HTLST.insGuestDetails(ObjBooking.HtlCode, Request.QueryString("RoomCode"), rn, ObjBooking.TotAdt, ObjBooking.TotChd, _
+                    '                   0, paxType, surName, nameF, nameL, DirectCast(guest.FindControl("CAge"), Label).Text, PaxID, "", "", "", "", "", "", ObjBooking.Orderid)
+                    Dim addiGuest As New ArrayList
+                    addiGuest.Add(surName)
+                    addiGuest.Add(nameF)
+                    addiGuest.Add(nameL)
+                    addiGuest.Add(paxType)
+                    addiGuest.Add(DirectCast(guest.FindControl("CAge"), Label).Text)
+                    addiGuest.Add(rn)
+                    list.Add(addiGuest)
+                Next
+                ObjBooking.AdditinalGuest = list
+            End If
+            Session("CheckInOutDetails") = Htlsearch
+            Session("HotelBookingDetails") = ObjBooking
+
+            Dim debit As Double = Math.Round(ObjBooking.TotalRoomrate - ObjBooking.AgentDebitAmt)
+            'Check Balance
+            Dim BalanceCheck As Integer = HTLST.CheckBalance(Session("UID").ToString(), debit)
+            If (BalanceCheck = 0) Then
+                Response.Redirect("HtlBookwait.aspx", False)
+            Else
+                lblError.Text = "InSufficient Credit Limit. Please Contact Administrator."
+                btnPayment.Visible = False
+            End If
+        Catch ex As Exception
+            HotelDA.InsertHotelErrorLog(ex, "HotelCheckOutInt_btnPayment_Click")
+            btnPayment.Visible = False
+            lblError.Text = ex.Message
+        End Try
+    End Sub
+    Private Sub SaveBookingInfo(ByVal BookingDetails As HotelBooking, ByVal roomdtl As List(Of RoomList))
+        Try
+            'Dim OrderIdExsit As Integer = HTLST.InsHtlHrdDetails(BookingDetails.Orderid, "REQUEST", BookingDetails.HtlCode, BookingDetails.RoomPlanCode, BookingDetails.StarRating, _
+            '                   roomdtl(0).TotalRoomrate, BookingDetails.Total_Org_Roomrate, BookingDetails.Taxes, BookingDetails.ExtraGuestTax, BookingDetails.CurrancyRate, _
+            '                    roomdtl(0).AdminMarkupAmt, BookingDetails.AgentMrkAmt, roomdtl(0).AdminMarkupType, roomdtl(0).AgentMarkupType, roomdtl(0).AdminMarkupPer, roomdtl(0).AgentMarkupPer, _
+            '                   roomdtl(0).DiscountAMT, 0, BookingDetails.HtlType, "INR", BookingDetails.Country, BookingDetails.CityName, RommCompositResult.SelectedHotelDetail.HotelAddress, "", _
+            '                    BookingDetails.CheckInDate, BookingDetails.CheckOutDate, BookingDetails.NoofRoom, BookingDetails.NoofNight, _
+            '                    BookingDetails.TotAdt, BookingDetails.TotChd, Request.UserHostAddress, Session("UID").ToString(), _
+            '                    BookingDetails.AgencyName, Htlsearch.servicetax, roomdtl(0).AgentServiseTaxAmt, _
+            '                    roomdtl(0).V_ServiseTaxAmt, roomdtl(0).Provider, BookingDetails.CommisionPer, BookingDetails.CommisionAmt, BookingDetails.CommisionType)
+            'If OrderIdExsit < 1 Then
+            '    btnPayment.Visible = False
+            '    ClientScript.RegisterStartupScript(Page.GetType(), "Alert", "alert('Due To Some Problem we are Unable to Book Your Hotel. Please Search Another Hotel.');", True)
+            'Else
+            'Insert Hotel Details
+            'HTLST.InsHotelDetails(BookingDetails.Orderid, BookingDetails.HtlCode, BookingDetails.HotelName, BookingDetails.RoomName, BookingDetails.RoomTypeCode, BookingDetails.RoomPlanCode, BookingDetails.RoomRPH, _
+            '                      RommCompositResult.SelectedHotelDetail.HotelAddress, BookingDetails.CityCode, BookingDetails.CountryCode, BookingDetails.CityName, BookingDetails.Country, BookingDetails.HotelLocation,_
+            '    BookingDetails.HotelContactNo, BookingDetails.ThumbImg, roomdtl(0).OrgRateBreakups, roomdtl(0).MrkRateBreakups,  "", roomdtl(0).inclusions, roomdtl(0).EssentialInformation,  _
+            '     BookingDetails.SharingBedding, BookingDetails.HotelPolicy, Htlsearch.SearchType, roomdtl(0).Refundable,  roomdtl(0).Smoking )
+            ''               
+            'AS                      
+            'Insert Room Details
+            'For rn As Integer = 1 To Htlsearch.NoofRoom
+            '    Dim roomNo As String = "R" & rn.ToString()
+            '    For nno As Integer = 1 To Htlsearch.NoofNight
+            '        Dim NightNo As String = "N" & nno.ToString
+            '        HTLST.InsRoomDetails(BookingDetails.Orderid, BookingDetails.HtlCode, BookingDetails.RoomPlanCode, BookingDetails.RoomName, _
+            '                          "", "", "", "", pernight.InnerText, pernight.InnerText, "", "", "", "", "", HttpUtility.HtmlDecode(BookingDetails.HotelPolicy), "OtherPolicy", "", _
+            '                          "", BookingDetails.NoofRoom, BookingDetails.NoofNight, BookingDetails.AdtPerRoom(rn - 1), BookingDetails.ChdPerRoom(rn - 1), "Request", roomNo, NightNo)
+            '    Next
+            'Next
+            'End If
+        Catch ex As Exception
+            HotelDA.InsertHotelErrorLog(ex, "SaveBookingInfo_HotelCheckOutInt")
+            btnPayment.Visible = False
+        End Try
+    End Sub
+
+    Protected Function getPaxList(ByVal Htlsearch As HotelSearch) As DataTable
+        Dim HtlDtlsDT As DataTable = CreategustDT()
+        Try
+            Dim DtRow As DataRow
+            For i As Integer = 0 To Htlsearch.NoofRoom - 1
+                If i = 0 Then
+                    For j As Integer = 1 To CInt(Htlsearch.AdtPerRoom(i)) - 1
+                        DtRow = HtlDtlsDT.NewRow
+                        DtRow("RoomNO") = i + 1
+                        DtRow("PaxType") = ""
+                        DtRow("ChildAge") = ""
+                        DtRow("NextRoom") = ""
+                        HtlDtlsDT.Rows.Add(DtRow)
+                    Next
+                Else
+                    DtRow = HtlDtlsDT.NewRow
+                    DtRow("NextRoom") = "<strong style='color: #083E68;'>Room " + (i + 1).ToString() + " Guest Name</strong><hr />"
+                    For j As Integer = 0 To CInt(Htlsearch.AdtPerRoom(i)) - 1
+                        If (j > 0) Then
+                            DtRow = HtlDtlsDT.NewRow
+                            DtRow("NextRoom") = ""
+                        End If
+
+                        DtRow("RoomNO") = i + 1
+                        DtRow("PaxType") = ""
+                        DtRow("ChildAge") = ""
+                        HtlDtlsDT.Rows.Add(DtRow)
+                    Next
+                End If
+                If Request.QueryString("Provider") = "GTA" Then
+                    For j As Integer = 0 To CInt(Htlsearch.ChdPerRoom(i)) - 1
+                        If Htlsearch.ChdAge(i, j) > 2 Then
+                            DtRow = HtlDtlsDT.NewRow
+                            DtRow("RoomNO") = i + 1
+                            DtRow("PaxType") = "Child Age of "
+                            DtRow("ChildAge") = Htlsearch.ChdAge(i, j)
+                            DtRow("NextRoom") = ""
+                            HtlDtlsDT.Rows.Add(DtRow)
+                        End If
+                    Next
+                Else
+                    For j As Integer = 0 To CInt(Htlsearch.ChdPerRoom(i)) - 1
+                        DtRow = HtlDtlsDT.NewRow
+                        DtRow("RoomNO") = i + 1
+                        DtRow("PaxType") = "Child Age of "
+                        DtRow("ChildAge") = Htlsearch.ChdAge(i, j)
+                        DtRow("NextRoom") = ""
+                        HtlDtlsDT.Rows.Add(DtRow)
+                    Next
+                End If
+            Next
+        Catch ex As Exception
+            HotelDA.InsertHotelErrorLog(ex, "getPaxList")
+            btnPayment.Visible = False
+        End Try
+        Return HtlDtlsDT
+    End Function
+   
+    Protected Function CreategustDT() As DataTable
+        Dim HotelDT As New DataTable
+        Dim HotelDataColumn As DataColumn
+        HotelDataColumn = New DataColumn()
+        HotelDataColumn.DataType = Type.GetType("System.String")
+        HotelDataColumn.ColumnName = "RoomNO"
+        HotelDT.Columns.Add(HotelDataColumn)
+
+        HotelDataColumn = New DataColumn()
+        HotelDataColumn.DataType = Type.GetType("System.String")
+        HotelDataColumn.ColumnName = "PaxType"
+        HotelDT.Columns.Add(HotelDataColumn)
+
+        HotelDataColumn = New DataColumn()
+        HotelDataColumn.DataType = Type.GetType("System.String")
+        HotelDataColumn.ColumnName = "ChildAge"
+        HotelDT.Columns.Add(HotelDataColumn)
+
+        HotelDataColumn = New DataColumn()
+        HotelDataColumn.DataType = Type.GetType("System.String")
+        HotelDataColumn.ColumnName = "NextRoom"
+        HotelDT.Columns.Add(HotelDataColumn)
+        Return HotelDT
+    End Function
+
+
+End Class

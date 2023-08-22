@@ -1,0 +1,306 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BSer.master.cs" Inherits="BS_BSer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>RWT</title>
+    <link href="<%= ResolveUrl("~/CSS/main2.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/CSS/astyle.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/CSS/style.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/CSS/styleone.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/CSS/lytebox.css") %>" rel="stylesheet" type="text/css" />
+    <link rel="SHORTCUT ICON" type="image/x-icon" href="http://b2b.ITZ.com/favicon.ico" />
+    <link rel="SHORTCUT ICON" type="image/ico" href="http://b2b.ITZ.com/favicon.ico" />
+    <link rel="SHORTCUT ICON" href="http://b2b.ITZ.com/addressbarlogo.jpg" />
+
+    <script src="<%= ResolveUrl("js/lytebox.js") %>" type="text/javascript"></script>
+
+    <script src="<%= ResolveUrl("js/fareinfo.js") %>" type="text/javascript"></script>
+
+    <script src="<%= ResolveUrl("JS/simplecalendar.js") %>" type="text/javascript"></script>
+
+    <script src="<%= ResolveUrl("JS/calendar1.js") %>" type="text/javascript"></script>
+
+    <script src="<%= ResolveUrl("JS/JScript.js") %>" type="text/javascript"></script>
+
+</head>
+<body ondragstart="return false" draggable="false">
+    <form id="form1" runat="server">
+    <table style="width: 100%; border: 0px;" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="vertical-align: top; text-align: right; font-size: 11px; background: #f9f9f9;
+                line-height: 25px;">
+                <div style="margin-right: 10px;" class="rgt">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+                    </asp:ScriptManager>
+                    <span class="bld">Email :</span> <a href="mailto:b2bhelp@RWT.com">b2bhelp@RWT.com</a>
+                    | <span class="bld">Customer Support :</span> + 91 11 46464140
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="clear1">
+                </div>
+                <div class="lft w33">
+                    <img src="<%= ResolveUrl("~/images/logo.png") %>" alt="Header image" border="0" />
+                </div>
+                <div class="rgt textalignright f13" style="margin-right:10px;">
+                    <div class="textalignright">
+                        <span class="bld">WelCome </span>
+                        <asp:Label ID="lblagency" runat="server"></asp:Label>
+                    </div>
+                    <div class="clear1">
+                    </div>
+                    <div id="tr_AgencyID" runat="server">
+                        <span class="bld">Agency ID : </span><span id="td_AgencyID" runat="server"></span>
+                    </div>
+                    <div class="clear1">
+                    </div>
+                    <div id="crdrow" runat="server">
+                        <span class="bld">Credit Limit : </span>
+                        <asp:Label ID="lblCamt" runat="server"></asp:Label>/-
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 30px; background: #004b91;
+                color: #fff; padding: 3px 10px; font-size: 11px;">
+                <div style="float: left; margin-left: 30px;" id="div_menu" runat="server">
+                    <div class="menutbs" id="divflt" runat="server">
+                        <a href="<%= ResolveUrl("~/Search.aspx") %>">
+                            <img src="<%= ResolveUrl("~/Images/flight1.png") %>" />Flight</a>
+                    </div>
+                    <div class="menutbs borderleft" id="divhtl" runat="server">
+                        <a href="<%= ResolveUrl("~/Search.aspx?Htl=H") %> ">
+                            <img src="<%= ResolveUrl("~/Images/hotel1.png") %>" />
+                            Hotel</a>
+                    </div>
+                    <div class="menutbs borderleft" id="div_Rail" runat="server">
+                        <%--  <a onclick="railurl();">Rail</a>--%>
+                        <%--<a href="<%= ResolveUrl("~/Rail/TrainSearch.aspx?id=1") %>">--%>
+                       <%-- <a href="<%= ResolveUrl("~/Rail/Search.aspx") %>">
+                            <img src="<%= ResolveUrl("~/Images/rail.png") %>" />
+                            Rail</a>--%>
+                        <asp:LinkButton ID="lnkrail" runat="server" Text="Rail" Visible="false"></asp:LinkButton>
+                    </div>
+                    <div class="menutbs borderleft" id="div_Bus" runat="server">
+                        <%--  <a onclick="railurl();">Rail</a>--%>
+                        <a href="<%= ResolveUrl("~/BS/BusSearch.aspx") %>">
+                            <img src="<%= ResolveUrl("~/Images/bus.png") %>" />
+                            Bus</a>
+                    </div>
+                    <div class="menutbs borderleft" id="div_Utility" runat="server">
+                      <%--  <a href="<%= ResolveUrl("~/NewUtility/UtilityRecharge.aspx") %> ">
+                            <img src="<%= ResolveUrl("~/Images/recharge.png") %>" />
+                            Recharge</a>--%>
+                    </div>
+                    <div class="menutbs borderleft" id="div_BillPayment" runat="server">
+                        <div style="float: left;">
+                          <%--  <a href="<%= ResolveUrl("~/EBLBillPayment/BillPayment.aspx") %> ">
+                                <img src="<%= ResolveUrl("~/Images/billpayment.png") %>" />
+                                Bill Payment</a>--%>
+                        </div>
+                    </div>
+                    <div class="lft">
+                        <div class="menutbs borderleft" id="div_Series" runat="server" onmouseover="showChildLinks()"
+                            onmouseout="hideChildLinks()">
+                          <%--  <a id="aSDep" href="#">
+                                <img src="<%= ResolveUrl("~/Images/seriesdeparture.png") %>" />
+                                Series Departure</a>--%>
+                            <div style="clear: both;">
+                            </div>
+                            <div style="position: absolute; z-index: 999;">
+                                <div id="divToShow" style="visibility: hidden; height: 24px; background: url(../images/menubg.jpg);
+                                    width: 80px; padding: 0 17px; line-height: 20px;">
+                                  <%--  <a id="aDom" href="<%= ResolveUrl("~/Report/OLSeries/FlightDetails.aspx?id=D") %>">
+                                        Domestic</a>--%>
+                                </div>
+                                <div style="clear: both;">
+                                </div>
+                                <div id="divToShow2" style="visibility: hidden; height: 20px; background-image: url(../images/menubg.jpg);
+                                    width: 80px; padding: 0 17px; line-height: 20px;">
+                                    <%--<a id="aInt" href="<%= ResolveUrl("~/Report/OLSeries/FlightDetails.aspx?id=I") %>">
+                                        International</a>--%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menutbs borderleft" id="div_holidays" runat="server">
+                       <%-- <a href="<%= ResolveUrl("~/Holidays/package_search.aspx") %> ">--%>
+                           <%-- <img src="<%= ResolveUrl("~/Images/holidays1.png") %>" />
+                            Holidays</a>--%>
+                    </div>
+                    <div class="menutbs borderleft">
+                        <%--<a href="<%= ResolveUrl("~/Report/Accounts/creditcardpayment.aspx") %>">
+                            <img src="<%= ResolveUrl("~/images/creditcard.png") %>" title="Upload through Credit/Debit card."
+                                alt="Upload through Credit/Debit card." />
+                            <span class="colorwhite">Upload through Card</span> </a>--%>
+                    </div>
+
+                    <div class="menutbs borderleft">
+                       <%-- <a href="<%= ResolveUrl("~/visa/visainfo.aspx")%>">
+                            <img src="<%= ResolveUrl("~/images/visa.png")%>" title="Visa"
+                                alt="visa" />
+                            <span class="colorwhite">Visa</span> </a>--%>
+                    </div>
+                </div>
+                <div id="setng2" class="rgt cursorpointer" style="width: 100px;">
+                    <div class="rgt" id="setng">
+                        <img src="<%= ResolveUrl("~/Images/settings.png") %>" />
+                        <div class="clear1">
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="settings colorwhite hide" id="setng1">
+                        <div>
+                            <a href="<%= ResolveUrl("~/Report/Accounts/Ledger.aspx") %>">Dash Board</a>
+                        </div>
+                        <div id="hypdeal" runat="server">
+                            <a href="<%= ResolveUrl("~/Report/Agent/DealSheetDomIntl.aspx") %>" target="_blank">
+                                Deal Sheet</a>
+                        </div>
+                        <div>
+                            <a href='#' rel="lyteframe" rev="width: 950px; height: 500px; overflow:hidden;"
+                               >Feedback</a>
+                        </div>
+                              <div>
+
+                                            <a href="<%= ResolveUrl("~/BS/BusReport.aspx")%>">Bus</a>
+                              </div>
+                          <div>
+                            <a href='<%= ResolveUrl("~/BS/BusMarkup.aspx") %>' rel="lyteframe" rev="width: 950px; height: 500px; overflow:hidden;"
+                               >Agent MarkUp</a>
+                        </div>
+                          <div>
+                            <a href='<%= ResolveUrl("~/BS/BusAdminMarkup.aspx") %>' rel="lyteframe" rev="width: 950px; height: 500px; overflow:hidden;"
+                               >Admin MarkUp</a>
+                        </div>
+                        
+                        <div>
+                            <a href='<%= ResolveUrl("~/BS/BusCommsion.aspx") %>' rel="lyteframe" rev="width: 950px; height: 500px; overflow:hidden;"
+                               >Commision</a>
+                        </div>
+
+                        <div style="border: none;" class="f13">
+                            <asp:LinkButton ID="lnklogout" runat="server" Text="Log Out" Font-Italic="False"
+                                Font-Bold="True" OnClick="lnklogout_Click1" CausesValidation="False"></asp:LinkButton>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="height: 40px;">
+                
+                 <marquee onmouseover="stop();" onmouseout="start();"><strong style="color:#004b91;padding-top:20px; font-size:14px;"><span id="tdmarquee" runat="server"></span></strong></marquee>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="menutbl">
+                    <table style="width: 50%; margin: 0 auto;">
+                        <tr>
+                            <td>
+                                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="NavigationMenu"
+                                    DynamicPopOutImageUrl="Images/right-arrow.gif" StaticPopOutImageUrl="Images/drop-arrow.gif">
+                                    <StaticMenuItemStyle CssClass="staticMenuItemStyle" />
+                                    <DynamicMenuItemStyle CssClass="dynamicMenuItemStyle" />
+                                    <DataBindings>
+                                        <asp:MenuItemBinding DataMember="MenuItem" NavigateUrlField="NavigateUrl" TextField="MenuText" />
+                                    </DataBindings>
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td height="400px" valign="top" style="padding-top: 10px;" id="hdff">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="footer_wrapper">
+                    <div id="footer">
+                        Copyright © 2017 <a href="#">RWT</a>
+                        | Designed by <a href="#" target="_parent">RWT
+                            Team</a>
+                    </div>
+                    <!-- end of footer -->
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+
+    <script type="text/javascript">
+        // 
+        var u = window.location.pathname;
+        var h = u.split('/');
+        var s = "";
+        for (var i = 0; i < h.length; i++) {
+            if (h[i] == "SprReports") {
+                s = h[i];
+            }
+        }
+        if (s == "SprReports") {
+            document.getElementById("menutbl").style.display = "block";
+        }
+        else { document.getElementById("menutbl").style.display = "none"; }
+
+    </script>
+
+    <script type="text/javascript">
+        function checkOnload() {
+
+            var koko = querySt("Rail");
+
+            if (koko == 'not') {
+                alert('Please Contact your franchise / nodal office to continue with your irctc service ');
+            }
+        }
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#setng").click(function () {
+                $("#setng1").slideDown();
+            });
+            $("#setng1").mouseover(function() {
+                $("#setng1").slideDown();
+            });
+            $("#setng").click(function() {
+                $("#setng1").hide();
+            });
+        });
+
+        
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        function showChildLinks() {
+            var x = document.getElementById("divToShow");
+            x.style.visibility = "visible";
+            var y = document.getElementById("divToShow2");
+            y.style.visibility = "visible";
+        }
+        function hideChildLinks() {
+            var x = document.getElementById("divToShow");
+            x.style.visibility = "hidden";
+            var y = document.getElementById("divToShow2");
+            y.style.visibility = "hidden";
+        }
+
+    </script>
+
+</body>
+</html>

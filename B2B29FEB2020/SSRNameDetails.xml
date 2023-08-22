@@ -1,0 +1,3583 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetCodeNameResponse>
+      <GetCodeNameResult xmlns:a="http://schemas.datacontract.org/2004/07/ACE.Entities" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:ExceptionMessage i:nil="true"/>
+        <a:NSProcessTime>0</a:NSProcessTime>
+        <a:ProcessTime>24</a:ProcessTime>
+        <a:CodeNames>
+          <a:CodeName>
+            <a:Code>NDMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Dagang with Chicken Curry + Dodol</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NHCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Hujan Panas with Beef Rendang and Wajik</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NKCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Kuning Manado</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NKMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Kerabu</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLCA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pak Nasser's Nasi Lemak Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mee Goreng Mamak + Teh Tarik</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MMFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sticky Rice with Dried Fish + Mango</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Dagang with Chicken Curry + Dodol</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NDDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Dagang with Chicken Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pak Nasser's Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLGB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLMA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLMJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Lemak Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GSMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Grandma's Chicken Pie</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GTR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GUNS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HBBJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hyderabadi Briyani (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HBDB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Egg &amp; Vegetable Fried Rice with Hoisin Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HCDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>HIPPIE CHIC Watch &amp; Bracelet Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Frankster (Chicken)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HDMA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hot Dog</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HFL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Premium Flex</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ISDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Idli with Sambar + Kesari</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JAMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Teriyaki</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Miso and Wasabi Onigiri Bento</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JBHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Japanese Bento</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JBMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Japanese Bento Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JCAI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Juice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JCHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Japanese Shrimp Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ume Soba and Tempura Bento</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JPTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Japanese Chicken Teriyaki  with rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lemon Chicken In Marble Bread Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Lasagne (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LGMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>SimplySiti Simply Elegant Lip Gloss Duo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LGUN</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LICB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lil' Star Combo: Mini Pizza + Snacks</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LLCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lil' Star Combo: Mini Pizza + Snacks</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LLDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>LIFETRONS SWITZERLAND Lifetrons Pro Travel Lens</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LLMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lil’ Star Combo: Mini Pizza + Mini Chicken Bites + Snacks</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEAC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chic Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEAD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Briyani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEAE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roti Canai</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEQA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Kuning</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEQB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chic Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEUG</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>maXimise my meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEXA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Fried Rice/D7 M'sia Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEXB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Focaccia/D7 Int'l Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEXC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Vege Fried Rice/D7 Vege Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 30kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 35kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 40kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAO</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 10kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBCR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Car Rental</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBLA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 15kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBLB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBLC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 25kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBLD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 30kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBLF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 40kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBPA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>1 piece of checked baggage (max. 20kg)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBPB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>2 pieces of checked baggage (max. 20kg each)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBSE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports Equipment 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBVP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Red Carpet - Prebook</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pancakes + Maple Syrup + Butter</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCIC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCMK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Comfort Kit</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Lemak Special Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCNF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pay counter fee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pasta with Chicken &amp; Holy Basil</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PCXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pancakes</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Palak Pulao with Subz Kadhai &amp; Dal Bukhara</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PDRC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PDUV</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Prebook Duvet</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PECB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Penne Pasta with Tomato Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Promo free baggage</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Promo free meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Grilled Chicken in Pesto Sauce Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GSDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Grandma's Chicken Pie</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEXD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Chicken Rice/D7 Kid's Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MWAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MWFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MWHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water (350ml)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MWI5</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MWQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MWZ2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MXAI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hokey Pokey Ice Cream</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MXAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Red Velvet Cake</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MXFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Green Tea Pudding with Red Bean Paste + Hot Green Tea</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BQCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Masala Cheese Omelette with BBQ Chicken Kebab</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BRCA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bukhara chicken briyani combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bukhara Chicken Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BRKX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hotcakes Stack Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BRMA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Nasi Briyani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Beef Stew with Pasta</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BSDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>BVLGARI Mon Jasmin Noir Travel Spray Set 15ml + 50ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BSTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Stir-fried Beef with Sesame Oil and Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CEMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Tanamera x AirAsia Relaxing Cold Eye Mask</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFAI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFAJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hot Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFBC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Panini</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFI5</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>
+              Coffee&#xD;
+            </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFPQ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee (240ml)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CODI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cheese Omelette with Chicken Sausage</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>COHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>COMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cheese Omelette with Chicken Sausage</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>COTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spicy Fried Chicken with Rice and a Thai Omelette</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Stroganoff With Parsley Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CPDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>KYUTEC Camera Pen</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CPML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Complimentary Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CPTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coconut Pudding Dessert</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CPXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Panini</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DUSE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Standard seat selection</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ECF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Exept check-in fee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>EGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Fried Rice with Fried Egg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>EPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Exotic Vegetables, Feta &amp; Spinach Pasta</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ESO</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ESOH</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ESOS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ETCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>EXST</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Extra seat</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FCFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FCHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HKDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>HICKIES Elastic Lacing System (Rainbow) </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HLDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>HICKIES ELASTIC LACING SYSTEM</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HOMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia Hotshot Mug 12oz</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HRDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Healthy Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>HVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hyderabadi Vegetable Biryani with Dal Bukhara  (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IBPR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IBPW</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ICML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Uduk Special Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRWX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure return int'l (FLY THRU/11-30 days)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MUTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Banana Cake with Malee Orange Juice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MXQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Corn Salad + Gula Melaka Muffin</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MYDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pak Nasser’s Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MYMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pak Nasser's Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hyderabadi Murg Biryani with Tale Ande Ka Salan</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Dagang with Chicken Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>JSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Junior Cho's Korean Beef Stew</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KBDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Kebab with Basmathi Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KBMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bibimbap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KCAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kung Pao Chicken with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KCMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kung Pao Chicken with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kung Po Chicken with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KCXJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lil' Star Combo: Mini Vegetarian Pizza + Light Bites (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LLTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lil' Star Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LMDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>L'OREAL PARIS Couture Mademoiselle Makeup Palette</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LNCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Martin Yan’s Longevity Noodles + Coca-Cola</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LNDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Longevity Noodles</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LNGE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia Lounge access</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LNMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Martin Yan’s Longevity Noodles</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Laccha Paratha With Veg Croquette And Chole</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LSAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Paneer Tikka &amp; Sheek Kebab Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MREL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>
+              Masala Pao with Murgh Kheema Anda Masala&#xD;
+            </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MSDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MSDX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MSFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MTAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Murg Tikka Kalimirch, Sun Dried Onion Pulao with Dal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MUDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>maXimize your meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MUPG</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pineapple tart and juice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Lasagna</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LSDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>LIFETRONS Rechargeable Luggage Scale with Digital Color Display</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LSDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Lasagne</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LSMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Lasagne</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LSPQ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LTML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Late meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>LWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Lamb Kathi Kebab Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MAAS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Speech impaired / Deaf &amp; blind</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mac and Cheese with Chicken Meatballs</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MFAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Masala Frittata with Chicken&amp;Leek Croquette,Herb Potato Wedges</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MFHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Malaysian Fried Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kamal's Mee Goreng Mamak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MGFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Exotic mango with sticky rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MHCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mustard &amp; Herb Chicken Thigh with Pepper Sauce and Sauteed Veg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MIDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>MILI Universal Charger Plus</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pak Nasser’s Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NLXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pak Nasser's Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Minyak Palembang</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NMXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Minyak Palembang</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Padang Uda Ratman</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Tomato Rice with Ayam Percik</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nizami Chicken Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>NYCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nyonya Prawn Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Lemak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MEAB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hot Dog</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MMMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kamal's Mee Goreng Mamak</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MMPG</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Max Your Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MOCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Masala Omelette With Chicken Nuggets And Parsley Potatoes</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Masala Pulao with Palak, Kashmiri Dum Aloo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MPDC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MPDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>GIVENCHY 3-Step Makeup Palette</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Exotic Mango with Sticky Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ODDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>ÖGON DESIGNS Quilted Passport Wallet Black</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ODTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Oyako Don</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>OFW</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>OGMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ORDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Uncle Chin’s Chicken Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ORML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Rice Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ORMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Uncle Chin's Chicken Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>OSDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>OREGON SCIENTIFIC I.BALANCE NEGATIVE ION EVERYDAY BANGLE</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>OSTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Rice with Shrimp and Basil and Thai Omelette</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>OZDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>OKAMIZU Okaline Alkaline Biostick (2 units)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PACB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Maan's Pasta Arrabiata</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PB15</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pre-purchase baggage 15kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PB20</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pre-purchase baggage 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PB25</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pre-purchase baggage 25kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PB30</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pre-purchase baggage 30kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 15kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PBAC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 25kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BPDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>BUCKLEY LONDON ROSE GOLD ICE CUBE PENDANT &amp; BRACELET SET</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MBDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>CRISS Tungsten Carbide Bio Magnetic Bracelet for Men</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MKBV</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mat Kelapa</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MLCT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>MultiCity</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MLDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>MONTBLANC LEGEND EDT 50ML</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MMAI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Fruit salad + Ice cream</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MMAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coleslaw and Gula Melaka Muffin</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Assorted sandwiches</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASD1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bali (Zone 1)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASD2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bali (Zone 2)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASD3</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bali (Zone 3)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASD4</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bali (Zone 4)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASD5</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bali (Zone 5)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASD6</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bali (Zone 6)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>ANNA SUI Miniatures Gift Set (with Pouch) 5 x 4ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ATCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Aloo Gobi Ki Tehari with Mirch Ka Salan</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ATM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Angkatan Tentera Malaysia</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ATML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>ATM Late meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ajwain Poori, Aloo Methi Tamatari &amp; Veg Cutlet</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AVIP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Red Carpet - Airport</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AVML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vege Rice Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BBAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bisi Bele Bath</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BBHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Rice with Beef in Black Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BBMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Big Breakfast+ Juice + Coffe/Tea</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Butter Chicken with Flavoured Rice + Fanta Orange + Peanuts</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BTDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>BRAUN Battery Toothbrush</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BTTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bento Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWAI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bottled Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWAJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water 285ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water (Cup)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bottled Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CECB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cheesy Chicken Piccata Pasta</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Triple Chocolate Muffin</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MCDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>MISSHA Super Aqua Cell Renew Snail Cream 47ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MCDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mac and Cheese with Chicken Meatballs</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MCMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mac and Cheese with Chicken Meatballs</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>MDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Peas Pulao and Tawa Machi with Masoor Dal Tadka</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Coffee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFSA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Smoked Chicken Focaccia</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFXJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>
+              Coffee&#xD;
+            </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>
+              Coffee&#xD;
+            </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CFZ2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>CHICKEN CURRY &amp; MASALA KULCHA</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CHCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cheesy Chicken Burger In Sesame Bun</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CHGA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Free 1x flight change</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CHLD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Child pax</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CHMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kid's Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CHNA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ancillary bundle A (AAX)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CQDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>CLINIQUE All - In - One Colour Palette</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRCA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Rice Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Uncle Chin's Chicken Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRGB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Rendang with Basmathi Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRMA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Chicken Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Briyani with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CRXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Uncle Chin's Chicken Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CMMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roasted Stuffed Chicken with Mushroom Tarragon Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CNCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Caesar Chicken Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KEDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>KYUTEC ELECTRO PAIN RELIEF PADS</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KJCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Korean Japchae</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KNDL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KOMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kimchi Chicken Duruchigi</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KRTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Korean Kimchi Stir-fry Chicken with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KSBJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>KSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mac &amp; Cheese Sauce with Broccoli</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Assorted Sandwiches</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CSSA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chic sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Tikka with Tamarind Chutney</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CTHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Teriyaki with Mushroom Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CTRF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Counter check-in fee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CUCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cupcakes</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Vindaloo Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CVTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Stir-fried Chinese Noodles with Vegetables</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FCXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Frankster (Chicken)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FPML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Asian Fried Rice Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FRCA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Fried Rice with Chicken Satay Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Asian Fried Rice with Chicken Satay</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FRDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>FERRARI Deluxe Essence Miniatures Set EDP for Men</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FRMA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Asian Fried Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FRXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Asian Fried Rice with Chicken Satay</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegan Tofu with Rice Pilaf (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>FWDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>FOLLI FOLLIE Logomania Wallet</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>South Indian Delight</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IDMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Butter Chicken Masala</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>INF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Infant</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>INFT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Infant</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>INMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>International cuisine</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>INSV</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Value Pack Insurance (except DJ flights)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IODF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IODM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure one-way domestic</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IORG</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure one-way regional</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IOWW</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure one-way int'l (International/FLY THRU)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASB1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bandung (Zone 1)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASB2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Bandung (Zone 2)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IPF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Itinerary printing fee</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IPSM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IPSO</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRDM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure Return Domestic (1 - 10 days or Z2 1 - 14 days)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRDZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure Return Domestic (11 - 30days or Z2 15 - 30 days)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRGO</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRRG</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure Return Regional (1 - 10 days or Z2 1- 14 days)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRRZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure Return Regional (11 - 30 days or Z2 15 - 30 days)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>IRWW</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Insure return int'l (FLY THRU/1-10 days)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Thai Green Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASGB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASI1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird (Zone 1)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASI2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird (Zone 2)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASI3</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird (Zone 3)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASK1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Medan (Zone 1)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASK2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Medan (Zone 2)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASK3</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Medan (Zone 3)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BBUS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cross-Border Bus</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Black Pepper Mushroom Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BCDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>BUCKLEY LONDON Heart Charm Scrunchy DUO</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BCMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia Red Baseball Cap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BCMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ashok's Butter Masala Chicken Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Thai Hot Basil Chicken Stir-fry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Beef Caldereta</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BEDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>BANANA REPUBLIC Classic EDT Duo 2 x 50ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>000</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ABCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ashok's Butter Masala Chicken Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ABFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ABMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Allstars Bears Collection</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ABP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ACHK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ACMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia A320 Generic Aircraft Model (1:150)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ADSR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Advanced seat request</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AE01</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AE02</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AE03</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AE04</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AE05</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water (350ml)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWPQ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bottled Water (350ml)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water (Cup)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWXJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bottled Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BWXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bottled Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BXDA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Regular - up to 15kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BXDB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Medium - up to 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BXDC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Large - up to25kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BXDD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Xtra Large - up to 30kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BXDE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Baggage - up to 40kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AE06</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEAB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEAC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEBA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEBB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEBC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEBD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEBE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AEBJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Asian Fried Rice with Chicken Satay + Teh Tarik</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AFU</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AKFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ALCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Andhra Chicken Fry with Lemon Rice &amp; Beans Poriyal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CHNB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ancillary bundle B (AAX)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CICB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cheese Omelette, Lyonnaise Potatoes and Chicken Tikka</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CJCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Tikka Masala with Jeera Rice and Dal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Kebuli with Chicken Kalio + Banana Compote + Dates</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>CALVIN KLEIN Miniatures Individually Packed Coffret for Her</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKI5</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CXCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken ham and mexican coleslaw sandwich with marble bread</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CYCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Yang Chow</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DCHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DEAF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Deaf Pax</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DGMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Dagang with Chicken Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DLML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DNGJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nameshi Dengaku (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DOCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Dilli Ke Raseele Rajma with Jeera Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DREL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DRM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>DSMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Glutinous Rice with Chicken and Dim Sum Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Green Curry Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCGB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Green Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>GoCorporate</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCPF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCPL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Green Curry Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GCXJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GFMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Miso Chicken with Garlic Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>GOV</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Warrant Add-on</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASS2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Surabaya (Zone 2)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Assorted Sandwiches</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Katsu Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CKZ2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CLCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mysore Chicken Curry, Lemon Rice, Keerai Koottu</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CLPQ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CLTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Lasagne</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Mayo with Apple Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CMDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>CAMUS VSOP Elegance 1.0 Litre</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Classic Beef Burger</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BFHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Breakfast Frittata</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BFMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kimchi Beef Fried Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BGAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 1</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BGAB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 2</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BGAC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage3</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BGAD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 4</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BGAE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Checked baggage 5</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Bangus Sisig</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BYCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Briyani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CABD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CACB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Adobo ala Mariles</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>ML Noi's Basil Fried Chicken on Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CBMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kid’s Meal (Mini Chicken Burgers + Dutch Lady Chocolate Milk)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CBTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Rice Soup Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CCBC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CCBD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Chettinad</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AMBU</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AMD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Comfort kit</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>AMDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>ANGRY BIRDS Small Set Miniatures 4X5ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia Airport Play Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Minyak with Ayam Percik</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APTA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APTB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APTC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APTI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>APVP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Red Carpet - Airport</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Auto Seat Assignment</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASM1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Skybus (KL Sentral)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASM2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Skybus (1 Utama)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASM3</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Skybus (JB1)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASM4</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Skybus (JB2)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Asian Meal Bibimbap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Thai Green Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Standard seat</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ASS1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Golden Bird Surabaya (Zone 1)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BHDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>BANG &amp; OLUFSEN Headphone Beoplay Form 2</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BICB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Big Breakfast</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BLK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>20% off for Philippine Senior Citizens/Person with Disability</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BLML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Nasi Briyani Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BLND</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Blind Pax</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BMDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ashok's Butter Masala Chicken Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BMMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Ashok's Butter Masala Chicken Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BMXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>BPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Broccoli Paratha with Aloo Jeera Tamatri and Corn Peas Cutlet</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>TOMATO, CUCUMBER AND CHEESE SANDWICH</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated drink (Coca-Cola)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>
+              Carbonated Drink (250ml)&#xD;
+            </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDPQ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink (250ml)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDXJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>CDXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SACB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay (5 sticks)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SBAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kid’s Meal ( Mini Chicken Burgers + Ribena)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spaghetti Chicken Bolognaise</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SBTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SBXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spaghetti Chicken Bolognese</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SCAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kid’s Meal (Mac and Cheese +  Ribena)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spaghetti Chicken Bolognaise</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>South Indian Delight</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VECB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Chickpea Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Fried Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VGML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Value Pack meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VGMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spinach &amp; Mushroom Lasagna</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VGTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegan Tofu with Rice Pilaf (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VIDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Biryani Rice with Vegetable Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PFTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Pad Thai Noodles with Tofu</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PHDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>PANDORA STARTER BRACELET WITH HEART CHARM</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PHTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Philippines travel tax</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PKMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Chicken with Pumpkin Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PLCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Paneer Lababdar, Jeera Pulao with Dal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PMHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pasta Marinara</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PMP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Inflight entertainment</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PMPC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PNCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Peri Peri Paneer Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Paneer Makhni with Peas Pulao and Dal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Pasta</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PREL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRMB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRMK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRMM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRMP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRMR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PRXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Pasta</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Smoked Chicken Pizza Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>PANDORA I Love to Travel Charm Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Smoked Chicken Pizza Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSEA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports equipment 15kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSEB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports equipment 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSEC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports equipment 25kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSED</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports equipment 30kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSEE</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports equipment 35kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSEF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sports equipment 40kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSFM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Passenger Service Fee - Myanmar</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSIC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSKY</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>SkyRider</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Smoked Chicken Pizza Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PSP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Playstation Portable</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pad Thai</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PTDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>OPI 'Passport to Color' Travel Retail Exclusive Set 6 x 3.75ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PTTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Pad Thai with Prawns</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PTXC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PUMH</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>UMRAH/Hajj pax</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PVBC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Paneer and Mix Vegetables In Tomato Roomali Roti Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PVIP</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Red Carpet - Prebook</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PWDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>KYUTEC Camera Watch</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PXCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Corn &amp; Bell Peppers Sandwich with Pesto Mayo In Marble Bread</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>PZCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Cheesy Chicken Pizza</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RADI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roasted Chicken with Stuffing and Cranberry Gravy</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RAMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roasted Chicken with Stuffing and Cranberry Gravy</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Smoky BBQ Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with BBQ Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RCMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Stuffing and Cranberry Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Stir-fried Rice Noodles with Coconut Milk</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Dijon Creamy Mushroom Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RDXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Djon Creamy Mushroom Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken &amp; Gherkins Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RICB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Corn Fried Rice with Vegetable Manchurian  (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RKCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roasted Chicken with Sundried Tomato Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RLDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>RIMMEL LONDON 'Retro‘Mania' 1.1ml + 7ml + 12ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay with Peanut Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ROCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roti Canai With Chicken Curry + Teh Tarik</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RPCJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RPDI</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roti Prata with Chicken Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RPMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roti Prata with Chicken Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RQVS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Cream Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RSHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Rice with Shrimp &amp; Bok Choy</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RSTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Tasty grilled chicken with baked jasmine rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roti Canai With Chicken Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RVBC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roasted Veg Sandwich with Cheese&amp;Mint Mayo in Masala Bread</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>RXCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roast Chicken with Sautéed Vegetables</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SCFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>KID's Meal (Chicken Macaroni + Beverage)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SCML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>SkyRider Club Ace meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SCQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mac and Cheese with Chicken Meatballs</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SCXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kid’s Meal (Mac and Cheese + Beverage)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SDAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kid’s Meal (Mac and Cheese +  Ribena)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SDCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Assorted Sandwiches</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SDHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Carbonated Drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SECB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Curry with Steamed Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SEKR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AAX Sports equipment Korea promo 20kg</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Stir Fried Mushroom with Basil</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SFHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Seafood Fried Noodle</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Scallop Congee with Youtiao</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SHCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Shepherd’s Pie</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SICB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>South Indian Delight  (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SLTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spinach and Corn In Multi Grain Bread Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SMMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spaghetti Meatball Bolognese Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SNAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Deli Chicken Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SNCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Singapore fried noodle with Thai dessert and drink</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SNTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Deli Chicken  Focaccia Bread  Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SPAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Special meal of the month AK</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Non-veg pie – Smoked Chicken and Mushroom Pie</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SPFD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Special meal of the month FD</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SPML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Special Meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SPMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Special request AAX</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SPQZ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Birthday Cake QZ</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Dada's Roast Chicken with Sticky Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SREL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sweet and Sour Fish Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SSMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sweet &amp; Sour Chicken Meatballs with Garlic Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SSTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>STCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>STMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Salmon Teriyaki Rice Bowl</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>STXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay (5 sticks)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Roasted Corn and Thyme Sandwich</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Satay Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>SZCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Subz Pulao with Tawa Chicken Slice and Tadka Tamateen</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TACB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Grilled Basa Fish with Sautéed Vegetables</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TAMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia Double USB Travel Adapter (Red)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Teriyaki Chicken Rice Cake + T&amp;CO Green Tea</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TEAJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hot Japanese Tea</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TEMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AirAsia Travel Essential Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TFAA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TFAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TFCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegan Tofu with Rice Pilaf (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TFMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegan Tofu with Rice Pilaf (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TGCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken in Thai Green Curry and Steamed Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TGCJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Thai Green Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>THCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Thai Green Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TKCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Paneer Tikka Pie, Samosa Chole</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TLCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TLDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>TALIKA Light DUO® Collagen Booster and Skin Lightener with Mask</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TOMJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spicy Chicken Fried Rice wit Thai Omelette</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TPDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>TOSCOW   Ocean Mist - Glow  Cultured Pearl</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spicy Tuna Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Tandoori Chicken Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>TXCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Tikka Sandwich with Mint Mayo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>UCTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Uncle Chin’s Chicken Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>UCXJ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VACB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Enchiladas with Cheese, Potato Wedges, Peas &amp; Corn</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Hyderabadi Vegetable Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Curry with Biryani Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBIN</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>1 meal</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBPB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBPM</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VBPS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCAX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCBD</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Pasta with Roast Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Curry with Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VCMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Briyani Rice with Vegetarian Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VIMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Biryani Rice with Vegetarian Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VKCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Aloo Bhaji With Peas Pulao (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Manchurian Rice (V)</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VMDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>VERSACE Miniatures Collection for Women 4.5ml + 4 x 5ml</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VOCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Chicken with Pumpkin Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VOMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Luohan Zhai - Veggie Delight</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VPCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Pasta in Tomato Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VPML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Non-vegetarian Value Pack meal </a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VRCA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vege Fried Rice Combo</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VRCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Kabali Vegetable Biryani</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VRMA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>AA Vegetarian Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Stroganoff With Parsley Rice</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VTCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Fried Rice with Mixed Vegetables</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VTXT</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetarian Fried Rice with Tofu Lampion</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VVCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetables in Red Thai Curry</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VVDF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>VIVALDI 8 Pieces Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>VWCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Vegetable Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WAK</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Warrant Add-on</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WAKL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Late Warrant</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WATX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WBCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>English Muffin Hot Sandwich with Coffee or Tea</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WBHL</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Mineral Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WBTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>American Breakfast Set</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCAR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Airport unable to walk long distance</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCAS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Airport unable to ascend and descend steps</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Sesame Chicken Wrap</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCHA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Arrival request wheelchair</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCHC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Paraplegic</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCHQ</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Quadriplegic</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCHR</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Unable to walk long distance</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCHS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Unable to ascend and descend steps</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCHX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>WCHX Wheelchair 3</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCMS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>SimplySiti Simply Elegant 2 Way Cake</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WCVC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WEMX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Chicken Lasagne</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WETX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Spaghetti Chicken Bolognese</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WHML</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Japanese Beef Hamburg Steak with Tomato Sauce</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WOWA</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Birthday</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>WSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Grilled Chicken with Mustard Sauce, Rye Bread with Mineral Water</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XBAG</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Xpress baggage</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XBC</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Xpress Boarding</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XBD1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Xpress Boarding</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XBD2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Xpress Boarding</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XBS</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Xpress Boarding</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Grilled Chicken Breast in Mushroom Sauce with Veggies</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Southwest Stuffed Chicken</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XST1</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>One xtra seat</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>XST2</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Two xtra seats</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>YMCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Yamanashi Mochi</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>YMTX</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Yamanashi Mochi</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>YODF</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>YOU Rose Gold Trinity necklace</a:Name>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>YSCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name/>
+          </a:CodeName>
+          <a:CodeName>
+            <a:Code>ZCCB</a:Code>
+            <a:CultureCode>en-GB</a:CultureCode>
+            <a:Name>Exotic Mexican Vegetable Steak with Mushroom Cream Sauce</a:Name>
+          </a:CodeName>
+        </a:CodeNames>
+      </GetCodeNameResult>
+    </GetCodeNameResponse>
+  </s:Body>
+</s:Envelope>

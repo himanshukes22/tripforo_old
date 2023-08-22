@@ -1,0 +1,202 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="FltSearch.ascx.vb" Inherits="UserControl_FltSearch" %>
+<link type="text/css" href="<%=ResolveUrl("~/Styles/jquery-ui-1.8.8.custom.css") %>"
+    rel="stylesheet" />
+<style type="text/css">
+    .txtBox {
+        width: 140px;
+        height: 18px;
+        line-height: 18px;
+        border: 1px #D6D6D6 solid;
+        padding: 0 3px;
+        font-size: 11px;
+    }
+
+    .txtCalander {
+        width: 100px;
+        background-image: url(images/cal.gif);
+        background-repeat: no-repeat;
+        background-position: right;
+        cursor: pointer;
+        border: 1px #D6D6D6 solid;
+    }
+
+    .style1 {
+        height: 248px;
+    }
+    input[type=checkbox] {
+    margin-top: 15px;
+}
+</style>
+<div  ></div>
+<div class="w70 auto serchbox">
+    
+        
+        <div class="w100">
+            <div class="tital">Search Domestic And International Flights</div>
+            <input type="radio" name="TripType" value="rdbOneWay" id="rdbOneWay" checked="checked" />
+            One-Way
+            <input type="radio" name="TripType" value="rdbRoundTrip" id="rdbRoundTrip" /> 
+            Round-Trip 
+        </div>
+        
+                                
+                                <div class="w40 lft">
+                                    <input type="text" name="txtDepCity1" value="From" onClick="this.value = '';" id="txtDepCity1" class="loginbox1"  />
+                                    <input type="hidden" id="hidtxtDepCity1" name="hidtxtDepCity1" value="" />
+                                </div>
+                           
+                                <div class="w40 rgt">
+                                    <input type="text" name="txtArrCity1" value="To" onClick="this.value = '';" id="txtArrCity1" class="loginbox1" />
+                                    <input type="hidden" id="hidtxtArrCity1" name="hidtxtArrCity1" value="" />
+                                </div>
+                            <div class="clear1"></div>
+    <div class="w40 lft">
+                                <div class="w40 lft">Depart :<br />
+                                
+                                
+                                    <input type="text" name="txtDepDate" id="txtDepDate" class="txtCalander" value=""
+                                        readonly="readonly" />
+                                    <input type="hidden" name="hidtxtDepDate" id="hidtxtDepDate" value="" />
+                               </div>
+                           
+                                <div class="w40 rgt">Return :<br />
+                               
+                               
+                                    <input type="text" name="txtRetDate" id="txtRetDate" class="txtCalander" value=""
+                                        readonly="readonly" />
+                                    <input type="hidden" name="hidtxtRetDate" id="hidtxtRetDate" value="" />
+                                
+                                </div> </div>
+    <div class="w30 rgt" style="background-color:#fff; margin-right:68px;">
+                           
+           
+        <div class="w100">Choose Passengers<br />
+                                </div>
+                           
+                                <div class="lft">Adults(12+)
+                                </div>
+                                <div class="mright10 lft">
+                                    <select name="Adult" id="Adult">
+                                        <option value="1" selected="selected">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                            
+                                <div class="lft">Children(2-11)
+                                </div>
+                                <div class="lft mright10">
+                                    <select name="Child" id="Child">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                           
+                                <div class="lft">Infants(Under 2)
+                                </div>
+                                <div class="lft mright10">
+                                    <select name="Infant" id="Infant">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div></div>
+                         <div class="clear1"></div>
+        <div class="lft w100" style="display:none;">
+                                <div class="lft ptop10">Prefer Non-Stop Flight
+                                </div>
+                                <div class="lft mright10">
+                                    <input type="checkbox" name="chkNonstop" id="chkNonstop" value='Y' />
+                                </div>
+                           
+                            <div class="lft" id="trAdvSearchRow" style="display: none">
+                                <div class="lft ptop10">All Fare Classes
+                                </div>
+                                <div class="lft mright10">
+                                    <input type="checkbox" name="chkAdvSearch" id="chkAdvSearch" value="True" />
+                                </div>
+                            </div>
+                           
+                                <div class="lft ptop10">Gds Round Trip Fares
+                                </div>
+                                <div class="lft mright10">
+                                    <input type="checkbox" name="GDS_RTF" id="GDS_RTF" value="True" />
+                                </div>
+                          
+                                <div class="lft ptop10">Lcc Round Trip Fares
+                                </div>
+                                <div class="lft mright10">
+                                    <input type="checkbox" name="LCC_RTF" id="LCC_RTF" value="True" />
+                                </div>
+                           
+                               
+           
+               
+</div>
+
+    <div class="w40 rgt">
+
+         <div class="lft ptop10">Class :
+                                </div>
+                                <div class="lft ptop10 mright10">
+                                    <select name="Cabin" id="Cabin">
+                                        <option value="">--All--</option>
+                                        <option value="Y">Economy</option>
+                                        <option value="C">Business</option>
+                                        <option value="F">First</option>
+                                    </select>
+                                </div>
+                          
+                                <div class="lft ptop10 mright10">Airline :
+                                </div>
+                                <div class="lft ptop10 mright10">
+                                    <input type="text" name="txtAirline" value="" id="txtAirline" class="txtBox" />
+                                    <input type="hidden" id="hidtxtAirline" name="hidtxtAirline" value="" />
+                                </div>
+         <div class="clear1"></div>
+
+                         
+                    
+
+    </div>
+
+    <div class="clear1"></div>
+    <div class="rgt w20 mright10">
+                        <input type="button" id="btnSearch" name="btnSearch" value="Search"/>
+                    </div>
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+    var myDate = new Date();
+    var currDate = (myDate.getDate()) + '/' + (myDate.getMonth() + 1) + '/' + myDate.getFullYear();
+    document.getElementById("txtDepDate").value = currDate;
+    document.getElementById("hidtxtDepDate").value = currDate;
+    document.getElementById("txtRetDate").value = currDate;
+    document.getElementById("hidtxtRetDate").value = currDate;
+    var UrlBase = '<%=ResolveUrl("~/") %>';
+</script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.4.4.min.js") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-ui-1.8.8.custom.min.js")%>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/change.min.js") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/search3.js") %>"></script>

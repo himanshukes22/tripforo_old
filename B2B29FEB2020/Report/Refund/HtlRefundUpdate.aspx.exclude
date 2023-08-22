@@ -1,0 +1,228 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="HtlRefundUpdate.aspx.vb" Inherits="HtlRefundUpdate" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+     <link href="../../CSS/main2.css" rel="stylesheet" type="text/css" />
+ <link href="../../CSS/style.css" rel="stylesheet" type="text/css" />
+       
+<script type="text/javascript">
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if ((charCode >= 48 && charCode <= 57) || (charCode == 8)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }	 
+</script>
+
+ <script language="javascript" type="text/javascript">
+      function Validate() {
+          if (document.getElementById("<%=txtRefundCharge.ClientID%>").value == "") {
+              alert("Please Provide Cancellation Charge");
+              document.getElementById("<%=txtRefundCharge.ClientID%>").focus();
+              return false;
+          }
+
+          if (document.getElementById("<%=txtServiceCharge.ClientID%>").value == "") {
+              alert("Please Provide Service Charge");
+              document.getElementById("<%=txtServiceCharge.ClientID%>").focus();
+              return false;
+          }
+      }
+             
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            height: 20px;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width: 83%;" >
+        <tr>
+            <td>
+                <table cellspacing="0" align="center">
+                    <tr>
+            <td>
+            <table cellspacing="10" cellpadding="0" style="" >
+                                <tr>
+                                    <td  align="center" style=" font-weight: bold; font-size:large; height:38px;">
+                                       Update Hotel Cancellation
+                                    </td>
+                                </tr>
+                                               
+                    <tr>
+                        <td >
+                            <table border="0"  cellspacing="0" width="100%" align="center" style="padding: 0 5px">
+                                <tr>
+                                    <td style="font-weight: bold; font-size:medium;" colspan="4" align="center">
+                                         Agent Detail
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TextBig" width="92px" height="20px">
+                                        Agent ID:
+                                    </td>
+                                    <td id="td_AgentID" runat="server" class="Text" width="150px">
+                                    </td>
+                                    <td class="TextBig" width="150px" height="20px">
+                                        Available Credit Limit:
+                                    </td>
+                                    <td id="td_CardLimit" runat="server" class="Text" width="150px">
+                                      
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TextBig" width="92px" height="20px">
+                                        Agent Name:
+                                    </td>
+                                    <td id="td_AgentName" runat="server" class="Text">
+                                    </td>
+                                    <td class="TextBig">
+                                        Agency Name:
+                                    </td>
+                                    <td id="td_AgencyName" runat="server" class="Text" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td class="TextBig">
+                                        Address:
+                                    </td>
+                                    <td id="td_AgentAddress" runat="server" class="Text" width="200px">
+                                    </td>
+                                    <td class="TextBig" width="92px" height="20px">
+                                        Street:
+                                    </td>
+                                    <td id="td_Street" runat="server" class="Text" width="200px">
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="TextBig" width="92px" height="20px">
+                                       Email:
+                                    </td>
+                                    <td id="td_Email" runat="server" class="Text">
+                                    </td>
+                                    <td class="TextBig">
+                                        Mobile No:
+                                    </td>
+                                    <td id="td_AgentMobNo" runat="server" class="Text">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    </table>
+                    </td>
+                    </tr>
+                        <tr><td>
+                    <asp:GridView ID="grd_htlhold" runat="server" AutoGenerateColumns="False" CssClass="mGrid">
+                        <Columns>
+                        
+                        <asp:TemplateField HeaderText="Order ID">
+                            <ItemTemplate>
+                             <asp:Label ID="lblOrderId" runat="server" Text='<%#Eval("OrderId")%>'></asp:Label>
+                              </ItemTemplate>                            
+                        </asp:TemplateField>
+                        
+                        <asp:TemplateField HeaderText="Booking ID">
+                            <ItemTemplate>
+                               <a href='../../Hotel/BookingSummaryHtl.aspx?OrderId=<%#Eval("OrderId")%> &BID=<%#Eval("BookingID")%>'
+                                 rel="lyteframe" rev="width: 830px; height: 400px; overflow:hidden;" target="_blank"
+                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #004b91">
+                                 <asp:Label ID="lblBID" runat="server" Text= '<%#Eval("BookingID")%>'></asp:Label><br />(Detail)</a>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                         <asp:BoundField DataField="StarRating" HeaderText="Star" />
+                         <asp:BoundField DataField="HtlName" HeaderText="Hotel Name" />
+                         <asp:BoundField DataField="RoomName" HeaderText="Room Name" />
+                    <%--    <asp:BoundField  DataField="Agency_Name" HeaderText="Agency Name" />--%>
+                        <asp:TemplateField HeaderText="Agent ID">
+                            <ItemTemplate>
+                             <asp:Label ID="lblAgent" runat="server" Text='<%#Eval("AgentID")%>'></asp:Label>
+                              </ItemTemplate>                            
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Agency Name">
+                            <ItemTemplate>
+                             <asp:Label ID="lblAgency" runat="server" Text='<%#Eval("Agency_Name")%>'></asp:Label>
+                              </ItemTemplate>                            
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="PgFName" HeaderText="Frist Name" />
+                         <asp:BoundField DataField="PgLName" HeaderText="Last Name" />
+                        <asp:BoundField DataField="TotalCost" HeaderText="Total Cost" />
+                        <asp:TemplateField HeaderText="Net Cost">
+                            <ItemTemplate>
+                             <asp:Label ID="lblNetCost" runat="server" Text='<%#Eval("NetCost")%>'></asp:Label>
+                              </ItemTemplate>                            
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="RoomCount" HeaderText="No.of Room" />
+                        <asp:BoundField DataField="NightCount" HeaderText="N0.of Night" />
+                        <asp:BoundField DataField="BookingDate" HeaderText="Booking Date" />
+                        <asp:BoundField HeaderText="Submit Date" DataField="SubmitDate" />
+                        <asp:BoundField HeaderText="Accept Date" DataField="AcceptDate" />
+                                            </Columns>
+                                        </asp:GridView>
+                                     </td>
+                                     </tr>    
+
+                                <tr>
+                                    <td>
+                                     <table width="100%" cellpadding="2" cellspacing="2" border="0">
+                                    <tr >
+                                        <td style="font-weight: bold;">
+                                            Cancellation Charge: </td>
+                                            <td> <asp:TextBox ID="txtRefundCharge" runat="server" Height="20px" Width="92" onkeypress="return isNumberKey(event)"></asp:TextBox>
+                                       </td>
+
+                                        <td style="font-weight: bold">
+                                            Service Charge:</td>
+                                            
+                                        <td>
+                                            <asp:TextBox ID="txtServiceCharge" runat="server" Height="20px" Width="92" onkeypress="return isNumberKey(event)"></asp:TextBox>
+                                        </td>
+                                        <td style="font-weight: bold;">
+                                            Remarks:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtRemark" runat="server" TextMode="MultiLine" Height="47px" ></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <td></td><td></td>
+                                        <td  align="center">
+                                            <asp:Button ID="btn_Update" runat="server" Text="Update" OnClientClick="return Validate();"
+                                                CssClass="button" />
+                                        </td>
+                                        <td  align="center">
+                                            <asp:Button ID="btnCancel" runat="server" Text="Close" 
+                                                CssClass="button" />
+                                        </td>
+                                    </tr>
+                                 <tr>
+                                                <td colspan="6">
+                                                    <asp:Label ID="lblmessage" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6">
+                                                    <asp:Label ID="lblCancelPoli" runat="server" Font-Bold="true"></asp:Label>
+                                                </td>
+                                            </tr>
+                                </table>
+                                     </td>
+                                </tr>
+                                </table>
+                                     </td>
+                                </tr> </table>
+    </form>
+</body>
+</html>

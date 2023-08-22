@@ -1,0 +1,386 @@
+﻿<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:univ='http://www.travelport.com/schema/universal_v34_0' xmlns:com='http://www.travelport.com/schema/common_v34_0' xmlns:pas='http://www.travelport.com/schema/passive_v34_0'>
+  <soapenv:Header/>
+  <soapenv:Body>
+    <univ:PassiveCreateReservationReq TargetBranch='P2669074' TraceId='HTL2A9235474B' ProviderCode='1G' Version='1'>
+      <com:BillingPointOfSaleInfo OriginApplication='UAPI'/>
+      <com:BookingTraveler Key='1' TravelerType='ADT'>
+        <com:BookingTravelerName First='Sami' Last='Ashraf' Prefix='Mr' />
+        <com:PhoneNumber Number='+91-8879-078867' Type='Mobile'></com:PhoneNumber>
+        <com:Email EmailID='Sami.Ashraf@unilever.com' Type='P'/>
+      </com:BookingTraveler>
+      <com:AccountingRemark Key='HTLPassiveAC-2' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF3/000267056</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-3' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF4/B003Y310</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-4' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF5/YY</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-5' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF6/CT</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-6' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF14/NV</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-7' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF7/S</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-8' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF12/ Sami Ashraf</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-11' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>CMP/Air</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-12' Category='FT' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>PRE-1H/HRR-INR /HRC-·  </com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-13' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF9/yes</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-14' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF10/no</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-17' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF13/ Sami Ashraf</com:RemarkData>
+      </com:AccountingRemark>
+      <com:GeneralRemark Key='HTLPassiveG-1' TypeInGds='Basic'>
+        <com:RemarkData>DICCode-DIC120 DICName-Hindustan Unilever Limited – Ggn</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='MT' Key='HTLPassiveG-9' TypeInGds='Alpha'>
+        <com:RemarkData>Sami.Ashraf@unilever.com</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='P' Key='HTLPassiveG-10' TypeInGds='Alpha'>
+        <com:RemarkData>BOMM +91-8879-078867</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-15' TypeInGds='Basic'>
+        <com:RemarkData>##COMPANYID:10967</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='HE' Key='HTLPassiveG-16' TypeInGds='Alpha'>
+        <com:RemarkData>TR1- Sami.Ashraf*40unilever.com</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-19' TypeInGds='Alpha'>
+        <com:RemarkData>HF 4056</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-20' TypeInGds='Alpha'>
+        <com:RemarkData>LF 3000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-21' TypeInGds='Alpha'>
+        <com:RemarkData>FA 3000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-23' TypeInGds='Alpha'>
+        <com:RemarkData>ALT1 4056</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-25' TypeInGds='Alpha'>
+        <com:RemarkData>NO</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-26' TypeInGds='Alpha'>
+        <com:RemarkData>CF</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-28' TypeInGds='Alpha'>
+        <com:RemarkData>ECO</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-29' TypeInGds='Alpha'>
+        <com:RemarkData>Side Trip</com:RemarkData>
+      </com:GeneralRemark>
+      <pas:PassiveSegment SupplierCode='ZZ' Status='MK' StartDate='2017-04-25T00:00:00+00:00' EndDate='2017-04-27T00:00:00+00:00' Origin='DEL' NumberOfItems='1' SegmentType='Hotel' Key='1' ></pas:PassiveSegment>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>VISTA SIGNATURE</pas:Text>
+        <pas:Type>H</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>standar</pas:Text>
+        <pas:Type>R</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>Hotel Contact Number 1244415555</pas:Text>
+        <pas:Type>SI</pas:Type>
+      </pas:PassiveRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Amount: INR 6000.00</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Plot No B 109 & 110 Near Unitech Signature Towers </com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>TCCODE 750314 TCNAME Chinky Kalra</com:RemarkData>
+      </pas:AssociatedRemark>
+      <com:ActionStatus Key='HTL1817' Type='ACTIVE' TicketDate='2017-04-25T18:17:25.000+00:00' ProviderCode='1G'/>
+    </univ:PassiveCreateReservationReq>
+  </soapenv:Body>
+</soapenv:Envelope>
+
+
+<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:univ='http://www.travelport.com/schema/universal_v34_0' xmlns:com='http://www.travelport.com/schema/common_v34_0' xmlns:pas='http://www.travelport.com/schema/passive_v34_0'>
+  <soapenv:Header/>
+  <soapenv:Body>
+    <univ:PassiveCreateReservationReq TargetBranch='P2669074' TraceId='HTL8FEA683E98' ProviderCode='1G' Version='1'>
+      <com:BillingPointOfSaleInfo OriginApplication='UAPI'/>
+      <com:BookingTraveler Key='1' TravelerType='ADT'>
+        <com:BookingTravelerName First='Sami' Last='Ashraf' Prefix='Mr' />
+        <com:PhoneNumber Number='+91-8879-078867' Type='Mobile'></com:PhoneNumber>
+        <com:Email EmailID='Sami.Ashraf@unilever.com' Type='P'/>
+      </com:BookingTraveler>
+      <com:AccountingRemark Key='HTLPassiveAC-2' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF3/000267056</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-3' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF4/B003Y310</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-4' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF5/YY</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-5' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF6/CT</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-6' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF14/NV</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-7' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF7/S</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-8' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF12/ Sami Ashraf</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-11' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>CMP/Air</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-12' Category='FT' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>PRE-1H/HRR-INR /HRC-·  </com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-13' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF9/yes</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-14' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF10/no</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-17' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF13/ Sami Ashraf</com:RemarkData>
+      </com:AccountingRemark>
+      <com:GeneralRemark Key='HTLPassiveG-1' TypeInGds='Basic'>
+        <com:RemarkData>DICCode-DIC120 DICName-Hindustan Unilever Limited – Ggn</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='MT' Key='HTLPassiveG-9' TypeInGds='Alpha'>
+        <com:RemarkData>Sami.Ashraf@unilever.com</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='P' Key='HTLPassiveG-10' TypeInGds='Alpha'>
+        <com:RemarkData>BOMM +91-8879-078867</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-15' TypeInGds='Basic'>
+        <com:RemarkData>##COMPANYID:10967</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='HE' Key='HTLPassiveG-16' TypeInGds='Alpha'>
+        <com:RemarkData>TR1- Sami.Ashraf*40unilever.com</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-19' TypeInGds='Alpha'>
+        <com:RemarkData>HF 4056</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-20' TypeInGds='Alpha'>
+        <com:RemarkData>LF 3000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-21' TypeInGds='Alpha'>
+        <com:RemarkData>FA 3000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-23' TypeInGds='Alpha'>
+        <com:RemarkData>ALT1 4056</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-25' TypeInGds='Alpha'>
+        <com:RemarkData>NO</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-26' TypeInGds='Alpha'>
+        <com:RemarkData>CF</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-28' TypeInGds='Alpha'>
+        <com:RemarkData>ECO</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-29' TypeInGds='Alpha'>
+        <com:RemarkData>Side Trip</com:RemarkData>
+      </com:GeneralRemark>
+      <pas:PassiveSegment SupplierCode='ZZ' Status='MK' StartDate='2017-04-25T00:00:00+00:00' EndDate='2017-04-27T00:00:00+00:00' Origin='DEL' NumberOfItems='1' SegmentType='Hotel' Key='1' ></pas:PassiveSegment>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>VISTA SIGNATURE</pas:Text>
+        <pas:Type>H</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>standar</pas:Text>
+        <pas:Type>R</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>Hotel Contact Number 1244415555</pas:Text>
+        <pas:Type>SI</pas:Type>
+      </pas:PassiveRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Amount: INR 6000.00</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Plot No B 109 & 110 Near Unitech Signature Towers </com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>TCCODE 750314 TCNAME Chinky Kalra</com:RemarkData>
+      </pas:AssociatedRemark>
+      <com:ActionStatus Key='HTL1819' Type='ACTIVE' TicketDate='2017-04-25T18:19:32.000+00:00' ProviderCode='1G'/>
+    </univ:PassiveCreateReservationReq>
+  </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:univ='http://www.travelport.com/schema/universal_v34_0' xmlns:com='http://www.travelport.com/schema/common_v34_0' xmlns:pas='http://www.travelport.com/schema/passive_v34_0'>
+  <soapenv:Header/>
+  <soapenv:Body>
+    <univ:PassiveCreateReservationReq TargetBranch='P2671670' TraceId='HTLEAAE153E7D' ProviderCode='1G' Version='1'>
+      <com:BillingPointOfSaleInfo OriginApplication='UAPI'/>
+      <com:BookingTraveler Key='1' TravelerType='ADT'>
+        <com:BookingTravelerName First='Vujjanappa' Last='Bandi' />
+        <com:PhoneNumber Number='+91-7795-689706' Type='Mobile'></com:PhoneNumber>
+        <com:Email EmailID='vujjanappa.bandi@cgi.com' Type='P'/>
+      </com:BookingTraveler>
+      <com:AccountingRemark Key='HTLPassiveAC-2' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF5/IN006</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-3' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF8/ASINACESDC</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-4' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF9/ASIA</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-5' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF3/126303</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-6' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF6/IT</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-7' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF13/ONI</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-8' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF11/YY</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-9' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF4/6002</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-10' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF10/NA</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-11' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF18/vujjanappa.bandi@cgi.com</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-12' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF12/VIP/C</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-13' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF14/N</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-14' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF7/EMP</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-15' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF15/NA</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-16' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF16/991263031</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-17' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF17/ASINACESDC</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-21' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF41/BLR</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-27' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF45/NonBillable Internal </com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-29' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF47/NA</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-30' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF48/NA</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-31' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>REF49/NA</com:RemarkData>
+      </com:AccountingRemark>
+      <com:AccountingRemark Key='HTLPassiveAC-33' Category='X*' TypeInGds='Other' ProviderCode='1G'>
+        <com:RemarkData>ID.C/ CGICGIINHRG</com:RemarkData>
+      </com:AccountingRemark>
+      <com:GeneralRemark Key='HTLPassiveG-1' TypeInGds='Basic'>
+        <com:RemarkData>DICCode-DIC244 DICName-Cgi Information Systems and Management Consultants</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-19' TypeInGds='Basic'>
+        <com:RemarkData>M +91-7795-689706</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-20' TypeInGds='Basic'>
+        <com:RemarkData>E vujjanappa.bandi@cgi.com</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-22' TypeInGds='Basic'>
+        <com:RemarkData>HYD</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-23' TypeInGds='Alpha'>
+        <com:RemarkData>HF 4000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-24' TypeInGds='Alpha'>
+        <com:RemarkData>LF 2000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-25' TypeInGds='Alpha'>
+        <com:RemarkData>FA 2000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-26' TypeInGds='Basic'>
+        <com:RemarkData>LA</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='F' Key='HTLPassiveG-28' TypeInGds='Alpha'>
+        <com:RemarkData>ALT1 3000</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Category='H' Key='HTLPassiveG-32' TypeInGds='Alpha'>
+        <com:RemarkData>NA</com:RemarkData>
+      </com:GeneralRemark>
+      <com:GeneralRemark Key='HTLPassiveG-34' TypeInGds='Basic'>
+        <com:RemarkData>ID.C/CGICGIINHRG+ID.C/CGICGIINHRG</com:RemarkData>
+      </com:GeneralRemark>
+      <pas:PassiveSegment SupplierCode='ZZ' Status='MK' StartDate='2017-04-25T00:00:00+00:00' EndDate='2017-05-09T00:00:00+00:00' Origin='BLR' NumberOfItems='1' SegmentType='Hotel' Key='1' ></pas:PassiveSegment>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>AKHAND HOMES</pas:Text>
+        <pas:Type>H</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>1ZZZAK1</pas:Text>
+        <pas:Type>R</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>Hotel Contact Number 9100944673</pas:Text>
+        <pas:Type>SI</pas:Type>
+      </pas:PassiveRemark>
+      <pas:PassiveRemark PassiveSegmentRef='1'>
+        <pas:Text>CF12345</pas:Text>
+        <pas:Type>CF</pas:Type>
+      </pas:PassiveRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Amount: INR 28000.00</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Manas Manor, Plot No: 21 & 22, Maseed Banda, Konda</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>SERVICE APPARTMENT</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>Customer Preferd Hotel</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>CP</com:RemarkData>
+      </pas:AssociatedRemark>
+      <pas:AssociatedRemark SegmentRef='1'>
+        <com:RemarkData>TCCODE 736698 TCNAME Javeria Waris</com:RemarkData>
+      </pas:AssociatedRemark>
+      <com:ActionStatus Key='HTL1528' Type='ACTIVE' TicketDate='2017-04-25T15:28:37.000+00:00' ProviderCode='1G'/>
+    </univ:PassiveCreateReservationReq>
+  </soapenv:Body>
+</soapenv:Envelope>
+
+<json:object xsi:schemaLocation="http://www.datapower.com/schemas/json jsonx.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:json="http://www.ibm.com/xmlns/prod/2009/jsonx">
+  <json:object name="errors">
+    <json:object name="error">
+      <json:string name="status">400</json:string>
+      <json:string name="code">TPGateway - Request data not found - Request ignored -  service name = PassiveService username = Universal API/uAPI7599224455-7aed6507</json:string>
+      <json:string name="detail">TPGateway - Request data not found - Request ignored -  service name = PassiveService username = Universal API/uAPI7599224455-7aed6507</json:string>
+    </json:object>
+  </json:object>
+</json:object>
+<Error>

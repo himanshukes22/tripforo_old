@@ -1,0 +1,324 @@
+﻿Imports System.Collections.Generic
+Imports System.Web
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+Imports System.Data
+Imports System.Data.SqlClient
+Partial Class Reports_Admin_IntlDiscountMaster
+    Inherits System.Web.UI.Page
+    Private STDom As New SqlTransactionDom
+    Private IND As New IntDiscount()
+    Private dt As New DataTable()
+    Private dtt As New DataTable()
+    Private ds As New DataSet()
+    Private adap As SqlDataAdapter
+    'public string constr = ConfigurationManager.ConnectionStrings["myAmdDB"].ConnectionString.ToString();
+    Private con As New SqlConnection(ConfigurationManager.ConnectionStrings("myAmdDB").ConnectionString.ToString())
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+        If Session("UID") Is Nothing Then
+            Response.Redirect("~/Login.aspx")
+        End If
+        If Session("User_Type").ToString().ToUpper() <> "ADMIN" Then
+            Response.Redirect("~/Login.aspx")
+        End If
+        Try
+            If Not IsPostBack Then
+                ddl_ptype.AppendDataBoundItems = True
+                ddl_ptype.Items.Clear()
+                'Dim item As New ListItem("All Type", "0")
+                'ddl_ptype.Items.Insert(0, item)
+                ddl_ptype.DataSource = STDom.GetAllGroupType().Tables(0)
+                ddl_ptype.DataTextField = "GroupType"
+                ddl_ptype.DataValueField = "GroupType"
+                ddl_ptype.DataBind()
+
+                ddl_type.AppendDataBoundItems = True
+                ' ddl_type.Items.Clear();
+                ' ListItem item1 = new ListItem("Select Type", "0");
+                ' item1.Selected = true;
+                '  ddl_type.Items.Insert(0, item1);
+                '  ListItem item2 = new ListItem("All Type", "0");
+                ' ddl_type.Items.Insert(1,item2);
+                ddl_type.DataSource = STDom.GetAllGroupType().Tables(0)
+                ddl_type.DataTextField = "GroupType"
+                ddl_type.DataValueField = "GroupType"
+                ddl_type.DataBind()
+
+                ddl_Pairline.AppendDataBoundItems = True
+                ddl_Pairline.Items.Clear()
+                ddl_Pairline.Items.Insert(0, "--Select Airline--")
+                ddl_Pairline.DataSource = IND.GetAirline()
+                ddl_Pairline.DataTextField = "AL_Name"
+                ddl_Pairline.DataValueField = "AL_Code"
+                ddl_Pairline.DataBind()
+            End If
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        End Try
+        Try
+            Dim dtmodule As New DataTable
+            dtmodule = STDom.GetModuleAccessDetails(Session("UID"), MODULENAME.DISCOUNT_I.ToString()).Tables(0)
+            If (dtmodule.Rows.Count > 0) Then
+                For Each dr As DataRow In dtmodule.Rows
+                    If (dr("MODULETYPE").ToString().ToUpper() = MODULETYPE.INSERT.ToString().ToUpper() AndAlso Convert.ToBoolean(dr("STATUS").ToString()) = True) Then
+                        btn_submit.Visible = False
+                        tr_PLB.Visible = False
+                    End If
+                    If (dr("MODULETYPE").ToString().ToUpper() = MODULETYPE.UPDATE.ToString().ToUpper() AndAlso Convert.ToBoolean(dr("STATUS").ToString()) = True) Then
+                        grd_P_IntlDiscount.Columns(13).Visible = False
+                    End If
+                    If (dr("MODULETYPE").ToString().ToUpper() = MODULETYPE.DELETE.ToString().ToUpper() AndAlso Convert.ToBoolean(dr("STATUS").ToString()) = True) Then
+                        grd_P_IntlDiscount.Columns(14).Visible = False
+                    End If
+                Next
+            End If
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Public Sub BindGrid()
+        Try
+            If ddl_type.SelectedValue <> "Select Type" Then
+                grd_P_IntlDiscount.DataSource = GetPLBAndCommissionRecordByGroupType(ddl_type.SelectedValue)
+                grd_P_IntlDiscount.DataBind()
+            End If
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Protected Sub ddl_type_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs)
+        BindGrid()
+    End Sub
+    Protected Sub btn_submit_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Try
+            Dim typeval As String = If(HiddenAlltype.Value = "All Type", "0", ddl_ptype.SelectedValue)
+            Dim result As String
+            Dim startDate As String = Request("From").ToString()
+            Dim endDate As String = Request("To").ToString()
+            InsertCommissionAndPLB(typeval, ddl_Pairline.SelectedItem.Text, ddl_Pairline.SelectedValue, Convert.ToDecimal(txt_basic.Text), Convert.ToDecimal(txt_CYB.Text), Convert.ToDecimal(txt_CYQ.Text), _
+             Convert.ToDecimal(txt_Pbasic.Text), Convert.ToDecimal(txt_Pyqb.Text), txt_PRBD.Text.Trim(), txt_Remark.Text, startDate.Trim(), endDate.Trim(), _
+             txt_Sector.Text.Trim(), DateTime.Now, Session("UID").ToString(), ddl_COMMClass.SelectedValue, ddl_PLBClass.SelectedValue, result)
+            HiddenAlltype.Value = ""
+            If result.Trim() <> String.Empty Then
+                ScriptManager.RegisterStartupScript(Me.Page, Me.[GetType](), "Alert", "alert('" & result & "');", True)
+            Else
+                ScriptManager.RegisterStartupScript(Me.Page, Me.[GetType](), "Alert", "alert('All Record successfully inserted.');", True)
+            End If
+        Catch ex As Exception
+
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Protected Sub grd_P_IntlDiscount_RowEditing(ByVal sender As Object, ByVal e As GridViewEditEventArgs)
+        Try
+            grd_P_IntlDiscount.EditIndex = e.NewEditIndex
+            BindGrid()
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Protected Sub grd_P_IntlDiscount_RowCancelingEdit(ByVal sender As Object, ByVal e As GridViewCancelEditEventArgs)
+        Try
+            grd_P_IntlDiscount.EditIndex = -1
+            BindGrid()
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Protected Sub grd_P_IntlDiscount_RowDeleting(ByVal sender As Object, ByVal e As GridViewDeleteEventArgs)
+        Try
+            Dim result As Integer
+            Dim GroupType As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("C"), Label)
+            Dim AirlineCode As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_airlinecode"), Label)
+            Dim lbl_rbd As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_rbd"), Label)
+            Dim lbl_Sector As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_Sector"), Label)
+            Dim lbl_StartDate As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_StartDate"), Label)
+            Dim lbl_EndDate As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_EndDate"), Label)
+            Dim lbl_Remark As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_Remark"), Label)
+            Try
+                Dim IPAddress As String = Request.ServerVariables("REMOTE_ADDR")
+                Dim cmd As New SqlCommand("Sp_Delete_Commission_and_IntPLB_LOG", con)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.Add("@GroupType", SqlDbType.VarChar).Value = GroupType
+                cmd.Parameters.Add("@AirlineName", SqlDbType.VarChar).Value = ""
+                cmd.Parameters.Add("@AirlineCode", SqlDbType.VarChar).Value = AirlineCode
+                cmd.Parameters.Add("@CommisionOnBasic", SqlDbType.VarChar).Value = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).Cells(11).FindControl("lbl_Cbasic"), Label).Text
+                cmd.Parameters.Add("@CommisionOnBasicYq", SqlDbType.VarChar).Value = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).Cells(13).FindControl("lbl_Cbasicyq"), Label).Text
+                cmd.Parameters.Add("@CommissionOnYq", SqlDbType.VarChar).Value = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).Cells(12).FindControl("lbl_Cyq"), Label).Text
+                cmd.Parameters.Add("@PlbOnBasic", SqlDbType.VarChar).Value = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).Cells(6).FindControl("lbl_Pbasic"), Label).Text
+                cmd.Parameters.Add("@PlbOnBasicYq", SqlDbType.VarChar).Value = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).Cells(7).FindControl("lbl_Pbasicyq"), Label).Text
+                cmd.Parameters.Add("@RBD", SqlDbType.VarChar).Value = lbl_rbd.Text
+                cmd.Parameters.Add("@Remark", SqlDbType.VarChar).Value = lbl_Remark.Text
+                cmd.Parameters.Add("@StartDate", SqlDbType.VarChar).Value = lbl_StartDate.Text
+                cmd.Parameters.Add("@EndDate", SqlDbType.VarChar).Value = lbl_EndDate.Text
+                cmd.Parameters.Add("@Sector", SqlDbType.VarChar).Value = lbl_Sector.Text
+                cmd.Parameters.Add("@UpdatedBy", SqlDbType.VarChar).Value = Session("UID").ToString
+                cmd.Parameters.Add("@IPADDRESS", SqlDbType.VarChar).Value = IPAddress
+                cmd.Parameters.Add("@CMD_TYPE", SqlDbType.VarChar).Value = "DELETED"
+                cmd.Connection = con
+                con.Open()
+                cmd.ExecuteNonQuery()
+                con.Close()
+            Catch ex As SqlException
+                clsErrorLog.LogInfo(ex)
+            End Try
+            DeleteCommissionAndPLB(GroupType.Text, AirlineCode.Text, result)
+            BindGrid()
+            If result = 1 Then
+                ScriptManager.RegisterStartupScript(Me.Page, Me.[GetType](), "Alert", "alert(' Record successfully deleted.');", True)
+            Else
+                ScriptManager.RegisterStartupScript(Me.Page, Me.[GetType](), "Alert", "alert(' Problen in deleting record.');", True)
+            End If
+        Catch ex As Exception
+            'ErrorLogTrace.WriteErrorLog(ex, "Flight")
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Protected Sub grd_P_IntlDiscount_RowUpdating(ByVal sender As Object, ByVal e As GridViewUpdateEventArgs)
+        Try
+            Dim result As Integer
+            Dim RBD As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_RBD"), TextBox)
+            Dim Sector As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_Sector"), TextBox)
+            Dim PlbOnBasic As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_PBasic"), TextBox)
+            Dim PlbOnBasicYq As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_PBasicYQ"), TextBox)
+            Dim StartDate As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_StartDate"), TextBox)
+            Dim EndDate As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_EndDate"), TextBox)
+            Dim Remark As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_Remark"), TextBox)
+            Dim CommisionOnBasic As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_CBasic"), TextBox)
+            Dim CommissionOnYq As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_CYQ"), TextBox)
+            Dim CommisionOnBasicYQ As TextBox = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("txt_CBasicYQ"), TextBox)
+            Dim GroupType As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_group"), Label)
+            Dim AirlineName As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_airline"), Label)
+            Dim AirlineCode As Label = DirectCast(grd_P_IntlDiscount.Rows(e.RowIndex).FindControl("lbl_airlinecode"), Label)
+
+            UpdateCommissionAndPLB(GroupType.Text, AirlineName.Text, AirlineCode.Text, Convert.ToDecimal(CommisionOnBasic.Text.Trim()), Convert.ToDecimal(CommisionOnBasicYQ.Text.Trim()), Convert.ToDecimal(CommissionOnYq.Text.Trim()), _
+             Convert.ToDecimal(PlbOnBasic.Text.Trim()), Convert.ToDecimal(PlbOnBasicYq.Text.Trim()), RBD.Text.Trim(), Remark.Text.Trim(), StartDate.Text.Trim(), EndDate.Text.Trim(), _
+             Sector.Text.Trim(), DateTime.Now, Session("UID").ToString(), result)
+            grd_P_IntlDiscount.EditIndex = -1
+            BindGrid()
+
+            If result = 1 Then
+                ScriptManager.RegisterStartupScript(Me.Page, Me.[GetType](), "Alert", "alert(' Record successfully updated.');", True)
+            Else
+                ScriptManager.RegisterStartupScript(Me.Page, Me.[GetType](), "Alert", "alert(' Problen in updating record.');", True)
+            End If
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        End Try
+    End Sub
+    Public Function InsertCommissionAndPLB(ByVal GroupType As String, ByVal AirlineName As String, ByVal AirlineCode As String, ByVal CommisionOnBasic As Decimal, ByVal CommisionOnBasicYq As Decimal, ByVal CommissionOnYq As Decimal, _
+     ByVal PlbOnBasic As Decimal, ByVal PlbOnBasicYq As Decimal, ByVal RBD As String, ByVal Remark As String, ByVal StartDate As String, ByVal EndDate As String, _
+     ByVal Sector As String, ByVal updatedDate As DateTime, ByVal updatedBy As String, ByVal CommClass As String, ByVal PLBClass As String, ByRef result As String) As Integer
+
+        Dim i As Integer = 0
+        Try
+            Dim cmd As New SqlCommand("Sp_Insert_Commission_and_IntPLB", con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@GroupType", GroupType)
+            cmd.Parameters.AddWithValue("@AirlineName", AirlineName)
+            cmd.Parameters.AddWithValue("@AirlineCode ", AirlineCode)
+            cmd.Parameters.AddWithValue("@CommisionOnBasic", CommisionOnBasic)
+            cmd.Parameters.AddWithValue("@CommisionOnBasicYq", CommisionOnBasicYq)
+            cmd.Parameters.AddWithValue("@CommissionOnYq", CommissionOnYq)
+            cmd.Parameters.AddWithValue("@PlbOnBasic", PlbOnBasic)
+            cmd.Parameters.AddWithValue("@PlbOnBasicYq", PlbOnBasicYq)
+            cmd.Parameters.AddWithValue("@RBD ", RBD)
+            cmd.Parameters.AddWithValue("@Remark", Remark)
+            cmd.Parameters.AddWithValue("@StartDate", StartDate)
+            cmd.Parameters.AddWithValue("@EndDate", EndDate)
+            cmd.Parameters.AddWithValue("@Sector", Sector)
+            cmd.Parameters.AddWithValue("@UpdatedDate", updatedDate)
+            cmd.Parameters.AddWithValue("@UpdatedBy", updatedBy)
+            cmd.Parameters.AddWithValue("@CommClass", CommClass)
+            cmd.Parameters.AddWithValue("@PLBClass", PLBClass)
+            cmd.Parameters.Add("@result", SqlDbType.VarChar, 4000)
+            cmd.Parameters("@result").Direction = ParameterDirection.Output
+
+            con.Open()
+            i = cmd.ExecuteNonQuery()
+            result = cmd.Parameters("@result").Value.ToString()
+            con.Close()
+        Catch ex As SqlException
+            result = ex.ToString()
+        Finally
+        End Try
+        Return i
+    End Function
+    Public Function UpdateCommissionAndPLB(ByVal GroupType As String, ByVal AirlineName As String, ByVal AirlineCode As String, ByVal CommisionOnBasic As Decimal, ByVal CommisionOnBasicYq As Decimal, ByVal CommissionOnYq As Decimal, _
+     ByVal PlbOnBasic As Decimal, ByVal PlbOnBasicYq As Decimal, ByVal RBD As String, ByVal Remark As String, ByVal StartDate As String, ByVal EndDate As String, _
+     ByVal Sector As String, ByVal updatedDate As DateTime, ByVal updatedBy As String, ByRef result As Integer) As Integer
+        Dim i As Integer = 0
+        Try
+            Dim IPAddress As String = Request.ServerVariables("REMOTE_ADDR")
+            Dim cmd As New SqlCommand("Sp_Update_Commission_and_IntPLB", con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@GroupType", GroupType)
+            cmd.Parameters.AddWithValue("@AirlineName", AirlineName)
+            cmd.Parameters.AddWithValue("@AirlineCode ", AirlineCode)
+            cmd.Parameters.AddWithValue("@CommisionOnBasic", CommisionOnBasic)
+            cmd.Parameters.AddWithValue("@CommisionOnBasicYq", CommisionOnBasicYq)
+            cmd.Parameters.AddWithValue("@CommissionOnYq", CommissionOnYq)
+            cmd.Parameters.AddWithValue("@PlbOnBasic", PlbOnBasic)
+            cmd.Parameters.AddWithValue("@PlbOnBasicYq", PlbOnBasicYq)
+            cmd.Parameters.AddWithValue("@RBD ", RBD)
+            cmd.Parameters.AddWithValue("@Remark", Remark)
+            cmd.Parameters.AddWithValue("@StartDate", StartDate)
+            cmd.Parameters.AddWithValue("@EndDate", EndDate)
+            cmd.Parameters.AddWithValue("@Sector", Sector)
+            cmd.Parameters.AddWithValue("@UpdatedDate", updatedDate)
+            cmd.Parameters.AddWithValue("@UpdatedBy", updatedBy)
+            cmd.Parameters.AddWithValue("@IPADDRESS", IPAddress)
+            cmd.Parameters.Add("@result", SqlDbType.Int)
+            cmd.Parameters("@result").Direction = ParameterDirection.Output
+            con.Open()
+            i = cmd.ExecuteNonQuery()
+            result = Convert.ToInt16(cmd.Parameters("@result").Value)
+            con.Close()
+        Catch ex As SqlException
+            'throw ex;
+            ' ex.ToString();
+            result = -1
+        Finally
+        End Try
+        Return i
+    End Function
+    Public Function DeleteCommissionAndPLB(ByVal GroupType As String, ByVal AirlineCode As String, ByRef result As Integer) As Integer
+        Dim i As Integer = 0
+        Try
+            Dim cmd As New SqlCommand("Sp_Delete_Commission_and_IntPLB", con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@GroupType", GroupType)
+            cmd.Parameters.AddWithValue("@AirlineCode ", AirlineCode)
+            cmd.Parameters.Add("@result", SqlDbType.Int)
+            cmd.Parameters("@result").Direction = ParameterDirection.Output
+
+            con.Open()
+            i = cmd.ExecuteNonQuery()
+            result = Convert.ToInt16(cmd.Parameters("@result").Value)
+
+            con.Close()
+        Catch ex As SqlException
+            'throw ex;
+            ' ex.ToString();
+            result = -1
+        Finally
+        End Try
+        Return i
+
+    End Function
+    Public Function GetPLBAndCommissionRecordByGroupType(ByVal groupType As String) As DataTable
+        Dim dt As New DataTable()
+        Try
+            adap = New SqlDataAdapter("SP_GetPLBAndCommissionRecordByGroupType", con)
+            adap.SelectCommand.CommandType = CommandType.StoredProcedure
+            adap.SelectCommand.Parameters.AddWithValue("@GroupType", groupType)
+            adap.Fill(dt)
+        Catch ex As Exception
+            clsErrorLog.LogInfo(ex)
+        Finally
+            adap.Dispose()
+        End Try
+        Return dt
+    End Function
+End Class

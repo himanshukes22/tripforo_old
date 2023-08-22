@@ -1,0 +1,565 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage_Test.master" AutoEventWireup="false" CodeFile="Registration.aspx.vb" Inherits="Registration" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+        });
+    </script>
+
+    <script type="text/javascript">
+        function RefreshCaptcha() {
+            var img = document.getElementById("imgCaptcha");
+            img.src = "CAPTCHA.ashx?query=" + Math.random();
+        }
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        function validateSearch() {
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Fname_txt").value == "") {
+                alert('Specify First Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Fname_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Lname_txt").value == "") {
+                alert('Specify Last Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Lname_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Add_txt").value == "") {
+                alert('Specify Address');
+                document.getElementById("ctl00_ContentPlaceHolder1_Add_txt").focus();
+                return false;
+            }
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_country").value == "India") {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_state").value == "--Select State--") {
+                    alert('Please Select State');
+                    document.getElementById("ctl00_ContentPlaceHolder1_ddl_state").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_city").value == "") {
+                    alert('Please Select City');
+                    document.getElementById("ctl00_ContentPlaceHolder1_ddl_city").focus();
+                    return false;
+                }
+
+            }
+            else {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Coun_txt").value == "") {
+                    alert('Specify Country Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Coun_txt").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Stat_txt").value == "") {
+                    alert('Specify State Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Stat_txt").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Other_City").value == "") {
+                    alert('Specify City Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Other_City").focus();
+                    return false;
+
+                }
+
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pin_txt").value == "") {
+                alert('Specify Pincode');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pin_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Mob_txt").value == "") {
+                alert('Specify Mobile Number');
+                document.getElementById("ctl00_ContentPlaceHolder1_Mob_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").value == "") {
+                alert('Specify EmailID');
+                document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").focus();
+                return false;
+            }
+
+            var emailPat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            var emailid = document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").value;
+            var matchArray = emailid.match(emailPat);
+            if (matchArray == null) {
+                alert("Your email address seems incorrect. Please try again.");
+                document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Agn_txt").value == "") {
+                alert('Specify Agency Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Agn_txt").focus();
+                return false;
+            }
+            //bipin
+            if (document.getElementById("ctl00_ContentPlaceHolder1_TextBox_NameOnPard").value == "") {
+                alert('Specify Name on Pan Card');
+                document.getElementById("ctl00_ContentPlaceHolder1_TextBox_NameOnPard").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pan_txt").value == "") {
+                alert('Specify Pan No');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pan_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Ans_txt").value == "") {
+                alert('Specify Answer');
+                document.getElementById("ctl00_ContentPlaceHolder1_Ans_txt").focus();
+                return false;
+            }
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_TxtUserId").value == "") {
+                alert('Specify Userid');
+                document.getElementById("ctl00_ContentPlaceHolder1_TxtUserId").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value == "") {
+                alert('Specify Password');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").focus();
+                return false;
+            }
+            else {
+                var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,16}$/;
+                if (!regex.test(document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value)) {
+                    alert("Password must contain:8 To 16 characters atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character'");
+                    document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").focus();
+                    return false;
+                }
+
+                // var patt = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8}");
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value == "") {
+                alert('Specify Confirm Password');
+                document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value != "") {
+                debugger;
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value != document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value) {
+                    alert("Confirm Password is same as Password");
+                    document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").focus();
+                    return false;
+                }
+
+                if (confirm("Are you sure!"))
+                    return true;
+                return false;
+            }
+
+        }
+        function phone_vali() {
+            if ((event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32) || (event.keyCode == 45))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+        function vali() {
+            if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 32) || (event.keyCode == 45))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+
+        function vali1() {
+            if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 32) || (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+
+        function getKeyCode(e) {
+            if (window.event)
+                return window.event.keyCode;
+            else if (e)
+                return e.which;
+            else
+                return null;
+        }
+        function keyRestrict(e, validchars) {
+            var key = '', keychar = '';
+            key = getKeyCode(e);
+            if (key == null) return true;
+            keychar = String.fromCharCode(key);
+            keychar = keychar.toLowerCase();
+            validchars = validchars.toLowerCase();
+            if (validchars.indexOf(keychar) != -1)
+                return true;
+            if (key == null || key == 0 || key == 8 || key == 9 || key == 13 || key == 27)
+                return true;
+            return false;
+        }
+
+    </script>
+
+    <section>
+		<div class="tr-register" >
+			<div class="tr-regi-form" style="width: 70% !important;">
+				<h4 style="color: #eee;">Personal Information</h4>
+				
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col m4 s12">
+							  <asp:DropDownList ID="tit_drop" runat="server" CssClass="">
+                                            <asp:ListItem Value="Mr.">Mr.</asp:ListItem>
+                                            <asp:ListItem Value="Ms.">Ms.</asp:ListItem>
+                                            <asp:ListItem Value="Mrs.">Mrs.</asp:ListItem>
+                                        </asp:DropDownList>
+                            <%--<label>Title</label>--%>
+						</div>
+						<div class="input-field col m4 s12">
+							
+                             <asp:TextBox ID="Fname_txt" CssClass="validate" runat="server" MaxLength="30" Style="position: static"
+                                            onkeypress="return keyRestrict(event,' abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+							<label>First Name</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							<%--<input type="number" class="validate">--%>
+                             <asp:TextBox ID="Lname_txt" CssClass="validate" runat="server" MaxLength="30" Style="position: static;"
+                                            onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+							<label>Last Nmae</label>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="input-field col m4 s12">
+							
+                            <asp:TextBox ID="Add_txt" runat="server" Class="validate" ></asp:TextBox>
+							<label>Address</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							
+                              <asp:DropDownList ID="ddl_country" runat="server" CssClass="validate" AutoPostBack="True" style="height: 40px;">
+                                  <asp:ListItem Selected="True" Value="India">--Select Country--</asp:ListItem>
+                                            <asp:ListItem  Value="India">India</asp:ListItem>
+                                            <asp:ListItem Value="Other">Other</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Coun_txt" Class="validate" runat="server" Style="position: static"
+                                            Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+							
+						</div>
+
+                        <div class="input-field col m4 s12">
+                             <asp:DropDownList ID="ddl_state" runat="server" AutoPostBack="True" CssClass="validate">
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Stat_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"
+                                            Visible="false"></asp:TextBox>
+                            </div>
+
+
+					</div>
+					<div class="row">
+						<div class="input-field col m4 s12">
+							<input type="text" id="ddl_city" runat="server" class="validate" style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" />
+                                        <asp:TextBox ID="Other_City" CssClass="psb_dd form-controlrt " runat="server" Style="position: static"
+                                            Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+							<label>City</label>
+						</div>
+
+                        <div class="input-field col m4 s12">
+                         <asp:TextBox ID="TextBox_Area" CssClass="validate" runat="server" MaxLength="20" Style="position: static"
+                                            onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+                            <label>Area</label>
+                            </div>
+
+                        <div class="input-field col m4 s12">
+                         <asp:TextBox ID="Pin_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="8" Style="position: static"
+                                            onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+                            <label>Pin Code</label>
+                            </div>
+					</div>
+					
+				</form>
+				
+			</div>
+
+            <div class="tr-regi-form" style="width: 70% !important;">
+				<h4 style="color: #eee;">Contact Information</h4>
+				
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col m4 s12">
+							  <asp:DropDownList ID="DropDownList1" runat="server" CssClass="">
+                                            <asp:ListItem Value="Mr.">Mr.</asp:ListItem>
+                                            <asp:ListItem Value="Ms.">Ms.</asp:ListItem>
+                                            <asp:ListItem Value="Mrs.">Mrs.</asp:ListItem>
+                                        </asp:DropDownList>
+                            <%--<label>Title</label>--%>
+						</div>
+						<div class="input-field col m4 s12">
+							
+                              <asp:TextBox ID="Ph_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="15" Style="position: static"
+                                                onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+							<label>Phone No.</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							<%--<input type="number" class="validate">--%>
+                            <asp:TextBox ID="Mob_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="10" Style="position: static"
+                                                onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+							<label>Mobile No.</label>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="input-field col m4 s12">
+							
+                              <asp:TextBox ID="Email_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+							<label>Email</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							
+                               <asp:TextBox ID="Aemail_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+							<label>Email 2</label>
+						</div>
+
+                        <div class="input-field col m4 s12">
+                              <asp:TextBox ID="Fax_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static" onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+                            <label>Fax No.</label>
+                            </div>
+
+
+					</div>
+					
+					
+				</form>
+				
+			</div>
+
+
+
+             <div class="tr-regi-form" style="width: 70% !important;">
+				<h4 style="color: #eee;">Business Information</h4>
+				
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col m4 s12">
+							<asp:TextBox ID="Agn_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="50" onkeypress="return keyRestrict(event,' .abcdefghijklmnopqrstuvwxyz1234567890');"></asp:TextBox>
+
+                            <label>Business Name</label>
+						</div>
+						<div class="input-field col m4 s12">
+							
+                             <asp:TextBox ID="Web_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+							<label>WebSite</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							<%--<input type="number" class="validate">--%>
+                            <asp:TextBox ID="Stax_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+							<label>STax No.</label>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="input-field col m4 s12">
+							
+                              <asp:TextBox ID="Pan_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+							<label>Pan No.</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							
+                               <asp:TextBox ID="TextBox_NameOnPard" CssClass="psb_dd form-controlrt" runat="server" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" Style="position: static" MaxLength="20"></asp:TextBox>
+							<label>Name On Pan</label>
+						</div>
+
+                        <div class="input-field col m4 s12">
+                              <asp:FileUpload ID="fld_pan" runat="server" CssClass=""  />
+                            <label>Pan Image</label>
+                            <div class="" style="font-size: 11px; color: #0e4faa; font-weight: bold">
+                                                ( Pancard image must be in JPG formate )
+                                            </div>
+                            </div>
+
+                      
+
+					</div>
+					
+                      <div class="row">
+                            <div class="input-field col m4 s12">
+                              <asp:DropDownList ID="Sales_DDL" runat="server" CssClass="form-controlrt">
+                                            </asp:DropDownList>
+                                <%--<label>Ref. By</label>--%>
+                            </div>
+
+                          <div class="input-field col m4 s12">
+                               <asp:TextBox ID="Rem_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+                              <label>Remark</label>
+                          </div>
+
+                          <div class="input-field col m4 s12">
+                              <asp:FileUpload ID="fld_1" runat="server" CssClass="psb_dd" />
+                                            <div style="font-size: 11px; color: #0e4faa; font-weight: bold">( Image must be in JPG formate and  Size should be (90*70) pixels)</div>
+                          </div>
+                        </div>
+
+                      <div class="row">
+                            <div class="input-field col m4 s12">
+                                 <asp:DropDownList ID="SecQ_drop" CssClass="form-controlrt" runat="server">
+                                     <asp:ListItem Value="What is Your Pet Name?">--Security Question--</asp:ListItem>
+                                                <asp:ListItem Value="What is Your Pet Name?">Mr.What is Your Pet Name?</asp:ListItem>
+                                                <asp:ListItem Value="What is your Favourite Color?">What is your Favourite Color?</asp:ListItem>
+                                                <asp:ListItem Value="What is Your Date of Birth">What is Your Date of Birth</asp:ListItem>
+                                            </asp:DropDownList>
+                            </div>
+
+                          <div class="input-field col m4 s12">
+                              <asp:TextBox ID="Ans_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+                              <label>Security Answer</label>
+                          </div>
+
+                          <div class="input-field col m4 s12">
+                              <asp:DropDownList ID="DD_Branch" runat="server" CssClass="form-controlrt">
+
+                              </asp:DropDownList>
+                          </div>
+                        </div>
+					
+				</form>
+				
+			</div>
+
+
+
+            <div class="tr-regi-form" style="width: 70% !important;">
+				<h4 style="color: #eee;">Authentication Information</h4>
+				
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col m4 s12">
+							<asp:TextBox ID="TxtUserId" runat="server" Style="position: static" MaxLength="20" CssClass="psb_dd form-controlrt" oncopy="return false" onpaste="return false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz1234567890');"></asp:TextBox>
+
+                            <label>User Id</label>
+						</div>
+						<div class="input-field col m4 s12">
+							
+                            <asp:TextBox ID="Pass_text" runat="server" Style="position: static"
+                                                TextMode="Password" MaxLength="16" CssClass="psb_dd form-controlrt"></asp:TextBox>
+							<label>Password</label>
+						</div>
+					
+					
+						<div class="input-field col m4 s12">
+							<%--<input type="number" class="validate">--%>
+                            <asp:TextBox ID="cpass_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"
+                                                TextMode="Password" MaxLength="16"></asp:TextBox>
+							<label>Confirm Password</label>
+						</div>
+					</div>
+
+                    <div class="row">
+						<div class="input-field col m4 s12">
+							 <img src="CAPTCHA.ashx" id="imgCaptcha" />
+                                            &nbsp;<a onclick="javascript:RefreshCaptcha();" style="cursor: pointer"><img src="Images/refresh.png" /></a>
+
+                            <label>Captcha Information</label>
+						</div>
+						<div class="input-field col m4 s12">
+							
+                            <asp:TextBox ID="TextBox1" CssClass="form-controlrt" runat="server"></asp:TextBox>
+							<label>Enter Text From Image</label>
+						</div>
+					
+					
+						
+					</div>
+					
+					
+				</form>
+				
+			</div>
+
+            <div class="row">
+            <asp:Button ID="submit"  runat="server" Text="Submit" OnClientClick="return validateSearch()" CssClass="btn btn-danger" />
+                </div>
+
+		</div>
+	</section>
+
+
+    <script type="text/javascript">
+        var UrlBase = '<%=ResolveUrl("~/") %>';
+        var autoCity = UrlBase + "AutoComplete.asmx/GETCITYSTATE";
+        $("#ctl00_ContentPlaceHolder1_ddl_city").autocomplete({
+            source: function (request, response) {
+
+                //if ($("#ctl00_ContentPlaceHolder1_ddl_city").val()!=data.d.item) {
+                //    $("#ctl00_ContentPlaceHolder1_ddl_city").focus();
+                //    alert("Please Select appropriate city");
+                //    return false;
+                //}
+                $.ajax({
+                    url: autoCity,
+                    data: "{ 'INPUT': '" + $("#ctl00_ContentPlaceHolder1_ddl_state").val() + "','SEARCH': '" + request.term + "' }",
+                    dataType: "json", type: "POST",
+                    contentType: "application/json; charset=utf-8",
+
+                    success: function (data) {
+
+                        if (data.d.length > 0) {
+                            response($.map(data.d, function (item) {
+                                return { label: item, value: item, id: $("#ctl00_ContentPlaceHolder1_ddl_state").val() }
+                            }))
+
+                        }
+                        else {
+                            response([{ label: 'City Not Found', val: -1 }]);
+                        }
+                        //response($.map(data.d, function (item) {
+                        //    return { label: item, value: item, id: $("#ctl00_ContentPlaceHolder1_ddl_state").val() }
+                        //}))
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                        alert(textStatus);
+                    }
+                })
+            },
+            autoFocus: true,
+            minLength: 3,
+            select: function (event, ui) {
+                if (ui.item.val == -1) {
+                    $(this).val("");
+                    return false;
+                }
+            },
+            autoFocus: true,
+            minLength: 3,
+            change: function (event, ui) {
+                if (ui.item == null) {
+                    this.value = '';
+                    alert('Please select City from the City list');
+                }
+            }
+        });
+
+    </script>
+
+</asp:Content>
+

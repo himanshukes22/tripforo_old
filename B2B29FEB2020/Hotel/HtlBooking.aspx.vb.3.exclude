@@ -1,0 +1,191 @@
+﻿Imports HotelShared
+Partial Class Hotel_HtlBooking
+    Inherits System.Web.UI.Page
+    Dim HtlLogObj As New HotelBAL.HotelSendMail_Log()
+    Dim HTLST As New HotelDAL.HotelDA
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim ObjBooking As New HotelBooking
+        Try
+            ObjBooking = CType(Session("HotelBookingDetails"), HotelBooking)
+            Dim rowcount As Integer = HTLST.TicketingStatus_Refresh(ObjBooking.Orderid, Session("UID").ToString())
+            ' Dim deductAmt As Double = ObjBooking.TotalRoomrate - ObjBooking.AgentMrkAmt
+            If rowcount > 0 And ObjBooking.Total_Org_Roomrate < (ObjBooking.TotalRoomrate - ObjBooking.AgentMrkAmt) Then
+                Dim HtlRes As New HotelBAL.HotelAvailabilitySearch()
+                ObjBooking = HtlRes.PreBookingHotelRequest(ObjBooking)
+                Session("HotelBooking") = ObjBooking
+                If ObjBooking.ProBookingID <> "false" Then
+                    If DeductbookingAmount(ObjBooking) Then
+                        ObjBooking = HtlRes.HotelBookingRequest(ObjBooking)
+                        UpdateBooking(ObjBooking)
+                    Else
+                        Response.Redirect("NoResult.aspx?HtlError=booking Fail, Due to insuficiant balance", False)
+                    End If
+                End If
+
+
+
+
+
+                'If ObjBooking.Provider = "TG" Then
+                '    If ObjBooking.ProBookingID <> "false" Then
+                '        If DeductbookingAmount(ObjBooking) Then
+                '            ObjBooking = HtlRes.HotelBookingRequest(ObjBooking)
+                '            If ObjBooking.BookingID <> "" Then
+                '                ObjBooking.Status = StatusClass.Confirm.ToString()
+                '            Else
+                '                ObjBooking.BookingID = HtlLogObj.GetID("HTL")
+                '                ObjBooking.Status = StatusClass.Hold.ToString()
+                '            End If
+                '            UpdateBooking(ObjBooking)
+                '        Else
+                '            Response.Redirect("NoResult.aspx?HtlError=booking Fail, Due to insuficiant balance", False)
+                '        End If
+                '    Else
+                '        Response.Redirect("NoResult.aspx?HtlError=Price has been change for " + ObjBooking.HotelName + " Hotel.", False)
+                '    End If
+                'ElseIf ObjBooking.Provider = "GTA" Then
+                '    If ObjBooking.ProBookingID = "true" Then
+                '        If DeductbookingAmount(ObjBooking) Then
+                '            ObjBooking = HtlRes.HotelBookingRequest(ObjBooking)
+                '            If ObjBooking.BookingID <> "" Then
+                '                If ObjBooking.Status = "Confirmed" Then
+                '                    ObjBooking.Status = StatusClass.Confirm.ToString()
+                '                End If
+                '            Else
+                '                ObjBooking.ProBookingID = ""
+                '            End If
+                '            UpdateBooking(ObjBooking)
+                '        Else
+                '            Response.Redirect("NoResult.aspx?HtlError=booking Fail, Due to insuficiant balance", False)
+                '        End If
+                '    Else
+                '        Response.Redirect("NoResult.aspx?HtlError=Price has been change for " + ObjBooking.HotelName + " Hotel.", False)
+                '    End If
+                'ElseIf ObjBooking.Provider = "EX" Then
+                '    If ObjBooking.ProBookingID <> "Not Available" Then
+                '        If DeductbookingAmount(ObjBooking) Then
+                '            ObjBooking = HtlRes.HotelBookingRequest(ObjBooking)
+                '            If ObjBooking.BookingID <> "" Then
+                '                ObjBooking.Status = StatusClass.Confirm.ToString()
+                '            Else
+                '                ObjBooking.BookingID = HtlLogObj.GetID("HTL")
+                '                ObjBooking.Status = StatusClass.Hold.ToString()
+                '            End If
+                '            UpdateBooking(ObjBooking)
+                '        Else
+                '            Response.Redirect("NoResult.aspx?HtlError=booking Fail, Due to insuficiant balance", False)
+                '        End If
+                '    Else
+                '        Response.Redirect("NoResult.aspx?HtlError=Price has been change for " + ObjBooking.HotelName + " Hotel.", False)
+                '    End If
+                'ElseIf ObjBooking.Provider = "RZ" Then
+                '    If ObjBooking.ProBookingID = "true" Then
+                '        If DeductbookingAmount(ObjBooking) Then
+                '            ObjBooking = HtlRes.HotelBookingRequest(ObjBooking)
+                '            'If ObjBooking.BookingID <> "" Then
+                '            '    If ObjBooking.Status = "Confirmed" Then
+                '            '        ObjBooking.Status = StatusClass.Confirm.ToString()
+                '            '    End If
+                '            'Else
+                '            '    ObjBooking.ProBookingID = ""
+                '            'End If
+                '            ObjBooking.HotelContactNo = ""
+                '            UpdateBooking(ObjBooking)
+                '        Else
+                '            Response.Redirect("NoResult.aspx?HtlError=booking Fail, Due to insuficiant balance", False)
+                '        End If
+                '    Else
+                '        Response.Redirect("NoResult.aspx?HtlError=Price has been change for " + ObjBooking.HotelName + " Hotel.", False)
+                '    End If
+                'Else
+                '    If ObjBooking.ProBookingID = "true" Then
+                '        If DeductbookingAmount(ObjBooking) Then
+                '            ObjBooking = HtlRes.HotelBookingRequest(ObjBooking)
+                '            If ObjBooking.BookingID <> "" Then
+                '                If ObjBooking.Status = "confirmed" Then
+                '                    ObjBooking.Status = StatusClass.Confirm.ToString()
+                '                End If
+                '            Else
+                '                ObjBooking.ProBookingID = ""
+                '            End If
+                '            UpdateBooking(ObjBooking)
+                '        Else
+                '            Response.Redirect("NoResult.aspx?HtlError=booking Fail, Due to insuficiant balance", False)
+                '        End If
+                '    Else
+                '        Response.Redirect("NoResult.aspx?HtlError=Price has been change for " + ObjBooking.HotelName + " Hotel.", False)
+                '    End If
+                'End If
+            End If
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlBooking_Page_Load")
+            Response.Redirect("NoResult.aspx?HtlError=your booking on Hold due to some exception on booking process", False)
+        End Try
+    End Sub
+    Protected Sub Page_Init(ByVal sender As Object, ByVal e As EventArgs)
+        Try
+            Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1))
+            Response.Cache.SetCacheability(HttpCacheability.NoCache)
+            Response.Cache.SetNoStore()
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlBooking_Page_Init")
+        End Try
+    End Sub
+    Protected Function DeductbookingAmount(ByVal SearchDetails As HotelBooking) As Boolean
+        Try
+            'Check Balance
+            Dim BalanceCheck As Integer = HTLST.CheckBalance(Session("UID").ToString, SearchDetails.AgentDebitAmt)
+            If (BalanceCheck = 0) Then
+                Dim ablBalance As Double = HTLST.UpdateBalance(Session("UID").ToString, SearchDetails.AgentDebitAmt)
+                'Insert Data in LedgerDetails Table
+                HTLST.insertLedgerDetails(Session("UID").ToString, Session("AgencyName").ToString(), SearchDetails.Orderid, "", "", "", "", "", "", _
+                                       Request.UserHostAddress, SearchDetails.AgentDebitAmt, 0, Convert.ToDecimal(ablBalance), "HTL Book", "Hotel booking", 0)
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlBooking_DeductbookingAmount")
+            Return False
+        End Try
+    End Function
+    Protected Sub UpdateBooking(ByVal SearchDetails As HotelBooking)
+        Try
+            If SearchDetails.BookingID <> "" Then
+                If (SearchDetails.Provider = "GTA" Or SearchDetails.Provider = "RoomXML") And SearchDetails.Status.ToLower = "confirmed" Then
+                    SearchDetails.Status = StatusClass.Confirm.ToString()
+                End If
+            Else
+                SearchDetails.BookingID = ""
+                SearchDetails.Status = StatusClass.Hold.ToString()
+            End If
+
+            Session("HotelBooking") = SearchDetails
+            'Update Booking Info 
+            HTLST.UpdateHtlBooking(SearchDetails.Orderid, SearchDetails.BookingID, SearchDetails.ProBookingID, SearchDetails.Status, SearchDetails.HotelContactNo, "", "")
+
+            Dim BookingCopy As String = HtlLogObj.TicketSummury(SearchDetails.Orderid, Request.Url.Scheme + "://" + Request.Url.Authority)
+            Session("BookingCopy") = BookingCopy
+            HtlLogObj.SendMailCopy(SearchDetails, BookingCopy, Session("HtlName").ToString(), Request.Url.Scheme + "://" + Request.Url.Authority)
+
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "HtlBooking_UpdateBooking")
+            Response.Redirect("NoResult.aspx?HtlError=your booking on Hold due to some exception on booking process", False)
+        End Try
+        'Yatra Billing 
+        Try
+            'Dim objYatra As New YatraBilling.HOTEL_YATRA
+            'objYatra.ProcessYatra_WyHotel(SearchDetails.Orderid)
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "YatraBilling")
+        End Try
+        'NAV METHOD  CALL START
+        Try
+            'Dim objNavHotel As New HotelService.clsHotel(SearchDetails.Orderid, "0")
+            'objNavHotel.hotelToNav(SearchDetails.Orderid, "", 0)
+        Catch ex As Exception
+            HotelDAL.HotelDA.InsertHotelErrorLog(ex, "NAVBilling")
+        End Try
+        'Nav METHOD END'
+    End Sub
+End Class

@@ -1,0 +1,3218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{20525FFF-1E38-4604-BC3E-539CEF553252}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ITZB2B</RootNamespace>
+    <AssemblyName>ITZB2B</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ITZB2B.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ITZB2B.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AgentLogo\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Hotel\litebox_webpage\" />
+    <Folder Include="Hotel\skins\tn3\" />
+    <Folder Include="Hotel\SpryAssets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgencySearch.asmx" />
+    <Content Include="AirLogo\1I.gif" />
+    <Content Include="AirLogo\2P.gif" />
+    <Content Include="AirLogo\3H.gif" />
+    <Content Include="AirLogo\4M.gif" />
+    <Content Include="AirLogo\4S.gif" />
+    <Content Include="AirLogo\5G.gif" />
+    <Content Include="AirLogo\5X.gif" />
+    <Content Include="AirLogo\6A.gif" />
+    <Content Include="AirLogo\6E.gif" />
+    <Content Include="AirLogo\6N.gif" />
+    <Content Include="AirLogo\7B.gif" />
+    <Content Include="AirLogo\7G.gif" />
+    <Content Include="AirLogo\8B.gif" />
+    <Content Include="AirLogo\8G.gif" />
+    <Content Include="AirLogo\9G.gif" />
+    <Content Include="AirLogo\9K.gif" />
+    <Content Include="AirLogo\9U.gif" />
+    <Content Include="AirLogo\9W.gif" />
+    <Content Include="AirLogo\9Y.gif" />
+    <Content Include="AirLogo\9z.GIF" />
+    <Content Include="AirLogo\A0.gif" />
+    <Content Include="AirLogo\A3.gif" />
+    <Content Include="AirLogo\A7.gif" />
+    <Content Include="AirLogo\AA.gif" />
+    <Content Include="AirLogo\ac.gif" />
+    <Content Include="AirLogo\AE.gif" />
+    <Content Include="AirLogo\AF.gif" />
+    <Content Include="AirLogo\AH.gif" />
+    <Content Include="AirLogo\AI.gif" />
+    <Content Include="AirLogo\AI_.gif" />
+    <Content Include="AirLogo\AK.gif" />
+    <Content Include="AirLogo\AM.gif" />
+    <Content Include="AirLogo\AN.gif" />
+    <Content Include="AirLogo\AO.gif" />
+    <Content Include="AirLogo\AP.gif" />
+    <Content Include="AirLogo\AQ.gif" />
+    <Content Include="AirLogo\AR.gif" />
+    <Content Include="AirLogo\AS.gif" />
+    <Content Include="AirLogo\AT.gif" />
+    <Content Include="AirLogo\AV.gif" />
+    <Content Include="AirLogo\AX.gif" />
+    <Content Include="AirLogo\AY.gif" />
+    <Content Include="AirLogo\AZ.gif" />
+    <Content Include="AirLogo\B3.gif" />
+    <Content Include="AirLogo\B6.gif" />
+    <Content Include="AirLogo\BA.gif" />
+    <Content Include="AirLogo\BD.gif" />
+    <Content Include="AirLogo\BG.gif" />
+    <Content Include="AirLogo\BI.gif" />
+    <Content Include="AirLogo\BO.gif" />
+    <Content Include="AirLogo\BR.gif" />
+    <Content Include="AirLogo\BT.gif" />
+    <Content Include="AirLogo\BU.gif" />
+    <Content Include="AirLogo\BW.gif" />
+    <Content Include="AirLogo\BY.gif" />
+    <Content Include="AirLogo\CA.gif" />
+    <Content Include="AirLogo\CI.gif" />
+    <Content Include="AirLogo\CL.gif" />
+    <Content Include="AirLogo\CM.gif" />
+    <Content Include="AirLogo\CO.gif" />
+    <Content Include="AirLogo\CP.gif" />
+    <Content Include="AirLogo\CU.gif" />
+    <Content Include="AirLogo\CX.gif" />
+    <Content Include="AirLogo\CY.gif" />
+    <Content Include="AirLogo\CZ.gif" />
+    <Content Include="AirLogo\DE.gif" />
+    <Content Include="AirLogo\DH.gif" />
+    <Content Include="AirLogo\DI.gif" />
+    <Content Include="AirLogo\DL.gif" />
+    <Content Include="AirLogo\DM.gif" />
+    <Content Include="AirLogo\DP.gif" />
+    <Content Include="AirLogo\DT.gif" />
+    <Content Include="AirLogo\E0.gif" />
+    <Content Include="AirLogo\EG.gif" />
+    <Content Include="AirLogo\EI.gif" />
+    <Content Include="AirLogo\EK.gif" />
+    <Content Include="AirLogo\EN.gif" />
+    <Content Include="AirLogo\ER.gif" />
+    <Content Include="AirLogo\ET.gif" />
+    <Content Include="AirLogo\EW.gif" />
+    <Content Include="AirLogo\EY.gif" />
+    <Content Include="AirLogo\F9.gif" />
+    <Content Include="AirLogo\FI.gif" />
+    <Content Include="AirLogo\FJ.gif" />
+    <Content Include="AirLogo\FL.gif" />
+    <Content Include="AirLogo\FM.gif" />
+    <Content Include="AirLogo\FN.gif" />
+    <Content Include="AirLogo\FQ.gif" />
+    <Content Include="AirLogo\FR.gif" />
+    <Content Include="AirLogo\FT.gif" />
+    <Content Include="AirLogo\FU.gif" />
+    <Content Include="AirLogo\FV.gif" />
+    <Content Include="AirLogo\FX.gif" />
+    <Content Include="AirLogo\G2.gif" />
+    <Content Include="AirLogo\G3.gif" />
+    <Content Include="AirLogo\G5.gif" />
+    <Content Include="AirLogo\G6.gif" />
+    <Content Include="AirLogo\G8.gif" />
+    <Content Include="AirLogo\G9.gif" />
+    <Content Include="AirLogo\GA.gif" />
+    <Content Include="AirLogo\GE.gif" />
+    <Content Include="AirLogo\GF.gif" />
+    <Content Include="AirLogo\GH.gif" />
+    <Content Include="AirLogo\GI.gif" />
+    <Content Include="AirLogo\GJ.gif" />
+    <Content Include="AirLogo\GL.gif" />
+    <Content Include="AirLogo\GM.gif" />
+    <Content Include="AirLogo\GN.gif" />
+    <Content Include="AirLogo\GQ.gif" />
+    <Content Include="AirLogo\GR.gif" />
+    <Content Include="AirLogo\GT.gif" />
+    <Content Include="AirLogo\GU.gif" />
+    <Content Include="AirLogo\GV.gif" />
+    <Content Include="AirLogo\GW.gif" />
+    <Content Include="AirLogo\H2.gif" />
+    <Content Include="AirLogo\H3.gif" />
+    <Content Include="AirLogo\H5.gif" />
+    <Content Include="AirLogo\H7.gif" />
+    <Content Include="AirLogo\H8.gif" />
+    <Content Include="AirLogo\H9.gif" />
+    <Content Include="AirLogo\HA.gif" />
+    <Content Include="AirLogo\HB.gif" />
+    <Content Include="AirLogo\HC.gif" />
+    <Content Include="AirLogo\HE.gif" />
+    <Content Include="AirLogo\HF.gif" />
+    <Content Include="AirLogo\HG.gif" />
+    <Content Include="AirLogo\HJ.gif" />
+    <Content Include="AirLogo\HM.gif" />
+    <Content Include="AirLogo\HP.gif" />
+    <Content Include="AirLogo\HQ.gif" />
+    <Content Include="AirLogo\HV.gif" />
+    <Content Include="AirLogo\HX.gif" />
+    <Content Include="AirLogo\HY.gif" />
+    <Content Include="AirLogo\HZ.gif" />
+    <Content Include="AirLogo\I7.gif" />
+    <Content Include="AirLogo\IA.gif" />
+    <Content Include="AirLogo\IB.gif" />
+    <Content Include="AirLogo\IC.gif" />
+    <Content Include="AirLogo\ID.gif" />
+    <Content Include="AirLogo\IF.gif" />
+    <Content Include="AirLogo\IG.gif" />
+    <Content Include="AirLogo\IH.gif" />
+    <Content Include="AirLogo\IJ.gif" />
+    <Content Include="AirLogo\IK.gif" />
+    <Content Include="AirLogo\IN.gif" />
+    <Content Include="AirLogo\IO.gif" />
+    <Content Include="AirLogo\IP.gif" />
+    <Content Include="AirLogo\IQ.gif" />
+    <Content Include="AirLogo\IR.gif" />
+    <Content Include="AirLogo\IT.gif" />
+    <Content Include="AirLogo\IT4.gif" />
+    <Content Include="AirLogo\IY.gif" />
+    <Content Include="AirLogo\IZ.gif" />
+    <Content Include="AirLogo\J2.gif" />
+    <Content Include="AirLogo\J3.gif" />
+    <Content Include="AirLogo\J4.gif" />
+    <Content Include="AirLogo\J7.gif" />
+    <Content Include="AirLogo\J8.gif" />
+    <Content Include="AirLogo\JA.gif" />
+    <Content Include="AirLogo\JB.gif" />
+    <Content Include="AirLogo\JD.gif" />
+    <Content Include="AirLogo\JE.gif" />
+    <Content Include="AirLogo\JF.gif" />
+    <Content Include="AirLogo\JH.gif" />
+    <Content Include="AirLogo\JI.gif" />
+    <Content Include="AirLogo\JJ.gif" />
+    <Content Include="AirLogo\JK.gif" />
+    <Content Include="AirLogo\JL.gif" />
+    <Content Include="AirLogo\JM.gif" />
+    <Content Include="AirLogo\JO.gif" />
+    <Content Include="AirLogo\JP.gif" />
+    <Content Include="AirLogo\JQ.gif" />
+    <Content Include="AirLogo\JR.gif" />
+    <Content Include="AirLogo\JS.gif" />
+    <Content Include="AirLogo\JU.gif" />
+    <Content Include="AirLogo\JV.gif" />
+    <Content Include="AirLogo\JY.gif" />
+    <Content Include="AirLogo\JZ.gif" />
+    <Content Include="AirLogo\K2.gif" />
+    <Content Include="AirLogo\K5.gif" />
+    <Content Include="AirLogo\K6.gif" />
+    <Content Include="AirLogo\K8.gif" />
+    <Content Include="AirLogo\KA.gif" />
+    <Content Include="AirLogo\KB.gif" />
+    <Content Include="AirLogo\KC.gif" />
+    <Content Include="AirLogo\KE.gif" />
+    <Content Include="AirLogo\KF.gif" />
+    <Content Include="AirLogo\KL.gif" />
+    <Content Include="AirLogo\KM.gif" />
+    <Content Include="AirLogo\KO.gif" />
+    <Content Include="AirLogo\KQ.gif" />
+    <Content Include="AirLogo\KS.gif" />
+    <Content Include="AirLogo\KU.gif" />
+    <Content Include="AirLogo\KV.gif" />
+    <Content Include="AirLogo\KX.gif" />
+    <Content Include="AirLogo\L6.gif" />
+    <Content Include="AirLogo\LA.gif" />
+    <Content Include="AirLogo\LB.gif" />
+    <Content Include="AirLogo\LE.gif" />
+    <Content Include="AirLogo\LG.gif" />
+    <Content Include="AirLogo\LH.gif" />
+    <Content Include="AirLogo\LI.gif" />
+    <Content Include="AirLogo\LK.gif" />
+    <Content Include="AirLogo\LL.gif" />
+    <Content Include="AirLogo\LM.gif" />
+    <Content Include="AirLogo\LN.gif" />
+    <Content Include="AirLogo\ITZ.gif" />
+    <Content Include="AirLogo\LO.gif" />
+    <Content Include="AirLogo\LR.gif" />
+    <Content Include="AirLogo\LS.gif" />
+    <Content Include="AirLogo\LT.gif" />
+    <Content Include="AirLogo\LV.gif" />
+    <Content Include="AirLogo\LW.gif" />
+    <Content Include="AirLogo\LX.gif" />
+    <Content Include="AirLogo\LY.gif" />
+    <Content Include="AirLogo\M3.gif" />
+    <Content Include="AirLogo\M5.gif" />
+    <Content Include="AirLogo\M9.gif" />
+    <Content Include="AirLogo\MA.gif" />
+    <Content Include="AirLogo\MD.gif" />
+    <Content Include="AirLogo\ME.gif" />
+    <Content Include="AirLogo\MF.gif" />
+    <Content Include="AirLogo\MH.gif" />
+    <Content Include="AirLogo\MI.gif" />
+    <Content Include="AirLogo\MJ.gif" />
+    <Content Include="AirLogo\MK.gif" />
+    <Content Include="AirLogo\MM.gif" />
+    <Content Include="AirLogo\MN.gif" />
+    <Content Include="AirLogo\MO.gif" />
+    <Content Include="AirLogo\MP.gif" />
+    <Content Include="AirLogo\MS.gif" />
+    <Content Include="AirLogo\MU.gif" />
+    <Content Include="AirLogo\MW.gif" />
+    <Content Include="AirLogo\MX.gif" />
+    <Content Include="AirLogo\MY.gif" />
+    <Content Include="AirLogo\MZ.gif" />
+    <Content Include="AirLogo\N3.gif" />
+    <Content Include="AirLogo\N6.gif" />
+    <Content Include="AirLogo\NA.gif" />
+    <Content Include="AirLogo\NB.gif" />
+    <Content Include="AirLogo\NC.gif" />
+    <Content Include="AirLogo\NE.gif" />
+    <Content Include="AirLogo\NF.gif" />
+    <Content Include="AirLogo\NG.gif" />
+    <Content Include="AirLogo\NH.gif" />
+    <Content Include="AirLogo\NI.gif" />
+    <Content Include="AirLogo\NJ.gif" />
+    <Content Include="AirLogo\NK.gif" />
+    <Content Include="AirLogo\NM.gif" />
+    <Content Include="AirLogo\NN.gif" />
+    <Content Include="AirLogo\NP.gif" />
+    <Content Include="AirLogo\NT.gif" />
+    <Content Include="AirLogo\NU.gif" />
+    <Content Include="AirLogo\NW.gif" />
+    <Content Include="AirLogo\NX.gif" />
+    <Content Include="AirLogo\NZ.gif" />
+    <Content Include="AirLogo\OA.gif" />
+    <Content Include="AirLogo\OH.gif" />
+    <Content Include="AirLogo\OK.gif" />
+    <Content Include="AirLogo\OL.gif" />
+    <Content Include="AirLogo\OM.gif" />
+    <Content Include="AirLogo\ON.gif" />
+    <Content Include="AirLogo\OO.gif" />
+    <Content Include="AirLogo\OP.gif" />
+    <Content Include="AirLogo\OR.gif" />
+    <Content Include="AirLogo\OS.gif" />
+    <Content Include="AirLogo\OT.gif" />
+    <Content Include="AirLogo\OU.gif" />
+    <Content Include="AirLogo\OV.gif" />
+    <Content Include="AirLogo\OY.gif" />
+    <Content Include="AirLogo\OZ.gif" />
+    <Content Include="AirLogo\P5.gif" />
+    <Content Include="AirLogo\P7.gif" />
+    <Content Include="AirLogo\P8.gif" />
+    <Content Include="AirLogo\P9.gif" />
+    <Content Include="AirLogo\PA.gif" />
+    <Content Include="AirLogo\PB.gif" />
+    <Content Include="AirLogo\PC.gif" />
+    <Content Include="AirLogo\PD.gif" />
+    <Content Include="AirLogo\PF.gif" />
+    <Content Include="AirLogo\PG.gif" />
+    <Content Include="AirLogo\PH.gif" />
+    <Content Include="AirLogo\PJ.gif" />
+    <Content Include="AirLogo\PK.gif" />
+    <Content Include="AirLogo\PM.gif" />
+    <Content Include="AirLogo\PN.gif" />
+    <Content Include="AirLogo\PR.gif" />
+    <Content Include="AirLogo\PS.gif" />
+    <Content Include="AirLogo\PU.gif" />
+    <Content Include="AirLogo\PW.gif" />
+    <Content Include="AirLogo\PX.gif" />
+    <Content Include="AirLogo\PY.gif" />
+    <Content Include="AirLogo\PZ.gif" />
+    <Content Include="AirLogo\Q3.gif" />
+    <Content Include="AirLogo\Q4.gif" />
+    <Content Include="AirLogo\Q6.gif" />
+    <Content Include="AirLogo\QB.gif" />
+    <Content Include="AirLogo\QC.gif" />
+    <Content Include="AirLogo\QF.gif" />
+    <Content Include="AirLogo\QI.gif" />
+    <Content Include="AirLogo\QM.gif" />
+    <Content Include="AirLogo\QN.gif" />
+    <Content Include="AirLogo\QQ.gif" />
+    <Content Include="AirLogo\QR.gif" />
+    <Content Include="AirLogo\QS.gif" />
+    <Content Include="AirLogo\QV.gif" />
+    <Content Include="AirLogo\QX.gif" />
+    <Content Include="AirLogo\QZ.gif" />
+    <Content Include="AirLogo\R2.gif" />
+    <Content Include="AirLogo\R4.gif" />
+    <Content Include="AirLogo\R7.gif" />
+    <Content Include="AirLogo\RA.gif" />
+    <Content Include="AirLogo\RB.gif" />
+    <Content Include="AirLogo\RE.gif" />
+    <Content Include="AirLogo\RG.gif" />
+    <Content Include="AirLogo\RJ.gif" />
+    <Content Include="AirLogo\RO.gif" />
+    <Content Include="AirLogo\RQ.gif" />
+    <Content Include="AirLogo\RT.gif" />
+    <Content Include="AirLogo\RU.gif" />
+    <Content Include="AirLogo\S2.gif" />
+    <Content Include="AirLogo\S3.gif" />
+    <Content Include="AirLogo\S4.gif" />
+    <Content Include="AirLogo\S5.gif" />
+    <Content Include="AirLogo\S7.gif" />
+    <Content Include="AirLogo\SA.gif" />
+    <Content Include="AirLogo\SB.gif" />
+    <Content Include="AirLogo\SC.gif" />
+    <Content Include="AirLogo\SE.gif" />
+    <Content Include="AirLogo\SG.gif" />
+    <Content Include="AirLogo\SH.gif" />
+    <Content Include="AirLogo\SK.gif" />
+    <Content Include="AirLogo\SL.gif" />
+    <Content Include="AirLogo\sm6A.gif" />
+    <Content Include="AirLogo\sm6E.gif" />
+    <Content Include="AirLogo\sm9G.gif" />
+    <Content Include="AirLogo\sm9W.gif" />
+    <Content Include="AirLogo\smA7.gif" />
+    <Content Include="AirLogo\smAA.gif" />
+    <Content Include="AirLogo\smAB.gif" />
+    <Content Include="AirLogo\smAC.gif" />
+    <Content Include="AirLogo\smAF.gif" />
+    <Content Include="AirLogo\smAI.gif" />
+    <Content Include="AirLogo\smAM.gif" />
+    <Content Include="AirLogo\smAN.gif" />
+    <Content Include="AirLogo\smAP.gif" />
+    <Content Include="AirLogo\smAQ.gif" />
+    <Content Include="AirLogo\smAR.gif" />
+    <Content Include="AirLogo\smAS.gif" />
+    <Content Include="AirLogo\smAT.gif" />
+    <Content Include="AirLogo\smAV.gif" />
+    <Content Include="AirLogo\smAY.gif" />
+    <Content Include="AirLogo\smAZ.gif" />
+    <Content Include="AirLogo\smB6.gif" />
+    <Content Include="AirLogo\smBA.gif" />
+    <Content Include="AirLogo\smBD.gif" />
+    <Content Include="AirLogo\smBE.gif" />
+    <Content Include="AirLogo\smBG.gif" />
+    <Content Include="AirLogo\smBI.gif" />
+    <Content Include="AirLogo\smBR.gif" />
+    <Content Include="AirLogo\smBW.gif" />
+    <Content Include="AirLogo\smCA.gif" />
+    <Content Include="AirLogo\smCI.gif" />
+    <Content Include="AirLogo\smCM.gif" />
+    <Content Include="AirLogo\smCO.gif" />
+    <Content Include="AirLogo\smCX.gif" />
+    <Content Include="AirLogo\smCZ.gif" />
+    <Content Include="AirLogo\smDI.gif" />
+    <Content Include="AirLogo\smDJ.gif" />
+    <Content Include="AirLogo\smDL.gif" />
+    <Content Include="AirLogo\smDM.gif" />
+    <Content Include="AirLogo\smE0.gif" />
+    <Content Include="AirLogo\smEI.gif" />
+    <Content Include="AirLogo\smEK.gif" />
+    <Content Include="AirLogo\smEN.gif" />
+    <Content Include="AirLogo\smET.gif" />
+    <Content Include="AirLogo\smEY.gif" />
+    <Content Include="AirLogo\smF7.gif" />
+    <Content Include="AirLogo\smF9.gif" />
+    <Content Include="AirLogo\smFB.gif" />
+    <Content Include="AirLogo\smFI.gif" />
+    <Content Include="AirLogo\smFJ.gif" />
+    <Content Include="AirLogo\smFL.gif" />
+    <Content Include="AirLogo\smFM.gif" />
+    <Content Include="AirLogo\smFN.gif" />
+    <Content Include="AirLogo\smFQ.gif" />
+    <Content Include="AirLogo\smFR.gif" />
+    <Content Include="AirLogo\smFT.gif" />
+    <Content Include="AirLogo\smFU.gif" />
+    <Content Include="AirLogo\smFV.gif" />
+    <Content Include="AirLogo\smG2.gif" />
+    <Content Include="AirLogo\smG3.gif" />
+    <Content Include="AirLogo\smG5.gif" />
+    <Content Include="AirLogo\smG6.gif" />
+    <Content Include="AirLogo\smG8.gif" />
+    <Content Include="AirLogo\smG9.GIF" />
+    <Content Include="AirLogo\smGA.gif" />
+    <Content Include="AirLogo\smGE.gif" />
+    <Content Include="AirLogo\smGF.gif" />
+    <Content Include="AirLogo\smGH.gif" />
+    <Content Include="AirLogo\smGI.gif" />
+    <Content Include="AirLogo\smGJ.gif" />
+    <Content Include="AirLogo\smGQ.gif" />
+    <Content Include="AirLogo\smGR.gif" />
+    <Content Include="AirLogo\smGT.gif" />
+    <Content Include="AirLogo\smGU.gif" />
+    <Content Include="AirLogo\smGV.gif" />
+    <Content Include="AirLogo\smGW.gif" />
+    <Content Include="AirLogo\smH2.gif" />
+    <Content Include="AirLogo\smH3.gif" />
+    <Content Include="AirLogo\smH5.gif" />
+    <Content Include="AirLogo\smH7.gif" />
+    <Content Include="AirLogo\smH8.gif" />
+    <Content Include="AirLogo\smH9.gif" />
+    <Content Include="AirLogo\smHA.gif" />
+    <Content Include="AirLogo\smHB.gif" />
+    <Content Include="AirLogo\smHC.gif" />
+    <Content Include="AirLogo\smHE.gif" />
+    <Content Include="AirLogo\smHF.gif" />
+    <Content Include="AirLogo\smHJ.gif" />
+    <Content Include="AirLogo\smHM.gif" />
+    <Content Include="AirLogo\smHP.gif" />
+    <Content Include="AirLogo\smHQ.gif" />
+    <Content Include="AirLogo\smHS.gif" />
+    <Content Include="AirLogo\smHU.gif" />
+    <Content Include="AirLogo\smHV.gif" />
+    <Content Include="AirLogo\smHX.gif" />
+    <Content Include="AirLogo\smHY.gif" />
+    <Content Include="AirLogo\smHZ.gif" />
+    <Content Include="AirLogo\smI7.gif" />
+    <Content Include="AirLogo\smIB.gif" />
+    <Content Include="AirLogo\smIC.gif" />
+    <Content Include="AirLogo\smID.gif" />
+    <Content Include="AirLogo\smIE.gif" />
+    <Content Include="AirLogo\smIF.gif" />
+    <Content Include="AirLogo\smIG.gif" />
+    <Content Include="AirLogo\smIH.gif" />
+    <Content Include="AirLogo\smIK.gif" />
+    <Content Include="AirLogo\smIO.gif" />
+    <Content Include="AirLogo\smIP.gif" />
+    <Content Include="AirLogo\smIQ.gif" />
+    <Content Include="AirLogo\smIR.gif" />
+    <Content Include="AirLogo\smIT.gif" />
+    <Content Include="AirLogo\smIV.gif" />
+    <Content Include="AirLogo\smIY.gif" />
+    <Content Include="AirLogo\smIZ.gif" />
+    <Content Include="AirLogo\smJ2.gif" />
+    <Content Include="AirLogo\smJ3.gif" />
+    <Content Include="AirLogo\smJ4.gif" />
+    <Content Include="AirLogo\smJ7.gif" />
+    <Content Include="AirLogo\smJ8.gif" />
+    <Content Include="AirLogo\smJA.gif" />
+    <Content Include="AirLogo\smJB.gif" />
+    <Content Include="AirLogo\smJC.gif" />
+    <Content Include="AirLogo\smJF.gif" />
+    <Content Include="AirLogo\smJH.gif" />
+    <Content Include="AirLogo\smJJ.gif" />
+    <Content Include="AirLogo\smJK.gif" />
+    <Content Include="AirLogo\smJL.gif" />
+    <Content Include="AirLogo\smJM.gif" />
+    <Content Include="AirLogo\smJO.gif" />
+    <Content Include="AirLogo\smJP.gif" />
+    <Content Include="AirLogo\smJQ.gif" />
+    <Content Include="AirLogo\smJS.gif" />
+    <Content Include="AirLogo\smJT.GIF" />
+    <Content Include="AirLogo\smJU.gif" />
+    <Content Include="AirLogo\smJV.gif" />
+    <Content Include="AirLogo\smJY.gif" />
+    <Content Include="AirLogo\smJZ.gif" />
+    <Content Include="AirLogo\smK5.gif" />
+    <Content Include="AirLogo\smK6.gif" />
+    <Content Include="AirLogo\smK8.gif" />
+    <Content Include="AirLogo\smKA.gif" />
+    <Content Include="AirLogo\smKC.gif" />
+    <Content Include="AirLogo\smKE.gif" />
+    <Content Include="AirLogo\smKF.gif" />
+    <Content Include="AirLogo\smKK.gif" />
+    <Content Include="AirLogo\smKL.gif" />
+    <Content Include="AirLogo\smKM.gif" />
+    <Content Include="AirLogo\smKO.gif" />
+    <Content Include="AirLogo\smKQ.gif" />
+    <Content Include="AirLogo\smKS.gif" />
+    <Content Include="AirLogo\smKU.gif" />
+    <Content Include="AirLogo\smKV.gif" />
+    <Content Include="AirLogo\smKX.gif" />
+    <Content Include="AirLogo\smLA.gif" />
+    <Content Include="AirLogo\smLB.gif" />
+    <Content Include="AirLogo\smLG.gif" />
+    <Content Include="AirLogo\smLH.gif" />
+    <Content Include="AirLogo\smLI.gif" />
+    <Content Include="AirLogo\smLK.gif" />
+    <Content Include="AirLogo\smLL.gif" />
+    <Content Include="AirLogo\smLN.gif" />
+    <Content Include="AirLogo\SMITZ.gif" />
+    <Content Include="AirLogo\smLO.gif" />
+    <Content Include="AirLogo\smLP.gif" />
+    <Content Include="AirLogo\smLR.gif" />
+    <Content Include="AirLogo\smLS.gif" />
+    <Content Include="AirLogo\smLT.gif" />
+    <Content Include="AirLogo\smLV.gif" />
+    <Content Include="AirLogo\smLW.gif" />
+    <Content Include="AirLogo\smLX.gif" />
+    <Content Include="AirLogo\smLY.gif" />
+    <Content Include="AirLogo\smM3.gif" />
+    <Content Include="AirLogo\smM5.gif" />
+    <Content Include="AirLogo\smM9.gif" />
+    <Content Include="AirLogo\smMA.gif" />
+    <Content Include="AirLogo\smMD.gif" />
+    <Content Include="AirLogo\smME.gif" />
+    <Content Include="AirLogo\smMF.gif" />
+    <Content Include="AirLogo\smMH.gif" />
+    <Content Include="AirLogo\smMI.gif" />
+    <Content Include="AirLogo\smMK.gif" />
+    <Content Include="AirLogo\smMM.gif" />
+    <Content Include="AirLogo\smMN.gif" />
+    <Content Include="AirLogo\smMO.gif" />
+    <Content Include="AirLogo\smMP.gif" />
+    <Content Include="AirLogo\smMS.gif" />
+    <Content Include="AirLogo\smMU.gif" />
+    <Content Include="AirLogo\smMW.gif" />
+    <Content Include="AirLogo\smMX.gif" />
+    <Content Include="AirLogo\smMY.gif" />
+    <Content Include="AirLogo\smMZ.gif" />
+    <Content Include="AirLogo\smN3.gif" />
+    <Content Include="AirLogo\smNA.gif" />
+    <Content Include="AirLogo\smNB.gif" />
+    <Content Include="AirLogo\smNC.gif" />
+    <Content Include="AirLogo\smNE.gif" />
+    <Content Include="AirLogo\smNF.gif" />
+    <Content Include="AirLogo\smNH.gif" />
+    <Content Include="AirLogo\smNI.gif" />
+    <Content Include="AirLogo\smNK.gif" />
+    <Content Include="AirLogo\smNM.gif" />
+    <Content Include="AirLogo\smNN.gif" />
+    <Content Include="AirLogo\smNP.gif" />
+    <Content Include="AirLogo\smNT.gif" />
+    <Content Include="AirLogo\smNU.gif" />
+    <Content Include="AirLogo\smNW.gif" />
+    <Content Include="AirLogo\smNX.gif" />
+    <Content Include="AirLogo\smNZ.gif" />
+    <Content Include="AirLogo\smOA.gif" />
+    <Content Include="AirLogo\smOK.gif" />
+    <Content Include="AirLogo\smOL.gif" />
+    <Content Include="AirLogo\smOM.gif" />
+    <Content Include="AirLogo\smON.gif" />
+    <Content Include="AirLogo\smOO.gif" />
+    <Content Include="AirLogo\smOP.gif" />
+    <Content Include="AirLogo\smOR.gif" />
+    <Content Include="AirLogo\smOS.gif" />
+    <Content Include="AirLogo\smOT.gif" />
+    <Content Include="AirLogo\smOU.gif" />
+    <Content Include="AirLogo\smOV.gif" />
+    <Content Include="AirLogo\smOY.gif" />
+    <Content Include="AirLogo\smOZ.gif" />
+    <Content Include="AirLogo\smP5.gif" />
+    <Content Include="AirLogo\smP8.gif" />
+    <Content Include="AirLogo\smP9.gif" />
+    <Content Include="AirLogo\smPA.gif" />
+    <Content Include="AirLogo\smPB.gif" />
+    <Content Include="AirLogo\smPc.gif" />
+    <Content Include="AirLogo\smPD.gif" />
+    <Content Include="AirLogo\smPF.gif" />
+    <Content Include="AirLogo\smPG.gif" />
+    <Content Include="AirLogo\smPH.gif" />
+    <Content Include="AirLogo\smPJ.gif" />
+    <Content Include="AirLogo\smPK.gif" />
+    <Content Include="AirLogo\smPM.gif" />
+    <Content Include="AirLogo\smPR.gif" />
+    <Content Include="AirLogo\smPS.gif" />
+    <Content Include="AirLogo\smPW.gif" />
+    <Content Include="AirLogo\smPX.gif" />
+    <Content Include="AirLogo\smPY.gif" />
+    <Content Include="AirLogo\smQ3.gif" />
+    <Content Include="AirLogo\smQ4.gif" />
+    <Content Include="AirLogo\smQ6.gif" />
+    <Content Include="AirLogo\smQB.gif" />
+    <Content Include="AirLogo\smQC.gif" />
+    <Content Include="AirLogo\smQF.gif" />
+    <Content Include="AirLogo\smQI.gif" />
+    <Content Include="AirLogo\smQN.gif" />
+    <Content Include="AirLogo\smQQ.gif" />
+    <Content Include="AirLogo\smQR.gif" />
+    <Content Include="AirLogo\smQS.gif" />
+    <Content Include="AirLogo\smQV.gif" />
+    <Content Include="AirLogo\smQZ.gif" />
+    <Content Include="AirLogo\smR2.gif" />
+    <Content Include="AirLogo\smRA.gif" />
+    <Content Include="AirLogo\smRB.gif" />
+    <Content Include="AirLogo\smRE.gif" />
+    <Content Include="AirLogo\smRG.gif" />
+    <Content Include="AirLogo\smRJ.gif" />
+    <Content Include="AirLogo\smRO.gif" />
+    <Content Include="AirLogo\smRQ.gif" />
+    <Content Include="AirLogo\smRT.gif" />
+    <Content Include="AirLogo\smRU.gif" />
+    <Content Include="AirLogo\smS2.gif" />
+    <Content Include="AirLogo\smS3.gif" />
+    <Content Include="AirLogo\smS4.gif" />
+    <Content Include="AirLogo\smS5.gif" />
+    <Content Include="AirLogo\smS7.gif" />
+    <Content Include="AirLogo\smSA.gif" />
+    <Content Include="AirLogo\smSB.gif" />
+    <Content Include="AirLogo\smSC.gif" />
+    <Content Include="AirLogo\smSE.gif" />
+    <Content Include="AirLogo\smSG.gif" />
+    <Content Include="AirLogo\smSK.gif" />
+    <Content Include="AirLogo\smSN.gif" />
+    <Content Include="AirLogo\smSQ.gif" />
+    <Content Include="AirLogo\smSR.gif" />
+    <Content Include="AirLogo\smSS.gif" />
+    <Content Include="AirLogo\smST.gif" />
+    <Content Include="AirLogo\smSU.gif" />
+    <Content Include="AirLogo\smSV.gif" />
+    <Content Include="AirLogo\smSW.gif" />
+    <Content Include="AirLogo\smSY.gif" />
+    <Content Include="AirLogo\smT3.gif" />
+    <Content Include="AirLogo\smT7.gif" />
+    <Content Include="AirLogo\smTA.gif" />
+    <Content Include="AirLogo\smTC.gif" />
+    <Content Include="AirLogo\smTE.gif" />
+    <Content Include="AirLogo\smTF.gif" />
+    <Content Include="AirLogo\smTG.gif" />
+    <Content Include="AirLogo\smTH.gif" />
+    <Content Include="AirLogo\smTK.gif" />
+    <Content Include="AirLogo\smTM.gif" />
+    <Content Include="AirLogo\smTN.gif" />
+    <Content Include="AirLogo\smTP.gif" />
+    <Content Include="AirLogo\smTS.gif" />
+    <Content Include="AirLogo\smTU.gif" />
+    <Content Include="AirLogo\smTV.gif" />
+    <Content Include="AirLogo\smTW.gif" />
+    <Content Include="AirLogo\smTX.gif" />
+    <Content Include="AirLogo\smTZ.gif" />
+    <Content Include="AirLogo\smU2.gif" />
+    <Content Include="AirLogo\smU4.gif" />
+    <Content Include="AirLogo\smU5.gif" />
+    <Content Include="AirLogo\smU6.gif" />
+    <Content Include="AirLogo\smU8.gif" />
+    <Content Include="AirLogo\smUA.gif" />
+    <Content Include="AirLogo\smUF.gif" />
+    <Content Include="AirLogo\smUG.gif" />
+    <Content Include="AirLogo\smUH.gif" />
+    <Content Include="AirLogo\smUK.gif" />
+    <Content Include="AirLogo\smUL.gif" />
+    <Content Include="AirLogo\smUN.gif" />
+    <Content Include="AirLogo\smUO.gif" />
+    <Content Include="AirLogo\smUP.gif" />
+    <Content Include="AirLogo\smUS.gif" />
+    <Content Include="AirLogo\smUU.gif" />
+    <Content Include="AirLogo\smUX.gif" />
+    <Content Include="AirLogo\smV3.gif" />
+    <Content Include="AirLogo\smV7.gif" />
+    <Content Include="AirLogo\smVA.gif" />
+    <Content Include="AirLogo\smVG.gif" />
+    <Content Include="AirLogo\smVK.gif" />
+    <Content Include="AirLogo\smVM.gif" />
+    <Content Include="AirLogo\smVN.gif" />
+    <Content Include="AirLogo\smVS.gif" />
+    <Content Include="AirLogo\smVT.gif" />
+    <Content Include="AirLogo\smVV.gif" />
+    <Content Include="AirLogo\smVW.gif" />
+    <Content Include="AirLogo\smVY.gif" />
+    <Content Include="AirLogo\smW5.gif" />
+    <Content Include="AirLogo\smW6.gif" />
+    <Content Include="AirLogo\smW9.gif" />
+    <Content Include="AirLogo\smWB.gif" />
+    <Content Include="AirLogo\smWF.gif" />
+    <Content Include="AirLogo\smWJ.gif" />
+    <Content Include="AirLogo\smWM.gif" />
+    <Content Include="AirLogo\smWN.gif" />
+    <Content Include="AirLogo\smWP.gif" />
+    <Content Include="AirLogo\smWR.gif" />
+    <Content Include="AirLogo\smWS.gif" />
+    <Content Include="AirLogo\smWX.gif" />
+    <Content Include="AirLogo\smWY.gif" />
+    <Content Include="AirLogo\smX3.gif" />
+    <Content Include="AirLogo\smX9.gif" />
+    <Content Include="AirLogo\smXF.gif" />
+    <Content Include="AirLogo\smXJ.gif" />
+    <Content Include="AirLogo\smXK.gif" />
+    <Content Include="AirLogo\smXL.gif" />
+    <Content Include="AirLogo\smXM.gif" />
+    <Content Include="AirLogo\smXQ.gif" />
+    <Content Include="AirLogo\smXR.gif" />
+    <Content Include="AirLogo\smXU.gif" />
+    <Content Include="AirLogo\smY2.gif" />
+    <Content Include="AirLogo\smY7.gif" />
+    <Content Include="AirLogo\smYO.gif" />
+    <Content Include="AirLogo\smYS.gif" />
+    <Content Include="AirLogo\smYT.gif" />
+    <Content Include="AirLogo\smYV.gif" />
+    <Content Include="AirLogo\smYX.gif" />
+    <Content Include="AirLogo\smZ4.gif" />
+    <Content Include="AirLogo\smZ5.gif" />
+    <Content Include="AirLogo\smZ6.gif" />
+    <Content Include="AirLogo\smZB.gif" />
+    <Content Include="AirLogo\smZE.gif" />
+    <Content Include="AirLogo\smZH.gif" />
+    <Content Include="AirLogo\smZI.gif" />
+    <Content Include="AirLogo\smZK.gif" />
+    <Content Include="AirLogo\smZL.gif" />
+    <Content Include="AirLogo\smZO.gif" />
+    <Content Include="AirLogo\smZQ.gif" />
+    <Content Include="AirLogo\smZU.gif" />
+    <Content Include="AirLogo\smZZ.gif" />
+    <Content Include="AirLogo\SN.gif" />
+    <Content Include="AirLogo\SQ.gif" />
+    <Content Include="AirLogo\SR.gif" />
+    <Content Include="AirLogo\SS.gif" />
+    <Content Include="AirLogo\ST.gif" />
+    <Content Include="AirLogo\SU.gif" />
+    <Content Include="AirLogo\SV.gif" />
+    <Content Include="AirLogo\SW.gif" />
+    <Content Include="AirLogo\SY.gif" />
+    <Content Include="AirLogo\SZ.gif" />
+    <Content Include="AirLogo\T3.gif" />
+    <Content Include="AirLogo\T7.gif" />
+    <Content Include="AirLogo\TA.gif" />
+    <Content Include="AirLogo\TC.gif" />
+    <Content Include="AirLogo\TE.gif" />
+    <Content Include="AirLogo\TF.gif" />
+    <Content Include="AirLogo\TG.gif" />
+    <Content Include="AirLogo\TH.gif" />
+    <Content Include="AirLogo\TK.gif" />
+    <Content Include="AirLogo\TM.gif" />
+    <Content Include="AirLogo\TN.gif" />
+    <Content Include="AirLogo\TP.gif" />
+    <Content Include="AirLogo\TS.gif" />
+    <Content Include="AirLogo\TT.gif" />
+    <Content Include="AirLogo\TU.gif" />
+    <Content Include="AirLogo\TV.gif" />
+    <Content Include="AirLogo\TW.gif" />
+    <Content Include="AirLogo\TX.gif" />
+    <Content Include="AirLogo\TZ.gif" />
+    <Content Include="AirLogo\U2.gif" />
+    <Content Include="AirLogo\U4.gif" />
+    <Content Include="AirLogo\U5.gif" />
+    <Content Include="AirLogo\U6.gif" />
+    <Content Include="AirLogo\U8.gif" />
+    <Content Include="AirLogo\UA.gif" />
+    <Content Include="AirLogo\UC.gif" />
+    <Content Include="AirLogo\UF.gif" />
+    <Content Include="AirLogo\UG.gif" />
+    <Content Include="AirLogo\UH.gif" />
+    <Content Include="AirLogo\UK.gif" />
+    <Content Include="AirLogo\UL.gif" />
+    <Content Include="AirLogo\UM.gif" />
+    <Content Include="AirLogo\UN.gif" />
+    <Content Include="AirLogo\UP.gif" />
+    <Content Include="AirLogo\US.gif" />
+    <Content Include="AirLogo\UT.gif" />
+    <Content Include="AirLogo\UU.gif" />
+    <Content Include="AirLogo\UX.gif" />
+    <Content Include="AirLogo\UY.gif" />
+    <Content Include="AirLogo\V3.gif" />
+    <Content Include="AirLogo\V7.gif" />
+    <Content Include="AirLogo\vA.gif" />
+    <Content Include="AirLogo\VG.gif" />
+    <Content Include="AirLogo\VH.gif" />
+    <Content Include="AirLogo\VM.gif" />
+    <Content Include="AirLogo\VN.gif" />
+    <Content Include="AirLogo\VO.gif" />
+    <Content Include="AirLogo\VP.gif" />
+    <Content Include="AirLogo\VR.gif" />
+    <Content Include="AirLogo\VS.gif" />
+    <Content Include="AirLogo\VT.gif" />
+    <Content Include="AirLogo\VV.gif" />
+    <Content Include="AirLogo\VW.gif" />
+    <Content Include="AirLogo\VX.gif" />
+    <Content Include="AirLogo\VY.gif" />
+    <Content Include="AirLogo\W5.gif" />
+    <Content Include="AirLogo\W6.gif" />
+    <Content Include="AirLogo\W9.gif" />
+    <Content Include="AirLogo\WB.gif" />
+    <Content Include="AirLogo\WE.gif" />
+    <Content Include="AirLogo\WF.gif" />
+    <Content Include="AirLogo\WJ.gif" />
+    <Content Include="AirLogo\WM.gif" />
+    <Content Include="AirLogo\WN.gif" />
+    <Content Include="AirLogo\WP.gif" />
+    <Content Include="AirLogo\WR.gif" />
+    <Content Include="AirLogo\WS.gif" />
+    <Content Include="AirLogo\WX.gif" />
+    <Content Include="AirLogo\WY.gif" />
+    <Content Include="AirLogo\X3.gif" />
+    <Content Include="AirLogo\X9.gif" />
+    <Content Include="AirLogo\XE.gif" />
+    <Content Include="AirLogo\XF.gif" />
+    <Content Include="AirLogo\XJ.gif" />
+    <Content Include="AirLogo\XK.gif" />
+    <Content Include="AirLogo\XL.gif" />
+    <Content Include="AirLogo\XM.gif" />
+    <Content Include="AirLogo\XQ.gif" />
+    <Content Include="AirLogo\XR.gif" />
+    <Content Include="AirLogo\XU.gif" />
+    <Content Include="AirLogo\Y2.gif" />
+    <Content Include="AirLogo\Y7.gif" />
+    <Content Include="AirLogo\YN.gif" />
+    <Content Include="AirLogo\YO.gif" />
+    <Content Include="AirLogo\YP.gif" />
+    <Content Include="AirLogo\YS.gif" />
+    <Content Include="AirLogo\YT.gif" />
+    <Content Include="AirLogo\YV.gif" />
+    <Content Include="AirLogo\YW.gif" />
+    <Content Include="AirLogo\YX.gif" />
+    <Content Include="AirLogo\Z4.gif" />
+    <Content Include="AirLogo\Z5.gif" />
+    <Content Include="AirLogo\Z6.gif" />
+    <Content Include="AirLogo\ZB.gif" />
+    <Content Include="AirLogo\ZE.gif" />
+    <Content Include="AirLogo\ZH.gif" />
+    <Content Include="AirLogo\ZI.gif" />
+    <Content Include="AirLogo\ZK.gif" />
+    <Content Include="AirLogo\ZL.gif" />
+    <Content Include="AirLogo\ZO.gif" />
+    <Content Include="AirLogo\ZQ.gif" />
+    <Content Include="AirLogo\__.gif" />
+    <Content Include="AirHandler.ashx" />
+    <Compile Include="app_code\PaymentGateway.vb.exclude" />
+    <Compile Include="app_code\PaymentGatewayBAL.vb.exclude" />
+    <Compile Include="app_code\PaymentGatewayDAL.vb.exclude" />
+    <None Include="App_WebReferences\RailwayEnq\Service1.disco" />
+    <Content Include="AutoComplete.asmx" />
+    <Compile Include="bin\Ajax.dll" />
+    <Compile Include="bin\AjaxControlToolkit.dll" />
+    <Compile Include="bin\AjaxPro.2.dll" />
+    <Compile Include="bin\BS_BAL.dll" />
+    <Compile Include="bin\BS_BAL.pdb" />
+    <Compile Include="bin\BS_DAL.dll" />
+    <Compile Include="bin\BS_DAL.pdb" />
+    <Compile Include="bin\BS_SHARED.dll" />
+    <Compile Include="bin\BS_SHARED.pdb" />
+    <Compile Include="bin\CookComputing.XmlRpcV2.dll" />
+    <Compile Include="bin\Cryptography.dll" />
+    <Compile Include="bin\EBLBill.dll" />
+    <Compile Include="bin\EBLBill.pdb" />
+    <Compile Include="bin\EncryptDecrypt.dll" />
+    <Compile Include="bin\EXCEPTION_LOG.dll" />
+    <Compile Include="bin\EXCEPTION_LOG.pdb" />
+    <Compile Include="bin\GALWS.dll" />
+    <Compile Include="bin\GALWS.pdb" />
+    <Compile Include="bin\GoAirServiceDll.dll" />
+    <Compile Include="bin\GoAirServiceDll.pdb" />
+    <Compile Include="bin\GoAirServiceDll.xml" />
+    <Compile Include="bin\HermesMobile.dll" />
+    <Compile Include="bin\HotelBAL.dll" />
+    <Compile Include="bin\HotelBAL.pdb" />
+    <Compile Include="bin\HotelDAL.dll" />
+    <Compile Include="bin\HotelDAL.pdb" />
+    <Compile Include="bin\HotelShared.dll" />
+    <Compile Include="bin\HotelShared.pdb" />
+    <Compile Include="bin\HtlLibrary.dll" />
+    <Compile Include="bin\HtlLibrary.pdb" />
+    <Compile Include="bin\HtlLibrary.xml" />
+    <Compile Include="bin\HtmlAgilityPack.dll" />
+    <Compile Include="bin\Interop.HASHCRYPTSTREAMSLib.dll" />
+    <Compile Include="bin\Interop.MSXML.dll" />
+    <Compile Include="bin\Interop.NEWOBJECTSPACK1Lib.dll" />
+    <Compile Include="bin\Ionic.Zip.Reduced.dll" />
+    <Compile Include="bin\IPTracker.dll" />
+    <Compile Include="bin\IPTracker.pdb" />
+    <Compile Include="bin\IRC_BAL.dll" />
+    <Compile Include="bin\IRC_BAL.pdb" />
+    <Compile Include="bin\IRC_DAL.dll" />
+    <Compile Include="bin\IRC_DAL.pdb" />
+    <Compile Include="bin\IRC_SHARED.dll" />
+    <Compile Include="bin\IRC_SHARED.pdb" />
+    <Compile Include="bin\itextsharp.dll" />
+    <Compile Include="bin\LCC.dll" />
+    <Compile Include="bin\LCC.pdb" />
+    <Compile Include="bin\LCC.xml" />
+    <Compile Include="bin\LccCoupon.dll" />
+    <Compile Include="bin\LccCoupon.pdb" />
+    <Compile Include="bin\LccCouponResult.dll" />
+    <Compile Include="bin\LccCouponResult.pdb" />
+    <Compile Include="bin\LCCINTL.dll" />
+    <Compile Include="bin\LCCINTL.pdb" />
+    <Compile Include="bin\LCCINTL.xml" />
+    <Compile Include="bin\LCCRTFDISTR.dll" />
+    <Compile Include="bin\LCCRTFDISTR.pdb" />
+    <Compile Include="bin\LCCRTFDISTR.xml" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.pdb" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb" />
+    <Compile Include="bin\microsoft.practices.enterpriselibrary.common.xml" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb" />
+    <Compile Include="bin\microsoft.practices.enterpriselibrary.data.xml" />
+    <Compile Include="bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Compile Include="bin\Microsoft.Practices.ServiceLocation.pdb" />
+    <Compile Include="bin\Microsoft.Practices.Unity.dll" />
+    <Compile Include="bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Compile Include="bin\Microsoft.Practices.Unity.Interception.pdb" />
+    <Compile Include="bin\Microsoft.Practices.Unity.pdb" />
+    <Compile Include="bin\NEWLCCRTF.dll" />
+    <Compile Include="bin\NEWLCCRTF.pdb" />
+    <Content Include="bin\NEWLCCRTF.xml" />
+    <Compile Include="bin\Newtonsoft.Json.dll" />
+    <Compile Include="bin\NumToWord.dll" />
+    <Compile Include="bin\OLSeries.dll" />
+    <Compile Include="bin\OLSeries.pdb" />
+    <Compile Include="bin\OLSeries.xml" />
+    <Compile Include="bin\RB.BAL.dll" />
+    <Compile Include="bin\RB.BAL.pdb" />
+    <Compile Include="bin\RB.DAL.dll" />
+    <Compile Include="bin\RB.DAL.pdb" />
+    <Compile Include="bin\RB.SHARED.dll" />
+    <Compile Include="bin\RB.SHARED.pdb" />
+    <Compile Include="bin\SFA.dll" />
+    <Compile Include="bin\sightseenBAL.dll" />
+    <Compile Include="bin\sightseenDAL.dll" />
+    <Compile Include="bin\sightseenShared.dll" />
+    <Compile Include="bin\SMSAPI.dll" />
+    <Compile Include="bin\SMSAPI.pdb" />
+    <Compile Include="bin\SMSAPI.xml" />
+    <Compile Include="bin\TestGoAirServiceDll.dll" />
+    <Content Include="BS\BSer.master.cs" />
+    <Content Include="BS\BusResult.aspx" />
+    <Content Include="BS\BusResult.aspx.cs" />
+    <Content Include="BS\BusSearch.aspx" />
+    <Content Include="BS\BusSearch.aspx.cs" />
+    <Content Include="BS\CancelTicket.aspx" />
+    <Content Include="BS\CancelTicket.aspx.cs" />
+    <Content Include="BS\CSS\basic.css" />
+    <Content Include="BS\CSS\CommonCss.css" />
+    <Content Include="BS\CSS\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="BS\CSS\images\ui-icons_056b93_256x240.png" />
+    <Content Include="BS\CSS\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="BS\CSS\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="BS\CSS\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="BS\CSS\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="BS\CSS\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="BS\CSS\jquery-ui-1.8.8.custom.css" />
+    <Content Include="BS\CSS\jquery.autocomplete.css" />
+    <Content Include="BS\CustomerInfo.aspx" />
+    <Content Include="BS\CustomerInfo.aspx.cs" />
+    <Content Include="BS\GetTicketStatus.aspx" />
+    <Content Include="BS\GetTicketStatus.aspx.cs" />
+    <Content Include="BS\Images\1.png" />
+    <Content Include="BS\Images\1s.png" />
+    <Content Include="BS\Images\2.png" />
+    <Content Include="BS\Images\3.png" />
+    <Content Include="BS\Images\3b.png" />
+    <Content Include="BS\Images\3s.png" />
+    <Content Include="BS\Images\4.png" />
+    <Content Include="BS\Images\arrow.png" />
+    <Content Include="BS\Images\arrow123.png" />
+    <Content Include="BS\Images\arrw.png" />
+    <Content Include="BS\Images\bg.png" />
+    <Content Include="BS\Images\bgk.jpg" />
+    <Content Include="BS\Images\bgk.png" />
+    <Content Include="BS\Images\Broken circle.gif" />
+    <Content Include="BS\Images\btnbg.jpg" />
+    <Content Include="BS\Images\btnbg.png" />
+    <Content Include="BS\Images\btnbg1.png" />
+    <Content Include="BS\Images\bus-o.png" />
+    <Content Include="BS\Images\bus.png" />
+    <Content Include="BS\Images\busfrm1.png" />
+    <Content Include="BS\Images\bus_sh.png" />
+    <Content Include="BS\Images\cal.gif" />
+    <Content Include="BS\Images\Calender.jpg" />
+    <Content Include="BS\Images\Calender.png" />
+    <Content Include="BS\Images\cls.png" />
+    <Content Include="BS\Images\conductorS.png" />
+    <Content Include="BS\Images\drop-arrow.gif" />
+    <Content Include="BS\Images\fare.png" />
+    <Content Include="BS\Images\fare1.png" />
+    <Content Include="BS\Images\load.gif" />
+    <Content Include="BS\Images\loaderB64.gif" />
+    <Content Include="BS\Images\loading_bar.gif" />
+    <Content Include="BS\Images\logo.jpg" />
+    <Content Include="BS\Images\next.png" />
+    <Content Include="BS\Images\next_year.png" />
+    <Content Include="BS\Images\prev.png" />
+    <Content Include="BS\Images\prev_year.png" />
+    <Content Include="BS\Images\print_booking.jpg" />
+    <Content Include="BS\Images\ptbg.png" />
+    <Content Include="BS\Images\rupee.png" />
+    <Content Include="BS\Images\rupee1.png" />
+    <Content Include="BS\Images\s1.png" />
+    <Content Include="BS\Images\s2.png" />
+    <Content Include="BS\Images\S20.png" />
+    <Content Include="BS\Images\S20b.png" />
+    <Content Include="BS\Images\S20s.png" />
+    <Content Include="BS\Images\s3.png" />
+    <Content Include="BS\Images\s4.png" />
+    <Content Include="BS\Images\seats.png" />
+    <Content Include="BS\Images\seatseller_logo.jpg" />
+    <Content Include="BS\Images\smload.gif" />
+    <Content Include="BS\Images\smload1.gif" />
+    <Content Include="BS\Images\smload2.gif" />
+    <Content Include="BS\Images\smload3.gif" />
+    <Content Include="BS\Images\star_red1.png" />
+    <Content Include="BS\Images\tab-header.jpg" />
+    <Content Include="BS\Images\tpbtnbg.png" />
+    <Content Include="BS\Images\tyr.png" />
+    <Content Include="BS\Images\ui-icons_0078ae_256x240.png" />
+    <Content Include="BS\Images\ui-icons_056b93_256x240.png" />
+    <Content Include="BS\Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="BS\Images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="BS\Images\ui-icons_f5e175_256x240.png" />
+    <Content Include="BS\Images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="BS\Images\ui-icons_fcd113_256x240.png" />
+    <Content Include="BS\Images\val.png" />
+    <Content Include="BS\Images\val1.png" />
+    <Content Include="BS\Images\val2.png" />
+    <Content Include="BS\Images\ver1.png" />
+    <Content Include="BS\Images\ver2.png" />
+    <Content Include="BS\Images\ver2b.png" />
+    <Content Include="BS\Images\ver2s.png" />
+    <Content Include="BS\Images\ver3.png" />
+    <Content Include="BS\Images\ver4.png" />
+    <Content Include="BS\Images\watch-a.png" />
+    <Content Include="BS\Images\watch-d.png" />
+    <Content Include="BS\Images\watch.png" />
+    <Content Include="BS\JS\BusResult.js" />
+    <Content Include="BS\JS\BusSearch.js" />
+    <Content Include="BS\JS\Common.js" />
+    <Content Include="BS\JS\CustomerInfo.js" />
+    <Content Include="BS\JS\HandleQueryString.js" />
+    <Content Include="BS\JS\jquery-1.4.4.min.js" />
+    <Content Include="BS\JS\jquery-1.9.1.js" />
+    <Content Include="BS\JS\jquery-latest.js" />
+    <Content Include="BS\JS\jquery-ui-1.8.8.custom.min.js" />
+    <Content Include="BS\JS\jquery.blockUI.js" />
+    <Content Include="BS\JS\jquery.bpopup.min.js" />
+    <Content Include="BS\JS\jquery.dataTables.min.js" />
+    <Content Include="BS\JS\jquery.simplemodal.js" />
+    <Content Include="BS\JS\Ticketcopy.js" />
+    <Content Include="BS\Properties\AssemblyInfo.cs" />
+    <Content Include="BS\TicketCopy.aspx" />
+    <Content Include="BS\TicketCopy.aspx.cs" />
+    <Content Include="BS\TicketSummary.aspx" />
+    <Content Include="BS\TicketSummary.aspx.cs" />
+    <Content Include="BS\UserControl\BusSearch.ascx" />
+    <Content Include="BS\UserControl\BusSearch.ascx.cs" />
+    <Content Include="BS\WebService\CommonService.asmx" />
+    <Content Include="chosen\chosen-sprite.png" />
+    <Content Include="chosen\chosen.css" />
+    <Content Include="chosen\chosen.jquery.js" />
+    <Content Include="chosen\chosen.proto.js" />
+    <Content Include="chosen\jquery-1.6.1.min.js" />
+    <Content Include="CitySearch.asmx" />
+    <Content Include="CSS\A2BT\A2B.css" />
+    <Content Include="CSS\A2BT\astyle.css" />
+    <Content Include="CSS\A2BT\basic.css" />
+    <Content Include="CSS\A2BT\jplist.min.css" />
+    <Content Include="CSS\A2BT\jquery-ui-1.8.8.custom.css" />
+    <Content Include="CSS\A2BT\jquery-ui.css" />
+    <Content Include="CSS\A2BT\main2.css" />
+    <Content Include="CSS\A2BT\normalize.css" />
+    <Content Include="CSS\A2BT\style.css" />
+    <Content Include="CSS\A2BT\styles.min.css" />
+    <Content Include="CSS\astyle-.css" />
+    <Content Include="CSS\astyle.css" />
+    <Content Include="CSS\astyle1.css" />
+    <Content Include="CSS\customerInfo.css" />
+    <Content Include="CSS\flightIntlRes.css" />
+    <Content Include="CSS\images\A2Bimg\2 X MINI BUS.jpg" />
+    <Content Include="CSS\images\A2Bimg\2 X SHUTTLE BUS.jpg" />
+    <Content Include="CSS\images\A2Bimg\book.gif" />
+    <Content Include="CSS\images\A2Bimg\cal.gif" />
+    <Content Include="CSS\images\A2Bimg\Coach.jpg" />
+    <Content Include="CSS\images\A2Bimg\Direct Transfer.jpg" />
+    <Content Include="CSS\images\A2Bimg\DU.png" />
+    <Content Include="CSS\images\A2Bimg\Executive Transfer.jpg" />
+    <Content Include="CSS\images\A2Bimg\filter.png" />
+    <Content Include="CSS\images\A2Bimg\images.jpg" />
+    <Content Include="CSS\images\A2Bimg\Luxury Vehicle.jpg" />
+    <Content Include="CSS\images\A2Bimg\LUXURY_VEHICLE.jpg" />
+    <Content Include="CSS\images\A2Bimg\Mini Bus.jpg" />
+    <Content Include="CSS\images\A2Bimg\Mini Coach.jpg" />
+    <Content Include="CSS\images\A2Bimg\modify.png" />
+    <Content Include="CSS\images\A2Bimg\next.png" />
+    <Content Include="CSS\images\A2Bimg\next1.png" />
+    <Content Include="CSS\images\A2Bimg\print.jpg" />
+    <Content Include="CSS\images\A2Bimg\Private Transfer.jpg" />
+    <Content Include="CSS\images\A2Bimg\private_transfer_standard.jpg" />
+    <Content Include="CSS\images\A2Bimg\reset.png" />
+    <Content Include="CSS\images\A2Bimg\SHUTTLE BUS.jpg" />
+    <Content Include="CSS\images\A2Bimg\shuttle_express.jpg" />
+    <Content Include="CSS\images\A2Bimg\SUV.jpg" />
+    <Content Include="CSS\images\A2Bimg\Taxi.jpg" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_0078ae_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_056b93_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_e0fdff_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_f5e175_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_f7a50d_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\ui-icons_fcd113_256x240.png" />
+    <Content Include="CSS\images\A2Bimg\UP.png" />
+    <Content Include="CSS\images\bg.jpg" />
+    <Content Include="CSS\images\body_top.png" />
+    <Content Include="CSS\images\body_top1.png" />
+    <Content Include="CSS\images\btn.png" />
+    <Content Include="CSS\images\btnbg.png" />
+    <Content Include="CSS\images\btnbtn.jpg" />
+    <Content Include="CSS\images\closebox.png" />
+    <Content Include="CSS\images\footer.png" />
+    <Content Include="CSS\images\head.png" />
+    <Content Include="CSS\images\logicon.png" />
+    <Content Include="CSS\images\loginback.jpg" />
+    <Content Include="CSS\images\logo.png" />
+    <Content Include="CSS\images\menbd.png" />
+    <Content Include="CSS\images\menubg.jpg" />
+    <Content Include="CSS\images\menubg.png" />
+    <Content Include="CSS\images\menuD.gif" />
+    <Content Include="CSS\images\t1.png" />
+    <Content Include="CSS\images\t2.png" />
+    <Content Include="CSS\images\t3.png" />
+    <Content Include="CSS\images\t4.png" />
+    <Content Include="CSS\images\t5.png" />
+    <Content Include="CSS\images\t6.png" />
+    <Content Include="CSS\images\t7.png" />
+    <Content Include="CSS\images\t8.png" />
+    <Content Include="CSS\images\time.png" />
+    <Content Include="CSS\images\tpbbg.jpg" />
+    <Content Include="CSS\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="CSS\images\untitled.bmp" />
+    <Content Include="CSS\jquery-ui-1.8.8.custom.css" />
+    <Content Include="CSS\LccRF.css" />
+    <Content Include="CSS\login.css" />
+    <Content Include="CSS\lytebox.css" />
+    <Content Include="CSS\main2.css" />
+    <Content Include="CSS\PopupStyle.css" />
+    <Content Include="CSS\PopupStylePkg.css" />
+    <Content Include="CSS\Slider.css" />
+    <Content Include="CSS\slimbox2.css" />
+    <Content Include="CSS\style---.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\styleone.css" />
+    <Content Include="CSS\styles.css" />
+    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="CSS\visa.css" />
+    <Content Include="IDomestic\BookConfirmation.aspx" />
+    <Content Include="IDomestic\BookingConfimation.aspx" />
+    <Content Include="IDomestic\CustomerInfo.aspx" />
+    <Content Include="IDomestic\Result.aspx" />
+    <Content Include="IDomestic\FltResult1.aspx" />
+    <Content Include="IDomestic\FltResultO.aspx" />
+    <Content Include="IDomestic\FltResultR.aspx" />
+    <Content Include="IDomestic\json.txt" />
+    <Content Include="IDomestic\Multicity.xsl" />
+    <Content Include="IDomestic\NoResult.aspx" />
+    <Content Include="IDomestic\PriceDetails.aspx" />
+    <Content Include="International\BookConfirmation.aspx" />
+    <Content Include="International\BookingConfimation.aspx" />
+    <Content Include="International\BookingMsg.aspx" />
+    <Content Include="International\CustomerInfo.aspx" />
+    <Content Include="International\FltResIntl.aspx" />
+    <Content Include="International\Result.aspx" />
+    <Content Include="International\Multicity.xsl" />
+    <Content Include="International\PriceDetails.aspx" />
+    <Content Include="FltSearch1.asmx" />
+    <Content Include="Home\facebook.png" />
+    <Content Include="Home\footer.png" />
+    <Content Include="Home\left_sidebar_top.png" />
+    <Content Include="Home\logo.gif" />
+    <Content Include="Home\logo.png" />
+    <Content Include="Home\logos.gif" />
+    <Content Include="Hotel\bookbg.jpg" />
+    <Content Include="Hotel\BookingSummaryHtl.aspx" />
+    <Content Include="Hotel\calendar.html" />
+    <Content Include="Hotel\check.png" />
+    <Content Include="Hotel\check1.png" />
+    <Content Include="Hotel\css\B2Bhotelengine.css" />
+    <Content Include="Hotel\css\bookbg.jpg" />
+    <Content Include="Hotel\css\btn.png" />
+    <Content Include="Hotel\css\btnbg.png" />
+    <Content Include="Hotel\css\hotelengine.css" />
+    <Content Include="Hotel\css\hotelengine_old.css" />
+    <Content Include="Hotel\css\HotelStyleSheet.css" />
+    <Content Include="Hotel\css\images\bookbg.jpg" />
+    <Content Include="Hotel\css\images\btnbgk.jpg" />
+    <Content Include="Hotel\css\images\finalbtn.png" />
+    <Content Include="Hotel\css\images\menu_hover.png" />
+    <Content Include="Hotel\css\images\more2.png" />
+    <Content Include="Hotel\css\images\sidebar.png" />
+    <Content Include="Hotel\css\images\sidebar_bottom_01.png" />
+    <Content Include="Hotel\css\images\sidebar_bottom_02.png" />
+    <Content Include="Hotel\css\images\site_title_top.png" />
+    <Content Include="Hotel\css\images\sort1.jpg" />
+    <Content Include="Hotel\css\images\sort12.jpg" />
+    <Content Include="Hotel\css\images\sort2.jpg" />
+    <Content Include="Hotel\css\jplist.min.css" />
+    <Content Include="Hotel\css\jquery-ui-1.8.8.custom.css" />
+    <Content Include="Hotel\css\jquery.ui.all.css" />
+    <Content Include="Hotel\css\normalize.css" />
+    <Content Include="Hotel\css\styles.min.css" />
+    <Content Include="Hotel\hotel-Promo.jpg" />
+    <Content Include="Hotel\HotelBookingConfirmation.aspx" />
+    <Content Include="Hotel\HotelCheckOut.aspx" />
+    <Content Include="Hotel\HotelCheckOutInt.aspx" />
+    <Content Include="Hotel\HotelSearchs.asmx" />
+    <Content Include="Hotel\HotelTesting.aspx" />
+    <Content Include="Hotel\HtlBooking.aspx" />
+    <Content Include="Hotel\HtlBookwait.aspx" />
+    <Content Include="Hotel\HtlDetails.aspx" />
+    <Content Include="Hotel\HtlFareDetails.aspx" />
+    <Content Include="Hotel\HtlResult.aspx" />
+    <Content Include="Hotel\Htlwait.aspx" />
+    <Content Include="Hotel\Images\0star.png" />
+    <Content Include="Hotel\Images\1star.png" />
+    <Content Include="Hotel\Images\2star.png" />
+    <Content Include="Hotel\Images\3star.png" />
+    <Content Include="Hotel\Images\4star.png" />
+    <Content Include="Hotel\Images\5star.png" />
+    <Content Include="Hotel\Images\a.png" />
+    <Content Include="Hotel\Images\a1.png" />
+    <Content Include="Hotel\Images\adult.png" />
+    <Content Include="Hotel\Images\anr.png" />
+    <Content Include="Hotel\Images\ar1.png" />
+    <Content Include="Hotel\Images\ar2.png" />
+    <Content Include="Hotel\Images\ar3.png" />
+    <Content Include="Hotel\Images\ar4.png" />
+    <Content Include="Hotel\Images\b.jpg" />
+    <Content Include="Hotel\Images\b.png" />
+    <Content Include="Hotel\Images\bdeal.png" />
+    <Content Include="Hotel\Images\BG.png" />
+    <Content Include="Hotel\Images\bookbg.jpg" />
+    <Content Include="Hotel\Images\border.png" />
+    <Content Include="Hotel\Images\btnbgk.jpg" />
+    <Content Include="Hotel\Images\btnbgk.png" />
+    <Content Include="Hotel\Images\btnnew.png" />
+    <Content Include="Hotel\Images\c.png" />
+    <Content Include="Hotel\Images\c1.png" />
+    <Content Include="Hotel\Images\cal.gif" />
+    <Content Include="Hotel\Images\check.png" />
+    <Content Include="Hotel\Images\check1.png" />
+    <Content Include="Hotel\Images\child.png" />
+    <Content Include="Hotel\Images\Cots_msg.gif" />
+    <Content Include="Hotel\Images\d.png" />
+    <Content Include="Hotel\Images\d1.png" />
+    <Content Include="Hotel\Images\d2.png" />
+    <Content Include="Hotel\Images\d3.png" />
+    <Content Include="Hotel\Images\deal.png" />
+    <Content Include="Hotel\Images\deal1.png" />
+    <Content Include="Hotel\Images\deal3.jpg" />
+    <Content Include="Hotel\Images\down-dark.png" />
+    <Content Include="Hotel\Images\down.png" />
+    <Content Include="Hotel\Images\Facility\AC.png" />
+    <Content Include="Hotel\Images\Facility\Airport_transfer.png" />
+    <Content Include="Hotel\Images\Facility\babysitting.png" />
+    <Content Include="Hotel\Images\Facility\Banquet_hall.png" />
+    <Content Include="Hotel\Images\Facility\Banquet_hall__.png" />
+    <Content Include="Hotel\Images\Facility\bar copy.png" />
+    <Content Include="Hotel\Images\Facility\bar-copy.png" />
+    <Content Include="Hotel\Images\Facility\bar.png" />
+    <Content Include="Hotel\Images\Facility\bath.png" />
+    <Content Include="Hotel\Images\Facility\beauty.png" />
+    <Content Include="Hotel\Images\Facility\breakfast.png" />
+    <Content Include="Hotel\Images\Facility\Brekfast.png" />
+    <Content Include="Hotel\Images\Facility\Conference.png" />
+    <Content Include="Hotel\Images\Facility\dinning.png" />
+    <Content Include="Hotel\Images\Facility\elevator.png" />
+    <Content Include="Hotel\Images\Facility\exchange.png" />
+    <Content Include="Hotel\Images\Facility\golf.png" />
+    <Content Include="Hotel\Images\Facility\gym.png" />
+    <Content Include="Hotel\Images\Facility\handicap.png" />
+    <Content Include="Hotel\Images\Facility\health_club.png" />
+    <Content Include="Hotel\Images\Facility\hotel_facilities_bizz.png" />
+    <Content Include="Hotel\Images\Facility\Internet.png" />
+    <Content Include="Hotel\Images\Facility\jacuzzi.png" />
+    <Content Include="Hotel\Images\Facility\laundary.png" />
+    <Content Include="Hotel\Images\Facility\lobby.png" />
+    <Content Include="Hotel\Images\Facility\Loker.png" />
+    <Content Include="Hotel\Images\Facility\lounge.png" />
+    <Content Include="Hotel\Images\Facility\lounge__.png" />
+    <Content Include="Hotel\Images\Facility\no_pet.png" />
+    <Content Include="Hotel\Images\Facility\parking.png" />
+    <Content Include="Hotel\Images\Facility\pets.png" />
+    <Content Include="Hotel\Images\Facility\phone.png" />
+    <Content Include="Hotel\Images\Facility\Restorent.png" />
+    <Content Include="Hotel\Images\Facility\sauna.png" />
+    <Content Include="Hotel\Images\Facility\shopping.png" />
+    <Content Include="Hotel\Images\Facility\swimming.png" />
+    <Content Include="Hotel\Images\Facility\tennis.png" />
+    <Content Include="Hotel\Images\Facility\travel_desk.png" />
+    <Content Include="Hotel\Images\Facility\TV.png" />
+    <Content Include="Hotel\Images\Facility\wiefy.png" />
+    <Content Include="Hotel\Images\Facility\wifi.gif" />
+    <Content Include="Hotel\Images\Facility\_Parking.png" />
+    <Content Include="Hotel\Images\Facility\_Phone.png" />
+    <Content Include="Hotel\Images\fade.png" />
+    <Content Include="Hotel\Images\favicon.png" />
+    <Content Include="Hotel\Images\filter.png" />
+    <Content Include="Hotel\Images\finalbtn.png" />
+    <Content Include="Hotel\Images\fltloding.gif" />
+    <Content Include="Hotel\Images\grid-btn-disabled.png" />
+    <Content Include="Hotel\Images\grid-btn.png" />
+    <Content Include="Hotel\Images\hotel-discount.swf" />
+    <Content Include="Hotel\Images\hotel-Promo.jpg" />
+    <Content Include="Hotel\Images\hotelsearch.png" />
+    <Content Include="Hotel\Images\hotel\NoImage.jpg" />
+    <Content Include="Hotel\Images\htlrs.png" />
+    <Content Include="Hotel\Images\icon.jpg" />
+    <Content Include="Hotel\Images\list-btn-disabled.png" />
+    <Content Include="Hotel\Images\list-btn.png" />
+    <Content Include="Hotel\Images\loading.swf" />
+    <Content Include="Hotel\Images\m0.gif" />
+    <Content Include="Hotel\Images\m1.gif" />
+    <Content Include="Hotel\Images\m1.png" />
+    <Content Include="Hotel\Images\m2.gif" />
+    <Content Include="Hotel\Images\m2.png" />
+    <Content Include="Hotel\Images\m3.gif" />
+    <Content Include="Hotel\Images\m4.gif" />
+    <Content Include="Hotel\Images\m5.gif" />
+    <Content Include="Hotel\Images\maker.png" />
+    <Content Include="Hotel\Images\map.png" />
+    <Content Include="Hotel\Images\MapIcon.jpg" />
+    <Content Include="Hotel\Images\mapicon2.jpg" />
+    <Content Include="Hotel\Images\mapicon3.png" />
+    <Content Include="Hotel\Images\marker.png" />
+    <Content Include="Hotel\Images\marker2.gif" />
+    <Content Include="Hotel\Images\marker2.png" />
+    <Content Include="Hotel\Images\mm1.png" />
+    <Content Include="Hotel\Images\mm2.png" />
+    <Content Include="Hotel\Images\more2.png" />
+    <Content Include="Hotel\Images\msg.png" />
+    <Content Include="Hotel\Images\new.png" />
+    <Content Include="Hotel\Images\NoImage.jpg" />
+    <Content Include="Hotel\Images\OK.ico" />
+    <Content Include="Hotel\Images\plusminus.png" />
+    <Content Include="Hotel\Images\price.png" />
+    <Content Include="Hotel\Images\reset.png" />
+    <Content Include="Hotel\Images\sidebar.png" />
+    <Content Include="Hotel\Images\sidebar_bottom_01.png" />
+    <Content Include="Hotel\Images\sidebar_bottom_02.png" />
+    <Content Include="Hotel\Images\site_title_top.png" />
+    <Content Include="Hotel\Images\sort1.jpg" />
+    <Content Include="Hotel\Images\sort12.jpg" />
+    <Content Include="Hotel\Images\sort2.jpg" />
+    <Content Include="Hotel\Images\star.png" />
+    <Content Include="Hotel\Images\star1.png" />
+    <Content Include="Hotel\Images\star_1.png" />
+    <Content Include="Hotel\Images\star_cut.png" />
+    <Content Include="Hotel\Images\t1.png" />
+    <Content Include="Hotel\Images\t2.png" />
+    <Content Include="Hotel\Images\t3.png" />
+    <Content Include="Hotel\Images\t4.png" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_1.5.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_1.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_2.5.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_2.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_3.5.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_3.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_4.5.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_4.gif" />
+    <Content Include="Hotel\Images\TripAdvisor\TA_5.gif" />
+    <Content Include="Hotel\Images\viewPricebreakup.jpg" />
+    <Content Include="Hotel\Images\wait.swf" />
+    <Content Include="Hotel\img\common\ajax-loader-line.gif" />
+    <Content Include="Hotel\img\common\ajax-loader.gif" />
+    <Content Include="Hotel\img\common\black-bg.png" />
+    <Content Include="Hotel\img\common\codecanyon.png" />
+    <Content Include="Hotel\img\common\download.png" />
+    <Content Include="Hotel\img\common\favicon.png" />
+    <Content Include="Hotel\img\common\github.png" />
+    <Content Include="Hotel\img\common\jplist - Copy.png" />
+    <Content Include="Hotel\img\common\jplist.png" />
+    <Content Include="Hotel\img\common\logo.png" />
+    <Content Include="Hotel\img\common\next-blue.png" />
+    <Content Include="Hotel\img\common\next-orange.png" />
+    <Content Include="Hotel\img\common\next.png" />
+    <Content Include="Hotel\img\common\paypal.png" />
+    <Content Include="Hotel\img\icons\down-dark.png" />
+    <Content Include="Hotel\img\icons\down.png" />
+    <Content Include="Hotel\img\icons\grid-btn-disabled.png" />
+    <Content Include="Hotel\img\icons\grid-btn.png" />
+    <Content Include="Hotel\img\icons\list-btn-disabled.png" />
+    <Content Include="Hotel\img\icons\list-btn.png" />
+    <Content Include="Hotel\img\icons\new.png" />
+    <Content Include="Hotel\img\titles\designer.png" />
+    <Content Include="Hotel\img\titles\enterprise.png" />
+    <Content Include="Hotel\img\titles\matrix.png" />
+    <Content Include="Hotel\img\titles\premier.png" />
+    <Content Include="Hotel\img\titles\pro.png" />
+    <Content Include="Hotel\img\titles\standard.png" />
+    <Content Include="Hotel\img\titles\starter.png" />
+    <Content Include="Hotel\JS\HotelMarkup.js" />
+    <Content Include="Hotel\JS\HotelMarkup_Old.js" />
+    <Content Include="Hotel\JS\hotelpasg.js" />
+    <Content Include="Hotel\JS\HotelRefund.js" />
+    <Content Include="Hotel\JS\HotelRefund_old.js" />
+    <Content Include="Hotel\JS\HotelsResultsNew--.js" />
+    <Content Include="Hotel\JS\HotelsResultsNew.js" />
+    <Content Include="Hotel\JS\htlDetailMap.js" />
+    <Content Include="Hotel\JS\HtlResultMap.js" />
+    <Content Include="Hotel\JS\HtlRoomDetails.js" />
+    <Content Include="Hotel\JS\HtlSearchQuery.js" />
+    <Content Include="Hotel\JS\jHotelFareBreakup.js" />
+    <Content Include="Hotel\JS\jplist.min.js" />
+    <Content Include="Hotel\JS\jquery-1.10.0.min.js" />
+    <Content Include="Hotel\JS\jquery-1.3.2.min.js" />
+    <Content Include="Hotel\JS\jquery-1.7.1.js.js" />
+    <Content Include="Hotel\JS\jquery-1.7.1.min.js" />
+    <Content Include="Hotel\JS\jquery-barcode.js" />
+    <Content Include="Hotel\JS\jquery-barcode.min.js" />
+    <Content Include="Hotel\JS\JSLINQ.js" />
+    <Content Include="Hotel\JS\modernizr.min.js" />
+    <Content Include="Hotel\JS\ModifySearch.js" />
+    <Content Include="Hotel\JS\wait.js" />
+    <Content Include="Hotel\NoResult.aspx" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\6e.gif" />
+    <Content Include="Images\9w.gif" />
+    <Content Include="Images\AA.gif" />
+    <Content Include="Images\aboutITZ.png" />
+    <Content Include="Images\aboutus.png" />
+    <Content Include="Images\acc.png" />
+    <Content Include="Images\accept.png" />
+    <Content Include="Images\accounts.png" />
+    <Content Include="Images\ACTA.gif" />
+    <Content Include="Images\add.gif" />
+    <Content Include="Images\addressicon.png" />
+    <Content Include="Images\add_btn.jpg" />
+    <Content Include="Images\adt.png" />
+    <Content Include="Images\ADTOI.jpg" />
+    <Content Include="Images\AF.gif" />
+    <Content Include="Images\AI.gif" />
+    <Content Include="Images\air.jpg" />
+    <Content Include="Images\air.png" />
+    <Content Include="Images\airline.png" />
+    <Content Include="Images\airline.swf" />
+    <Content Include="Images\airlines.png" />
+    <Content Include="Images\AIRMILES.gif" />
+    <Content Include="Images\airplains.swf" />
+    <Content Include="Images\air_plane.png" />
+    <Content Include="Images\ak.gif" />
+    <Content Include="Images\amd_logo.gif" />
+    <Content Include="Images\arrow.jpg" />
+    <Content Include="Images\arrows.png" />
+    <Content Include="Images\Axis-Bank-Logo.bmp" />
+    <Content Include="Images\BA.gif" />
+    <Content Include="Images\background.png" />
+    <Content Include="Images\back_disabled.jpg" />
+    <Content Include="Images\back_enabled.jpg" />
+    <Content Include="Images\baggage.png" />
+    <Content Include="Images\bajaj plane 1.gif" />
+    <Content Include="Images\bankdetails.jpg" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\banner2.jpg" />
+    <Content Include="Images\banner2.png" />
+    <Content Include="Images\bg-black.gif" />
+    <Content Include="Images\bg-black2.gif" />
+    <Content Include="Images\bg-blackx.gif" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bgg.png" />
+    <Content Include="Images\billpayment.png" />
+    <Content Include="Images\bleft_113.gif" />
+    <Content Include="Images\body_top.jpg" />
+    <Content Include="Images\body_top.png" />
+    <Content Include="Images\body_top1.png" />
+    <Content Include="Images\body_top2.png" />
+    <Content Include="Images\boi.jpg" />
+    <Content Include="Images\book.gif" />
+    <Content Include="Images\book.jpg" />
+    <Content Include="Images\box-bg.jpg" />
+    <Content Include="Images\box-bl.jpg" />
+    <Content Include="Images\box-bottom.jpg" />
+    <Content Include="Images\box-br.jpg" />
+    <Content Include="Images\box-lt.jpg" />
+    <Content Include="Images\box-rt.jpg" />
+    <Content Include="Images\box-tp.jpg" />
+    <Content Include="Images\box-tpl.jpg" />
+    <Content Include="Images\box-tpr.jpg" />
+    <Content Include="Images\boxl.jpg" />
+    <Content Include="Images\boxr.jpg" />
+    <Content Include="Images\breakup.gif" />
+    <Content Include="Images\btn.png" />
+    <Content Include="Images\btnbg.png" />
+    <Content Include="Images\btnbtn.jpg" />
+    <Content Include="Images\btn_edit.jpg" />
+    <Content Include="Images\btn_login.jpg" />
+    <Content Include="Images\btn_minus.gif" />
+    <Content Include="Images\btn_plus.gif" />
+    <Content Include="Images\bus.png" />
+    <Content Include="Images\button_01.png" />
+    <Content Include="Images\cal.gif" />
+    <Content Include="Images\Cancel.jpg" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\cancel1.png" />
+    <Content Include="Images\cancel_new.png" />
+    <Content Include="Images\car_btn.jpg" />
+    <Content Include="Images\chd.png" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\close.jpg" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\closebox.png" />
+    <Content Include="Images\connexxus01.gif" />
+    <Content Include="Images\CONSUMERPROTECTION.gif" />
+    <Content Include="Images\contact-us.png" />
+    <Content Include="Images\contact.png" />
+    <Content Include="Images\contactus_btn.jpg" />
+    <Content Include="Images\creditcard.png" />
+    <Content Include="Images\cruises_btn.jpg" />
+    <Content Include="Images\customer-service-icon.png" />
+    <Content Include="Images\deal.JPG" />
+    <Content Include="Images\dealsheet.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\delete_new.png" />
+    <Content Include="Images\div.gif" />
+    <Content Include="Images\drop-arrow.gif" />
+    <Content Include="Images\dsheet.png" />
+    <Content Include="Images\dubai_sp.jpg" />
+    <Content Include="Images\duration.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\edit_new.png" />
+    <Content Include="Images\EK.gif" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\fade.png" />
+    <Content Include="Images\faxicon.png" />
+    <Content Include="Images\Fbreak.jpg" />
+    <Content Include="Images\Fbreak1.jpg" />
+    <Content Include="Images\FD.gif" />
+    <Content Include="Images\filter.png" />
+    <Content Include="Images\first.gif" />
+    <Content Include="Images\flash2.swf" />
+    <Content Include="Images\flickr.png" />
+    <Content Include="Images\flight1.png" />
+    <Content Include="Images\flight_btn.jpg" />
+    <Content Include="Images\Flt_bk.JPG" />
+    <Content Include="Images\footer.jpg" />
+    <Content Include="Images\footer.png" />
+    <Content Include="Images\forward_disabled.jpg" />
+    <Content Include="Images\forward_enabled.jpg" />
+    <Content Include="Images\g.png" />
+    <Content Include="Images\G8.gif" />
+    <Content Include="Images\gallery\image_01_s.jpg" />
+    <Content Include="Images\gallery\image_02_s.jpg" />
+    <Content Include="Images\gallery\image_03_s.jpg" />
+    <Content Include="Images\gallery\image_04_s.jpg" />
+    <Content Include="Images\gallery\image_05_s.jpg" />
+    <Content Include="Images\gallery\image_06.jpg" />
+    <Content Include="Images\gallery\image_06_b.jpg" />
+    <Content Include="Images\gallery\image_06_s.jpg" />
+    <Content Include="Images\glr.png" />
+    <Content Include="Images\go.png" />
+    <Content Include="Images\grid-btn.png" />
+    <Content Include="Images\hands.jpg" />
+    <Content Include="Images\HDFC.jpg" />
+    <Content Include="Images\header2_bg.jpg" />
+    <Content Include="Images\header4_bg.jpg" />
+    <Content Include="Images\HeaderGlassBlack.jpg" />
+    <Content Include="Images\holiday.png" />
+    <Content Include="Images\holidays1.png" />
+    <Content Include="Images\home.JPG" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\home_btn_h.jpg" />
+    <Content Include="Images\hotel1.png" />
+    <Content Include="Images\hotel_btn.jpg" />
+    <Content Include="Images\hr-white-line.jpg" />
+    <Content Include="Images\iaai-color.png" />
+    <Content Include="Images\IAAI.jpg" />
+    <Content Include="Images\IATA-logo.png" />
+    <Content Include="Images\IATA.jpg" />
+    <Content Include="Images\IATO.png" />
+    <Content Include="Images\IC.gif" />
+    <Content Include="Images\icici_bank.jpg" />
+    <Content Include="Images\icons\baggage.png" />
+    <Content Include="Images\icons\Edit_prices.png" />
+    <Content Include="Images\icons\faredetails.png" />
+    <Content Include="Images\icons\faredetails1.png" />
+    <Content Include="Images\icons\information.png" />
+    <Content Include="Images\icons\Price_list.png" />
+    <Content Include="Images\id_card.png" />
+    <Content Include="Images\ind_map.jpg" />
+    <Content Include="Images\inf.png" />
+    <Content Include="Images\irctc.png" />
+    <Content Include="Images\IRCTC_Logo_1.png" />
+    <Content Include="Images\issuei.JPG" />
+    <Content Include="Images\it.gif" />
+    <Content Include="Images\KL.gif" />
+    <Content Include="Images\last.gif" />
+    <Content Include="Images\lastpage.gif" />
+    <Content Include="Images\LDWL.jpg" />
+    <Content Include="Images\leftSM_bottom.jpg" />
+    <Content Include="Images\leftSM_right.jpg" />
+    <Content Include="Images\leftSM_top.jpg" />
+    <Content Include="Images\left_sidebar_bottom.png" />
+    <Content Include="Images\left_sidebar_middle.png" />
+    <Content Include="Images\left_sidebar_top.png" />
+    <Content Include="Images\LH.gif" />
+    <Content Include="Images\li1.jpg" />
+    <Content Include="Images\linkedin.png" />
+    <Content Include="Images\list-btn-disabled.png" />
+    <Content Include="Images\list-btn.png" />
+    <Content Include="Images\list.png" />
+    <Content Include="Images\ITZsp_box.png" />
+    <Content Include="Images\load.gif" />
+    <Content Include="Images\loader.swf" />
+    <Content Include="Images\loadingAnim.gif" />
+    <Content Include="Images\loadinglogin.gif" />
+    <Content Include="Images\loadingnew.swf" />
+    <Content Include="Images\loadingWheel.gif" />
+    <Content Include="Images\loading_bar.gif" />
+    <Content Include="Images\login-Icon.png" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\login.png" />
+    <Content Include="Images\loginbtn.png" />
+    <Content Include="Images\loginhere.png" />
+    <Content Include="Images\login_icon.gif" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo1 %282%29.png" />
+    <Content Include="Images\logo1.jpg" />
+    <Content Include="Images\logo2.jpg" />
+    <Content Include="Images\logos.jpg" />
+    <Content Include="Images\mailicon.png" />
+    <Content Include="Images\mail\ColorfulRajasthan.jpg" />
+    <Content Include="Images\mail\kathmandu.jpg" />
+    <Content Include="Images\mail\kerala.jpg" />
+    <Content Include="Images\mail\small\kathmandu_s.jpg" />
+    <Content Include="Images\mail\small\kerala.jpg" />
+    <Content Include="Images\mail\small\rajasthan_s.jpg" />
+    <Content Include="Images\main_imag.jpg" />
+    <Content Include="Images\mc_sc.png" />
+    <Content Include="Images\menbd.png" />
+    <Content Include="Images\menubg.jpg" />
+    <Content Include="Images\menubg.png" />
+    <Content Include="Images\menu_hover.jpg" />
+    <Content Include="Images\middleSM_bottom.jpg" />
+    <Content Include="Images\middleSM_left.jpg" />
+    <Content Include="Images\middleSM_right.jpg" />
+    <Content Include="Images\middleSM_top.jpg" />
+    <Content Include="Images\ministry-of-tourism-logo.gif" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\mm_arrow.gif" />
+    <Content Include="Images\mm_spacer.gif" />
+    <Content Include="Images\modify.png" />
+    <Content Include="Images\msg.png" />
+    <Content Include="Images\myprofile.png" />
+    <Content Include="Images\myspace.png" />
+    <Content Include="Images\nature-bg.jpg" />
+    <Content Include="Images\new-banner.jpg" />
+    <Content Include="Images\NewBlink.gif" />
+    <Content Include="Images\new_user.gif" />
+    <Content Include="Images\next.gif" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\nextpage.gif" />
+    <Content Include="Images\next_year.gif" />
+    <Content Include="Images\next_year.png" />
+    <Content Include="Images\nologo.png" />
+    <Content Include="Images\ok.png" />
+    <Content Include="Images\OS.gif" />
+    <Content Include="Images\packages.png" />
+    <Content Include="Images\payu.png" />
+    <Content Include="Images\phonecall_t.swf" />
+    <Content Include="Images\phoneicon.png" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\plusminusnew.png" />
+    <Content Include="Images\pnm.png" />
+    <Content Include="Images\prev.gif" />
+    <Content Include="Images\prev.png" />
+    <Content Include="Images\prevpage.gif" />
+    <Content Include="Images\prev_year.gif" />
+    <Content Include="Images\prev_year.png" />
+    <Content Include="Images\print_booking.jpg" />
+    <Content Include="Images\product_01.png" />
+    <Content Include="Images\product_02.png" />
+    <Content Include="Images\product_03.png" />
+    <Content Include="Images\product_04.png" />
+    <Content Include="Images\product_05.png" />
+    <Content Include="Images\product_06.png" />
+    <Content Include="Images\product_07.png" />
+    <Content Include="Images\product_08.png" />
+    <Content Include="Images\product_thumb\image_01.jpg" />
+    <Content Include="Images\product_thumb\image_01.png" />
+    <Content Include="Images\product_thumb\image_02.jpg" />
+    <Content Include="Images\product_thumb\image_03.jpg" />
+    <Content Include="Images\product_thumb\image_04.jpg" />
+    <Content Include="Images\product_thumb\image_05.jpg" />
+    <Content Include="Images\product_thumb\kathmandu_s.jpg" />
+    <Content Include="Images\profile.png" />
+    <Content Include="Images\profile_pic_blank.jpg" />
+    <Content Include="Images\rail.png" />
+    <Content Include="Images\recharge.png" />
+    <Content Include="Images\refund.jpg" />
+    <Content Include="Images\register.png" />
+    <Content Include="Images\remove_btn.jpg" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\reports.png" />
+    <Content Include="Images\request.png" />
+    <Content Include="Images\reset.png" />
+    <Content Include="Images\right-arrow.gif" />
+    <Content Include="Images\rightSM_bottom.jpg" />
+    <Content Include="Images\right_sidebar_bottom.png" />
+    <Content Include="Images\right_sidebar_middle.png" />
+    <Content Include="Images\right_sidebar_top.png" />
+    <Content Include="Images\Rmk.jpg" />
+    <Content Include="Images\rs.png" />
+    <Content Include="Images\rsp.png" />
+    <Content Include="Images\s2.gif" />
+    <Content Include="Images\SANDLES.gif" />
+    <Content Include="Images\sbi_logo.gif" />
+    <Content Include="Images\search.jpg" />
+    <Content Include="Images\searching.gif" />
+    <Content Include="Images\searching.swf" />
+    <Content Include="Images\selected1.png" />
+    <Content Include="Images\sep.jpg" />
+    <Content Include="Images\series-departure.png" />
+    <Content Include="Images\seriesdeparture.png" />
+    <Content Include="Images\settings.png" />
+    <Content Include="Images\sg.gif" />
+    <Content Include="Images\SignUP.png" />
+    <Content Include="Images\slideitmoo_back.png" />
+    <Content Include="Images\slideitmoo_forward.png" />
+    <Content Include="Images\slideshow\find-rates2.jpg" />
+    <Content Include="Images\slideshow\find-rates3.jpg" />
+    <Content Include="Images\slideshow\find-rates4.jpg" />
+    <Content Include="Images\slideshow\silde-nav.png" />
+    <Content Include="Images\slideshow\slide-n-1.gif" />
+    <Content Include="Images\slideshow\slide-n-10.gif" />
+    <Content Include="Images\slideshow\slide-n-11.gif" />
+    <Content Include="Images\slideshow\slide-n-12.gif" />
+    <Content Include="Images\slideshow\slide-n-13.gif" />
+    <Content Include="Images\slideshow\slide-n-14.gif" />
+    <Content Include="Images\slideshow\slide-n-2.gif" />
+    <Content Include="Images\slideshow\slide-n-3.gif" />
+    <Content Include="Images\slideshow\slide-n-4.gif" />
+    <Content Include="Images\slideshow\slide-n-5.gif" />
+    <Content Include="Images\slideshow\slide-n-6.gif" />
+    <Content Include="Images\slideshow\slide-n-7.gif" />
+    <Content Include="Images\slideshow\slide-n-8.gif" />
+    <Content Include="Images\slideshow\slide-n-9.gif" />
+    <Content Include="Images\slideshow\springtravels_findbestrates.jpg" />
+    <Content Include="Images\smak.gif" />
+    <Content Include="Images\smFD.gif" />
+    <Content Include="Images\sorry.gif" />
+    <Content Include="Images\sort_asc.jpg" />
+    <Content Include="Images\sort_both.jpg" />
+    <Content Include="Images\sort_desc.jpg" />
+    <Content Include="Images\SQ.gif" />
+    <Content Include="Images\standard_chartered.jpg" />
+    <Content Include="Images\stop.png" />
+    <Content Include="Images\sub.gif" />
+    <Content Include="Images\submit.png" />
+    <Content Include="Images\TAAI.jpg" />
+    <Content Include="Images\TAAI_logo.png" />
+    <Content Include="Images\table-bg.jpg" />
+    <Content Include="Images\TAFI.jpg" />
+    <Content Include="Images\TAFI.png" />
+    <Content Include="Images\TG.gif" />
+    <Content Include="Images\thailand.jpg" />
+    <Content Include="Images\time.png" />
+    <Content Include="Images\top_bg.jpg" />
+    <Content Include="Images\Tourism_Malaysia_logo.png" />
+    <Content Include="Images\Tours-Travels.jpg" />
+    <Content Include="Images\tpbg.jpg" />
+    <Content Include="Images\tpbg1.jpg" />
+    <Content Include="Images\tpbg3.jpg" />
+    <Content Include="Images\tpbg4.jpg" />
+    <Content Include="Images\tpbg6.jpg" />
+    <Content Include="Images\tpbgb.jpg" />
+    <Content Include="Images\tpbgm1.jpg" />
+    <Content Include="Images\tpbgm2.jpg" />
+    <Content Include="Images\train.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\uftaaLogo.png" />
+    <Content Include="Images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Images\ui-icons_056b93_256x240.png" />
+    <Content Include="Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Images\update.gif" />
+    <Content Include="Images\update.png" />
+    <Content Include="Images\update_new.png" />
+    <Content Include="Images\upload.png" />
+    <Content Include="Images\urlicon.png" />
+    <Content Include="Images\vacations_btn.jpg" />
+    <Content Include="Images\visa.png" />
+    <Content Include="Images\visa_verify.png" />
+    <Content Include="Images\VS.gif" />
+    <Content Include="Images\wait.gif" />
+    <Content Include="JScript.js" />
+    <Content Include="JS\AC_RunActiveContent.js" />
+    <Content Include="JS\calendar.js" />
+    <Content Include="JS\calendar1.js" />
+    <Content Include="JS\chrome.js" />
+    <Content Include="JS\common.js" />
+    <Content Include="JS\Distributor.js" />
+    <Content Include="JS\fareinfo.js" />
+    <Content Include="JS\jquery-1.4.1.js" />
+    <Content Include="JS\jquery-1.4.4.min.js" />
+    <Content Include="JS\jquery-ui-1.8.8.custom.min.js" />
+    <Content Include="JS\jquery.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\JScript.js" />
+    <Content Include="JS\LccRF.js" />
+    <Content Include="JS\lytebox.js" />
+    <Content Include="JS\lytebox1.js" />
+    <Content Include="JS\ProxyJS.js" />
+    <Content Include="JS\SalesJScript.js" />
+    <Content Include="JS\simplecalendar.js" />
+    <Content Include="JS\slimbox2.js" />
+    <Content Include="LccRF\LccBkgConfirmation.aspx" />
+    <Content Include="LccRF\LccCheckOut.aspx" />
+    <Content Include="LccRF\LccRResult.aspx" />
+    <Content Include="LccRF\LccRTFBooking.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="PopupJS\BG.png" />
+    <Content Include="PopupJS\close.jpg" />
+    <Content Include="PopupJS\close.png" />
+    <Content Include="PopupJS\DDL.js" />
+    <Content Include="PopupJS\DDLCss.css" />
+    <Content Include="PopupJS\dhtmlwindow.css" />
+    <Content Include="PopupJS\dhtmlwindow.js" />
+    <Content Include="PopupJS\fat_eua.js" />
+    <Content Include="PopupJS\lightBoxUtility.js" />
+    <Content Include="PopupJS\lightBoxUtilityNew.js" />
+    <Content Include="PopupJS\modal.css" />
+    <Content Include="PopupJS\modal.js" />
+    <Content Include="Scripts\A2B\Airport.js" />
+    <Content Include="Scripts\A2B\AirpotsearchJScript.js" />
+    <Content Include="Scripts\A2B\jplist.min.js" />
+    <Content Include="Scripts\A2B\jquery-1.10.0.min.js" />
+    <Content Include="Scripts\A2B\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\A2B\jquery-ui-1.8.8.custom.min.js" />
+    <Content Include="Scripts\A2B\jquery-ui.js" />
+    <Content Include="Scripts\A2B\jquery.bpopup.min.js" />
+    <Content Include="Scripts\A2B\json2.js" />
+    <Content Include="Scripts\A2B\SortAD.js" />
+    <Content Include="Scripts\AgencySearch--.js" />
+    <Content Include="Scripts\AgencySearch.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\change.min.js" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Scripts\Flight\async.js" />
+    <Content Include="Scripts\Flight\Common.js" />
+    <Content Include="Scripts\Flight\FlightMailing.js" />
+    <Content Include="Scripts\Flight\FlightResult2.js" />
+    <Content Include="Scripts\Flight\FlightResultIntl.js" />
+    <Content Include="Scripts\Flight\FlightResults.js" />
+    <Content Include="Scripts\Flight\FlightResultsNew.js" />
+    <Content Include="Scripts\Flight\FlightWait.js" />
+    <Content Include="Scripts\Flight\FltSearch.js" />
+    <Content Include="Scripts\Flight\handleQueryString.js" />
+    <Content Include="Scripts\Flight\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\Flight\jquery-1.6.min.js" />
+    <Content Include="Scripts\Flight\jquery-ui-1.8.8.custom.min.js" />
+    <Content Include="Scripts\Flight\jquery.blockUI.js" />
+    <Content Include="Scripts\Flight\jquery.dataTables.js" />
+    <Content Include="Scripts\Flight\jquery.dataTables.min.js" />
+    <Content Include="Scripts\Flight\jquery.floatobject-1.0.js" />
+    <Content Include="Scripts\Flight\jquery.qtip.min.js" />
+    <Content Include="Scripts\Flight\JSLINQ.js" />
+    <Content Include="Scripts\Flight\SortAD.js" />
+    <Content Include="Scripts\Flight\TextFilterGroup.js" />
+    <Content Include="Scripts\FltSearch.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
+    <Content Include="Scripts\gridview-readonly-script.js" />
+    <Content Include="Scripts\handleQueryString.js" />
+    <Content Include="Scripts\jplist.min.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.2.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.8.custom.min.js" />
+    <Content Include="Scripts\jquery.tooltip.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\PkgSlider.Js" />
+    <Content Include="Scripts\PopupScript.js" />
+    <Content Include="Scripts\PopupScriptPkg.js" />
+    <Content Include="Scripts\ReissueRefund.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\Search.js" />
+    <Content Include="Scripts\search.min.js" />
+    <Content Include="Scripts\Search1.js" />
+    <Content Include="Scripts\Search2.js" />
+    <Content Include="Scripts\Search3.js" />
+    <Content Include="Scripts\SearchResult.js" />
+    <Content Include="Scripts\SetBanners.js" />
+    <Content Include="Scripts\SetOffers.js" />
+    <Content Include="Scripts\SetPkgBanner.js" />
+    <Content Include="SprReports\A2BTRANSFERREPORT.aspx" />
+    <Content Include="SprReports\Accounts\AccountPanel.aspx" />
+    <Content Include="SprReports\Accounts\ADJPendingDetails.aspx" />
+    <Content Include="SprReports\Accounts\ADJProcessAccount.aspx" />
+    <Content Include="SprReports\Accounts\AgentPanel.aspx" />
+    <Content Include="SprReports\Accounts\Agent_Tds.aspx" />
+    <Content Include="SprReports\Accounts\BusBookingInvoiceDetails.aspx" />
+    <Content Include="SprReports\Accounts\BusInvoiceDetails.aspx" />
+    <Content Include="SprReports\Accounts\CashInFlow.aspx" />
+    <Content Include="SprReports\Accounts\CreditCardPayment.aspx" />
+    <Content Include="SprReports\Accounts\CreditNodeDomDetails.aspx" />
+    <Content Include="SprReports\Accounts\CreditNodeIntlDetails.aspx" />
+    <Content Include="SprReports\Accounts\CreditNoteRail.aspx" />
+    <Content Include="SprReports\Accounts\DomSaleRegister.aspx" />
+    <Content Include="SprReports\Accounts\HotelCreditNote.aspx" />
+    <Content Include="SprReports\Accounts\HotelInvoiceDetails.aspx" />
+    <Content Include="SprReports\Accounts\HotelSalesRegister.aspx" />
+    <Content Include="SprReports\Accounts\IntInvoiceDetails.aspx" />
+    <Content Include="SprReports\Accounts\IntlSaleRegister.aspx" />
+    <Content Include="SprReports\Accounts\IRCTCInvoiceDetail.aspx" />
+    <Content Include="SprReports\Accounts\Ledger.aspx" />
+    <Content Include="SprReports\Accounts\NetMarginReport.aspx" />
+    <Content Include="SprReports\Accounts\PendingCreditDetails.aspx" />
+    <Content Include="SprReports\Accounts\ProcessAccount.aspx" />
+    <Content Include="SprReports\Accounts\Rail_Refund.aspx" />
+    <Content Include="SprReports\Accounts\Rail_RefundReport.aspx" />
+    <Content Include="SprReports\Accounts\RechargeRefundReport.aspx" />
+    <Content Include="SprReports\Accounts\SaleRegisterIRCTC.aspx" />
+    <Content Include="SprReports\Accounts\Upload.aspx" />
+    <Content Include="SprReports\Accounts\UploadAdjustment.aspx" />
+    <Content Include="SprReports\Accounts\UploadCredit.aspx" />
+    <Content Include="SprReports\Accounts\WinYatraRpt.aspx" />
+    <Content Include="SprReports\Admin\Activate_Agents.aspx" />
+    <Content Include="SprReports\Admin\AdminHtlMarkup.aspx" />
+    <Content Include="SprReports\Admin\AdminMarkupset.aspx" />
+    <Content Include="SprReports\Admin\Admin_profile.aspx" />
+    <Content Include="SprReports\Admin\Agent_Details.aspx" />
+    <Content Include="SprReports\Admin\AirlineFee.aspx" />
+    <Content Include="SprReports\Admin\BlockAirline.aspx" />
+    <Content Include="SprReports\Admin\ChartReports.aspx" />
+    <Content Include="SprReports\Admin\ChartReports.aspx.cs" />
+    <Content Include="SprReports\Admin\CouponFareReport.aspx" />
+    <Content Include="SprReports\Admin\csv.aspx" />
+    <Content Include="SprReports\Admin\csv.aspx.cs" />
+    <Content Include="SprReports\Admin\DomAirlineMarkup.aspx" />
+    <Content Include="SprReports\Admin\DomDiscountMaster.aspx" />
+    <Content Include="SprReports\Admin\ExecutiveDetails.aspx" />
+    <Content Include="SprReports\Admin\HitsTrace.aspx" />
+    <Content Include="SprReports\Admin\HitsTrace.aspx.cs" />
+    <Content Include="SprReports\Admin\HtlDiscount.aspx" />
+    <Content Include="SprReports\Admin\IntlAirlineMarkup.aspx" />
+    <Content Include="SprReports\Admin\IntlDiscountMaster.aspx" />
+    <Content Include="SprReports\Admin\MISCSRVCHARGE.aspx" />
+    <Content Include="SprReports\Admin\ModuleAccess.aspx" />
+    <Content Include="SprReports\Admin\QCTicketReport.aspx" />
+    <Content Include="SprReports\Admin\RailCommission.aspx" />
+    <Content Include="SprReports\Admin\RailCommission.aspx.cs" />
+    <Content Include="SprReports\Admin\RegisterDistributor.aspx" />
+    <Content Include="SprReports\Admin\SalesExecRegDetail.aspx" />
+    <Content Include="SprReports\Admin\SalesExecRegistration.aspx" />
+    <Content Include="SprReports\Admin\Update_Agent.aspx" />
+    <Content Include="SprReports\Admin\Update_BookingOrder.aspx" />
+    <Content Include="SprReports\Admin\WinYatraRpt.aspx" />
+    <Content Include="SprReports\Agent\AgentHtlMarkup.aspx" />
+    <Content Include="SprReports\Agent\AgentMarkupIntl.aspx" />
+    <Content Include="SprReports\Agent\AgentMarkupset.aspx" />
+    <Content Include="SprReports\Agent\agent_markup.aspx" />
+    <Content Include="SprReports\Agent\Agent_Profile.aspx" />
+    <Content Include="SprReports\Agent\DealSheetDomIntl.aspx" />
+    <Content Include="SprReports\Agent\TravelCalender.aspx" />
+    <Content Include="SprReports\Agent\UploadAmountDetails.aspx" />
+    <Content Include="SprReports\BusReport.aspx" />
+    <Content Include="SprReports\CancelTicketResponse.aspx" />
+    <Content Include="SprReports\Distr\AddBankDetails.aspx" />
+    <Content Include="SprReports\Distr\CashBack.aspx" />
+    <Content Include="SprReports\Distr\InProcessUploadDetails.aspx" />
+    <Content Include="SprReports\Distr\RegisterAgent.aspx" />
+    <Content Include="SprReports\Distr\TotalSaleDistributor.aspx" />
+    <Content Include="SprReports\Distr\UploadAmount.aspx" />
+    <Content Include="SprReports\Distr\UploadRequest.aspx" />
+    <Content Include="SprReports\Distr\ZeroSalesReport.aspx" />
+    <Content Include="SprReports\FailedBusTicket.aspx" />
+    <Content Include="SprReports\HitsTrace.aspx" />
+    <Content Include="SprReports\HitsTrace.aspx.cs" />
+    <Content Include="SprReports\HoldBookingID.aspx" />
+    <Content Include="SprReports\HoldPNR\BusHoldReport.aspx" />
+    <Content Include="SprReports\HoldPNR\DomHoldPNRReport.aspx" />
+    <Content Include="SprReports\HoldPNR\DomHoldPNRRequest.aspx" />
+    <Content Include="SprReports\HoldPNR\DomHoldPNRUpdate.aspx" />
+    <Content Include="SprReports\HoldPNR\IntlHoldPNRReport.aspx" />
+    <Content Include="SprReports\HoldPNR\IntlHoldPNRRequest.aspx" />
+    <Content Include="SprReports\HoldPNR\IntlHoldPNRUpdate.aspx" />
+    <Content Include="SprReports\HoldPNR\UpdateHoldPNRIntl.aspx" />
+    <Content Include="SprReports\HoldRechargeReport.aspx" />
+    <Content Include="SprReports\Hotel\Booked-Hotel.xml" />
+    <Content Include="SprReports\Hotel\HoldHotelAccept.aspx" />
+    <Content Include="SprReports\Hotel\HoldHotelRequest.aspx" />
+    <Content Include="SprReports\Hotel\HotelBookingLog.aspx" />
+    <Content Include="SprReports\Hotel\HotelItemDownload.aspx" />
+    <Content Include="SprReports\Hotel\SearchBookedHotel.aspx" />
+    <Content Include="SprReports\HtlBookingRpt.aspx" />
+    <Content Include="SprReports\Import\AcceptPnrImport.aspx" />
+    <Content Include="SprReports\Import\AcceptPnrImportIntl.aspx" />
+    <Content Include="SprReports\Import\ImportPnrDetails.aspx" />
+    <Content Include="SprReports\Import\ImportPnrDetailsIntl.aspx" />
+    <Content Include="SprReports\Import\PnrImportRequest.aspx" />
+    <Content Include="SprReports\Import\PnrImportStatus.aspx" />
+    <Content Include="SprReports\Import\PnrImportStatusIntl.aspx" />
+    <Content Include="SprReports\Import\ProcessImportPnr.aspx" />
+    <Content Include="SprReports\Import\ProcessImportPnrIntl.aspx" />
+    <Content Include="SprReports\Import\UpdateImportPnr.aspx" />
+    <Content Include="SprReports\Import\UpdateImportPnrIntl.aspx" />
+    <Content Include="SprReports\LeadPaxInfo.aspx" />
+    <Content Include="SprReports\OLSeries\AcceptAccountRequest.aspx" />
+    <Content Include="SprReports\OLSeries\AcceptRequestSeriesDepart.aspx" />
+    <Content Include="SprReports\OLSeries\CSS\Series.css" />
+    <Content Include="SprReports\OLSeries\FeedSeriesDetails.aspx" />
+    <Content Include="SprReports\OLSeries\FlightDetails.aspx" />
+    <Content Include="SprReports\OLSeries\FlightQueryForm.aspx" />
+    <Content Include="SprReports\OLSeries\Image\anibull1.GIF" />
+    <Content Include="SprReports\OLSeries\Image\cal.gif" />
+    <Content Include="SprReports\OLSeries\Image\head.png" />
+    <Content Include="SprReports\OLSeries\Image\images.jpg" />
+    <Content Include="SprReports\OLSeries\Image\next.png" />
+    <Content Include="SprReports\OLSeries\Image\next_year.png" />
+    <Content Include="SprReports\OLSeries\Image\prev.png" />
+    <Content Include="SprReports\OLSeries\Image\prev_year.png" />
+    <Content Include="SprReports\OLSeries\Image\untitled.bmp" />
+    <Content Include="SprReports\OLSeries\JS\JScript.js" />
+    <Content Include="SprReports\OLSeries\RequestAccount.aspx" />
+    <Content Include="SprReports\OLSeries\SeriesAccountReport.aspx" />
+    <Content Include="SprReports\OLSeries\SeriesFlightReport.aspx" />
+    <Content Include="SprReports\OLSeries\UpdateHoldSeat.aspx" />
+    <Content Include="SprReports\PnrSummaryIntl.aspx" />
+    <Content Include="SprReports\Proxy\AgentProxyTicket.aspx" />
+    <Content Include="SprReports\Proxy\InsertProxy.aspx" />
+    <Content Include="SprReports\Proxy\PassengerDetail.aspx" />
+    <Content Include="SprReports\Proxy\Proxy.aspx" />
+    <Content Include="SprReports\Proxy\ProxyBookingRequest.aspx" />
+    <Content Include="SprReports\Proxy\ProxyEmp.aspx" />
+    <Content Include="SprReports\Proxy\ProxyTicketDetail.aspx" />
+    <Content Include="SprReports\QC_Checklist.aspx" />
+    <Content Include="SprReports\RechargeReport.aspx" />
+    <Content Include="SprReports\RefundSearch.aspx" />
+    <Content Include="SprReports\RefundSearch.aspx.cs" />
+    <Content Include="SprReports\Refund\CancellationReportDom.aspx" />
+    <Content Include="SprReports\Refund\CancellationReportIntl.aspx" />
+    <Content Include="SprReports\Refund\HtlCancelation.aspx" />
+    <Content Include="SprReports\Refund\HtlRefundInProcces.aspx" />
+    <Content Include="SprReports\Refund\HtlRefundReport.aspx" />
+    <Content Include="SprReports\Refund\HtlRefundRequest.aspx" />
+    <Content Include="SprReports\Refund\HtlRefundUpdate.aspx" />
+    <Content Include="SprReports\Refund\TktRptDom_RefundInProcess.aspx" />
+    <Content Include="SprReports\Refund\TktRptDom_RefundRequest.aspx" />
+    <Content Include="SprReports\Refund\TktRptDom_RefundUpdated.aspx" />
+    <Content Include="SprReports\Refund\TktRptIntl_RefundFair.aspx" />
+    <Content Include="SprReports\Refund\TktRptIntl_RefundInProcess.aspx" />
+    <Content Include="SprReports\Refund\TktRptIntl_RefundRequest.aspx" />
+    <Content Include="SprReports\Refund\TktRptIntl_RefundUpdated.aspx" />
+    <Content Include="SprReports\Registration.aspx" />
+    <Content Include="SprReports\Registration.aspx.cs" />
+    <Content Include="SprReports\Reissue\ReIssueReportDom.aspx" />
+    <Content Include="SprReports\Reissue\ReIssueReportIntl.aspx" />
+    <Content Include="SprReports\Reissue\TktRptDom_ReIssueInProcess.aspx" />
+    <Content Include="SprReports\Reissue\TktRptDom_ReIssueRequest.aspx" />
+    <Content Include="SprReports\Reissue\TktRptDom_ReIssueUpdate.aspx" />
+    <Content Include="SprReports\Reissue\TktRptIntl_ReIssueFare.aspx" />
+    <Content Include="SprReports\Reissue\TktRptIntl_ReIssueInProcess.aspx" />
+    <Content Include="SprReports\Reissue\TktRptIntl_ReIssueRequest.aspx" />
+    <Content Include="SprReports\Reissue\TktRptIntl_ReIssueUpdate.aspx" />
+    <Content Include="SprReports\RejectedTicket.aspx" />
+    <Content Include="SprReports\Sales\AgentDeatSheet.aspx" />
+    <Content Include="SprReports\Sales\DailySaleReport.aspx" />
+    <Content Include="SprReports\Sales\DailySaleReporting.aspx" />
+    <Content Include="SprReports\Sales\Profile.aspx" />
+    <Content Include="SprReports\Sales\TotalSalesReport.aspx" />
+    <Content Include="SprReports\TicketReportDom.aspx" />
+    <Content Include="SprReports\TicketReportIntl.aspx" />
+    <Content Include="SprReports\TrainBookingReport.aspx" />
+    <Content Include="SprReports\Utility_E_Reports.aspx" />
+    <Content Include="SprReports\Utility_E_Reports.aspx.cs" />
+    <Content Include="SprReports\UtilVoucher.aspx" />
+    <Content Include="SprReports\VisaReports\VisaReport.aspx" />
+    <Content Include="stylesheet\style--.css" />
+    <Content Include="stylesheet\style.css" />
+    <Content Include="stylesheet\styles.css" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\farebreakup.css" />
+    <Content Include="Styles\flight.css" />
+    <Content Include="Styles\FlightIntl.css" />
+    <Content Include="Styles\flightsearch.css" />
+    <Content Include="Styles\flightsearch1.css" />
+    <Content Include="Styles\Footer.css" />
+    <Content Include="Styles\fullcalendar.css" />
+    <Content Include="Styles\images\closeopen.png" />
+    <Content Include="Styles\images\closeopen2.png" />
+    <Content Include="Styles\images\tab-header.jpg" />
+    <Content Include="Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.8.8.custom.css" />
+    <Content Include="Styles\jquery.autocomplete.css" />
+    <Content Include="Styles\jquery.dataTables.css" />
+    <Content Include="Styles\jquery.qtip.css" />
+    <Content Include="Styles\main.css" />
+    <Content Include="UserControl\EmailingControl.ascx" />
+    <Content Include="UserControl\FltSearch.ascx" />
+    <Content Include="UserControl\HotelSearch.ascx" />
+    <Content Include="UserControl\HotelSearch_Old.ascx" />
+    <Content Include="UserControl\IssueTrack.ascx" />
+    <Content Include="UserControl\LoginControl.ascx" />
+    <Content Include="UserControl\StockistUserControl.ascx" />
+    <Content Include="Wait.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app_code\A2BClass.vb" />
+    <Compile Include="app_code\AgencySearch.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app_code\AutoComplete.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app_code\BookingStatus.vb" />
+    <Compile Include="app_code\cancellation.vb" />
+    <Compile Include="app_code\CCPaymentGateway.vb" />
+    <Compile Include="app_code\City.vb" />
+    <Compile Include="app_code\CitySearch.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app_code\clsBKGSPLFARE.vb" />
+    <Compile Include="app_code\clsCalcCommAndPlb.vb" />
+    <Compile Include="app_code\ClsCorporate.vb" />
+    <Compile Include="app_code\clsDbGoAir.vb" />
+    <Compile Include="app_code\clsDbIndigo.vb" />
+    <Compile Include="app_code\clsDbSpiceJet.vb" />
+    <Compile Include="app_code\clsErrorLog.vb" />
+    <Compile Include="app_code\clsGoAir.vb" />
+    <Compile Include="app_code\ClsGoAirCpn.vb" />
+    <Compile Include="app_code\clsIndigo.vb" />
+    <Compile Include="app_code\clsInsertSelectedFlight.vb" />
+    <Compile Include="app_code\clsLccCpnAvailability.vb" />
+    <Compile Include="app_code\clsOfflineAvailability.vb" />
+    <Compile Include="app_code\clsOnlineTicketing.vb" />
+    <Compile Include="app_code\clsSpiceJet.vb" />
+    <Compile Include="app_code\clsTicketCopy.vb" />
+    <Compile Include="app_code\CollectInformation.vb" />
+    <Compile Include="app_code\container.vb" />
+    <Compile Include="app_code\DataAccess.vb" />
+    <Compile Include="app_code\Details.vb" />
+    <Compile Include="app_code\Distributor.vb" />
+    <Compile Include="app_code\DomFltResult.vb" />
+    <Compile Include="app_code\FareQuote.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app_code\FareQuote_SG.vb" />
+    <Compile Include="app_code\FltDetails.vb" />
+    <Compile Include="app_code\FltRequest.vb" />
+    <Compile Include="app_code\FltSearch1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app_code\GDS_Amadeus.vb" />
+    <Compile Include="app_code\GoogleMapApi.vb" />
+    <Compile Include="app_code\HotelSearchs.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app_code\InFlowDetails.vb" />
+    <Compile Include="app_code\IntDiscount.vb" />
+    <Compile Include="app_code\IntFltResult.vb" />
+    <Compile Include="app_code\IntlDetails.vb" />
+    <Compile Include="app_code\Invoice.vb" />
+    <Compile Include="app_code\markup.vb" />
+    <Compile Include="app_code\pnrinfo.vb" />
+    <Compile Include="app_code\PnrTst.vb" />
+    <Compile Include="app_code\Proxy.vb" />
+    <Compile Include="app_code\RandomKeyGenerator.vb" />
+    <Compile Include="app_code\Sales.vb" />
+    <Compile Include="app_code\SeriesDepart.vb" />
+    <Compile Include="app_code\SpiceIndigoUTL.vb" />
+    <Compile Include="app_code\SqlTransaction.vb" />
+    <Compile Include="app_code\SqlTransactionDom.vb" />
+    <Compile Include="app_code\SqlTransactionNew.vb" />
+    <Compile Include="app_code\SqlTransactionYatra.vb" />
+    <Compile Include="app_code\Status.vb" />
+    <Compile Include="app_code\Tran_dis.vb" />
+    <Compile Include="app_code\Uploaded.vb" />
+    <Compile Include="app_code\WebService.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app_code\XMLRequest.vb" />
+    <Compile Include="app_code\XML_Log.vb" />
+    <Compile Include="Class1.vb" />
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAfterLogin.master.vb">
+      <DependentUpon>MasterAfterLogin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.vb">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\A2BTRANSFERREPORT.aspx.vb">
+      <DependentUpon>A2BTRANSFERREPORT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\AccountPanel.aspx.vb">
+      <DependentUpon>AccountPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\ADJPendingDetails.aspx.vb">
+      <DependentUpon>ADJPendingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\ADJProcessAccount.aspx.vb">
+      <DependentUpon>ADJProcessAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\AgentPanel.aspx.vb">
+      <DependentUpon>AgentPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\Agent_Tds.aspx.vb">
+      <DependentUpon>Agent_Tds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\BusBookingInvoiceDetails.aspx.vb">
+      <DependentUpon>BusBookingInvoiceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\BusInvoiceDetails.aspx.vb">
+      <DependentUpon>BusInvoiceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\CashInFlow.aspx.vb">
+      <DependentUpon>CashInFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\CreditCardPayment.aspx.vb">
+      <DependentUpon>CreditCardPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\CreditNodeDomDetails.aspx.vb">
+      <DependentUpon>CreditNodeDomDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\CreditNodeIntlDetails.aspx.vb">
+      <DependentUpon>CreditNodeIntlDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\CreditNoteRail.aspx.vb">
+      <DependentUpon>CreditNoteRail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\DomSaleRegister.aspx.vb">
+      <DependentUpon>DomSaleRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\HotelCreditNote.aspx.vb">
+      <DependentUpon>HotelCreditNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\HotelInvoiceDetails.aspx.vb">
+      <DependentUpon>HotelInvoiceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\HotelSalesRegister.aspx.vb">
+      <DependentUpon>HotelSalesRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\IntInvoiceDetails.aspx.vb">
+      <DependentUpon>IntInvoiceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\IntlSaleRegister.aspx.vb">
+      <DependentUpon>IntlSaleRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\IRCTCInvoiceDetail.aspx.vb">
+      <DependentUpon>IRCTCInvoiceDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\Ledger.aspx.vb">
+      <DependentUpon>Ledger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\NetMarginReport.aspx.vb">
+      <DependentUpon>NetMarginReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\PendingCreditDetails.aspx.vb">
+      <DependentUpon>PendingCreditDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\ProcessAccount.aspx.vb">
+      <DependentUpon>ProcessAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\Rail_Refund.aspx.vb">
+      <DependentUpon>Rail_Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\Rail_RefundReport.aspx.vb">
+      <DependentUpon>Rail_RefundReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\RechargeRefundReport.aspx.vb">
+      <DependentUpon>RechargeRefundReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\SaleRegisterIRCTC.aspx.vb">
+      <DependentUpon>SaleRegisterIRCTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\Upload.aspx.vb">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\UploadAdjustment.aspx.vb">
+      <DependentUpon>UploadAdjustment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\UploadCredit.aspx.vb">
+      <DependentUpon>UploadCredit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Accounts\WinYatraRpt.aspx.vb">
+      <DependentUpon>WinYatraRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\Activate_Agents.aspx.vb">
+      <DependentUpon>Activate_Agents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\AdminHtlMarkup.aspx.vb">
+      <DependentUpon>AdminHtlMarkup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\AdminMarkupset.aspx.vb">
+      <DependentUpon>AdminMarkupset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\Admin_profile.aspx.vb">
+      <DependentUpon>Admin_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\Agent_Details.aspx.vb">
+      <DependentUpon>Agent_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\AirlineFee.aspx.vb">
+      <DependentUpon>AirlineFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\BlockAirline.aspx.vb">
+      <DependentUpon>BlockAirline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\CouponFareReport.aspx.vb">
+      <DependentUpon>CouponFareReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\DomAirlineMarkup.aspx.vb">
+      <DependentUpon>DomAirlineMarkup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\DomDiscountMaster.aspx.vb">
+      <DependentUpon>DomDiscountMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\ExecutiveDetails.aspx.vb">
+      <DependentUpon>ExecutiveDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\HtlDiscount.aspx.vb">
+      <DependentUpon>HtlDiscount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\IntlAirlineMarkup.aspx.vb">
+      <DependentUpon>IntlAirlineMarkup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\IntlDiscountMaster.aspx.vb">
+      <DependentUpon>IntlDiscountMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\MISCSRVCHARGE.aspx.vb">
+      <DependentUpon>MISCSRVCHARGE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\ModuleAccess.aspx.vb">
+      <DependentUpon>ModuleAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\QCTicketReport.aspx.vb">
+      <DependentUpon>QCTicketReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\RegisterDistributor.aspx.vb">
+      <DependentUpon>RegisterDistributor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\SalesExecRegDetail.aspx.vb">
+      <DependentUpon>SalesExecRegDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\SalesExecRegistration.aspx.vb">
+      <DependentUpon>SalesExecRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\Update_Agent.aspx.vb">
+      <DependentUpon>Update_Agent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\Update_BookingOrder.aspx.vb">
+      <DependentUpon>Update_BookingOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Admin\WinYatraRpt.aspx.vb">
+      <DependentUpon>WinYatraRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\AgentHtlMarkup.aspx.vb">
+      <DependentUpon>AgentHtlMarkup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\AgentMarkupIntl.aspx.vb">
+      <DependentUpon>AgentMarkupIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\AgentMarkupset.aspx.vb">
+      <DependentUpon>AgentMarkupset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\agent_markup.aspx.vb">
+      <DependentUpon>agent_markup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\Agent_Profile.aspx.vb">
+      <DependentUpon>Agent_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\DealSheetDomIntl.aspx.vb">
+      <DependentUpon>DealSheetDomIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\TravelCalender.aspx.vb">
+      <DependentUpon>TravelCalender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Agent\UploadAmountDetails.aspx.vb">
+      <DependentUpon>UploadAmountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\BusReport.aspx.vb">
+      <DependentUpon>BusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\CancelTicketResponse.aspx.vb">
+      <DependentUpon>CancelTicketResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\AddBankDetails.aspx.vb">
+      <DependentUpon>AddBankDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\CashBack.aspx.vb">
+      <DependentUpon>CashBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\InProcessUploadDetails.aspx.vb">
+      <DependentUpon>InProcessUploadDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\RegisterAgent.aspx.vb">
+      <DependentUpon>RegisterAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\TotalSaleDistributor.aspx.vb">
+      <DependentUpon>TotalSaleDistributor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\UploadAmount.aspx.vb">
+      <DependentUpon>UploadAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\UploadRequest.aspx.vb">
+      <DependentUpon>UploadRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Distr\ZeroSalesReport.aspx.vb">
+      <DependentUpon>ZeroSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\FailedBusTicket.aspx.vb">
+      <DependentUpon>FailedBusTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldBookingID.aspx.vb">
+      <DependentUpon>HoldBookingID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\BusHoldReport.aspx.vb">
+      <DependentUpon>BusHoldReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\DomHoldPNRReport.aspx.vb">
+      <DependentUpon>DomHoldPNRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\DomHoldPNRRequest.aspx.vb">
+      <DependentUpon>DomHoldPNRRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\DomHoldPNRUpdate.aspx.vb">
+      <DependentUpon>DomHoldPNRUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\IntlHoldPNRReport.aspx.vb">
+      <DependentUpon>IntlHoldPNRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\IntlHoldPNRRequest.aspx.vb">
+      <DependentUpon>IntlHoldPNRRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\IntlHoldPNRUpdate.aspx.vb">
+      <DependentUpon>IntlHoldPNRUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldPNR\UpdateHoldPNRIntl.aspx.vb">
+      <DependentUpon>UpdateHoldPNRIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HoldRechargeReport.aspx.vb">
+      <DependentUpon>HoldRechargeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Hotel\HoldHotelAccept.aspx.vb">
+      <DependentUpon>HoldHotelAccept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Hotel\HoldHotelRequest.aspx.vb">
+      <DependentUpon>HoldHotelRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Hotel\HotelBookingLog.aspx.vb">
+      <DependentUpon>HotelBookingLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Hotel\HotelItemDownload.aspx.vb">
+      <DependentUpon>HotelItemDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Hotel\SearchBookedHotel.aspx.vb">
+      <DependentUpon>SearchBookedHotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\HtlBookingRpt.aspx.vb">
+      <DependentUpon>HtlBookingRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\AcceptPnrImport.aspx.vb">
+      <DependentUpon>AcceptPnrImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\AcceptPnrImportIntl.aspx.vb">
+      <DependentUpon>AcceptPnrImportIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\ImportPnrDetails.aspx.vb">
+      <DependentUpon>ImportPnrDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\ImportPnrDetailsIntl.aspx.vb">
+      <DependentUpon>ImportPnrDetailsIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\PnrImportRequest.aspx.vb">
+      <DependentUpon>PnrImportRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\PnrImportStatus.aspx.vb">
+      <DependentUpon>PnrImportStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\PnrImportStatusIntl.aspx.vb">
+      <DependentUpon>PnrImportStatusIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\ProcessImportPnr.aspx.vb">
+      <DependentUpon>ProcessImportPnr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\ProcessImportPnrIntl.aspx.vb">
+      <DependentUpon>ProcessImportPnrIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\UpdateImportPnr.aspx.vb">
+      <DependentUpon>UpdateImportPnr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Import\UpdateImportPnrIntl.aspx.vb">
+      <DependentUpon>UpdateImportPnrIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\LeadPaxInfo.aspx.vb">
+      <DependentUpon>LeadPaxInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\AcceptAccountRequest.aspx.vb">
+      <DependentUpon>AcceptAccountRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\AcceptRequestSeriesDepart.aspx.vb">
+      <DependentUpon>AcceptRequestSeriesDepart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\FeedSeriesDetails.aspx.vb">
+      <DependentUpon>FeedSeriesDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\FlightDetails.aspx.vb">
+      <DependentUpon>FlightDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\FlightQueryForm.aspx.vb">
+      <DependentUpon>FlightQueryForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\RequestAccount.aspx.vb">
+      <DependentUpon>RequestAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\SeriesAccountReport.aspx.vb">
+      <DependentUpon>SeriesAccountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\SeriesFlightReport.aspx.vb">
+      <DependentUpon>SeriesFlightReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\OLSeries\UpdateHoldSeat.aspx.vb">
+      <DependentUpon>UpdateHoldSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\PnrSummaryIntl.aspx.vb">
+      <DependentUpon>PnrSummaryIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\AgentProxyTicket.aspx.vb">
+      <DependentUpon>AgentProxyTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\InsertProxy.aspx.vb">
+      <DependentUpon>InsertProxy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\PassengerDetail.aspx.vb">
+      <DependentUpon>PassengerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\Proxy.aspx.vb">
+      <DependentUpon>Proxy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\ProxyBookingRequest.aspx.vb">
+      <DependentUpon>ProxyBookingRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\ProxyEmp.aspx.vb">
+      <DependentUpon>ProxyEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Proxy\ProxyTicketDetail.aspx.vb">
+      <DependentUpon>ProxyTicketDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\QC_Checklist.aspx.vb">
+      <DependentUpon>QC_Checklist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\RechargeReport.aspx.vb">
+      <DependentUpon>RechargeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\CancellationReportDom.aspx.vb">
+      <DependentUpon>CancellationReportDom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\CancellationReportIntl.aspx.vb">
+      <DependentUpon>CancellationReportIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\HtlCancelation.aspx.vb">
+      <DependentUpon>HtlCancelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\HtlRefundInProcces.aspx.vb">
+      <DependentUpon>HtlRefundInProcces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\HtlRefundReport.aspx.vb">
+      <DependentUpon>HtlRefundReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\HtlRefundRequest.aspx.vb">
+      <DependentUpon>HtlRefundRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\HtlRefundUpdate.aspx.vb">
+      <DependentUpon>HtlRefundUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptDom_RefundInProcess.aspx.vb">
+      <DependentUpon>TktRptDom_RefundInProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptDom_RefundRequest.aspx.vb">
+      <DependentUpon>TktRptDom_RefundRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptDom_RefundUpdated.aspx.vb">
+      <DependentUpon>TktRptDom_RefundUpdated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptIntl_RefundFair.aspx.vb">
+      <DependentUpon>TktRptIntl_RefundFair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptIntl_RefundInProcess.aspx.vb">
+      <DependentUpon>TktRptIntl_RefundInProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptIntl_RefundRequest.aspx.vb">
+      <DependentUpon>TktRptIntl_RefundRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Refund\TktRptIntl_RefundUpdated.aspx.vb">
+      <DependentUpon>TktRptIntl_RefundUpdated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\ReIssueReportDom.aspx.vb">
+      <DependentUpon>ReIssueReportDom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\ReIssueReportIntl.aspx.vb">
+      <DependentUpon>ReIssueReportIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptDom_ReIssueInProcess.aspx.vb">
+      <DependentUpon>TktRptDom_ReIssueInProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptDom_ReIssueRequest.aspx.vb">
+      <DependentUpon>TktRptDom_ReIssueRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptDom_ReIssueUpdate.aspx.vb">
+      <DependentUpon>TktRptDom_ReIssueUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptIntl_ReIssueFare.aspx.vb">
+      <DependentUpon>TktRptIntl_ReIssueFare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptIntl_ReIssueInProcess.aspx.vb">
+      <DependentUpon>TktRptIntl_ReIssueInProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptIntl_ReIssueRequest.aspx.vb">
+      <DependentUpon>TktRptIntl_ReIssueRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Reissue\TktRptIntl_ReIssueUpdate.aspx.vb">
+      <DependentUpon>TktRptIntl_ReIssueUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\RejectedTicket.aspx.vb">
+      <DependentUpon>RejectedTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Sales\AgentDeatSheet.aspx.vb">
+      <DependentUpon>AgentDeatSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Sales\DailySaleReport.aspx.vb">
+      <DependentUpon>DailySaleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Sales\DailySaleReporting.aspx.vb">
+      <DependentUpon>DailySaleReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Sales\Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\Sales\TotalSalesReport.aspx.vb">
+      <DependentUpon>TotalSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\TicketReportDom.aspx.vb">
+      <DependentUpon>TicketReportDom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\TicketReportIntl.aspx.vb">
+      <DependentUpon>TicketReportIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\TrainBookingReport.aspx.vb">
+      <DependentUpon>TrainBookingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\UtilVoucher.aspx.vb">
+      <DependentUpon>UtilVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprReports\VisaReports\VisaReport.aspx.vb">
+      <DependentUpon>VisaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\EmailingControl.ascx.vb">
+      <DependentUpon>EmailingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FltSearch.ascx.vb">
+      <DependentUpon>FltSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\HotelSearch.ascx.vb">
+      <DependentUpon>HotelSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\HotelSearch_Old.ascx.vb">
+      <DependentUpon>HotelSearch_Old.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\IssueTrack.ascx.vb">
+      <DependentUpon>IssueTrack.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LoginControl.ascx.vb">
+      <DependentUpon>LoginControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockistUserControl.ascx.vb">
+      <DependentUpon>StockistUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wait.aspx.vb">
+      <DependentUpon>Wait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\BookConfirmation.aspx.vb">
+      <DependentUpon>BookConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\BookingConfimation.aspx.vb">
+      <DependentUpon>BookingConfimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\CustomerInfo.aspx.vb">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\Result.aspx.vb">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\FltResult1.aspx.vb">
+      <DependentUpon>FltResult1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\FltResultO.aspx.vb">
+      <DependentUpon>FltResultO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\FltResultR.aspx.vb">
+      <DependentUpon>FltResultR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\NoResult.aspx.vb">
+      <DependentUpon>NoResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IDomestic\PriceDetails.aspx.vb">
+      <DependentUpon>PriceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\BookConfirmation.aspx.vb">
+      <DependentUpon>BookConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\BookingConfimation.aspx.vb">
+      <DependentUpon>BookingConfimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\BookingMsg.aspx.vb">
+      <DependentUpon>BookingMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\CustomerInfo.aspx.vb">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\FltResIntl.aspx.vb">
+      <DependentUpon>FltResIntl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\Result.aspx.vb">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International\PriceDetails.aspx.vb">
+      <DependentUpon>PriceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\BookingSummaryHtl.aspx.vb">
+      <DependentUpon>BookingSummaryHtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HotelBookingConfirmation.aspx.vb">
+      <DependentUpon>HotelBookingConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HotelCheckOut.aspx.vb">
+      <DependentUpon>HotelCheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HotelCheckOutInt.aspx.vb">
+      <DependentUpon>HotelCheckOutInt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HotelTesting.aspx.vb">
+      <DependentUpon>HotelTesting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HtlBooking.aspx.vb">
+      <DependentUpon>HtlBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HtlBookwait.aspx.vb">
+      <DependentUpon>HtlBookwait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HtlDetails.aspx.vb">
+      <DependentUpon>HtlDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HtlFareDetails.aspx.vb">
+      <DependentUpon>HtlFareDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\HtlResult.aspx.vb">
+      <DependentUpon>HtlResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\Htlwait.aspx.vb">
+      <DependentUpon>Htlwait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel\NoResult.aspx.vb">
+      <DependentUpon>NoResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LccRF\LccBkgConfirmation.aspx.vb">
+      <DependentUpon>LccBkgConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LccRF\LccCheckOut.aspx.vb">
+      <DependentUpon>LccCheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LccRF\LccRResult.aspx.vb">
+      <DependentUpon>LccRResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LccRF\LccRTFBooking.aspx.vb">
+      <DependentUpon>LccRTFBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AirLogo\Thumbs.db" />
+    <None Include="App_WebReferences\RailwayEnq\Service1.discomap" />
+    <None Include="App_WebReferences\RailwayEnq\Service1.wsdl" />
+    <Content Include="bin\Ajax.dll.refresh" />
+    <Content Include="bin\AjaxControlToolkit.dll.refresh" />
+    <Content Include="bin\AjaxPro.2.dll.refresh" />
+    <Content Include="bin\BS_BAL.dll.refresh" />
+    <Compile Include="bin\BS_DAL.dll.refresh" />
+    <Compile Include="bin\BS_SHARED.dll.refresh" />
+    <Compile Include="bin\EBLBill.dll.config" />
+    <Compile Include="bin\EXCEPTION_LOG.dll.refresh" />
+    <Compile Include="bin\GALWS.dll.refresh" />
+    <Compile Include="bin\GoAirServiceDll.dll.refresh" />
+    <Compile Include="bin\HotelBAL.dll.refresh" />
+    <Compile Include="bin\HotelDAL.dll.refresh" />
+    <Compile Include="bin\HotelShared.dll.refresh" />
+    <Compile Include="bin\IRC_DAL.dll.config" />
+    <Compile Include="bin\LCC.dll.refresh" />
+    <Compile Include="bin\LccCoupon.dll.config" />
+    <Compile Include="bin\LccCouponResult.dll.refresh" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll.refresh" />
+    <Compile Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll.refresh" />
+    <Compile Include="bin\Newtonsoft.Json.dll.refresh" />
+    <Compile Include="bin\RB.BAL.dll.refresh" />
+    <Compile Include="bin\RB.DAL.dll.refresh" />
+    <Compile Include="bin\RB.SHARED.dll.refresh" />
+    <Compile Include="bin\TestGoAirServiceDll.dll.refresh" />
+    <Content Include="BS\BSer.master" />
+    <Content Include="chosen\Thumbs.db" />
+    <Content Include="CSS\images\A2Bimg\Thumbs.db" />
+    <Content Include="IDomestic\DomFareDtls.ashx" />
+    <Content Include="International\IntFareDtls.ashx" />
+    <Content Include="Home\Thumbs.db" />
+    <Content Include="Hotel\css\images\Thumbs.db" />
+    <Content Include="Hotel\HotelResultsNew.aspx.exclude" />
+    <Content Include="Hotel\HotelResultsNew.aspx.vb.exclude" />
+    <Content Include="Hotel\HotelSearchResult.aspx.exclude" />
+    <Content Include="Hotel\HotelSearchResult.aspx.vb.exclude" />
+    <Content Include="Hotel\HtlResult_old.aspx.exclude" />
+    <Content Include="Hotel\HtlResult_old.aspx.vb.exclude" />
+    <Content Include="Hotel\Images\Thumbs.db" />
+    <Content Include="Hotel\Images\TripAdvisor\Thumbs.db" />
+    <Content Include="Images\gallery\Thumbs.db" />
+    <Content Include="Images\icons\Thumbs.db" />
+    <Content Include="Images\mail\Thumbs.db" />
+    <Content Include="Images\product_thumb\Thumbs.db" />
+    <Content Include="Images\slideshow\Thumbs.db" />
+    <Content Include="Images\Thumbs.db" />
+    <Content Include="LccRF\fareDetails.ashx" />
+    <Content Include="LccRF\setvalue.ashx" />
+    <Content Include="MasterAfterLogin.master" />
+    <Content Include="MasterPage.master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="SprReports\Refund\HtlRefundInProcces.aspx.exclude" />
+    <Content Include="SprReports\Refund\HtlRefundInProcces.aspx.vb.exclude" />
+    <Content Include="SprReports\Refund\HtlRefundUpdate.aspx.exclude" />
+    <Content Include="SprReports\Refund\HtlRefundUpdate.aspx.vb.exclude" />
+    <Content Include="stylesheet\StyleSheetnew.css.exclude" />
+    <Content Include="Styles\bootstrap-theme.css.map" />
+    <Content Include="Styles\bootstrap.css.map" />
+    <Content Include="setvalue.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53943</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53943/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

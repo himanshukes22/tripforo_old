@@ -1,0 +1,274 @@
+﻿body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial, helvetica, sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    
+    
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+#FS_wrapper
+{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.box
+{
+    background: #fff;
+}
+
+.boxholder
+{
+    clear: both;
+    padding: 0px 0;
+    margin: 0px 0;
+    background: #c3d4f4;
+    border: 1px solid #c3d4f4;
+}
+.far_det
+{
+    font-size: 12px;
+    color: #282828;
+    margin: 0px;
+}
+
+.FS_tab
+{
+    float: left;
+    height: 32px;
+    width: 102px;
+    margin: 0 1px 0 0;
+    text-align: center;
+    background: url(file:///C|/Users/abc/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/B7K05DZV/images/greentab.png) no-repeat;
+}
+
+.FS_tabtxt
+{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 9px 0 0 0;
+}
+
+.FS_tabtxt a
+{
+    color: #1a0d28;
+    text-decoration: none;
+}
+
+
+.FS_tabtxt a:hover
+{
+    text-decoration: none;
+}
+
+.FS_tab:hover
+{
+    background: url(file:///C|/Users/abc/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/B7K05DZV/images/greentab_mo.png);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.flightsearchdeco
+{
+    font-size: 14px;
+    font-weight: bold;
+    width: 888px;
+    padding: 10px 5px 5px 20px;
+}
+
+.flightsearchsubdeco
+{
+    font-size: 13px;
+    color: #2a0d37;
+    width: 850px;
+    padding: 10px 5px 5px 20px;
+}
+
+#prevnext
+{
+    background: #fff;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.flightsearchresult
+{
+    border: none;
+    border: 2px solid #b6c8e7;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    width: 780px;
+    padding: 0px 0px;
+    font-size: 12px;
+    background: #FFF;
+}
+
+.flightsearchresult_top
+{
+    width: 705px;
+    height: 26px;
+    line-height: 25px;
+    background: #eee;
+    padding: 0 0 0 15px;
+    margin-top: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.flightsearchresult_top span
+{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.flightsearchresult_body
+{
+    width: 700px;
+    padding: 3px 10px;
+    height: 60px;
+    color: #2a0d37;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+}
+
+.flightsearchresult_content
+{
+    width: 630px;
+    float: left;
+}
+
+.flightsearchresult_logo
+{
+    width: 70px;
+    float: left;
+}
+
+.Connection_pnt
+{
+    height: 20px;
+    width: 780px;
+    line-height: 20px;
+    position: relative;
+    
+    text-align: center;
+    font-weight: bolder;
+    border-left: 1px solid #ffba00;
+    border-right: 1px solid #ffba00;
+    top: -1px;
+    background: #fff;
+}
+
+.Connection_pnt span
+{
+    color: #66bbff;
+}
+
+
+.fsr_bt
+{
+    float: left;
+    width: 80px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.fsr_bt p
+{
+    line-height: 20px;
+    margin: 0px;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.fsr_bt span
+{
+    font-weight: bold;
+}
+
+.fsr_bt img
+{
+    border: none;
+    vertical-align: middle;
+    padding: 0px;
+}
+
+.fsr_bt a
+{
+    font-size: 11px;
+}
+
+.booknow a
+{
+    display: block;
+    width: 102px;
+    height: 26px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    float: right;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    line-height: 26px;
+}
+.frdiv
+{
+    display: none;
+    position: absolute;
+    border: 1px #000000 solid;
+    font-size: 11px;
+    z-index: 5555;
+}
+
+.intlbtn
+{
+    background: url(../images/btn.png) no-repeat;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    width: 106px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+    background-position: 0 -24px;
+}
+
+.intlbtn:hover
+{
+    background-position: 0 -24px;
+}
+
+.intlbtn a
+{
+    font-size: 13px;
+    color: #fff;
+}
+
+
+.intlbtn a:hover
+{
+    color: #fff;
+}

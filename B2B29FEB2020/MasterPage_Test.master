@@ -1,0 +1,202 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage_Test.master.vb" Inherits="MasterPage_Test" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tripforo</title>
+
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="shortcut icon" href="../Advance_CSS/fav.png" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="Advance_CSS/css/font-awesome.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/lineicons.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/weather-icons.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/bootstrap.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/styles.css" />
+
+    <link href="Advance_CSS/css/paxdetails.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="Hotel/css/B2Bhotelengine.css" rel="stylesheet" />
+    <link type="text/css" href="<%=ResolveUrl("~/Styles/jquery-ui-1.8.8.custom.css") %>" rel="stylesheet" />
+    <%--    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">--%>
+    <link href="icofont/icofont.css" rel="stylesheet" />
+    <link href="icofont/icofont.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+     
+
+    <style>
+         ::-webkit-scrollbar {
+            width: 5px;
+            height: 7px;
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #525965;
+            border: 0px none #ffffff;
+            border-radius: 0px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #525965;
+            }
+
+            ::-webkit-scrollbar-thumb:active {
+                background: #525965;
+            }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+        }
+
+            ::-webkit-scrollbar-track:hover {
+                background: transparent;
+            }
+
+            ::-webkit-scrollbar-track:active {
+                background: transparent;
+            }
+
+        ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+        
+
+    <form id="form1" runat="server">
+           <nav class="navbar navbar-default navbar-inverse navbar-theme navbar-theme-abs navbar-theme-transparent navbar-theme-border" id="main-nav">
+        <div class="container">
+            <div class="navbar-inner nav">
+
+
+
+
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target="#navbar-main" data-toggle="collapse" type="button" area-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="search.aspx">
+                        <img src="Advance_CSS/Icons/logo(ft).png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                      
+                        <li>
+                            <a href="about-us.aspx">About</a>
+
+                        </li>
+                        <li>
+                            <a href="contact-us.aspx">Contact</a>
+
+                        </li>
+                      
+
+                        
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         
+                       
+
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+    </form>
+
+      
+
+    <div class="theme-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="theme-copyright-text">
+                        Copyright &copy; 2021
+             
+                        <a href="#">Tripforo</a>. All rights reserved.
+           
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="theme-copyright-social">
+                        <li>
+                            <a class="fa fa-facebook" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-google" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-youtube-play" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-instagram" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+    
+
+
+</html>
+
+
+<script src="Advance_CSS/js/jquery.js"></script>
+    <script src="Advance_CSS/js/moment.js"></script>
+    <script src="Advance_CSS/js/bootstrap.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&amp;callback=initMap&amp;libraries=places"></script>
+    <script src="Advance_CSS/js/owl-carousel.js"></script>
+    <script src="Advance_CSS/js/blur-area.js"></script>
+    <script src="Advance_CSS/js/icheck.js"></script>
+    <script src="Advance_CSS/js/gmap.js"></script>
+    <script src="Advance_CSS/js/magnific-popup.js"></script>
+    <script src="Advance_CSS/js/ion-range-slider.js"></script>
+    <script src="Advance_CSS/js/sticky-kit.js"></script>
+    <script src="Advance_CSS/js/smooth-scroll.js"></script>
+    <script src="Advance_CSS/js/fotorama.js"></script>
+    <script src="Advance_CSS/js/bs-datepicker.js"></script>
+    <script src="Advance_CSS/js/typeahead.js"></script>
+    <script src="Advance_CSS/js/quantity-selector.js"></script>
+    <script src="Advance_CSS/js/countdown.js"></script>
+    <script src="Advance_CSS/js/window-scroll-action.js"></script>
+    <script src="Advance_CSS/js/fitvid.js"></script>
+    <script src="Advance_CSS/js/youtube-bg.js"></script>
+    <script src="Advance_CSS/js/custom.js"></script>

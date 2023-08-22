@@ -1,0 +1,1594 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="regs2.aspx.vb" Inherits="regs2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet" />
+    <title>Registration(RWT)</title>
+
+    <link href="Registration/Content/User/animation.css" rel="stylesheet" />
+    <%--<link href="../www.easemytrip.com/css/header-new-main.css" rel="stylesheet" />--%>
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <script src="Registration/Scripts/External/angular.min.js"></script>
+    <script src="Registration/Scripts/Js/jquery-ui.js"></script>
+    <script src="Registration/Scripts/Js/User/adminJs4730.js?v=637071017756558079"></script>
+
+    <script src="Registration/Scripts/Js/User/AnguEmail7df5.js?v=637088359368128168"></script>
+
+    <link href="Registration/Content/CSS/themes/jquery.ui.datepickeref06.css?v=636490425933074891" rel="stylesheet" />
+
+    <link href="../code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css" rel="stylesheet" />
+
+    <style>
+        .bg_signup_b2b {
+            background: url(b2b-signup-bg.html);
+            background-size: cover;
+            position: relative;
+            width: 100%;
+            height: 352px;
+            padding: 70px 0;
+        }
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            font-family: 'Rubik', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #b9b9b9;
+            background-color: #fff;
+            margin: 0;
+        }
+
+        form {
+            padding: 0 25px;
+        }
+
+        h4, h5 {
+            color: #000;
+            margin: 15px 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+            h4:after, h5:after {
+                background-color: #e4e4e4;
+                content: "";
+                display: inline-block;
+                height: 1px;
+                position: relative;
+                vertical-align: middle;
+                width: 76%;
+            }
+
+            h5:after {
+                width: 62%;
+            }
+
+            h4:before, h5:before {
+                right: 0.5em;
+                margin-left: -50%;
+            }
+
+            h4:after, h5:after {
+                left: 0.5em;
+                margin-right: -50%;
+            }
+
+        .input_bx {
+            width: 100%;
+            padding: 12px 1em;
+            line-height: 1.4;
+            background-color: #fff;
+            border: 1px solid whitesmoke;
+            -webkit-transition: 0.35s ease-in-out;
+            -moz-transition: 0.35s ease-in-out;
+            -o-transition: 0.35s ease-in-out;
+            transition: 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+            font-family: 'Rubik';
+            font-size: 15px;
+            -webkit-box-shadow: 0 2px 2px 0 #cdcdcd;
+            -moz-box-shadow: 0 2px 2px 0 #cdcdcd;
+            -ms-box-shadow: 0 2px 2px 0 #cdcdcd;
+            box-shadow: 0 2px 2px 0 #cdcdcd;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            border-radius: 2px;
+            font-weight: 300;
+        }
+
+        input:focus, textarea:focus {
+            outline: 0;
+            border-color: #468be8;
+        }
+
+        .input-group {
+            margin-bottom: 1em;
+            zoom: 1;
+        }
+
+            .input-group:before, .input-group:after {
+                content: "";
+                display: table;
+            }
+
+            .input-group:after {
+                clear: both;
+            }
+
+        .container {
+            width: 65%;
+            padding: 25px;
+            margin: 0em auto;
+            background-color: #f3f3f3;
+            border-radius: 4px;
+            border: 1px solid #cbcbcb;
+            -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        }
+
+        .row {
+            zoom: 1;
+            margin-bottom: 10px;
+        }
+
+            .row:before, .row:after {
+                content: "";
+                display: table;
+            }
+
+            .row:after {
+                clear: both;
+            }
+
+        .col_1 {
+            width: 100%;
+            float: left;
+            position: relative;
+            text-align: center;
+        }
+
+        .col_2 {
+            width: 48.3%;
+            float: left;
+            position: relative;
+        }
+
+        .col_2n {
+            width: 36%;
+            float: left;
+            position: relative;
+        }
+
+        .col_2nn {
+            width: 25%;
+            float: left;
+            position: relative;
+        }
+
+        .col_3 {
+            width: 32%;
+            float: left;
+            position: relative;
+        }
+
+        .col_3_1 {
+            width: 19.3%;
+            float: left;
+            position: relative;
+        }
+
+        .col_4 {
+            width: 22.6%;
+            float: left;
+            position: relative;
+        }
+
+        .col_4_1 {
+            width: 22.7%;
+            float: left;
+            position: relative;
+        }
+
+        .col_2_1 {
+            width: 74%;
+            float: left;
+            position: relative;
+        }
+
+        .col_6 {
+            width: 14%;
+            float: left;
+            position: relative;
+        }
+
+        .col_7 {
+            width: 10%;
+            float: left;
+            position: relative;
+        }
+
+        .col_8 {
+            width: 19%;
+            float: left;
+            position: relative;
+        }
+
+        .col_12 {
+            width: 99.7%;
+            float: left;
+            position: relative;
+        }
+
+        .mgr30 {
+            margin-right: 30px;
+        }
+
+        .mgr14 {
+            margin-right: 3%;
+        }
+
+        .mgr13 {
+            margin-left: 3%;
+        }
+
+        .search_categories {
+            font-size: 13px;
+            padding: 12px 8px 12px 6px;
+            background: #fff;
+            border: 1px solid #f5f5f5;
+            overflow: hidden;
+            position: relative;
+            webkit-box-shadow: 0 2px 2px 0 #cdcdcd;
+            -moz-box-shadow: 0 2px 2px 0 #cdcdcd;
+            -ms-box-shadow: 0 2px 2px 0 #cdcdcd;
+            box-shadow: 0 2px 2px 0 #cdcdcd;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            border-radius: 2px;
+        }
+
+            .search_categories .select {
+                width: 120%;
+            }
+
+                .search_categories .select::after {
+                    content: '';
+                    padding: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                    text-align: center;
+                    width: 20%;
+                    height: 100%;
+                    pointer-events: none;
+                    background: #fff url(arrow-down.html) no-repeat;
+                    background-size: 12px 6px;
+                    background-position: 50% center;
+                }
+
+                .search_categories .select select {
+                    background: transparent;
+                    line-height: 1;
+                    border: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 120%;
+                    position: relative;
+                    z-index: 10;
+                    font-size: 1em;
+                    outline: none;
+                    font-family: 'Rubik';
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: #676767;
+                }
+
+        .search_categories2 {
+            font-size: 13px;
+            padding: 12px 8px 12px 6px;
+            background: #fff;
+            border: 1px solid #f5f5f5;
+            overflow: hidden;
+            position: relative;
+            webkit-box-shadow: 0 2px 2px 0 #cdcdcd;
+            -moz-box-shadow: 0 2px 2px 0 #cdcdcd;
+            -ms-box-shadow: 0 2px 2px 0 #cdcdcd;
+            box-shadow: 0 2px 2px 0 #cdcdcd;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            border-radius: 2px;
+        }
+
+            .search_categories2 .select2 {
+                width: 120%;
+            }
+
+                .search_categories2 .select2::after {
+                    content: '';
+                    padding: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                    text-align: center;
+                    width: 45%;
+                    height: 100%;
+                    pointer-events: none;
+                    background: #fff url(arrow-down.html) no-repeat;
+                    background-size: 12px 6px;
+                    background-position: 50% center;
+                }
+
+                .search_categories2 .select2 select {
+                    background: transparent;
+                    line-height: 1;
+                    border: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 120%;
+                    position: relative;
+                    z-index: 10;
+                    font-size: 1em;
+                    outline: none;
+                    font-family: 'Rubik';
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: #676767;
+                }
+
+        .check-box {
+            color: #333;
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            .check-box input {
+                position: absolute;
+                opacity: 0;
+            }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 19px;
+            width: 19px;
+            background-color: #d8d8d8;
+            border-radius: 2px;
+        }
+
+        .check-box:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        .check-box input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .check-box input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .check-box .checkmark:after {
+            left: 7px;
+            top: 2px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .lb-fl {
+            width: 100%;
+            margin: 5% 0;
+            padding: 0px;
+            float: left;
+        }
+
+        .btn-sbmt {
+            cursor: pointer;
+            background: #0952a4;
+            padding: 13px 8px;
+            text-align: center;
+            /*border-radius: 3px;
+            margin: 15px auto;*/
+            color: #fff;
+            outline: 0;
+            border: 0;
+            /*width: 40%;
+            font-size: 19px;*/
+            font-family: 'Rubik';
+            text-transform: uppercase;
+        }
+
+        .t-center {
+            text-align: center;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .from_ttl {
+            text-align: left;
+            width: 100%;
+            font-size: 27px;
+            font-weight: 400;
+            color: #000;
+            border-bottom: 1px solid #000;
+            padding-bottom: 8px;
+            margin: 7px 0;
+            position: relative;
+            z-index: 9;
+        }
+
+            .from_ttl strong {
+                font-weight: 500;
+            }
+
+        .v_midle {
+            vertical-align: middle;
+        }
+
+        .star {
+            color: red;
+        }
+
+        .palceholder {
+            position: absolute;
+            top: 14px;
+            left: 15px;
+            color: #676767;
+            display: none;
+            font-size: 14px;
+            font-family: 'Rubik';
+            font-weight: 300;
+        }
+
+        .r_none {
+            resize: none;
+        }
+
+        .error {
+            color: #ea2330;
+            margin: 5px 0 0 0;
+            font-size: 13px;
+            display: none;
+            font-family: 'Rubik';
+            font-weight: 300;
+        }
+
+        .para {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .logo_holder {
+            width: 281px;
+            height: 56px;
+            position: absolute;
+            left: 38%;
+            top: 38px;
+            background: #fff;
+            border: 1px solid #cbcbcb;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cont_flt2 {
+            display: block;
+            position: relative;
+            padding-left: 31px;
+            margin: 2px 4px 16px 0;
+            cursor: pointer;
+            font-size: 15px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: #333;
+        }
+
+            .cont_flt2 input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+        .chk_flt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #00a3d6;
+        }
+
+        .cont_flt2:hover input ~ .chk_flt {
+            background-color: #ccc;
+        }
+
+        .cont_flt2 input:checked ~ .chk_flt {
+            background-color: #fff;
+        }
+
+        .chk_flt:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .cont_flt2 input:checked ~ .chk_flt:after {
+            display: block;
+        }
+
+        .cont_flt2 .chk_flt:after {
+            top: 4px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00a3d6;
+        }
+        /*Upload Start*/
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .inputfile-1 + label {
+            color: #f1e5e6;
+            background-color: #ffffff;
+        }
+
+        .inputfile + label {
+            max-width: 80%;
+            font-size: 18px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            padding: 0.625rem 1.25rem;
+        }
+
+            .inputfile + label svg {
+                width: 1em;
+                height: 1em;
+                vertical-align: middle;
+                fill: currentColor;
+                margin-top: -0.25em;
+                margin-right: 0.25em;
+            }
+
+        .inputfile-1 + label {
+            color: #555555;
+            background-color: #ffffff;
+            border: 1px solid #555555;
+            border-radius: 4px;
+        }
+
+            .inputfile-1 + label:hover {
+                background: #555555;
+                color: #ffffff;
+            }
+
+        .inputfile + label {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            padding: 10px 3%;
+        }
+
+        .txt-r {
+            text-align: right;
+        }
+
+        .dgg {
+            width: 100%;
+            display: block;
+            font-size: 10px;
+            color: #000;
+        }
+        /*Upload End*/
+        @media only screen and (max-width: 540px) {
+            .col_2, .col_3, .col_4, .col_4_1, .col_2_1, .col_3_1, .col_7 {
+                width: 100%;
+            }
+
+            .col_6, .col_8 {
+                width: 33%;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            form {
+                padding: 5px;
+            }
+
+            h4:after {
+                width: 40%;
+            }
+
+            h5:after {
+                width: 27%;
+            }
+
+            .btn-sbmt {
+                width: 80%;
+            }
+        }
+    </style>
+
+
+
+
+
+
+    <%--<script>
+        $(document).ready(function () {
+            $('#mycheckbox').change(function () {
+
+                $('#mycheckboxdiv').toggle();
+                $('#ResAddDtlDv').toggle();
+                if ($("#chkTrains").is(':checked')) {
+                    $('#AgntPostOfcStar').show();
+                    $('#AgntPhNoStar').show();
+                    $('#AgntGSTStar').show();
+                }
+                else {
+                    $('#AgntPostOfcStar').hide();
+                    $('#AgntPhNoStar').hide();
+                    $('#AgntGSTStar').hide();
+                }
+
+            });
+        });
+        $(function () {
+            $("#txtDob").datepicker({
+                numberOfMonths: 1,
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>--%>
+    <script type="text/javascript">
+        $(function () {
+            $('#txtOfcPh').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+            $('#txtResPhNo').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#txtOfcPh').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+            $('#txtResPhNo').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+
+            $('#txtpincode').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+            $('#txtAdharNo').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        function Validate(e) {
+            var keyCode = e.keyCode || e.which;
+
+            var lblfname = document.getElementById("Fname_txt");
+            var lblmname = document.getElementById("txtmname");
+            var lblLastname = document.getElementById("Lname_txt");
+            var pancarholdername = document.getElementById("txtpanholdername");
+            lblfname.innerHTML = "";
+            lblmname.innerHTML = "";
+            lblLastname.innerHTML = "";
+            pancarholdername.innerHTML = "";
+
+            //Regex for Valid Characters i.e. Alphabets.
+            var regex = /^[A-Za-z]+$/;
+
+            //Validate TextBox value against the Regex.
+            var isValid = regex.test(String.fromCharCode(keyCode));
+            if (!isValid) {
+                lblfname.innerHTML = "Only Alphabets allowed.";
+                lblmname.innerHTML = "Only Alphabets allowed.";
+                lblLastname.innerHTML = "Only Alphabets allowed.";
+                pancarholdername.innerHTML = "Only Alphabets allowed.";
+            }
+
+            return isValid;
+        }
+    </script>
+
+
+    <script language="javascript" type="text/javascript">
+        function validateSearch() {
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Fname_txt").value == "") {
+                alert('Specify First Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Fname_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Lname_txt").value == "") {
+                alert('Specify Last Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Lname_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Add_txt").value == "") {
+                alert('Specify Address');
+                document.getElementById("ctl00_ContentPlaceHolder1_Add_txt").focus();
+                return false;
+            }
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_country").value == "India") {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_state").value == "--Select State--") {
+                    alert('Please Select State');
+                    document.getElementById("ctl00_ContentPlaceHolder1_ddl_state").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_city").value == "") {
+                    alert('Please Select City');
+                    document.getElementById("ctl00_ContentPlaceHolder1_ddl_city").focus();
+                    return false;
+                }
+
+            }
+            else {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Coun_txt").value == "") {
+                    alert('Specify Country Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Coun_txt").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Stat_txt").value == "") {
+                    alert('Specify State Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Stat_txt").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Other_City").value == "") {
+                    alert('Specify City Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Other_City").focus();
+                    return false;
+
+                }
+
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pin_txt").value == "") {
+                alert('Specify Pincode');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pin_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Mob_txt").value == "") {
+                alert('Specify Mobile Number');
+                document.getElementById("ctl00_ContentPlaceHolder1_Mob_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").value == "") {
+                alert('Specify EmailID');
+                document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").focus();
+                return false;
+            }
+
+            var emailPat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            var emailid = document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").value;
+            var matchArray = emailid.match(emailPat);
+            if (matchArray == null) {
+                alert("Your email address seems incorrect. Please try again.");
+                document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Agn_txt").value == "") {
+                alert('Specify Agency Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Agn_txt").focus();
+                return false;
+            }
+            //bipin
+            if (document.getElementById("ctl00_ContentPlaceHolder1_TextBox_NameOnPard").value == "") {
+                alert('Specify Name on Pan Card');
+                document.getElementById("ctl00_ContentPlaceHolder1_TextBox_NameOnPard").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pan_txt").value == "") {
+                alert('Specify Pan No');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pan_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Ans_txt").value == "") {
+                alert('Specify Answer');
+                document.getElementById("ctl00_ContentPlaceHolder1_Ans_txt").focus();
+                return false;
+            }
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_TxtUserId").value == "") {
+                alert('Specify Userid');
+                document.getElementById("ctl00_ContentPlaceHolder1_TxtUserId").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value == "") {
+                alert('Specify Password');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").focus();
+                return false;
+            }
+            else {
+                var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,16}$/;
+                if (!regex.test(document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value)) {
+                    alert("Password must contain:8 To 16 characters atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character'");
+                    document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").focus();
+                    return false;
+                }
+
+                // var patt = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8}");
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value == "") {
+                alert('Specify Confirm Password');
+                document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value != "") {
+                debugger;
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value != document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value) {
+                    alert("Confirm Password is same as Password");
+                    document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").focus();
+                    return false;
+                }
+
+                if (confirm("Are you sure!"))
+                    return true;
+                return false;
+            }
+
+        }
+        function phone_vali() {
+            if ((event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32) || (event.keyCode == 45))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+        function vali() {
+            if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 32) || (event.keyCode == 45))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+
+        function vali1() {
+            if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 32) || (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+
+        function getKeyCode(e) {
+            if (window.event)
+                return window.event.keyCode;
+            else if (e)
+                return e.which;
+            else
+                return null;
+        }
+        function keyRestrict(e, validchars) {
+            var key = '', keychar = '';
+            key = getKeyCode(e);
+            if (key == null) return true;
+            keychar = String.fromCharCode(key);
+            keychar = keychar.toLowerCase();
+            validchars = validchars.toLowerCase();
+            if (validchars.indexOf(keychar) != -1)
+                return true;
+            if (key == null || key == 0 || key == 8 || key == 9 || key == 13 || key == 27)
+                return true;
+            return false;
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+        });
+    </script>
+
+    <script type="text/javascript">
+        function RefreshCaptcha() {
+            var img = document.getElementById("imgCaptcha");
+            img.src = "CAPTCHA.ashx?query=" + Math.random();
+        }
+    </script>
+
+
+</head>
+<body>
+    <div>
+        <form runat="server" class="rcw-form container-fluid ff-box-shadow">
+            <div class="bg_signup_b2b" id="table_reg" runat="server">
+                <div class="logo_holder">
+                    <%--<img src="AgentLogo/BET2257418.png" width="145">--%>
+                    <img src="<%=ResolveUrl("Custom_Design/images/logo_new.png")%>" alt="" style="width: 253px; margin-top: -17px;" />
+                </div>
+                <div class="container">
+                    <div class="from_ttl" style="font-size:20px;text-align:center;">Register for Travel Agency</div>
+                    <div class="clear"></div>
+                    <div>
+                        <div class="row">
+                            <h4>Company Details</h4>
+                            <div class="input-group col_6_1 mgr14 revealOnScroll" data-animation="fadeInUp" style="width: 353px !important;">
+                                
+                                    <asp:TextBox ID="TextBox2" CssClass="psb_dd input_bx" runat="server" placeholder="Company Name *" MaxLength="30"
+                                    onkeypress="return keyRestrict(event,' abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+                                   
+                               
+                            </div>
+                            </div>
+                         <div class="row">
+                         
+                            <div class="input-group col_7_1 mgr14 revealOnScroll" data-animation="fadeInUp" >
+                                
+                                    <asp:TextBox ID="TextBox3" CssClass="psb_dd input_bx" runat="server" placeholder="Company Address *" MaxLength="100"
+                                    onkeypress="return keyRestrict(event,' abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+                                 
+                               
+                            </div>
+                            </div>
+                        <div class="row">
+
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" data-wow-delay="1s" >
+
+                                <%-- <input type="text" class="input_bx" name="txtDob" id="txtDob" placeholder="Date of Birth" />--%>
+                                <asp:DropDownList ID="ddl_state" runat="server" AutoPostBack="True" class="input_bx">
+                                </asp:DropDownList>
+                                <asp:TextBox ID="Stat_txt" CssClass="psb_dd form-controlrt" runat="server" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"
+                                    Visible="false"></asp:TextBox>
+                            </div>
+
+
+                            
+
+                            
+
+                            <div class="input-group col_4_1 revealOnScroll" data-animation="fadeInUp" data-wow-delay="0.5s" style="display:none;">
+
+
+                                <asp:TextBox ID="Add_txt" runat="server" CssClass="input_bx" placeholder="Address" required=""></asp:TextBox>
+                            </div>
+
+                            
+
+                            
+
+                            <div class="" data-animation="fadeInUp" data-wow-delay="1s">
+
+                                <%-- <input type="text" class="input_bx" name="txtDob" id="txtDob" placeholder="Date of Birth" />--%>
+                                <asp:TextBox ID="Other_City" CssClass="psb_dd input_bx " runat="server" Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+                            </div>
+
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" data-wow-delay="1s">
+                                <input type="text" id="ddl_city" runat="server" class="psb_dd input_bx" placeholder="City" style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" />
+                                <asp:TextBox ID="TextBox1" CssClass="psb_dd form-control " runat="server" Style="position: static"
+                                    Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+                            </div>
+
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" data-wow-delay="1s">
+                                <asp:TextBox ID="TextBox_Area" CssClass="psb_dd input_bx" runat="server" placeholder="Area" MaxLength="20" Style="position: static"
+                                    onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+
+                            </div>
+
+                            <div class="input-group col_4_1 revealOnScroll" data-animation="fadeInUp" data-wow-delay="1s">
+                                <asp:TextBox ID="Pin_txt" CssClass="psb_dd input_bx" runat="server" placeholder="Pin Code" MaxLength="8" Style="position: static"
+                                    onkeypress="return keyRestrict(event,'0123456789');" required=""></asp:TextBox>
+                            </div>
+                            
+
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" data-wow-delay="1s">
+
+                                <%-- <input type="text" class="input_bx" name="txtDob" id="txtDob" placeholder="Date of Birth" />--%>
+                                <asp:DropDownList ID="ddl_country" runat="server" class="input_bx" AutoPostBack="True">
+                                    <%-- <asp:ListItem Selected="True">--Select Country--</asp:ListItem>--%>
+                                    <asp:ListItem Selected="True" Value="India">India</asp:ListItem>
+                                    <asp:ListItem Value="Other">Other</asp:ListItem>
+                                </asp:DropDownList>
+                                <asp:TextBox ID="Coun_txt" CssClass="psb_dd form-control " runat="server"
+                                    Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <h4>Contact Information</h4>
+
+                             <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                
+                                   <div class="search_categories2">
+                                    <div class="select2">
+                                         
+                                        <asp:DropDownList ID="tit_drop" CssClass="form-control" placeholder="Title" runat="server" required="">
+                                            <asp:ListItem Value="Mr.">Mr.</asp:ListItem>
+                                            <asp:ListItem Value="Ms.">Ms.</asp:ListItem>
+                                            <asp:ListItem Value="Mrs.">Mrs.</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                               </div>
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" data-wow-delay="0.5s" style="width: 251px !important;">
+                                <div class="palceholder">
+                                    <label for="name">First Name</label>
+                                    <span class="star">*</span>
+                                </div>
+                                <%--<input type="text" class="input_bx" name="txtfname" id="txtfname" />--%>
+                                <asp:TextBox ID="Fname_txt" CssClass="psb_dd input_bx" runat="server" placeholder="First Name" MaxLength="30"
+                                    onkeypress="return keyRestrict(event,' abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" data-wow-delay="1s" style="width: 252px !important;">
+
+
+                                <asp:TextBox ID="Lname_txt" CssClass="psb_dd input_bx" placeholder="Last Name" runat="server" MaxLength="30"
+                                    onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" required=""></asp:TextBox>
+                            </div>
+                            <div class="input-group col_4_1 revealOnScroll" data-animation="fadeInUp" style="width:67px !important;">
+
+                                <asp:TextBox ID="TextBox4" CssClass="psb_dd input_bx" placeholder="+91" runat="server"></asp:TextBox>
+
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" style="width: 373px !important;">
+                                <asp:TextBox ID="Mob_txt" CssClass="psb_dd input_bx" placeholder="Mobile No." runat="server" MaxLength="10"
+                                    onkeypress="return keyRestrict(event,'0123456789');" required=""></asp:TextBox>
+                                <%--<textarea rows="1" class="input_bx r_none" name="txtAddress" id="txtAddress"></textarea>--%>
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" style="width: 252px !important;">
+                                <asp:TextBox ID="Email_txt" CssClass="psb_dd input_bx" placeholder="Email" runat="server" required=""></asp:TextBox>
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" style="width: 223px;">
+
+                                <asp:TextBox ID="Ph_txt" CssClass="psb_dd input_bx" placeholder="Phone No. (Optional)" runat="server" MaxLength="15"
+                                    onkeypress="return keyRestrict(event,'0123456789');" required=""></asp:TextBox>
+
+                            </div>
+                            
+                            
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" style="width: 223px;">
+                                <asp:TextBox ID="Aemail_txt" CssClass="psb_dd input_bx" runat="server" placeholder="Email 2(Optional)"></asp:TextBox>
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp" style="width: 224px;">
+                                <asp:TextBox ID="Fax_txt" CssClass="psb_dd input_bx" placeholder="Fax No.(Optional)" runat="server" Style="position: static" onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="row">
+                            <h5>Business Information</h5>
+
+                            
+                            <div class="input-group col_2 revealOnScroll" data-animation="fadeInUp" style="display:none">
+                                <asp:TextBox ID="Web_txt" CssClass="psb_dd input_bx" placeholder="Business WebSite" runat="server" required="" style="display:none"></asp:TextBox>
+
+                            </div>
+                            
+                            <div class="input-group col_2 mgr14 revealOnScroll" data-animation="fadeInUp" style="display:none">
+                                <asp:TextBox ID="Agn_txt" CssClass="psb_dd input_bx" placeholder="Business Name" runat="server" MaxLength="50" onkeypress="return keyRestrict(event,' .abcdefghijklmnopqrstuvwxyz1234567890');" required="" style="display:none"></asp:TextBox>
+
+                            </div>
+
+
+                            <div class="input-group col_2 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="Pan_txt" CssClass="psb_dd input_bx" placeholder="PAN No." runat="server" required=""></asp:TextBox>
+
+                            </div>
+                            <div class="input-group col_2 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="TextBox_NameOnPard" CssClass="psb_dd input_bx" placeholder="Name On PAN" runat="server" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" MaxLength="20" required=""></asp:TextBox>
+
+                            </div>
+
+                            <div class="input-group col_2 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="Stax_txt" CssClass="psb_dd input_bx" placeholder="GST No." runat="server" Style="position: static" required=""></asp:TextBox>
+
+                            </div>
+
+                            <div class="input-group col_2 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="TextBox5" CssClass="psb_dd input_bx" placeholder="Name On GST" runat="server" Style="position: static" required=""></asp:TextBox>
+
+                            </div>
+
+                            <div class="input-group col_2 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:FileUpload ID="fld_pan" runat="server" CssClass="psb_dd input_bx" />
+
+                                <div style="display: none;">
+                                    <asp:DropDownList ID="Stat_drop" CssClass="input_bx" runat="server" Height="20px" Width="150px">
+                                        <asp:ListItem Value="TA" Selected="True">Travel Agent</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="" style="font-size: 11px; color: #0e4faa;">
+                                    ( Pancard image must be in JPG formate )
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group col_2   revealOnScroll" data-animation="fadeInUp">
+                                <asp:FileUpload ID="fld_1" runat="server" CssClass="psb_dd input_bx" />
+                                <div style="font-size: 11px; color: #0e4faa;">( Logo must be in PNG formate and  Size should be (90*70) pixels)</div>
+
+                            </div>
+
+                            <div class="input-group col_2  mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="Rem_txt" CssClass="psb_dd input_bx" placeholder="Remark" runat="server" Style="position: static"></asp:TextBox>
+
+                            </div>
+
+                            <div class="input-group col_2 revealOnScroll" data-animation="fadeInUp">
+                                <asp:DropDownList ID="Sales_DDL" runat="server" class="input_bx">
+                                    <asp:ListItem Value="--Refer By--">--Refer By--</asp:ListItem>
+                                </asp:DropDownList>
+
+                            </div>
+
+                            
+
+
+                            <div class="input-group col_2 revealOnScroll" data-animation="fadeInUp" style="display:none">
+                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="input_bx" style="display:none"></asp:DropDownList>
+
+                            </div>
+                            <asp:DropDownList ID="DD_Branch" runat="server" CssClass="input_bx" style="display:none"></asp:DropDownList>
+                        </div>
+
+
+                        <div class="row">
+                            <h5>Authentication Information</h5>
+
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="TxtUserId" runat="server" Style="position: static" MaxLength="20" CssClass="psb_dd input_bx" placeholder="User Id" oncopy="return false" onpaste="return false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz1234567890');" required=""></asp:TextBox>
+
+                            </div>
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="Pass_text" runat="server" Style="position: static"
+                                    TextMode="Password" MaxLength="16" CssClass="psb_dd input_bx" placeholder="Password" required=""></asp:TextBox>
+
+                            </div>
+
+
+                            <div class="input-group col_4_1 mgr14 revealOnScroll" data-animation="fadeInUp">
+                                <asp:TextBox ID="cpass_txt" CssClass="psb_dd input_bx" placeholder="Confirm Password" runat="server" Style="position: static"
+                                    TextMode="Password" MaxLength="16" required=""></asp:TextBox>
+
+                            </div>
+                            <div class="input-group col_4_1 revealOnScroll" data-animation="fadeInUp">
+                                <asp:Button ID="submit" runat="server" Text="Submit" OnClientClick="return validateSearch()"
+                                    CssClass="btn-sbmt input_bx" />
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col_12 t-center">
+                            <p class="para">If you are already register, please click hear to login : <a href="Login.aspx">Login</a> </p>
+                        </div>
+                        <%--<div class="col_12 t-center">
+                        <input type="submit" class="btn-sbmt" id="submit" value="Sign up for free"></div>--%>
+                        <div class="clear"></div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+        </form>
+    </div>
+
+
+
+    <div id="table_Message" runat="server" visible="false">
+
+        <style type="text/css">
+            @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+            /* Take care of image borders and formatting */
+
+            img {
+                max-width: 600px;
+                outline: none;
+                text-decoration: none;
+                -ms-interpolation-mode: bicubic;
+            }
+
+            html {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                border: 0;
+                outline: none;
+                color: #bbbbbb;
+            }
+
+                a img {
+                    border: none;
+                }
+
+            /* General styling */
+
+            td, h1, h2, h3 {
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight: 400;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            body {
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-size-adjust: none;
+                width: 100%;
+                height: 100%;
+                color: #666;
+                background: #fff;
+                font-size: 16px;
+                height: 100vh;
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            table {
+                border-collapse: collapse !important;
+            }
+
+            .headline {
+                color: #444;
+                font-size: 36px;
+            }
+
+            .force-full-width {
+                width: 100% !important;
+            }
+        </style>
+
+
+        <style media="screen" type="text/css">
+            @media screen {
+                td, h1, h2, h3 {
+                    font-family: 'Nunito', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
+                }
+            }
+        </style>
+        <style media="only screen and (max-width: 480px)" type="text/css">
+            /* Mobile styles */
+            @media only screen and (max-width: 480px) {
+
+                table[class="w320"] {
+                    width: 320px !important;
+                }
+            }
+        </style>
+        <style type="text/css"></style>
+
+        </head>
+  <body bgcolor="#fff" class="body" style="padding: 20px; margin: 0; display: block; background: #ffffff; -webkit-text-size-adjust: none">
+      <table align="center" cellpadding="0" cellspacing="0" height="100%" width="100%">
+          <tbody>
+              <tr>
+                  <td align="center" bgcolor="#fff" class="" valign="top" width="100%">
+                      <center class=""><table cellpadding="0" cellspacing="0" class="w320" style="margin: 0 auto;" width="600">
+<tbody><tr>
+<td align="center" class="" valign="top"><table cellpadding="0" cellspacing="0" style="margin: 0 auto;" width="100%">
+</table>
+<table bgcolor="#fff" cellpadding="0" cellspacing="0" class="" style="margin: 0 auto; width: 100%;">
+<tbody style="margin-top: 15px;">
+  <tr class="">
+<td class="">
+<img alt="robot picture" class="" height="155" src="Custom_Design/images/logo_new.png" style="width: 214px;height: 42px;">
+</td>
+</tr>
+<tr class=""><td class="headline">Welcome toFaremonster!</td></tr>
+<tr>
+<td>
+<center class=""><table cellpadding="0" cellspacing="0" class="" style="margin: 0 auto;" width="75%"><tbody class=""><tr class="">
+<td class="" style="color:#444; font-weight: 400;"><br><br>
+ B2B Travel Solution has been designed to cater the requirements of Travel Partners enabling them to sell travel products online, giving them freedom of retaining their identity online. <br><br>
+  You have successfully been registered to useFaremonster<br>
+ <br>
+  Your login credentials are provided below:
+<br>
+<span style="font-weight:bold;">User Id: &nbsp;</span><span style="font-weight:lighter;" class=""><%=CID%></span> 
+ <br>
+  <span style="font-weight:bold;">Password: &nbsp;</span><span style="font-weight:lighter;" class=""><%=Password%></span>
+<br><br>  
+<br></td>
+</tr>
+</tbody></table></center>
+</td>
+</tr>
+<tr>
+<td class="">
+<div class="">
+<a style="background-color:#674299;border-radius:4px;color:#fff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:normal;line-height:50px;text-align:center;text-decoration:none;width:350px;-webkit-text-size-adjust:none;" href="Login.aspx">Visit Account and Start Ticketing</a>
+</div>
+ <br>
+</td>
+</tr>
+</tbody>
+  
+  </table>
+
+<table bgcolor="#fff" cellpadding="0" cellspacing="0" class="force-full-width" style="margin: 0 auto; margin-bottom: 5px:">
+<tbody>
+<tr>
+<td class="" style="color:#444;
+                    ">
+<p>The password was auto-generated, however feel free to change it 
+  
+    <a href="" style="text-decoration: underline;">
+      here</a>
+  
+  </p>
+  </td>
+</tr>
+</tbody></table></td>
+</tr>
+</tbody></table></center>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+      <table width='450' border='0' cellspacing='0' cellpadding='0' height='84' style='background-color: #0e4ca1; display: none; border-radius: 15px; color: #FFF; font-family: Arial, Helvetica, sans-serif; font-size: 22px;'>
+          <tr align='center' valign='middle'>
+              <td>USER NAME:  <%=CID%> </td>
+          </tr>
+          <tr align='center' valign='middle'>
+              <td>PASSWORD: <%=Password%></td>
+          </tr>
+
+      </table>
+    </div>
+
+
+    <script type="text/javascript">
+        var UrlBase = '<%=ResolveUrl("~/") %>';
+        var autoCity = UrlBase + "AutoComplete.asmx/GETCITYSTATE";
+        $("#ctl00_ContentPlaceHolder1_ddl_city").autocomplete({
+            source: function (request, response) {
+
+                //if ($("#ctl00_ContentPlaceHolder1_ddl_city").val()!=data.d.item) {
+                //    $("#ctl00_ContentPlaceHolder1_ddl_city").focus();
+                //    alert("Please Select appropriate city");
+                //    return false;
+                //}
+                $.ajax({
+                    url: autoCity,
+                    data: "{ 'INPUT': '" + $("#ctl00_ContentPlaceHolder1_ddl_state").val() + "','SEARCH': '" + request.term + "' }",
+                    dataType: "json", type: "POST",
+                    contentType: "application/json; charset=utf-8",
+
+                    success: function (data) {
+
+                        if (data.d.length > 0) {
+                            response($.map(data.d, function (item) {
+                                return { label: item, value: item, id: $("#ctl00_ContentPlaceHolder1_ddl_state").val() }
+                            }))
+
+                        }
+                        else {
+                            response([{ label: 'City Not Found', val: -1 }]);
+                        }
+                        //response($.map(data.d, function (item) {
+                        //    return { label: item, value: item, id: $("#ctl00_ContentPlaceHolder1_ddl_state").val() }
+                        //}))
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                        alert(textStatus);
+                    }
+                })
+            },
+            autoFocus: true,
+            minLength: 3,
+            select: function (event, ui) {
+                if (ui.item.val == -1) {
+                    $(this).val("");
+                    return false;
+                }
+            },
+            autoFocus: true,
+            minLength: 3,
+            change: function (event, ui) {
+                if (ui.item == null) {
+                    this.value = '';
+                    alert('Please select City from the City list');
+                }
+            }
+        });
+
+    </script>
+
+
+    <script>
+
+        $(function () {
+            var $window = $(window),
+                win_height_padded = $window.height() * 1.1,
+                isTouch = Modernizr.touch;
+
+            if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+            $window.on('scroll', revealOnScroll);
+
+            function revealOnScroll() {
+                var scrolled = $window.scrollTop(),
+                    win_height_padded = $window.height() * 1.1;
+
+                // Showed...
+                $(".revealOnScroll:not(.animated)").each(function () {
+                    var $this = $(this),
+                        offsetTop = $this.offset().top;
+
+                    if (scrolled + win_height_padded > offsetTop) {
+                        if ($this.data('timeout')) {
+                            window.setTimeout(function () {
+                                $this.addClass('animated ' + $this.data('animation'));
+                            }, parseInt($this.data('timeout'), 10));
+                        } else {
+                            $this.addClass('animated ' + $this.data('animation'));
+                        }
+                    }
+                });
+                // Hidden...
+                $(".revealOnScroll.animated").each(function (index) {
+                    var $this = $(this),
+                        offsetTop = $this.offset().top;
+                    if (scrolled + win_height_padded < offsetTop) {
+                        $(this).removeClass('animated fadeInUp flipInX lightSpeedIn bounceInUp rollIn bounceInRight')
+                    }
+                });
+            }
+
+            revealOnScroll();
+        });
+    </script>
+    <script>
+        $('.palceholder').click(function () {
+            $(this).siblings('input').focus();
+            $(this).siblings('textarea').focus();
+        });
+        $('.input_bx').focus(function () {
+            $(this).siblings('.palceholder').hide();
+        });
+        $('.input_bx').blur(function () {
+            var $this = $(this);
+            if ($this.val().length == 0)
+                $(this).siblings('.palceholder').show();
+        });
+        $('.input_bx').blur();
+    </script>
+    <script src="Registration/Scripts/Js/User/custom-file-input.js"></script>
+</body>
+</html>

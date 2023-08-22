@@ -1,0 +1,61 @@
+﻿.txt
+{
+	font-size: medium;
+	width: 150px;
+	height: 20px;
+	background-color: Transparent;
+}
+.multitxt
+{
+	height: 60px;
+	width: 200px;
+}
+.btn
+{
+	font-family: Arial;
+	font-size: medium;
+	height: 35px;
+	width: 150px;
+}
+.grdHeader
+{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	height: 35px;
+	color: White;
+	background-image: url( '../Image/images.jpg' );
+}
+.grdRow
+{
+	font-size: 12px;
+}
+.rowstyle
+{
+	font-size: 12px;
+	font-weight: bold;
+	height: 25px;
+}
+.dropdown
+{
+	height: 22px;
+	width: 120px;
+	background-color: Transparent;
+}
+
+.newbutton_2
+{
+	color: #FFFFFF;
+	font-family: Century Gothic;
+	font-weight: bolder;
+	font-size: 13px;
+	background-color: #004b91;
+}
+.newbutton_2:Link
+{
+	color: #FFFFFF;
+	font-family: Century Gothic;
+	font-weight: bolder;
+	font-size: 13px;
+	background-color: #004b91;
+}

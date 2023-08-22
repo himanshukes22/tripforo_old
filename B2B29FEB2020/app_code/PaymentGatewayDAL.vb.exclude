@@ -1,0 +1,41 @@
+﻿Imports Microsoft.VisualBasic
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Web
+Imports Microsoft.Practices.EnterpriseLibrary.Data
+Imports System.Data.SqlClient
+Imports System.Data
+Imports System.Data.Common
+Imports Microsoft.Practices.EnterpriseLibrary.Data.Sql
+Imports System.Configuration
+
+Namespace PaymentGateway
+    Public Class PaymentGatewayDAL
+        Private DBHelper As SqlDatabase
+        Private connectionString As String = ConfigurationManager.ConnectionStrings("Flight_Search").ConnectionString
+        Public Sub New()
+            DBHelper = New SqlDatabase(connectionString)
+        End Sub
+
+        Public Function GetPGCredentials(ByVal Provider As String) As PGCredentialsShared
+
+            Dim DBCmd As DbCommand = New SqlCommand()
+            DBCmd.CommandText = "Sp_Get_PgCredentials"
+            DBCmd.CommandType = CommandType.StoredProcedure
+            DBHelper.AddInParameter(DBCmd, "@Pvd", DbType.[String], Provider)
+            Dim idr As IDataReader = DBHelper.ExecuteReader(DBCmd)
+            Dim objPGCredentials As New PGCredentialsShared()
+            While idr.Read()
+
+                objPGCredentials.Provider = idr("Provider").ToString()
+                objPGCredentials.ProviderUrl = idr("ProviderUrl").ToString()
+                objPGCredentials.Merchant_Key = idr("Merchant_Key").ToString()
+                objPGCredentials.Merchant_Pswd = idr("Merchant_Pswd").ToString()
+                objPGCredentials.SuccessUrl = idr("SuccessUrl").ToString()
+                objPGCredentials.FailureUrl = idr("FailureUrl").ToString()
+                objPGCredentials.HashSequence = idr("HashSequence").ToString()
+            End While
+            Return objPGCredentials
+        End Function
+    End Class
+End Namespace

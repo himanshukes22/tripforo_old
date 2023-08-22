@@ -1,0 +1,282 @@
+﻿
+@charset "utf-8";
+/* CSS Document */
+.flight_popup {
+	width: 150px;
+	font-size: 11px;
+	color: #000;
+	background-image: url(../Style/Images/header2_bg.jpg);
+	background-repeat: repeat-x;
+	padding-left: 5px;
+	vertical-align: middle;
+	border: thin solid #20313f;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	background-color: #FFF;
+}
+
+.flt-wait-message {
+	text-align: center;
+	z-index: 1001;
+	background-color: #fff;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 20px 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-o-border-radius: 10px;
+	border: 5px solid #20313f;
+}
+
+.flight_heading {
+	color: #FFF;
+}
+
+.flight_head {
+	background-image: url(../Style/Images/header2_bg.jpg);
+	background-repeat: repeat-x;
+}
+
+.flight_text {
+	width: 35px;
+	color: #000;
+	font-size: 10px;
+	border: thin solid #20313f;
+	padding-left: 3px;
+	margin-left: 5px;
+}
+
+.flight_textbox {
+	font-size: 11px;
+	vertical-align: middle;
+	padding-left: 5px;
+	color: #000;
+	height: 20px;
+	width: 50px;
+	border: thin solid #20313f;
+	position: static;
+}
+
+.flight_serch {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #000000;
+	border: thin solid #20313f;
+	padding: 3px 7px 3px 7px;
+	vertical-align: middle;
+	margin-right: 5px;
+	text-decoration: none;
+}
+
+.flight_sort {
+	vertical-align: top;
+	background-image: url(../Style/Images/serch_bg.jpg);
+	background-repeat: repeat-x;
+	border: thin solid #20313f;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	color: #FFF;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+
+.flight_textbox2 {
+	font-size: 11px;
+	vertical-align: middle;
+	padding-left: 5px;
+	color: #000;
+	height: 20px;
+	border: thin solid #20313f;
+	width: 150px;
+	margin: 2px;
+}
+
+.flight_textbox3 {
+	padding-top: 5px;
+	color: #000000;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.fltcheckbox {
+	width: 25px;
+	float: left;
+}
+
+.flightnew2 {
+	font-size: 11px;
+	vertical-align: middle;
+	padding-left: 5px;
+	color: #000;
+	height: 16px;
+	border: thin solid #20313f;
+	width: 110px;
+}
+
+.flightnew {
+	font-size: 11px;
+	padding-left: 5px;
+	color: #000;
+	height: 20px;
+	vertical-align: middle;
+	width: 103px;
+	border: thin solid #20313f;
+}
+
+.flight_Calander {
+	background-image: url(../../images/calendar.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;
+	font-size: 11px;
+	vertical-align: middle;
+	padding-left: 5px;
+	color: #000;
+	height: 16px;
+	width: 95px;
+	border: thin solid #20313f;
+}
+
+.button3 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	/*background-color: #1c589d;*/
+	padding-right: 22px;
+	padding-left: 22px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	vertical-align: middle;
+	margin-right: 5px;
+	text-decoration: none;
+	background-image: url(../Style/Images/button_new.jpg);
+	background-repeat: repeat-x;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 5px;
+}
+
+.breakup {
+	border: thin dotted;
+	background-image: url(../Style/images/header2_bg.jpg);
+	background-repeat: repeat-x;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	line-height: 180%;
+	font-size: 9px;
+	color: #000;
+	padding: 5px;
+}
+
+.head {
+	font-size: 9px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFF;
+}
+
+.head2 {
+	font-size: 9px;
+	color: #000;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+
+
+
+.border {
+	padding-right: 5px;
+	margin-bottom: 3px;
+	font-size: 9px;
+	border-right-width: thin;
+	border-right-style: dotted;
+}
+
+.flight-control {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: White;
+	border: 1px;
+	width: 1000px;
+}
+
+.flight-matrix {
+	background-color: #F8f8f8;
+	color: #000;
+	line-height: 140%;
+	text-align: center;
+	border: thin solid #000;
+	padding: 5px;
+	margin-right: 10px;
+	border-collapse: collapse;
+}
+
+
+.matrixgrid {
+	width: auto;
+	border: solid thin #000;
+	text-align: center;
+	text-align: left;
+}
+
+	.matrixgrid td {
+		white-space: nowrap;
+		width: auto;
+		height: auto;
+		font-size: 10px;
+		padding: 5px;
+		border: 1px solid #000;
+		border-collapse: collapse;
+	}
+
+	.matrixgrid th {
+		white-space: nowrap;
+		width: auto;
+		color: #fff;
+		font-size: 11px;
+		text-align: center;
+		height: 25px;
+		border: 1px solid #000;
+		padding-left: 5px;
+		padding-right: 2px;
+	}
+
+	.matrixgrid a {
+		color: #000;
+		text-decoration: none;
+	}
+
+		.matrixgrid a:hover {
+			color: #20313f;
+			text-decoration: underline;
+		}
+
+	.matrixgrid .alt {
+		background-color: #000;
+	}
+
+	.matrixgrid .tr {
+		line-height: 10px;
+	}
+
+	.matrixgrid .pgr {
+		text-align: center;
+	}
+
+		.matrixgrid .pgr a {
+			color: #000;
+			text-decoration: none;
+		}
+
+			.matrixgrid .pgr a:hover {
+				color: #20313f;
+				text-decoration: none;
+			}

@@ -1,0 +1,642 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterAfterLogin.master" AutoEventWireup="false"
+    CodeFile="IntlDiscountMaster.aspx.vb" Inherits="Reports_Admin_IntlDiscountMaster" %>
+
+<%@ Register Src="~/UserControl/Settings.ascx" TagPrefix="uc1" TagName="Settings" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <%--<style>
+        /* RESET */ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, font, img, dl, dt, dd, ol, ul, li, legend, table, tbody, tr, th, td {
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+            outline: 0;
+            font-weight: inherit;
+            font-style: inherit;
+            font-size: 100%;
+            font-family: inherit;
+            list-style: none;
+        }
+
+            a img {
+                border: none;
+            }
+
+            ol li {
+                list-style: decimal outside;
+            }
+
+        fieldset {
+            border: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 1em;
+        }
+
+        div#container {
+            width: 780px;
+            margin: 0 auto;
+            padding: 1em 0;
+        }
+
+        p {
+            margin: 1em 0;
+            max-width: 700px;
+        }
+
+        h1 + p {
+            margin-top: 0;
+        }
+
+        h1, h2 {
+            font-family: Georgia, Times, serif;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: .75em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 2.5em 0 .5em;
+            border-bottom: 1px solid #999;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        ul li {
+            list-style: disc;
+            margin-left: 1em;
+        }
+
+        ol li {
+            margin-left: 1.25em;
+        }
+
+        div.side-by-side {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+
+            div.side-by-side > div {
+                float: left;
+                width: 50%;
+            }
+
+                div.side-by-side > div > em {
+                    margin-bottom: 10px;
+                    display: block;
+                }
+
+        a {
+            color: Navy;
+            text-decoration: underline;
+        }
+
+        .faqs em {
+            display: block;
+        }
+
+        .clearfix:after {
+            content: "\0020";
+            display: block;
+            height: 0;
+            clear: both;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        footer {
+            margin-top: 2em;
+            border-top: 1px solid #666;
+            padding-top: 5px;
+        }
+    </style>
+
+    <link href="../../CSS/main2.css" rel="stylesheet" type="text/css" />
+   
+    <link href="../../CSS/style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="../../chosen/chosen.css" />--%>
+    <script src="../../chosen/jquery-1.6.1.min.js" type="text/javascript"></script>
+
+    <script src="../../chosen/chosen.jquery.js" type="text/javascript"></script>
+    <link href="<%= ResolveUrl("~/Styles/jAlertCss.css")%>" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+
+
+
+        });
+
+        function allType() {
+            $('#<%=HiddenAlltype.ClientID %>').val("");
+            if ($("#CheckBoxAllType").is(":checked")) {
+
+                $('#<%=ddl_ptype.ClientID %>').hide();
+                $('#<%=HiddenAlltype.ClientID %>').val("All Type");
+
+            }
+            else {
+                $('#<%=ddl_ptype.ClientID %>').show();
+                $('#<%=HiddenAlltype.ClientID %>').val("");
+            }
+        }
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        function ValidateCom() {
+            if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_Cairline").value == "--Select Airline--") {
+
+                alert('Please Select AirlineName');
+                //document.getElementById("ddl_Cairline").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_basic").value == "") {
+
+                alert('Please Fill Basic');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_basic").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_CYQ").value == "") {
+
+                alert('Please Fill CommissionYQ');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_CYQ").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_CYB").value == "") {
+
+                alert('Please Fill Commission On YQ and Basic');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_CYB").focus();
+                return false;
+            }
+            if (confirm("Are you sure!"))
+                return true;
+            return false;
+        }
+        function PLBValidation() {
+            if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_Pairline").value == "--Select Airline--") {
+
+                alert('Please Fill AirlineName');
+                //                  document.getElementById("ddl_Pairline").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_Pbasic").value == "") {
+
+                alert('Please Fill PLB Basic');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_Pbasic").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_Pyqb").value == "") {
+
+                alert('Please Fill PLB YQ with Basic');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_Pyqb").focus();
+                return false;
+            }
+
+
+
+            if (document.getElementById("From").value == "") {
+
+                alert('Please Fill Start Date');
+                document.getElementById("From").focus();
+                return false;
+            }
+
+            if (document.getElementById("To").value == "") {
+
+                alert('Please Fill End Date');
+                document.getElementById("To").focus();
+                return false;
+            }
+
+
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_basic").value == "") {
+
+                alert('Please Fill Commission Basic');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_basic").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_CYQ").value == "") {
+
+                alert('Please Fill CommissionYQ');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_CYQ").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txt_CYB").value == "") {
+
+                alert('Please Fill Commission On YQ and Basic');
+                document.getElementById("ctl00_ContentPlaceHolder1_txt_CYB").focus();
+                return false;
+            }
+
+
+
+            if (confirm("Are you sure!"))
+                return true;
+            return false;
+        }
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if ((charCode >= 48 && charCode <= 57) || (charCode == 8) || (charCode == 46)) {
+                return true;
+            }
+            else {
+
+                return false;
+            }
+        }
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        function ConfirmDelete() {
+            if (confirm("Are you sure!"))
+                return true;
+            return false;
+        }
+    </script>
+
+    <link type="text/css" href="<%=ResolveUrl("~/Styles/jquery-ui-1.8.8.custom.css") %>"
+        rel="stylesheet" />
+    <div class="mtop80"></div>
+    <div class="large-12 medium-12 small-12">
+        <div class="large-3 medium-3 small-12 columns">
+
+            <uc1:Settings runat="server" ID="Settings" />
+
+        </div>
+        <div class="large-8 medium-8 small-12 columns end">
+            <div class="large-12 medium-12 small-12 heading">
+                <div class="large-12 medium-12 small-12 heading1">Intl. Discount Master</div>
+                <div class="clear1"></div>
+                <div class="large-12 medium-12 small-12">
+
+                    <div class="large-2 medium-2 small-4 columns">
+                        <asp:Label ID="Label1" runat="server" Text="Select Type" Font-Bold="True"></asp:Label>
+                        &nbsp;:
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns large-pull-7 medium-pull-7">
+                        <asp:DropDownList ID="ddl_type" runat="server" OnSelectedIndexChanged="ddl_type_SelectedIndexChanged"
+                            CssClass="drpBox" AutoPostBack="True">
+                            <asp:ListItem Value="Select Type" Selected="True" Text="--Select Type--"></asp:ListItem>
+                            <asp:ListItem Text="All Type" Value="0"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                </div>
+                <div class="clear1"></div>
+            </div>
+            <div class="clear1"></div>
+
+            <div id="tr_PLB" runat="server" class="large-12 medium-12 small-12 heading">
+
+                <div class="large-12 medium-12 small-12 heading1">
+                    COMMISSION & PLB DETAILS
+                </div>
+                <div class="clear1"></div>
+                <div class="redlnk large-12 medium-12 small-12">
+
+                    <div class="large-2 medium-2 small-4 columns">
+                        Airline:
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <asp:DropDownList ID="ddl_Pairline" runat="server" data-placeholder="Choose a Airline..."
+                            TabIndex="2">
+                        </asp:DropDownList>
+                    </div>
+                    <div class="large-2 medium-2 small-4 columns">
+                        GroupType :
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <asp:DropDownList ID="ddl_ptype" runat="server" AppendDataBoundItems="true" CssClass="drpBox">
+                            <%--    <asp:ListItem Value="0" Selected="True">All Type</asp:ListItem>--%>
+                        </asp:DropDownList>
+                    </div>
+
+                    <div class="large-2 medium-2 small-12 columns">
+                        <input type="checkbox" id="CheckBoxAllType" name="All Type" value="All Type" onclick="javascript: allType();"
+                            class="checked" />
+                        All Group Type
+                                            <input type="hidden" id="HiddenAlltype" runat="server" value="" />
+                    </div>
+                </div>
+                <div class="clear1"></div>
+            </div>
+            <div class="clear1"></div>
+            <div class="large-12 medium-12 small-12 heading">
+                <div class="large-12 medium-12 small-12 heading1">
+                    COMMISSION DETAILS
+                </div>
+                <div class="clear1"></div>
+                <div class="large-2 medium-2 small-4 columns">
+                    Commission Basic :
+                </div>
+                <div class="large-3 medium-3 small-8 columns">
+                    <asp:TextBox ID="txt_basic" runat="server" onKeyPress="return isNumberKey(event)"
+                        MaxLength="5" Text="0"></asp:TextBox>
+                </div>
+                <div class="large-3 medium-2 small-4 columns">Commission YQ:</div>
+                <div class="large-3 medium-3 small-8 columns">
+                    <asp:TextBox ID="txt_CYQ" runat="server" onKeyPress="return isNumberKey(event)" MaxLength="5"
+                        Text="0"></asp:TextBox>
+                </div>
+                <div class="clear1"></div>
+                <div class="large-2 medium-2 small-4 columns">
+                    Commission(BASIC+YQ) :
+                </div>
+                <div class="large-3 medium-3 small-8 columns">
+                    <asp:TextBox ID="txt_CYB" runat="server" onKeyPress="return isNumberKey(event)" MaxLength="5"
+                        Text="0"></asp:TextBox>
+                </div>
+                <div class="clear1"></div>
+            </div>
+            <div class="clear1"></div>
+            <div class="large-12 medium-12 small-12 heading">
+                <div class="large-12 medium-12 small-12 heading1">
+                    PLB DETAILS
+                </div>
+                <div class="clear1"></div>
+                <div class="large-12 medium-12 small-12">
+                    <div class="large-2 medium-2 small-4 columns">
+                        RBD :
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <asp:TextBox ID="txt_PRBD" runat="server"></asp:TextBox>
+                        &nbsp; Ex =&gt; A,B,C etc
+                    </div>
+                    <div class="large-2 medium-2 small-4 columns large-push-2 medium-push-2">
+                        Sector :
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+
+                        <asp:TextBox ID="txt_Sector" runat="server"></asp:TextBox>&nbsp; Ex
+                                                        =&gt; DLI-AMH,IXR-GHF etc
+                                                   
+                    </div>
+                </div>
+                <div class="clear1"></div>
+
+
+                <div class="redlnk large-12 medium-12 small-12">
+                    <div class="large-2 medium-2 small-4 columns">
+                        PLB Basic:
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <asp:TextBox ID="txt_Pbasic" runat="server" onKeyPress="return isNumberKey(event)"
+                            MaxLength="5" Text="0"></asp:TextBox>
+                    </div>
+                    <div class="large-2 medium-2 small-4 columns large-push-2 medium-push-2">
+                        PLB (BASIC+YQ) : &nbsp;
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <asp:TextBox ID="txt_Pyqb" runat="server" onKeyPress="return isNumberKey(event)"
+                            MaxLength="5" Text="0"></asp:TextBox>
+                    </div>
+
+                </div>
+                <div class="clear1"></div>
+                <div class="redlnk large-12 medium-12 small-12">
+                    <div class="large-2 medium-2 small-4 columns">
+                        Start Date:
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <input type="text" name="From" id="From" readonly="readonly" />
+                    </div>
+                    <div class="large-2 medium-2 small-4 columns large-push-2 medium-push-2">
+                        End Date:
+                    </div>
+                    <div class="large-3 medium-3 small-8 columns">
+                        <input type="text" name="To" id="To" readonly="readonly" />
+                    </div>
+                </div>
+                <div class="clear1"></div>
+                <div class="redlnk large-12 medium-12 small-12">
+                    <div class="large-2 medium-2 small-4 columns">
+                        Remark
+                    </div>
+                    <div class="large-5 medium-5 small-8 columns end">
+                        <asp:TextBox ID="txt_Remark" runat="server" CssClass="messageBox" MaxLength="5"
+                            TextMode="MultiLine"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="clear1"></div>
+                <div class="large-12 medium-12 small-12">
+                    <div class="large-2 medium-2 small-12 large-push-9 medium-push-9">
+                        <asp:Button ID="btn_submit" Text="Submit" runat="server" OnClientClick="return PLBValidation()"
+                            OnClick="btn_submit_Click" />
+                    </div>
+                    <div class="clear1"></div>
+                    <div class="large-12 medium-12 small-12">
+                        <asp:Label ID="lbl_plb" runat="server" Style="color: #CC0000;" Font-Bold="True"
+                            Visible="False"></asp:Label>
+                    </div>
+                </div>
+                <div class="clear1"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="clear1"></div>
+
+    <div class="large-12 medium-12 small-12">
+
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:GridView ID="grd_P_IntlDiscount" runat="server" AutoGenerateColumns="false"
+                    CssClass="table table-hover" GridLines="None" Font-Size="12px"  OnRowCancelingEdit="grd_P_IntlDiscount_RowCancelingEdit"
+                    OnRowDeleting="grd_P_IntlDiscount_RowDeleting" OnRowEditing="grd_P_IntlDiscount_RowEditing"
+                    OnRowUpdating="grd_P_IntlDiscount_RowUpdating">
+                    <Columns>
+                        <asp:TemplateField HeaderText="GROUP TYPE">
+                            <ItemTemplate>
+                                <asp:Label ID="C" runat="server" Text='<%#Eval("GroupType") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="AIRLINE NAME">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_airline" runat="server" Text='<%#Eval("AirlineName") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="AIRLINE CODE">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_airlinecode" runat="server" Text='<%#Eval("AirlineCode") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="RBD">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_rbd" runat="server" Text='<%#Eval("RBD") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_RBD" runat="server" Text='<%#Eval("RBD") %>' Width="80px" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="ORIGIN">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Sector" runat="server" Text='<%#Eval("Sector") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_Sector" runat="server" Text='<%#Eval("Sector") %>' Width="80px"
+                                    BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="PLB BASIC">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Pbasic" runat="server" Text='<%#Eval("PlbOnBasic") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_PBasic" runat="server" Text='<%#Eval("PlbOnBasic") %>' onKeyPress="return isNumberKey(event)"
+                                    Width="60px" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="PLB ON (BASIC+YQ)">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Pbasicyq" runat="server" Text='<%#Eval("PlbOnBasicYq") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_PBasicYQ" runat="server" Text='<%#Eval("PlbOnBasicYq") %>' onKeyPress="return isNumberKey(event)"
+                                    Width="60px" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="START DATE">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_StartDate" runat="server" Text='<%#Eval("StartDate") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <%-- <input type="text" name="txt_StartDate" id="txt_StartDate" readonly="readonly" style="width: 100px" />--%>
+                                <asp:TextBox ID="txt_StartDate" runat="server" Text='<%#Bind("StartDate") %>' Width="70px"
+                                    CssClass="txtboxx infdobcss" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="END DATE">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_EndDate" runat="server" Text='<%#Eval("EndDate") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_EndDate" runat="server" Text='<%#Bind("EndDate") %>' Width="70px"
+                                    CssClass="txtboxx infdobcss" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="REMARK">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Remark" runat="server" Text='<%#Eval("Remark") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_Remark" runat="server" Text='<%#Bind("Remark") %>' Width="150px"
+                                    BackColor="#ffff66" TextMode="MultiLine"></asp:TextBox>
+                            </EditItemTemplate>
+
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="COMMISSION ON BASIC">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Cbasic" runat="server" Text='<%#Eval("CommisionOnBasic") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_CBasic" runat="server" Text='<%#Eval("CommisionOnBasic") %>'
+                                    onKeyPress="return isNumberKey(event)" Width="60px" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="COMMISSION ON YQ">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Cyq" runat="server" Text='<%#Eval("CommissionOnYq") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_CYQ" runat="server" Text='<%#Eval("CommissionOnYq") %>' Width="60px"
+                                    onKeyPress="return isNumberKey(event)" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="COMMISSION ON (BASIC+YQ)">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Cbasicyq" runat="server" Text='<%#Eval("CommisionOnBasicYQ") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_CBasicYQ" runat="server" Text='<%#Eval("CommisionOnBasicYQ") %>'
+                                    onKeyPress="return isNumberKey(event)" Width="60px" BackColor="#ffff66"></asp:TextBox>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="EDIT">
+                            <ItemTemplate>
+                                <asp:Button ID="lnledit" runat="server" Text="Edit" CommandName="Edit" Font-Bold="true"
+                                    CssClass="newbutton_2" />
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:Button ID="lnlupdate" runat="server" Text="Update" CommandName="Update" Font-Bold="true"
+                                    CssClass="newbutton_2" />
+                                <asp:Button ID="lnlcancel" runat="server" Text="Cancel" CommandName="Cancel" Font-Bold="true"
+                                    CssClass="newbutton_2" />
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Delete">
+                            <ItemTemplate>
+                                <asp:Button ID="btn_delete" CssClass="newbutton_2" runat="server" Text="Delete" CommandName="Delete"
+                                    OnClientClick="return ConfirmDelete()" Font-Bold="true" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                    
+                </asp:GridView>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <asp:UpdateProgress ID="updateprogress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+            <ProgressTemplate>
+                <div style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; overflow: hidden; padding: 0; margin: 0; background-color: #000; filter: alpha(opacity=50); opacity: 0.5; z-index: 1000;">
+                </div>
+                <div style="position: fixed; top: 30%; left: 43%; padding: 10px; width: 20%; text-align: center; z-index: 1001; background-color: #fff; border: solid 1px #000; font-size: 12px; font-weight: bold; color: #000000">
+                    Please Wait....<br />
+                    <br />
+                    <img alt="loading" src="<%= ResolveUrl("~/images/loadingAnim.gif")%>" />
+                    <br />
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+
+    </div>
+
+    <link type="text/css" href="<%=ResolveUrl("~/Styles/jquery-ui-1.8.8.custom.css") %>" />
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-ui-1.8.8.custom.min.js")%>"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#From").datepicker(
+                 {
+                     numberOfMonths: 1,
+
+                     showButtonPanel: true, autoSize: true, dateFormat: 'dd-mm-yy', closeText: 'X', duration: 'slow', gotoCurrent: true, changeMonth: true,
+                     changeYear: true, hideIfNoPrevNext: true, navigationAsDateFormat: true, defaultDate: +0, showAnim: 'slide', showOtherMonths: true,
+                     selectOtherMonths: true, showOn: "button", buttonImage: '../../Images/cal.gif', buttonImageOnly: true
+                 }
+            ).datepicker("setDate", new Date().getDate - 1);
+
+        });
+        $(function () {
+            $("#To").datepicker(
+                 {
+                     numberOfMonths: 1,
+
+                     showButtonPanel: true, autoSize: true, dateFormat: 'dd-mm-yy', closeText: 'X', duration: 'slow', gotoCurrent: true, changeMonth: true,
+                     changeYear: true, hideIfNoPrevNext: true, navigationAsDateFormat: true, defaultDate: +0, showAnim: 'slide', showOtherMonths: true,
+                     selectOtherMonths: true, showOn: "button", buttonImage: '../../Images/cal.gif', buttonImageOnly: true
+                 }
+            ).datepicker("setDate", new Date().getDate - 1);
+
+        });
+
+
+
+
+
+    </script>
+
+</asp:Content>

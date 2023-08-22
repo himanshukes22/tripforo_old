@@ -1,0 +1,94 @@
+﻿Imports System.Collections.Generic
+Imports System.Web
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+Imports System.Data
+Partial Class HtlRefundUpdate
+    Inherits System.Web.UI.Page
+    Private SqlT As New SqlTransaction()
+    Private ccraObj As New HtlLibrary.CCRA
+    Private ST As New HtlLibrary.HtlSqlTrans()
+    Private STDom As New SqlTransactionDom
+    Dim GrdDS, AgencyDS As New DataSet
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            If Session("UID") = "" Or Session("UID") Is Nothing Then
+                Response.Redirect("~/Login.aspx")
+            End If
+            If Not IsPostBack Then
+                BindGrid()
+
+                AgencyDS = ST.GetAgencyDetails(GrdDS.Tables(0).Rows(0).Item("AgentID").ToString.Trim())
+                If AgencyDS.Tables(0).Rows.Count <> 0 Then
+                    Dim dt As New DataTable()
+                    dt = AgencyDS.Tables(0)
+                    Dim addr As String = dt.Rows(0)("city").ToString() & ", " & dt.Rows(0)("State").ToString() & ", " & dt.Rows(0)("country").ToString() & ", " & dt.Rows(0)("zipcode").ToString()
+                    td_AgentID.InnerText = GrdDS.Tables(0).Rows(0).Item("AgentID").ToString()
+                    td_AgentName.InnerText = dt.Rows(0)("Name").ToString()
+                    td_AgentAddress.InnerText = dt.Rows(0)("Address").ToString()
+                    td_Street.InnerText = addr
+                    td_AgentMobNo.InnerText = dt.Rows(0)("Mobile").ToString()
+                    td_Email.InnerText = dt.Rows(0)("Email").ToString()
+                    td_AgencyName.InnerText = dt.Rows(0)("Agency_Name").ToString()
+                    td_CardLimit.InnerText = dt.Rows(0)("Crd_Limit").ToString()
+                End If
+            End If
+        Catch ex As Exception
+            HtlLibrary.HtlLog.InsertLogDetails(ex)
+        End Try
+    End Sub
+    Private Sub BindGrid()
+        GrdDS = ST.HtlRefundDetail("InProcess", Request.QueryString("OrderID"), Session("UID").ToString, "UpdeteGET", "")
+        grd_htlhold.DataSource = GrdDS
+        grd_htlhold.DataBind()
+        lblCancelPoli.Text = GrdDS.Tables(0).Rows(0)("CancilationPoli")
+    End Sub
+
+    Protected Sub btn_Update_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_Update.Click
+        'Try
+        '    For Each row As GridViewRow In grd_htlhold.Rows
+        '        Dim orderId As String = DirectCast(row.FindControl("lblOrderId"), Label).Text
+        '        Dim lblBID As String = DirectCast(row.FindControl("lblBID"), Label).Text
+        '        Dim lblAgent As String = DirectCast(row.FindControl("lblAgent"), Label).Text
+        '        Dim lblAgency As String = DirectCast(row.FindControl("lblAgency"), Label).Text
+        '        Dim lblNetCost As Integer = Convert.ToInt32(DirectCast(row.FindControl("lblNetCost"), Label).Text)
+        '        Dim RefundCharge As Integer = Convert.ToInt32(txtRefundCharge.Text.Trim)
+        '        Dim ServiceCharge As Integer = Convert.ToInt32(txtServiceCharge.Text.Trim)
+        '        Dim Refundfare As Integer = Convert.ToInt32(lblNetCost) - (RefundCharge + ServiceCharge)
+
+        '        Dim Confirmation As String = ccraObj.htlcalncle(lblBID)
+        '        Dim Confirm As String = Confirmation.Substring(0, 7)
+
+        '        If (Confirm = "SUCCESS") Then
+        '            Dim i As Integer = ST.UpdateHltRefund("Refund", ViewState("OrderID").ToString, Session("UID").ToString, "UpdateRefu", txtRemark.Text.Trim, RefundCharge, ServiceCharge, Refundfare)
+
+        '            'Adding Refund Amount in Agent balance
+        '            Dim ablBalance As Double = SqlT.UpdateNew_RegsRefund(lblAgent, Refundfare)
+        '            Session("CL") = ablBalance
+        '            Dim rm As String = "ReFund Charge Against Ticket No " & orderId
+
+        '            ' Insert Data in LedgerDetails Table
+        '            STDom.insertLedgerDetails(lblAgent, lblAgency, orderId, lblBID, "", "", "", "", Session("UID").ToString, Request.UserHostAddress, 0, _
+        '                                Convert.ToDecimal(Refundfare), Convert.ToDecimal(ablBalance), "Ticket Refund", rm, 0)
+
+        '            Page.ClientScript.RegisterStartupScript(GetType(Page), "MessagePopUp", "alert('Cancelled " & Confirm & "fully." & "); ", True)
+        '        Else
+
+        '            Page.ClientScript.RegisterStartupScript(GetType(Page), "MessagePopUp", "alert('Please Try Again'); ", True)
+        '        End If
+
+        '    Next
+        '    BindGrid()
+        '    Response.Write("<script>javascript:window.close();</script>")
+        'Catch ex As Exception
+        'HtlLibrary.HtlLog.InsertLogDetails(ex)
+        'End Try
+    End Sub
+
+    Protected Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        Response.Write("<script>javascript:window.close();</script>")
+    End Sub
+End Class
+
+  

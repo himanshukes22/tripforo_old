@@ -1,0 +1,1558 @@
+﻿<%@ Master Language="VB" CodeFile="MasterAfterLogin.master.vb" Inherits="MasterAfterLogin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Tripforo</title>
+     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script type="text/javascript">
+          var UrlBase = '<%=ResolveUrl("~/")%>';
+        //var ApplUrl = 'http://b2b.//.com/';
+      </script>
+   
+     <link type="text/css" href="icofont/icofont.css" rel="stylesheet" />
+    <link type="text/css" href="icofont/icofont.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="Advance_CSS/css/font-awesome.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/lineicons.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/weather-icons.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/bootstrap.css" />
+    <link rel="stylesheet" href="Advance_CSS/css/styles.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   <%-- <link rel="icon" href="Advance_CSS/Icons/ftb.png" type="image/gif"/>--%>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="Hotel/css/B2Bhotelengine.css" rel="stylesheet" />
+
+    <link href="Advance_CSS/Sidebar.css" rel="stylesheet" />
+      <%--<link rel="shortcut icon" href="<%ResolveUrl("../../Advance_CSS/fav.png")%>" />--%>
+    <style type="text/css">
+        .menu-container {
+  visibility: hidden;
+  opacity: 0;
+}
+.menu-container.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.user-menu {
+  position: absolute;
+  right: -22px;
+  background-color: #FFFFFF;
+  width: 256px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+.user-menu .profile-highlight {
+  display: -webkit-box;
+  display: flex;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 12px 16px;
+  margin-bottom: 6px;
+}
+.user-menu .profile-highlight img {
+  width: 48px;
+  height: 48px;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user-menu .profile-highlight .details {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin: auto 12px;
+}
+.user-menu .profile-highlight .details #profile-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+.user-menu .profile-highlight .details #profile-footer {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.user-menu .footer {
+  border-top: 1px solid #E0E0E0;
+  padding-top: 6px;
+  margin-top: 6px;
+}
+.user-menu .footer .user-menu-link {
+  font-size: 13px;
+}
+.user-menu .user-menu-link {
+  display: -webkit-box;
+  display: flex;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+}
+.user-menu .user-menu-link div {
+  margin: auto 10px;
+}
+.user-menu .user-menu-link:hover {
+  background-color: #F5F5F5;
+  color: #333333;
+}
+.user-menu:before {
+  position: absolute;
+  top: -16px;
+  left: 120px;
+  display: inline-block;
+  content: "";
+  border: 8px solid transparent;
+  border-bottom-color: #E0E0E0;
+}
+.user-menu:after {
+  position: absolute;
+  top: -14px;
+  left: 121px;
+  display: inline-block;
+  content: "";
+  border: 7px solid transparent;
+  border-bottom-color: #FFFFFF;
+}
+
+    </style>
+
+     <style type="text/css">
+         body {
+             font-family: 'Quicksand', sans-serif !important;
+         }
+
+        @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+        @import url(http://fonts.googleapis.com/css?family=Gudea);
+
+        .footer1 {
+            background: #06384e url("../images/footer/footer-bg.png") repeat scroll left top;
+            padding-top: 40px;
+            padding-right: 0;
+            padding-bottom: 20px;
+            padding-left: 0; /*	border-top-width: 4px;
+	border-top-style: solid;
+	border-top-color: #003;*/
+        }
+
+
+
+        .title-widget {
+            color: #a9a9a9;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1;
+            position: relative;
+            text-transform: uppercase;
+            font-family: 'Fjalla One', sans-serif;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 25px;
+            margin-left: 0;
+            padding-left: 28px;
+        }
+
+            .title-widget::before {
+                background-color: #0b5b7d;
+                content: "";
+                height: 80px;
+                left: 0px;
+                position: absolute;
+                top: -26px;
+                width: 2px;
+            }
+
+
+
+        .widget_nav_menu ul {
+            list-style: outside none none;
+            padding-left: 0;
+        }
+
+        .widget_archive ul li {
+            background-color: rgba(0, 0, 0, 0.3);
+            content: "";
+            height: 3px;
+            left: 0;
+            position: absolute;
+            top: 7px;
+            width: 3px;
+        }
+
+
+        .widget_nav_menu ul li {
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 20px;
+            position: relative;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 7px;
+            padding-bottom: 7px;
+            width: 95%;
+        }
+
+
+
+        .title-median {
+            color: #636363;
+            font-size: 20px;
+            line-height: 20px;
+            margin: 0 0 15px;
+            text-transform: uppercase;
+            font-family: 'Fjalla One', sans-serif;
+        }
+
+        .footerp p {
+            font-family: 'Gudea', sans-serif;
+        }
+
+
+        #social:hover {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+
+        #social {
+            -webkit-transform: scale(0.8);
+            /* Browser Variations: */
+            -moz-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+        }
+        /* 
+    Only Needed in Multi-Coloured Variation 
+                                               */
+        .social-fb:hover {
+            color: #3B5998;
+        }
+
+        .social-tw:hover {
+            color: #4099FF;
+        }
+
+        .social-gp:hover {
+            color: #d34836;
+        }
+
+        .social-em:hover {
+            color: #f39c12;
+        }
+
+        .nomargin {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+
+
+        .footer-bottom {
+            background-color: #15224f;
+            min-height: 30px;
+            width: 100%;
+        }
+
+        .copyright {
+            color: #fff;
+            line-height: 30px;
+            min-height: 30px;
+            padding: 7px 0;
+        }
+
+        .design {
+            color: #fff;
+            line-height: 30px;
+            min-height: 30px;
+            padding: 7px 0;
+            text-align: right;
+        }
+
+            .design a {
+                color: #fff;
+            }
+
+
+        /************************************************************
+*************************Footer******************************
+*************************************************************/
+    </style>
+
+
+
+    <style>
+         ::-webkit-scrollbar {
+            width: 5px;
+            height: 7px;
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #525965;
+            border: 0px none #ffffff;
+            border-radius: 0px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #525965;
+            }
+
+            ::-webkit-scrollbar-thumb:active {
+                background: #525965;
+            }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+        }
+
+            ::-webkit-scrollbar-track:hover {
+                background: transparent;
+            }
+
+            ::-webkit-scrollbar-track:active {
+                background: transparent;
+            }
+
+        ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+    </style>
+  
+  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <%--   New CSS and JS start--%>
+<%--   <link href="<%= ResolveUrl("CSS/newcss/bootstrap.css") %>" rel="stylesheet" type="text/css" />--%>
+    <%--<link rel="stylesheet" href="<%=ResolveUrl("Custom_Design/css/bootstrap.css")%>" />--%>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<%--    <link href="CSS/newcss/main.css" rel="stylesheet" />--%>
+   <%-- <link href="CSS/itz.css" rel="stylesheet" />--%>
+   <%-- <script type="text/javascript" src="JS/newjs/bootstrap.js"></script>
+    <script type="text/javascript" src="JS/newjs/bootstrap.min.js"></script>--%>
+    <script type="text/javascript" src="https://use.fontawesome.com/20e527aa02.js"></script>
+
+
+
+
+<%--    <link href="<%= ResolveUrl("~/CSS/newcss/main.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/CSS/lytebox.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("css/itz.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("css/app.css")%>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("css/foundation.css")%>" rel="stylesheet" type="text/css" />
+    <script src="<%= ResolveUrl("~/Scripts/jquery-1.7.1.min.js")%>" type="text/javascript"></script>
+    <script src="<%= ResolveUrl("~/js/lytebox.js") %>" type="text/javascript"></script>
+    <script src="<%= ResolveUrl("~/JS/JScript.js") %>" type="text/javascript"></script>--%>
+
+
+<%--    <style type="text/css">
+        .TNCcontent {
+            max-width: 800px;
+            width: 100%;
+            margin: 0px auto;
+            margin-bottom: 60px;
+        }
+
+        .TNCpopup {
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: rgba(0,0,0,0.75);
+        }
+
+        /* Inner */
+.TNCpopup-inner {
+    max-width: 700px;
+    width: 90%;
+    max-height: 500px;
+    overflow-y: scroll;
+    padding: 40px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 6px rgba(0,0,0,1);
+    border-radius: 3px;
+    background: #fff;
+}
+
+        /* Close Button */
+      .TNCpopup-close {
+    width: 25px;
+    height: 25px;
+    padding-top: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    
+    border-radius: 1000px;
+    background: rgba(0,0,0,0.8);
+    font-family: Arial, Sans-Serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100%;
+    color: #fff;
+}
+          
+    </style>
+
+
+    <style type="text/css">
+        #scroll_top {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#scroll_top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#scroll_top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#scroll_top:active {
+  background-color: #555;
+}
+#scroll_top.show {
+  opacity: 1;
+  visibility: visible;
+}
+    </style>--%>
+
+    <%--<script type="text/javascript">
+        var btn = $('#scroll_top');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>--%>
+
+
+    <%--<script type="text/javascript">
+        function displayBaggageDetails(Airline) {
+            $(".TNCpopup" + Airline).show();
+        }
+        function hideBaggageDetails(cls) {
+            $("." + cls).hide();
+        }
+    </script>--%>
+
+
+</head>
+<body style="padding-top:62px;">
+  
+    <%--<a id="scroll_top" style="z-index:1011;"></a>--%>
+   
+
+      
+
+    
+
+
+    <form id="form1" runat="server">
+
+         <a id="button"><i aria-hidden="true">
+        <img src="Icons/flight.png" alt="" style="width: 30px; margin-top: 8px;" /></i>
+
+     </a>
+
+        <div class="ed-top" style="display:none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ed-com-t1-left">
+                            <ul>
+                                <li><a href="#" style="color:#fff;margin-left: -79px;">Call Us : +91 79 4910 9999</a>
+                                </li>
+                                <%--<li><a href="#">Phone: +101-1231-1231</a>
+                                </li>--%>
+                                <li>
+                                    <%--<i class="fa fa-circle" aria-hidden="true" style="color:orange;margin-top: 7px;"></i>--%>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ed-com-t1-right">
+                            <ul>
+
+                              <%--  <li>
+                                    <div  class="pd" runat="server" id="div3" style="font-size: 12.5px !important;color:#fff;margin-top: 3px;margin-right: 18px;"> <i><img src="/Images/icons/wallet.png" style="width: 18px;"/></i>   Balance: <span id="Span1" style="font-size: 11.5px !important;"></span>&nbsp;|&nbsp;<i><img src="/Images/icons/Credit.png" style="width: 21px;"/></i>   Credit Limit:  <span id="Span2" style="font-size: 11.5px !important;"></span>&nbsp;|&nbsp;<i><img src="/Images/icons/Due.png" style="width: 25px;"/></i>   Due: <span id="Span3" style="font-size: 11.5px !important;"></span></div>
+                                </li>--%>
+                                &nbsp;
+                               <%-- <li>
+                                    <asp:LinkButton ID="LinkButton3" runat="server" Text="Log Out" Font-Italic="False"
+                                                Font-Bold="True" OnClick="lnklogout_Click1" CausesValidation="False" style="background:#ef3535;"></asp:LinkButton>
+                                </li>--%>
+                                
+                            </ul>
+                        </div>
+                        <div class="ed-com-t1-social" style="display:none">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <input type='hidden' id='widget_agent_id' value='<%=Session("UID")%>' />
+        <nav id="menus" class="lefts" style="display:none;">
+           <ul class="nav sidebar-nav">
+                <li class="sidebar-brand abcss" >
+                     <a href="#" style=" color: #fff!important;background-color: #337ab7;" >
+                      <asp:Label   runat="server" ID="lblUserNameID"><%=LoginId%></asp:Label></a>                   
+                </li>
+              
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accounts <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">                         
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/Ledger.aspx")%>">Ledger</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/LedgerSingleOrderID.aspx")%>">Ledger New</a></li>
+                      <%If Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Then%>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/AgentPanel.aspx")%>">Upload Request</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Agent/UploadAmountDetails.aspx")%>">Upload Status</a></li>
+                            <%--<li><a href="<%= ResolveUrl("~/Report/Accounts/CashInFlow.aspx")%>">CashInFlow Report</a></li>--%>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/UploadAmount.aspx")%>">Wallet Top-Up</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/StaffTransaction.aspx")%>">Staff Transaction</a></li>
+                       <%End If%>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/DomSaleRegister.aspx")%>">Dom. Sale Register</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/IntlSaleRegister.aspx")%>">Intl. Sale Register</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/CommissionReport.aspx")%>">Commission Report</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/HotelSalesRegister.aspx")%>">Hotel Sale Register</a></li>
+                            <li><a href="<%= ResolveUrl("~/Report/Accounts/Bankdetails.aspx")%>">Bank Details</a></li>
+                      
+                  </ul>
+                 </li>
+                 <%If Session("User_Type").ToString().Trim().ToUpper().Equals("DI") Then%>
+                 <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Upload <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                      <li><a href="<%= ResolveUrl("~/Report/Accounts/AgentPanel.aspx")%>">Upload Request</a></li>
+                      <li><a href="<%= ResolveUrl("~/Report/Agent/UploadAmountDetails.aspx")%>">Upload Status</a></li>
+                      <%--<li><a href="<%= ResolveUrl("~/Report/Accounts/CashInFlow.aspx")%>">CashInFlow Report</a></li>--%>
+                      <li><a href="<%= ResolveUrl("~/Report/Accounts/UploadAmount.aspx")%>">Wallet Top-Up</a></li>                      
+                       <li><a href="<%= ResolveUrl("~/Report/Distr/UploadRequest.aspx")%>">Agent Upload Request</a></li>
+                      <li><a href="<%= ResolveUrl("~/Report/Distr/InProcessUploadDetails.aspx")%>">InProcess Upload</a></li>
+                      <%--<li><a href="<%= ResolveUrl("~/Report/Distr/RegisterAgent.aspx")%>">Add Agent</a></li>--%>                     
+                      <li><a href="<%= ResolveUrl("~/Report/Admin/Agent_Details.aspx")%>">Agent Details</a></li> 
+                      <li><a href="<%= ResolveUrl("~/Report/Distr/AddAgent.aspx")%>">Add Agent</a></li>
+                      <li><a href="<%= ResolveUrl("~/Report/Agent/AgentTypeDetails.aspx")%>">Create GroupType</a></li>
+                       <li><a href="<%= ResolveUrl("~/Report/Admin/CommissionMaster.aspx")%>">CommissionMaster</a></li> 
+                      <li><a href="<%= ResolveUrl("~/Report/Agent/agent_markup.aspx")%>">Set Agent Markup</a></li> 
+                       <li><a href="<%= ResolveUrl("~/Report/Agent/TypeDetailsRefresh.aspx")%>">Refresh New GroupType</a></li> 
+                       <li><a href="<%= ResolveUrl("~/Report/Distr/DepositeOffice.aspx")%>">Deposite Office</a></li> 
+                      <li><a href="<%= ResolveUrl("~/Report/Distr/AddBankDetails.aspx")%>">Add Bank Details</a></li> 
+                  </ul>                                      
+                </li>
+                <%End If%>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Flight <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    
+                    <li><a href="<%= ResolveUrl("~/Report/HoldPNR/HoldPNRReport.aspx")%>">Hold Pnr Report</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/Refund/CancellationReport.aspx")%>">Refund Report</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/Reissue/ReissueReport.aspx")%>">Reissue Report</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/RejectedTicket.aspx")%>">Rejected Report</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/TicketReport.aspx")%>">Ticket Report</a></li> 
+                      <li><a href="<%= ResolveUrl("~/Report/TicketStatusReport.aspx")%>">Ticket Status Report</a></li> 
+                      <li><a href="<%= ResolveUrl("~/Report/Agent/TravelCalender.aspx")%>">Travel Calendar</a></li> 
+                       <%If Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Then%>                      
+                      <li><a href="<%= ResolveUrl("~/Report/import/PnrImportRequest.aspx ")%>">PNR Import</a></li>
+                      <li><a href="<%= ResolveUrl("~/Report/proxy/Proxy.aspx")%>">Offline Request</a></li>
+                       <li><a href="<%= ResolveUrl("~/Report/proxy/AgentProxyTicket.aspx")%>">Offline Status</a></li>
+                      <%End If%>
+                      <%--<li><a href="<%= ResolveUrl("~/Report/import/PnrImportStatus.aspx")%>">DOM PNR Import Status</a></li>
+                      <li><a href="<%= ResolveUrl("~/Report/import/PnrImportStatusIntl.aspx")%>">INT PNR Import Status</a></li>--%>                                    
+                  </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hotel <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                    
+                    <li><a href="<%= ResolveUrl("~/Report/Hotel/HtlBookingRpt.aspx")%>">Hotel Report</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/Hotel/HoldHotelBooking.aspx")%>">Hold Hotel Report</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/Refund/HotelRefundReport.aspx")%>">Hotel Cancellation Report</a></li>                     
+                  </ul>
+                </li>
+                
+
+                <%If Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Then%>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">                    
+                    <li><a href="<%= ResolveUrl("~/Report/Agent/Agent_markup.aspx")%>">Dom. Airline Markup</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/Agent/AgentMarkupIntl.aspx")%>">Intl. Airline Markup</a></li>
+                    <li><a href="<%= ResolveUrl("~/Report/Agent/AgentHtlMarkup.aspx")%>">Hotel Markup</a></li>
+                    <li><a href="<%= ResolveUrl("~/BS/BusMarkup.aspx") %>">Bus Setting</a></li>
+                       <%If LoginType.ToUpper().Equals("AGENT") Then%>
+                    <li><a href="<%= ResolveUrl("~/Report/Agent/NewExecutive.aspx")%>">Add Staff</a></li>
+                      <%End If%>
+                  </ul>                                      
+                </li>
+                <%End If%>
+               <%-- <li>
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hotel Setting<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="<%= ResolveUrl("~/Report/Agent/AgentHtlMarkup.aspx")%>">Hotel Markup</a></li>
+                  </ul>
+                   
+                </li>--%>
+                
+                 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bus <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="<%= ResolveUrl("~/BS/BusReport.aspx")%>">BUS Ticket Report</a>
+                        </li>
+                       <li><a href="<%= ResolveUrl("~/BS/BUSRefundReport.aspx")%>">BUS Refund Report</a>
+                        </li>
+                   <li><a href="<%= ResolveUrl("~/BS/BUSRejectReport.aspx")%>">BUS Reject Report</a>
+                        </li>
+                    <li><a href="<%= ResolveUrl("~/BS/BUSHoldPnrReport.aspx")%>">BUS Hold PNR Report</a>
+                        </li>                  
+                  </ul>
+                </li>
+                                   
+                     <%If Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Or Session("User_Type").ToString().Trim().ToUpper().Equals("DI") Then%>
+                                       <li> <a href="<%= ResolveUrl("~/Report/Agent/Agent_Profile.aspx")%>">Profile</a> </li>
+                     <%End If%>
+
+                
+                <li>
+                 <asp:LinkButton ID="LinkButton2" runat="server" Text="Log Out" Font-Italic="False"
+                                                Font-Bold="True" OnClick="lnklogout_Click1" CausesValidation="False"></asp:LinkButton> 
+                </li>
+                
+            </ul>
+          </nav>
+        <button id="showmenus" class="hamburger is-closed" style="display:none;">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="overlay"></div>
+        <!-- /menus vertical -->
+        <!-- contenido de pagina, realmente no importa -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                var trigger = $('.hamburger'),
+                    overlay = $('.overlay'),
+                   isClosed = false;
+
+
+                trigger.click(function () {
+                    hamburger_cross();
+                });
+
+                function hamburger_cross() {
+
+                    if (isClosed == true) {
+                        overlay.hide();
+                        trigger.removeClass('is-open');
+                        trigger.addClass('is-closed');
+                        isClosed = false;
+                    } else {
+                        overlay.show();
+                        trigger.removeClass('is-closed');
+                        trigger.addClass('is-open');
+                        isClosed = true;
+                    }
+                }
+
+                $('[data-toggle="offcanvas"]').click(function () {
+                    $('#wrapper').toggleClass('toggled');
+                });
+
+
+
+
+            });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            $("#showmenus").click(function (e) {
+                e.preventDefault();
+                $("#menus").toggleClass("shows");
+            });
+            $("#menus a").click(function (event) {
+
+
+                if ($(this).next('ul').length) {
+                    $(this).next().toggle('fast');
+                    $(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left');
+                }
+            });
+        </script>
+
+
+
+<div class="page-wrapper chiller-theme">
+
+            <nav id="sidebar" class="sidebar-wrapper" style="z-index: 1011;">
+            <div class="sidebar-content" style="">
+                <div class="sidebar-brand">
+                    <!--<a href="#">Faretripbox</a>-->
+                   <%-- <a class="navbar-brand" href="/Faretripbox/Home.aspx" style="margin-top: -10px;">
+                        <img src="/Faretripbox/Icons/logo(ft).png" alt="Image Alternative text" title="Image Title">
+                    </a>--%>
+
+                    <div id="close-sidebar" style="margin-top: 10px; position: absolute;right: 12px;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
+                    </div>
+                    <div class="user-info"> 
+                        <span class="user-name"><%=AgencyName%>
+           
+                           <%-- <strong>Kunal</strong>--%>
+                        </span>
+                        <span class="user-role">(<%=AgencyId%>)</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <%--<span>Online</span>--%>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sidebar-menu">
+                    <ul>
+                        
+                        <li>
+                            <a href="../Report/TicketReport.aspx">
+                               <%-- <i class="icofont-home"></i>--%>
+                                <div class="mn_icncol">
+                                    
+    <div class="menuicnCol"> <i class="icofont-ticket1"></i></div>
+    <div class="pull-l"> <span class="mColtxt">My Booking</span>
+      <p class="mColsbtxt">View and manage your bookings</p>
+    </div>
+  </div>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="../Report/Accounts/Ledger.aspx">
+                                                   <div class="mn_icncol">
+                                    
+    <div class="menuicnCol"> <i class="icofont-ticket1"></i></div>
+    <div class="pull-l"> <span class="mColtxt">Ledger</span>
+      <p class="mColsbtxt">View and manage your debits and credits</p>
+    </div>
+  </div>
+                            </a>
+                            
+                        </li>
+
+
+                        <li>
+                            <a href="../Report/Accounts/UploadAmount.aspx">
+                               <div class="mn_icncol">
+    <div class="menuicnCol"><i class="wal_icn_v3"></i></div>
+    <div class="pull-l"> <span class="mColtxt">Wallet Top-Up</span>
+      <p class="mColsbtxt">Top-Up your wallet for hassle-free bookings</p>
+    </div>
+  </div>
+                            </a>
+
+                        </li>
+                     
+
+
+                  
+
+                        <li class="header-menu">
+                            <span>Our Product</span>
+                        </li>
+
+
+
+                         <li>
+                            <a href="#">
+                                <i class="fa fa-folder"></i>
+                                <span>Flight</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Hotel</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Dashboard.aspx">
+                                <i class="fa fa-calendar"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+
+        </nav>
+
+        </div>
+
+
+       
+        <header style="display:none;">
+            <div class="flyclubhead">
+                 <div id="DivLoadPBal" style="display: none; left: 0; top: 0; position: fixed; width: 100%; height: 100%; z-index: 9998; background-image: url(Images/fade.png);">
+            <div style="z-index: 9999; width: 30%; height: 20%; margin-right: auto; top: 150px; position: fixed; background: #fff; margin-left: 35%; padding-top: 10px; text-align: center;">
+                <div>
+                    <b style="vertical-align: bottom; font-size: 18px;">Loading please wait...</b>
+                </div>
+                <div style="clear: both;"></div>
+                <div style="padding-top: 10px;">
+                    <img alt="loading please wait" src="<%=ResolveUrl("~/Images/loadingAnim.gif")%>" style="width: 90px; height: 90px; position: absolute; margin-left: 40%; margin-right: auto; vertical-align: top;" />
+                </div>
+            </div>
+        </div>
+        <% Dim objMs As New FltSearch1()%>
+        <% Dim umMs As String%>
+        <% Dim rawurlMs As String%>
+                  <div style="margin-right: 10px;" class="rgt">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+                    </asp:ScriptManager>
+
+                </div>
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2 logo">
+                                    <a href="<%= ResolveUrl("Search.aspx") %>">
+                                        <img src="<%= ResolveUrl("Custom_Design/images/logo_new.png")%>" alt="Header image" border="0" style="position: relative;top: 6px;"/>
+                                    </a>
+                                    
+                                </div>
+
+                                
+                                <div class="col-md-3 col-xs-6 logo">
+                                  <div class="hidden-xs">
+
+                                      <div class="lft plft20  pull-right"  style="border-right: 1px solid #cacaca;border-left: 1px solid #cacaca;padding: 16px;color: #8e8e8e;position: inherit;"> <a href="<%= ResolveUrl("Search.aspx") %>" style="color: #9c9c9c;">
+                                          <i class="fa fa-hotel"></i></a></div>
+
+                                      <div class="lft plft20  pull-right" style="border-right: 1px solid #cacaca;border-left: 1px solid #cacaca;padding: 16px;color: #8e8e8e;position: inherit;"> <a href="<%= ResolveUrl("Search.aspx") %>" style="color: #9c9c9c;">
+                                          <i class="fa fa-bus"></i></a></div>
+
+                                     <div class="lft plft20  pull-right" style="border-right: 1px solid #cacaca;border-left: 1px solid #cacaca;padding: 16px;color: #8e8e8e;position: inherit;"> <a href="<%= ResolveUrl("Search.aspx") %>" style="color: #9c9c9c;">
+                                          <i class="fa fa-plane"></i></a></div>
+
+                                     
+
+
+                                    
+
+                                     
+</div>
+                                   
+                                    
+                                </div>
+
+                                <div class="col-md-6 hidden-xs " style="margin-top: 8px;float: right;">
+                                     <div class="menuhide" style="text-align:right;font-size: small;color:#737373;margin-top: 23px; " >
+                                             <%--User Id:  <asp:Label runat="server"><%=Session("firstNameITZ").ToString() %></asp:Label> ( <%=Session("AgencyId")%>)<br />--%>
+                                            <%--AgencyName: <%=Session("AgencyName").ToString() %> ( <%=Session("AgencyId")%>)<br />--%>
+                                           <i class="fa fa-circle" aria-hidden="true" style="color:orange;    position: absolute;top: 3px;right: 121px;"></i>Welcome !! <%--AgencyName:--%> <%=AgencyName%> ( <%=AgencyId%>)<br />
+                                <asp:Label ID="Label1" runat="server" Style="display: none;"></asp:Label>
+                                                </div>
+                                        <ul class="nav navbar-nav align-set" style="display:none;">
+                                           
+                                             <li class="menuhide"><div  class="pd" runat="server" id="divAgentBalance"> Available Balance: <span id="blc1"></span> Credit Limit:  <span id="CrdLimit1"></span> Due: <span id="DueAmt1"></span></div></li>                                          
+                                            
+                                        </ul>
+                                  
+                                    <div class="collapse navbar-collapse">
+                                        <div class="large-6 medium-7 small-7   columns mtop10" style="float: right;padding-right: 0px;padding-top:10px;display: none;"> 
+                                <div class="lft f13">
+                        <% If Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Then%>
+                        <div id="crdrow" runat="server" style="min-height: 40px;">
+                           
+                            <div>
+                                 
+                                <asp:Label ID="lblCamt" runat="server" Style="display: none;"></asp:Label>
+                            </div>
+                        </div>
+                     
+                        <% End If%>
+                        <div id="tr_AgencyID" runat="server" class="rgt padding1" style="border: 1px solid #f1f1f1; border-left: none; display: none">
+                            <div class="bld">
+                                Agency ID
+                            </div>
+                            <div id="td_AgencyID" runat="server">
+                            </div>
+                        </div>
+                        <div class="textalignright rgt padding1" style="border: 1px solid #f1f1f1; border-left: none; display: none">
+                            <div class="bld">
+                                Welcome
+                            </div>
+                            <div>
+                                <asp:Label ID="lblagency" runat="server"></asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        <div style="clear:both;"></div>
+                                        
+                                        <div id="setng2" class="cursorpointer rgt" style="margin-right: 30px; width: 130px;">
+                            <%--<div class="" id="setng">
+                                <img src="<%= ResolveUrl("~/Images/settings.png") %>" id="imgCtlPnl" />
+                                <span class="cplnew">Control Panel</span>
+                            </div>--%>
+                            <div class="clear">
+                            </div>
+
+                            <%If Session("TypeID").ToString().Trim().ToUpper().Equals("ECR") Then%>
+                            <div class="settings colorwhite hide" id="setng1">
+                                <div>
+
+                                    <a href="<%= ResolveUrl("~/Report/TicketReport.aspx")%>">Flight</a>
+                                </div>
+
+                                <div>
+
+                                    <a href="<%= ResolveUrl("~/Report/Accounts/DomSaleRegister.aspx")%>">Accounts</a>
+                                </div>
+
+                                <div style="border: none;" class="f13">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" Text="Log Out" Font-Italic="False"
+                                        Font-Bold="True" OnClick="lnklogout_Click1" CausesValidation="False"></asp:LinkButton>
+                                </div>
+                            </div>
+
+                            <%Else%>
+
+                            <div class="settings colorwhite hide" id="setng1">
+                                <div>
+                                    <a href="../Report/Accounts/Ledger.aspx">Ledger</a>
+                                </div>
+                                <div>
+
+                                    <a href="<%= ResolveUrl("~/Report/TicketReport.aspx")%>">Flight</a>
+                                </div>
+                                <div>
+
+                                    <a href="<%= ResolveUrl("~/Report/Hotel/HtlBookingRpt.aspx")%>">Hotel</a>
+                                </div>
+
+                                <%If Session("User_Type").ToString().Trim().ToUpper().Equals("ADMIN") Then%>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/agent/AgentTypeDetails.aspx")%>">Group Type</a>
+                                </div>
+
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Admin/DomAirlineMarkup.aspx")%>">Flight Setting</a>
+                                </div>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Admin/AdminHtlMarkup.aspx")%>">Hotel Setting</a>
+                                </div>
+                                <%ElseIf Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Then%>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Agent/Agent_markup.aspx")%>">Flight Setting</a>
+                                </div>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Agent/AgentHtlMarkup.aspx")%>">Hotel Setting</a>
+                                </div>
+                                <%End If%>
+
+
+                                <%If Session("User_Type").ToString().Trim().ToUpper().Equals("ADMIN") Then%>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Admin/Agent_Details.aspx")%>">Agent Profiles</a>
+                                </div>
+                                <%End If%>
+
+
+                                <%If Session("User_Type").ToString().Trim().ToUpper().Equals("ADMIN") Then%>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Admin/ExecutiveDetails.aspx")%>">Register Executive</a>
+                                </div>
+                                <%End If%>
+                                <div>
+                                    <%--<% umMs = ""%>
+                                            <% umMs = objMs.GetMUForPage("Report/Accounts/DomSaleRegister.aspx")%>
+                                            <% rawurlMs = ""%>
+                                            <%rawurlMs = Request.RawUrl%>
+                                            <%rawurlMs = "/" & rawurlMs.Replace(rawurlMs, umMs)%>
+                                            <a href="<%= rawurlMs %>">Accounts</a>--%>
+                                    <a href="<%= ResolveUrl("~/Report/Accounts/DomSaleRegister.aspx")%>">Accounts</a>
+                                </div>
+
+                                <div id="hypdeal" runat="server" style='display: none'>
+                                    <!-- <a href="<%= ResolveUrl("~/Report/Agent/DealSheetDomIntl.aspx") %>" target="_blank">
+                                    Deal Sheet</a>-->
+                                </div>
+
+
+                                <%If Session("User_Type").ToString().Trim().ToUpper().Equals("ADMIN") Then%>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Accounts/ChangePassword.aspx")%>">Change Password</a>
+                                </div>
+                                <%End If%>
+
+                                <%If Session("User_Type").ToString().Trim().ToUpper().Equals("AGENT") Then%>
+                                <div>
+                                    <a href="<%= ResolveUrl("~/Report/Agent/Agent_Profile.aspx")%>">Profile</a>
+                                </div>
+                                <%End If%>
+
+                                <div style="border: none;" class="f13">
+                                    <asp:LinkButton ID="lnklogout" runat="server" Text="Log Out" Font-Italic="False"
+                                        Font-Bold="True" OnClick="lnklogout_Click1" CausesValidation="False"></asp:LinkButton>
+                                </div>
+                            </div>
+
+                            <%End If%>
+                        </div>
+                                        <div id="menutbl" style="display: none;">
+                        <table style="width: 50%; margin: 0 auto; display: none;">
+                            <tr>
+                                <td>
+                                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="NavigationMenu"
+                                        DynamicPopOutImageUrl="Images/right-arrow.gif" StaticPopOutImageUrl="Images/drop-arrow.gif">
+                                        <StaticMenuItemStyle CssClass="staticMenuItemStyle" />
+                                        <DynamicMenuItemStyle CssClass="dynamicMenuItemStyle" />
+                                        <DataBindings>
+                                            <asp:MenuItemBinding DataMember="MenuItem" NavigateUrlField="NavigateUrl" TextField="MenuText" />
+                                        </DataBindings>
+                                    </asp:Menu>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <nav class="navbar navbar-default navbar-inverse navbar-theme navbar-theme-abs navbar-theme-transparent navbar-theme-border" id="main-nav">
+        <div class="container">
+            <div class="navbar-inner nav">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target="#navbar-main" data-toggle="collapse" type="button" area-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                      <%--  <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>--%>
+                        <i class="icofont-ui-user icofont-2x"></i>
+                    </button>
+
+                             <a id="show-sidebar" class="navbar-brand" href="#" style="z-index: 1011;display:none;">
+            <i class="icofont-gears icofont-2x"></i>
+        </a>
+                    <a class="navbar-brand" href="<%=ResolveUrl("Search.aspx")%>">
+                        <img src="<%=ResolveUrl("Advance_CSS/Icons/logo(ft).png")%>" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-main">
+                    <ul class="nav navbar-nav" style="margin-top:-5px;">
+
+                    
+
+                         <li class="user-menu__item">
+        <a class="user-menu-link" href="#">
+         Balance: ₹ <span id="blc" style="font-size: 11.5px !important;"></span>
+        </a>
+      </li>
+
+                         <li class="user-menu__item">
+        <a class="user-menu-link" href="#">
+          Credit Limit:  ₹ <span id="CrdLimit" style="font-size: 11.5px !important;"></span>
+        </a>
+      </li>
+      <li class="user-menu__item">
+        <a class="user-menu-link" href="#">
+          Due: ₹ <span id="DueAmt" style="font-size: 11.5px !important;"></span>
+        </a>
+      </li>
+                
+                         <li><i class="fa fa-power-off navbar-nav-item-user-icon" style="margin-top:1px;"></i>
+                            <asp:LinkButton class="user-menu-link"  Text="Logout" Font-Italic="False" ID="LinkButton3" runat="server" onclick="lnklogout_Click1" causesvalidation="False"
+                                                  style="color: #F44336;"></asp:LinkButton>
+                            
+           
+
+
+
+                            <ul class="dropdown-menu" style="display:none;">
+
+                                <div class="pd" runat="server" id="div1">
+                                <li>
+                                    <a href="account.html"></a>
+                                </li>
+                                <li>
+                                    <a href="account-notifications.html"></a>
+                                </li>
+                                <li>
+                                    <a href="account-cards.html"></a>
+                                </li>
+                                    </div>
+                           
+                                <li>
+                                    
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<div class="w3-card-2 topnav notranslate" id="topnav" style="position: fixed; top: 39px; z-index: 999; width: 65%; right: 0;border-radius: 65px 0px 0px 0px;">
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:30px">
+      <a href="/Search.aspx" class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home" style="border-left: none;"></a>
+         <a class="w3-bar-item w3-button" href="/Report/TicketReport.aspx">My Booking</a>
+      <%--<a class="w3-bar-item w3-button" href="/Report/TicketReport.aspx">Dashboard</a>--%>
+      <a class="w3-bar-item w3-button" href="about-us.aspx">About</a>
+      <a class="w3-bar-item w3-button" href="contact-us.aspx" >Contact</a>
+	  <a class="w3-bar-item w3-button" href="/Report/Accounts/AgentPanel.aspx">Top-Up</a>
+       
+      <a class="w3-bar-item w3-button" style="float: right;">Welcome :<%=AgencyName%> (<%=AgencyId%>)</a>
+    </div>
+   
+
+
+  </div>
+</div>
+
+
+       
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div>
+            <div id="footer_wrapper" class="hide">
+
+                <!-- end of footer -->
+            </div>
+        </div>
+
+        <div class="TNCpopup TNCpopupSG" data-popup="popup-1" style="display: none;">
+    <div class="TNCpopup-inner">
+        <h2><u><i>Terms & Conditions</i></u></h2>
+        <p><b>•</b>	Hand bag fares available through website and selected travel agents. No free check-in baggage allowance is applicable.</p>
+        <p><b>•</b>	Fare is only available for domestic sector.</p>
+        <p><b>•</b>	Hand Baggage Only Fare will be available to book now 15 days in advance.</p>
+        <p><b>•</b>	Hand Baggage Only Fare will only be available on direct flights only.</p>
+        <p><b>•</b>	Changes and cancellations are permitted as per applicable rules and charges for hand baggage only fare.</p>
+        <p><b>•</b>	Pre purchase of excess baggage should not be available under this fare.</p>
+        <p><b>•</b>	For bookings made under HBOF, each of the passenger shall be allowed to carry only one (01) piece of luggage of maximum seven (07) kg. of weight (having maximum overall dimensions of: 115 cms. (L+W+H) on Boeing aircraft and 108 cms. (L+W+H) on Bombardier aircraft) in addition to a regular sized shoulder laptop bag or a lady’s handbag, free of cost.</p>
+        <p>
+            <b>•</b>	If passenger bought HBAG fares and carrying Check-in Baggage at the last minute then below charges will apply:
+            Passengers on these fares who wish to check baggage will be charged Fare Type Change Fee of Rs.400 at the airport for up to 15kgs. Baggage in excess of 15 Kgs is subject to a fee (Rs.350 per Kg ) to be paid at the airport at check-in.
+        </p>
+        <p><a onclick="hideBaggageDetails('TNCpopupSG')" href="#">Close</a></p>
+        <a class="TNCpopup-close" onclick="hideBaggageDetails('TNCpopupSG')" href="#">x</a>
+    </div>
+</div>
+<div class="TNCpopup TNCpopup6E" data-popup="popup-1" style="display: none;">
+    <div class="TNCpopup-inner">
+        <h2><u><i>Terms & Conditions</i></u></h2>
+        <p><b>•</b>	Lite Fare will be available on all channels, all domestic flights except connecting flights & flights with a travel date within 15 days of booking date.</p>
+        <p><b>•</b>	Lite Fare will be applicable on Retail Fare only.</p>
+        <p><b>•</b>	In this fare, only 7kg Hand Baggage will be allowed.</p>
+        <p><b>•</b>	No check In baggage will be allowed.</p>
+        <p><b>•</b>	In case the customer reports with baggage at the airport, a fee of INR 200 will be charged at the airport for 15 KGS baggage allowance.</p>
+        <p><b>•</b>	For Baggage above 15 KGS excess baggage charges as per policy will be applicable.</p>
+        <p><a onclick="hideBaggageDetails('TNCpopup6E')" href="#">Close</a></p>
+        <a class="TNCpopup-close" onclick="hideBaggageDetails('TNCpopup6E')" href="#">x</a>
+    </div>
+</div>
+
+    </form>
+    <%--<script src="<%= ResolveUrl("~/Scripts/jquery-1.7.1.min.js")%>" type="text/javascript"></script>--%>
+
+    <%--<script type="text/javascript">
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $(".flyclubhead").addClass("menusbar");
+                $('.menusbar').slideDown();
+            }
+
+            else {
+                $(".flyclubhead").removeClass("menusbar");
+                $('.flyclubhead').slideDown();
+            }
+
+        });
+    </script>--%>
+
+  <%--  <script type="text/javascript">
+        $(".Dropdown").on("click", function () {
+            $(this).toggleClass('is-expanded');
+        });
+    </script>--%>
+
+
+    <%--<script type="text/javascript">
+        // 
+        var u = window.location.pathname;
+        var h = u.split('/');
+        var s = "";
+        for (var i = 0; i < h.length; i++) {
+            if (h[i] == "SprReports") {
+                s = h[i];
+            }
+        }
+        if (s == "SprReports") {
+            document.getElementById("menutbl").style.display = "block";
+        }
+        else { document.getElementById("menutbl").style.display = "none"; }
+
+    </script>--%>
+
+    <%--<script type="text/javascript">
+        $(document).ready(function () {
+            $("#setng").unbind().click(function () {
+                if ($("#setng1").is(":visible")) {
+                    $("#setng1").slideUp();
+                }
+                else {
+                    $("#setng1").slideDown();
+                }
+            });
+            $(document).click(function (event) {
+                if ($.trim($(event.target).attr("class")) != "cplnew" && $.trim($(event.target).attr("id")) != "setng" && $.trim($(event.target).attr("id")) != "imgCtlPnl") {
+                    $("#setng1").slideUp();
+                }
+            });
+            ////$("#setng").click(function () {
+            ////    $("#setng1").slideDown();
+            ////});
+            ////$("#setng1").mouseover(function () {
+            ////    $("#setng1").slideDown();
+            ////});
+            ////$("#hdff").mouseover(function () {
+            ////    $("#setng1").hide();
+            ////});
+        });
+
+        function checkOnload() {
+
+            var koko = querySt("Rail");
+
+            if (koko == 'not') {
+                alert('Please Contact your franchise / nodal office to continue with your irctc service ');
+            }
+        }
+    </script>--%>
+
+    <%--<script type="text/javascript" language="javascript">
+        function showChildLinks() {
+            var x = document.getElementById("divToShow");
+            x.style.visibility = "visible";
+            var y = document.getElementById("divToShow2");
+            y.style.visibility = "visible";
+        }
+        function hideChildLinks() {
+            var x = document.getElementById("divToShow");
+            x.style.visibility = "hidden";
+            var y = document.getElementById("divToShow2");
+            y.style.visibility = "hidden";
+        }
+
+    </script>--%>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            ////$("#aCLimit").click(function () {
+            ////$("#DivLoadPBal").show();
+            ////$("#ctl00_lblCamt").html("")
+            $("#blc").hide();
+            $("#blc").html("Not Available");
+            $("#imgLoadLoginVals").show();
+            try {
+                $.ajax({
+                    url: UrlBase + "FltSearch1.asmx/GetAgencyBal",
+                    data: "",
+                    dataType: "json",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+
+                        try {
+                            //var resBal = data.d;
+                            var resBal = 0;
+                            var dueAmt = 0;
+                            var crdLimit = 0;
+                            var cmbBal = data.d
+
+                            if (cmbBal.split('~').length > 0) {
+                                resBal = cmbBal.split('~')[0];
+                                if (cmbBal.split('~').length > 1) {
+                                    crdLimit = cmbBal.split('~')[1];
+                                }
+                                if (cmbBal.split('~').length > 2) {
+                                    dueAmt = cmbBal.split('~')[2];
+                                }
+                            }
+                            if (resBal != null && resBal != "") {
+                                $("#blc").html(" " + $.trim(resBal).split('.')[0] + "");
+                            }
+
+                            if (crdLimit != null && crdLimit != "") {
+                                $("#CrdLimit").html(" " + $.trim(crdLimit.split('.')[0]) + "");
+                            }
+                            if (dueAmt != null && dueAmt != "") {
+                                $("#DueAmt").html(" " + $.trim(dueAmt.split('.')[0]) + "");
+                            }
+                            // $("#imgLoadLoginVals").hide();
+                            $("#blc").show();
+                            $("#CrdLimit").show();
+                            $("#DueAmt").show();
+                            ////$("#DivLoadPBal").hide();                            
+                        }
+                        catch (err) {
+                            alert(err);
+                            ////$("#DivLoadPBal").hide();
+                            //$("#imgLoadLoginVals").hide();
+                            $("#blc").show();
+                            $("#CrdLimit").show();
+                            $("#DueAmt").show();
+                        }
+                    },
+                    error: function (e, t, n) {
+                        alert(t);
+                        ////$("#DivLoadPBal").hide();                                                
+                        //$("#imgLoadLoginVals").hide();
+                        $("#blc").show();
+                        $("#CrdLimit").show();
+                        $("#DueAmt").show();
+                    }
+                });
+            }
+            catch (err) {
+                alert(err);
+                ////$("#DivLoadPBal").hide();
+                // $("#imgLoadLoginVals").hide();
+                $("#blc").show();
+            }
+            ////});
+        });
+    </script>
+    <%-- <script type="text/javascript">
+        $(document).ready(function () {
+            ////$("#aCLimit").click(function () {
+            ////$("#DivLoadPBal").show();
+            ////$("#ctl00_lblCamt").html("")
+            $("#ctl00_lblCamt").hide();
+            $("#ctl00_lblCamt").html("<b>Balance Amount :</b> Not Available");
+            $("#imgLoadLoginVals").show();
+            try {
+                $.ajax({
+                    url: UrlBase + "FltSearch1.asmx/GetAgencyBal",
+                    data: "",
+                    dataType: "json",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        try {
+                            var resBal = data.d;
+                            if (resBal != null && resBal != "") {
+                                $("#ctl00_lblCamt").html("<b>Balance Amount :</b> " + $.trim(resBal) + "/-");
+                            }
+                            $("#imgLoadLoginVals").hide();
+                            $("#ctl00_lblCamt").show();
+                            ////$("#DivLoadPBal").hide();                            
+                        }
+                        catch (err) {
+                            alert(err);
+                            ////$("#DivLoadPBal").hide();
+                            $("#imgLoadLoginVals").hide();
+                            $("#ctl00_lblCamt").show();
+                        }
+                    },
+                    error: function (e, t, n) {
+                        alert(t);
+                        ////$("#DivLoadPBal").hide();                                                
+                        $("#imgLoadLoginVals").hide();
+                        $("#ctl00_lblCamt").show();
+                    }
+                });
+            }
+            catch (err) {
+                alert(err);
+                ////$("#DivLoadPBal").hide();
+                $("#imgLoadLoginVals").hide();
+                $("#ctl00_lblCamt").show();
+            }
+            ////});
+        });
+    </script>--%>
+    <script type="text/javascript">
+        function sortSelectOptions(selector, skip_first) {
+
+            try {
+                var options = (skip_first) ? $(selector + ' option:not(:first)') : $(selector + ' option');
+                var arr = options.map(function (_, o) { return { t: $(o).text(), v: o.value, s: $(o).prop('selected') }; }).get();
+                arr.sort(function (o1, o2) {
+                    var t1 = o1.t.toLowerCase(), t2 = o2.t.toLowerCase();
+                    return t1 > t2 ? 1 : t1 < t2 ? -1 : 0;
+                });
+                options.each(function (i, o) {
+                    o.value = arr[i].v;
+                    $(o).text(arr[i].t);
+                    if (arr[i].s) {
+                        $(o).attr('selected', 'selected').prop('selected', true);
+                    } else {
+                        $(o).removeAttr('selected');
+                        $(o).prop('selected', false);
+                    }
+                });
+            }
+
+            catch (esc) { }
+        }
+    </script>
+    <script type="text/javascript">
+        var arr = $('select').each(function () {
+            //for (i = 0; i < $('select').length; i++) {
+            sortSelectOptions('#' + this.id + '', true);
+            //}
+        });
+    </script>
+
+
+    <%--<script type="text/javascript">
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+
+    </script>--%>
+
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+
+            $(".sidebar-dropdown > a").click(function () {
+                $(".sidebar-submenu").slideUp(200);
+                if (
+                    $(this)
+                        .parent()
+                        .hasClass("active")
+                ) {
+                    $(".sidebar-dropdown").removeClass("active");
+                    $(this)
+                        .parent()
+                        .removeClass("active");
+                } else {
+                    $(".sidebar-dropdown").removeClass("active");
+                    $(this)
+                        .next(".sidebar-submenu")
+                        .slideDown(200);
+                    $(this)
+                        .parent()
+                        .addClass("active");
+                }
+            });
+
+            $("#close-sidebar").click(function () {
+                $(".page-wrapper").removeClass("toggled");
+            });
+            $("#show-sidebar").click(function () {
+                $(".page-wrapper").addClass("toggled");
+            });
+
+
+
+
+        });
+    </script>
+
+</body>
+</html>
+

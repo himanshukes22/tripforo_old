@@ -1,0 +1,9 @@
+D:\Tripforo\ZaakPayAPI\bin\Release\ZaakPayAPI.dll
+D:\Tripforo\ZaakPayAPI\bin\Release\ZaakPayAPI.pdb
+D:\Tripforo\ZaakPayAPI\bin\Release\Newtonsoft.Json.dll
+D:\Tripforo\ZaakPayAPI\bin\Release\Newtonsoft.Json.xml
+D:\Tripforo\ZaakPayAPI\obj\Release\ZaakPayAPI.csproj.CoreCompileInputs.cache
+D:\Tripforo\ZaakPayAPI\obj\Release\ZaakPayAPI.csproj.CopyComplete
+D:\Tripforo\ZaakPayAPI\obj\Release\ZaakPayAPI.dll
+D:\Tripforo\ZaakPayAPI\obj\Release\ZaakPayAPI.pdb
+D:\Tripforo\ZaakPayAPI\obj\Release\ZaakPayAPI.csproj.AssemblyReference.cache

@@ -1,0 +1,87 @@
+﻿.Heading {
+	font-size: 27px;
+	font-weight: bold;
+	color: #004b91;
+}
+
+.SubHeading {
+	font-size: 20px;
+	font-weight: bold;
+	color: #004b91;
+}
+
+.Panel {
+	font-size: 16px;
+	font-weight: bold;
+	color: #004b91;
+}
+
+.Text {
+	font-size: 13px;
+}
+
+.TextBig {
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.Grid {
+	padding: 4px 2px;
+	height: 35px;
+	color: #fff;
+	background-color: #004b91;
+	border-left: solid 1px #730c10;
+}
+
+.GridContent {
+	color: #000000;
+	font-size: 12px;
+}
+
+.Proxy {
+	padding: 4px 2px;
+	color: #fff;
+	background-color: #349e27;
+	font-size: 15px;
+	font-weight: bold;
+	border-left-color: #004b91;
+}
+
+.Total {
+	padding: 4px 2px;
+	color: #000000;
+	background-color: #FFFF66;
+	font-size: 15px;
+	font-weight: bold;
+	border-left-color: #004b91;
+	line-height: 20px;
+}
+
+.InvoiceText {
+	font-size: 13px;
+	line-height: 25px;
+	color: #000000;
+}
+
+.TransInvoice {
+	font-size: 12px;
+	font-weight: normal;
+	color: #424242;
+	line-height: 25px;
+}
+
+.AddText {
+	font-size: 13px;
+	line-height: 20px;
+	color: #000000;
+}
+
+.MsgText {
+	font-size: 11px;
+	line-height: 20px;
+	color: #000000;
+}
+
+
+

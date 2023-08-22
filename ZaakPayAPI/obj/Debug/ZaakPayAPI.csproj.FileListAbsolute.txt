@@ -1,0 +1,18 @@
+D:\Tripforo\ZaakPayAPI\bin\Debug\ZaakPayAPI.dll
+D:\Tripforo\ZaakPayAPI\bin\Debug\ZaakPayAPI.pdb
+D:\Tripforo\ZaakPayAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Tripforo\ZaakPayAPI\bin\Debug\Newtonsoft.Json.xml
+D:\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.csproj.CoreCompileInputs.cache
+D:\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.csproj.CopyComplete
+D:\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.dll
+D:\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.pdb
+D:\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.csproj.AssemblyReference.cache
+E:\Smriti Data\Tripforo\ZaakPayAPI\bin\Debug\ZaakPayAPI.dll
+E:\Smriti Data\Tripforo\ZaakPayAPI\bin\Debug\ZaakPayAPI.pdb
+E:\Smriti Data\Tripforo\ZaakPayAPI\bin\Debug\Newtonsoft.Json.dll
+E:\Smriti Data\Tripforo\ZaakPayAPI\bin\Debug\Newtonsoft.Json.xml
+E:\Smriti Data\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.csprojAssemblyReference.cache
+E:\Smriti Data\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.csproj.CoreCompileInputs.cache
+E:\Smriti Data\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.csproj.CopyComplete
+E:\Smriti Data\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.dll
+E:\Smriti Data\Tripforo\ZaakPayAPI\obj\Debug\ZaakPayAPI.pdb

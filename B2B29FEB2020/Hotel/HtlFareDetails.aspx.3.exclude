@@ -1,0 +1,107 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="HtlFareDetails.aspx.vb"
+    Inherits="Hotel_HtlFareDetails" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="<%=ResolveUrl("css/HotelStyleSheet.css") %>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=ResolveUrl("../Scripts/jquery-1.4.4.min.js") %>"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="mGrid">
+        <thead>
+            <tr>
+                <th>
+                    SUN
+                </th>
+                <th>
+                    MON
+                </th>
+                <th>
+                    TUE
+                </th>
+                <th>
+                    WED
+                </th>
+                <th>
+                    THU
+                </th>
+                <th>
+                    FRI
+                </th>
+                <th>
+                    SAT
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="SUNDAY" runat="server">
+                </td>
+                <td id="MONDAY" runat="server">
+                </td>
+                <td id="TUESDAY" runat="server">
+                </td>
+                <td id="WEDNESDAY" runat="server">
+                </td>
+                <td id="THURSDAY" runat="server">
+                </td>
+                <td id="FRIDAY" runat="server">
+                </td>
+                <td id="SATURDAY" runat="server">
+                </td>
+            </tr>
+            <tr runat="server" id="weeks2" visible="false">
+                <td id="SUNDAY2" runat="server">
+                </td>
+                <td id="MONDAY2" runat="server">
+                </td>
+                <td id="TUESDAY2" runat="server">
+                </td>
+                <td id="WEDNESDAY2" runat="server">
+                </td>
+                <td id="THURSDAY2" runat="server">
+                </td>
+                <td id="FRIDAY2" runat="server">
+                </td>
+                <td id="SATURDAY2" runat="server">
+                </td>
+            </tr>
+            <tr runat="server" id="weeks3" visible="false">
+                <td id="SUNDAY3" runat="server">
+                </td>
+                <td id="MONDAY3" runat="server">
+                </td>
+                <td id="TUESDAY3" runat="server">
+                </td>
+                <td id="WEDNESDAY3" runat="server">
+                </td>
+                <td id="THURSDAY3" runat="server">
+                </td>
+                <td id="FRIDAY3" runat="server">
+                </td>
+                <td id="SATURDAY3" runat="server">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="400px" >
+        <tr>
+            <td align="center">
+                <asp:Label ID="PriceBreakups" runat="server"></asp:Label>
+            </td>
+        </tr>
+    </table>
+  <%--   <div class="DetailsFareBreakups">
+    <table>
+    <tr><td>Total Price : </td><td runat="server" id="lblAmount"></td></tr>
+    <tr><td>Commision : </td><td runat="server" id="AgtComm"></td></tr>
+    <tr><td>Markups : </td><td  runat="server" id="AgtMrk"></td></tr>
+    <tr><td>Net Cost : </td><td runat="server" id="TdNetCost"></td></tr>
+    </table>
+    </div>--%>
+     <script src="<%=ResolveUrl("JS/HotelRefund.js") %>" type="text/javascript"></script>
+    </form>
+</body>
+</html>

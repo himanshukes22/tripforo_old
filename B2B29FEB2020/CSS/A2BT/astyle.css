@@ -1,0 +1,530 @@
+﻿body {
+	background: #f0f0f0;
+	
+}
+
+.topbodyc {
+	width: 100%;
+	background: url(../images/background.png) repeat-x;
+}
+
+#setng1 a {
+	color: #fff;
+}
+
+.settings {
+	position: absolute;
+	background: #20313f;
+	width: 100px;
+	line-height: 20px;
+}
+
+	.settings div {
+		padding: 5px 10px;
+		border-bottom: 1px dotted #ccc;
+	}
+
+		.settings div:hover {
+			background: #004b91;
+		}
+
+	.settings a {
+		color: #fff;
+	}
+
+.fromToDatePicker {
+	width: 90%;
+	padding: 0 2%;
+	background: url(../images/cal.gif) right no-repeat;
+	cursor: pointer;
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #87CEEB;
+	text-indent: 3px;
+	color: #02416e;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+}
+
+.hide {
+	display: none;
+}
+
+.f13 {
+	font-size: 13px;
+}
+
+.clear {
+	clear: both;
+}
+
+.padding1 {
+	padding: 1%;
+}
+
+.padding2s {
+	padding: 0 2%;
+}
+
+/*.brdr {
+	border: 1px solid #d1d1d1;
+}*/
+
+.brdrradius {
+	border-radius: 2%;
+	-webkit-border-radius: 2%;
+	-o-border-radius: 2%;
+	-moz-border-radius: 2%;
+}
+
+.clear1 {
+	clear: both;
+	height: 8px;
+}
+
+.borderleft {
+	border-left: 1px dotted #ccc;
+}
+
+.lft {
+	float: left;
+}
+
+.rgt {
+	float: right;
+}
+
+.mauto {
+	margin: auto;
+}
+
+.bld {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.cursorpointer {
+	cursor: pointer;
+}
+
+.mainttl {
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #02416e;
+}
+
+hr {
+	border: 0px;
+	border-bottom: 1px solid #d1d1d1;
+}
+
+
+
+.boxshadow {
+	box-shadow: 0px 0px 5px #ccc;
+}
+
+.boxshadow1 {
+	box-shadow: 0px 0px 8px #d1d1d1;
+}
+
+.colorwhite {
+	color: #fff;
+}
+
+.colormain {
+	color: #02416e;
+}
+
+.textalignright {
+	text-align: right;
+}
+
+#worldwide {
+	cursor: pointer;
+}
+
+#worldwide1 {
+	display: none;
+}
+
+	#worldwide1 a {
+		text-decoration: none;
+		color: #fff;
+		font-weight: bold;
+	}
+
+#msg {
+	background: #ffff78;
+	padding: 1% 2%;
+	display: none;
+	width: 75%;
+	margin: 0px auto;
+	box-shadow: 0px 0px 5px #272727;
+	line-height: 22px;
+	font-size: 12px;
+	position: relative;
+	font-weight: normal;
+	color: #4d4d4d;
+}
+
+	#msg span {
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+.msgul ul {
+	margin-left: -30px;
+}
+
+	.msgul ul li {
+		float: left;
+		list-style-type: none;
+		width: 50%;
+	}
+
+.close2 {
+	height: 1px;
+	width: 30px;
+	cursor: pointer;
+	position: relative;
+	float: right;
+}
+
+#ppup {
+	background: url(../images/fade.png);
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+	#ppup .ppup1 {
+		background: #f1f1f1;
+		box-shadow: 0px 0px 8px #272727;
+		font-size: 16px;
+		text-align: center;
+		line-height: 25px;
+		padding: 1%;
+		width: 35%;
+		margin-left: 31.5%;
+		margin-top: 200px;
+	}
+
+		#ppup .ppup1 a {
+			font-style: italic;
+		}
+
+		#ppup .ppup1 span {
+			font-weight: bold;
+		}
+
+	#ppup #clsppup {
+		font-weight: bold;
+		cursor: pointer;
+		margin: auto;
+		background: #d1d1d1;
+		border-radius: 4px;
+		width: 50px;
+		text-align: center;
+		box-shadow: 0px 0px 5px #272727;
+	}
+
+#irctcclick1 {
+	border-left: 2px solid #ccc;
+	padding: 10px;
+	margin-left: 10px;
+	float: right;
+}
+
+.borderradius30 {
+	border-radius: 30px;
+	-o-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+	.borderradius30:hover {
+		border-radius: 0px;
+		-o-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+	}
+
+.legend {
+	margin: 0 auto;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.bgw {
+	background: #fff;
+}
+
+.bgf1 {
+	background: #f9f9f9;
+}
+
+/*new css */
+
+.underlineitalic {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.bgb {
+	background: #004b91;
+}
+
+.bgda {
+	background: #004b91;
+}
+
+.bgp {
+	background: #004b91;
+}
+
+.t5 {
+	position: relative;
+	top: -3px;
+}
+
+.t2 {
+	position: relative;
+	top: -2px;
+}
+
+.padding1s {
+	padding: 0 1%;
+}
+
+.imgbrdr {
+	border: 3px solid #ccc;
+}
+
+.textaligncenter {
+	text-align: center;
+}
+
+.w95 {
+	width: 95%;
+	vertical-align: top;
+}
+
+.w85 {
+	width: 85%;
+	vertical-align: top;
+}
+
+.w8 {
+	width: 8%;
+	vertical-align: top;
+}
+
+.w12 {
+	width: 12%;
+	vertical-align: top;
+}
+
+.w51 {
+	width: 49%;
+	padding-right: .8%;
+	border-right: 1px solid #004b91;
+}
+
+.w55 {
+	width: 55%;
+	vertical-align: top;
+}
+
+.w93 {
+	width: 92.5%;
+}
+
+.w4 {
+	width: 4%;
+}
+
+.w3 {
+	width: 3%;
+}
+
+.w24 {
+	width: 24%;
+}
+
+.w43 {
+	width: 43%;
+	vertical-align: top;
+}
+
+.w97 {
+	width: 97.5%;
+	vertical-align: top;
+}
+
+.w110 {
+	width: 110%;
+}
+
+.clear3 {
+	height: 20px;
+	clear: both;
+}
+
+.marginfori {
+	margin: 10px 2px 0 15px;
+}
+
+.paddingTop {
+	padding-top: 1%;
+}
+
+.f10 {
+	font-size: 10px;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f20 {
+	font-size: 20px;
+}
+
+.f35 {
+	font-size: 35px;
+}
+
+.brdr4 {
+	border: 4px solid #d1d1d1;
+}
+
+.headercolor {
+	color: #004b91;
+}
+
+.LowCase {
+	text-transform: uppercase;
+}
+
+.PropCase {
+	text-transform: capitalize;
+}
+
+.margin1 {
+	margin: 1%;
+}
+
+.headercolor {
+	color: #004b91;
+}
+
+.LowCase {
+	text-transform: uppercase;
+}
+
+.PropCase {
+	text-transform: capitalize;
+}
+
+.margin1 {
+	margin: 1%;
+}
+
+.textunderline {
+	text-decoration: underline;
+}
+
+.colorp {
+	color: #004b91;
+}
+
+.colorb {
+	color: #004b91;
+}
+
+.emp8 {
+	font-size: .8em;
+}
+
+.borderradius {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
+
+.txtextra {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.color8 {
+	color: #888;
+}
+
+.lh30 {
+	line-height: 30px;
+}
+
+.textnowrap {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.em7 {
+	font-size: .8em;
+	line-height: 12px;
+	padding-top: 5px;
+	text-decoration: underline;
+	font-style: italic;
+	cursor: pointer;
+}
+*-------------------------------------------------------------------------------------------------------------------------*
+
+user agent stylesheetdiv {
+display: block;
+}
+Pseudo ::-webkit-scrollbar element
+::-webkit-scrollbar {
+width: 10px;
+height: 12px;
+}
+Pseudo ::-webkit-scrollbar-thumb element
+::-webkit-scrollbar-thumb {
+background: rgba(50,83,128,.5);
+border-radius: 10px;
+}
+Pseudo ::-webkit-scrollbar-track element
+::-webkit-scrollbar-track {
+background: rgba(50,83,128,.1);
+border-radius: 10px;
+}
+Inherited from body

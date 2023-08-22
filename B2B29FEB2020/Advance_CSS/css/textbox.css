@@ -1,0 +1,291 @@
+﻿.demo-container {
+    width: 25rem;
+}
+
+.tb-container {
+    position: relative;
+    margin: 0 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 25px;
+}
+
+.aumd-tb-label {
+    position: absolute;
+    color: #999;
+    top: 50%;
+    transform: translate(0.75rem, -50%);
+    pointer-events: none;
+    transition: all 0.14s ease-in-out;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input[type=text].aumd-tb,
+input[type=password].aumd-tb {
+    color: black;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 0.75rem 0.75rem;
+    font-size: 18px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*select[type=text].aumd-tb,
+select[type=password].aumd-tb {
+    color: black;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 0.75rem 0.75rem;
+    font-size: 18px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}*/
+
+    input[type=text].aumd-tb:hover {
+        background: whitesmoke;
+    }
+
+/*select[type=text].aumd-tb:hover {
+    background: whitesmoke;
+}*/
+
+    input[type=text].aumd-tb:focus,
+    input[type=password].aumd-tb:focus {
+        outline: none;
+    }
+
+/*select[type=text].aumd-tb:focus,
+select[type=password].aumd-tb:focus {
+    outline: none;
+}*/
+
+    input[type=text].aumd-tb.c-fix, input[type=text].aumd-tb:focus,
+    input[type=password].aumd-tb.c-fix,
+    input[type=password].aumd-tb:focus {
+        border-color: transparent;
+    }
+
+
+/*select[type=text].aumd-tb.c-fix, select[type=text].aumd-tb:focus,
+select[type=password].aumd-tb.c-fix,
+select[type=password].aumd-tb:focus {
+    border-color: transparent;
+}*/
+
+        input[type=text].aumd-tb.c-fix ~ label, input[type=text].aumd-tb:focus ~ label,
+        input[type=password].aumd-tb.c-fix ~ label,
+        input[type=password].aumd-tb:focus ~ label {
+            color: #09f;
+            font-size: 0.72rem;
+            top: calc(10% - .5rem);
+            transform: translate(0.75rem, 0%);
+        }
+
+        input[type=text].aumd-tb.c-fix ~ span:after, input[type=text].aumd-tb:focus ~ span:after,
+        input[type=password].aumd-tb.c-fix ~ span:after,
+        input[type=password].aumd-tb:focus ~ span:after {
+            width: 100%;
+            left: 0;
+        }
+
+    input[type=text].aumd-tb:not(:-moz-placeholder-shown), input[type=password].aumd-tb:not(:-moz-placeholder-shown) {
+        border-color: transparent;
+    }
+
+    input[type=text].aumd-tb:not(:-ms-input-placeholder), input[type=password].aumd-tb:not(:-ms-input-placeholder) {
+        border-color: transparent;
+    }
+
+    input[type=text].aumd-tb:not(:placeholder-shown),
+    input[type=password].aumd-tb:not(:placeholder-shown) {
+        border-color: transparent;
+    }
+
+input[type=text].aumd-tb:not(:-moz-placeholder-shown) ~ label, input[type=password].aumd-tb:not(:-moz-placeholder-shown) ~ label{
+    color: #09f;
+    font-size: 0.72rem;
+    top: calc(-10% - .5rem);
+    transform: translate(0.75rem, 0%);
+}
+
+input[type=text].aumd-tb:not(:-ms-input-placeholder) ~ label, input[type=password].aumd-tb:not(:-ms-input-placeholder) ~ label {
+    color: #09f;
+    font-size: 0.72rem;
+    top: calc(10% - .5rem);
+    transform: translate(0.75rem, 0%);
+}
+
+input[type=text].aumd-tb:not(:placeholder-shown) ~ label,
+input[type=password].aumd-tb:not(:placeholder-shown) ~ label {
+    color: #a2a2a2;
+    font-size: 12px;
+    top: calc(-10% - .5rem);
+    transform: translate(0.75rem, 0%);
+    font-weight: 100;
+}
+
+input[type=text].aumd-tb:not(:-moz-placeholder-shown) ~ span:after, input[type=password].aumd-tb:not(:-moz-placeholder-shown) ~ span:after {
+    width: 100%;
+    left: 0;
+}
+
+input[type=text].aumd-tb:not(:-ms-input-placeholder) ~ span:after, input[type=password].aumd-tb:not(:-ms-input-placeholder) ~ span:after {
+    width: 100%;
+    left: 0;
+}
+
+    input[type=text].aumd-tb:not(:placeholder-shown) ~ span:after,
+    input[type=password].aumd-tb:not(:placeholder-shown) ~ span:after {
+        width: 100%;
+        left: 0;
+    }
+
+    input[type=text].aumd-tb::-webkit-input-placeholder,
+    input[type=password].aumd-tb::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    input[type=text].aumd-tb::-moz-placeholder,
+    input[type=password].aumd-tb::-moz-placeholder {
+        color: transparent;
+    }
+
+    input[type=text].aumd-tb:-ms-input-placeholder,
+    input[type=password].aumd-tb:-ms-input-placeholder {
+        color: transparent;
+    }
+
+    input[type=text].aumd-tb ~ .validation,
+    input[type=password].aumd-tb ~ .validation {
+        display: block;
+        color: #999;
+        font-size: 0.72rem;
+        visibility: hidden;
+        max-height: 0;
+        height: 0;
+        transition: all 0.14s ease-in-out;
+        margin-left: 0.75rem;
+    }
+
+        input[type=text].aumd-tb ~ .validation:after,
+        input[type=password].aumd-tb ~ .validation:after {
+            transition: all 0.14s ease-in-out;
+            left: 50%;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            visibility: visible;
+            background-color: #b5b5b5;
+        }
+
+    .has-success input[type=text].aumd-tb, input[type=text].aumd-tb.form-control-success,
+    .has-success input[type=password].aumd-tb,
+    input[type=password].aumd-tb.form-control-success {
+        border-color: transparent;
+    }
+
+        .has-success input[type=text].aumd-tb ~ label, input[type=text].aumd-tb.form-control-success ~ label,
+        .has-success input[type=password].aumd-tb ~ label,
+        input[type=password].aumd-tb.form-control-success ~ label {
+            color: #00e25e;
+        }
+
+        .has-success input[type=text].aumd-tb ~ .validation, input[type=text].aumd-tb.form-control-success ~ .validation,
+        .has-success input[type=password].aumd-tb ~ .validation,
+        input[type=password].aumd-tb.form-control-success ~ .validation {
+            color: #00e25e;
+        }
+
+            .has-success input[type=text].aumd-tb ~ .validation:not(:empty), input[type=text].aumd-tb.form-control-success ~ .validation:not(:empty),
+            .has-success input[type=password].aumd-tb ~ .validation:not(:empty),
+            input[type=password].aumd-tb.form-control-success ~ .validation:not(:empty) {
+                height: 0.8rem;
+                line-height: 0.8rem;
+                max-height: 0.8rem;
+                display: initial;
+                visibility: visible;
+            }
+
+            .has-success input[type=text].aumd-tb ~ .validation:after, input[type=text].aumd-tb.form-control-success ~ .validation:after,
+            .has-success input[type=password].aumd-tb ~ .validation:after,
+            input[type=password].aumd-tb.form-control-success ~ .validation:after {
+                background-color: #00e25e;
+                width: 100%;
+                left: 0%;
+            }
+
+    .has-warning input[type=text].aumd-tb, input[type=text].aumd-tb.form-control-warning,
+    .has-warning input[type=password].aumd-tb,
+    input[type=password].aumd-tb.form-control-warning {
+        border-color: transparent;
+    }
+
+        .has-warning input[type=text].aumd-tb ~ label, input[type=text].aumd-tb.form-control-warning ~ label,
+        .has-warning input[type=password].aumd-tb ~ label,
+        input[type=password].aumd-tb.form-control-warning ~ label {
+            color: #fbc02d;
+        }
+
+        .has-warning input[type=text].aumd-tb ~ .validation, input[type=text].aumd-tb.form-control-warning ~ .validation,
+        .has-warning input[type=password].aumd-tb ~ .validation,
+        input[type=password].aumd-tb.form-control-warning ~ .validation {
+            color: #fbc02d;
+        }
+
+            .has-warning input[type=text].aumd-tb ~ .validation:not(:empty), input[type=text].aumd-tb.form-control-warning ~ .validation:not(:empty),
+            .has-warning input[type=password].aumd-tb ~ .validation:not(:empty),
+            input[type=password].aumd-tb.form-control-warning ~ .validation:not(:empty) {
+                height: 0.8rem;
+                line-height: 0.8rem;
+                max-height: 0.8rem;
+                display: initial;
+                visibility: visible;
+            }
+
+            .has-warning input[type=text].aumd-tb ~ .validation:after, input[type=text].aumd-tb.form-control-warning ~ .validation:after,
+            .has-warning input[type=password].aumd-tb ~ .validation:after,
+            input[type=password].aumd-tb.form-control-warning ~ .validation:after {
+                background-color: #fbc02d;
+                width: 100%;
+                left: 0;
+            }
+
+    .has-danger input[type=text].aumd-tb, input[type=text].aumd-tb.form-control-danger,
+    .has-danger input[type=password].aumd-tb,
+    input[type=password].aumd-tb.form-control-danger {
+        border-color: transparent;
+    }
+
+        .has-danger input[type=text].aumd-tb ~ label, input[type=text].aumd-tb.form-control-danger ~ label,
+        .has-danger input[type=password].aumd-tb ~ label,
+        input[type=password].aumd-tb.form-control-danger ~ label {
+            color: #e91e63;
+        }
+
+        .has-danger input[type=text].aumd-tb ~ .validation, input[type=text].aumd-tb.form-control-danger ~ .validation,
+        .has-danger input[type=password].aumd-tb ~ .validation,
+        input[type=password].aumd-tb.form-control-danger ~ .validation {
+            color: #e91e63;
+        }
+
+            .has-danger input[type=text].aumd-tb ~ .validation:not(:empty), input[type=text].aumd-tb.form-control-danger ~ .validation:not(:empty),
+            .has-danger input[type=password].aumd-tb ~ .validation:not(:empty),
+            input[type=password].aumd-tb.form-control-danger ~ .validation:not(:empty) {
+                height: 0.8rem;
+                line-height: 0.8rem;
+                max-height: 0.8rem;
+                display: initial;
+                visibility: visible;
+            }
+
+            .has-danger input[type=text].aumd-tb ~ .validation:after, input[type=text].aumd-tb.form-control-danger ~ .validation:after,
+            .has-danger input[type=password].aumd-tb ~ .validation:after,
+            input[type=password].aumd-tb.form-control-danger ~ .validation:after {
+                background-color: #e91e63;
+                width: 100%;
+                left: 0;
+            }

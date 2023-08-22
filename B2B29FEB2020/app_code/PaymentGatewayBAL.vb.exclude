@@ -1,0 +1,163 @@
+﻿Imports Microsoft.VisualBasic
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Security.Cryptography
+Imports System.Text
+Imports System.Configuration
+'Imports System.Threading.Tasks
+
+Namespace PaymentGateway
+    Public Class PaymentGatewayBAL
+        Public action1 As String = String.Empty
+        Public hash1 As String = String.Empty
+        'public string txnid1 = string.Empty;
+        Shared rnd As New Random()
+
+        Public Function GetPayment(ByVal PgDtls As PaymentGatewayShared) As PaymentGatewayShared
+            Try
+                Dim objDal As New PaymentGatewayDAL()
+                Dim Pgcrd As PGCredentialsShared = objDal.GetPGCredentials("Payu")
+
+                PgDtls.DeductedAmount = PgDtls.AmountPaid
+                PgDtls.PaymentDate = DateTime.Now
+
+                '#Region ""
+
+                ' Generating txnid
+                Dim strHash As String = Generatehash512(rnd.[Next]().ToString() & DateTime.Now)
+                PgDtls.TransactionID = strHash.ToString().Substring(0, 20)
+
+                ' Generating hash value
+                Dim hashVarsSeq As String() = Pgcrd.HashSequence.Split("|"c)
+                ' spliting hash sequence from config
+                Dim hash_string As String = ""
+                For Each hash_var As String In hashVarsSeq
+                    If hash_var = "key" Then
+                        hash_string = hash_string + Pgcrd.Merchant_Key
+                        hash_string = hash_string & "|"c
+                    ElseIf hash_var = "txnid" Then
+                        hash_string = hash_string & Convert.ToString(PgDtls.TransactionID)
+                        hash_string = hash_string & "|"c
+                    ElseIf hash_var = "amount" Then
+                        hash_string = hash_string & PgDtls.AmountPaid.ToString("g29")
+                        hash_string = hash_string & "|"c
+                    ElseIf hash_var = "productinfo" Then
+                        hash_string = hash_string & Convert.ToString(PgDtls.ProductInfo)
+                        hash_string = hash_string & "|"c
+                    ElseIf hash_var = "firstname" Then
+                        hash_string = hash_string & Convert.ToString(PgDtls.FirstName)
+                        hash_string = hash_string & "|"c
+                    ElseIf hash_var = "email" Then
+                        hash_string = hash_string & Convert.ToString(PgDtls.Emailid)
+                        hash_string = hash_string & "|"c
+                    ElseIf hash_var = "udf1" Then
+                        'Orderid
+                        hash_string = hash_string & Convert.ToString(PgDtls.OrderID)
+                        hash_string = hash_string & "|"c
+                    Else
+                        hash_string = hash_string & "|"c
+                    End If
+                Next
+
+                hash_string += Pgcrd.Merchant_Pswd
+                ' appending SALT
+                hash1 = Generatehash512(hash_string).ToLower()
+                'generating hash
+                action1 = Pgcrd.ProviderUrl + "/_payment"
+                ' setting URL
+
+                If Not String.IsNullOrEmpty(hash1) Then
+
+                    Dim baseUrl As String = System.Web.HttpContext.Current.Request.Url.ToString().Replace(System.Web.HttpContext.Current.Request.Url.PathAndQuery, "/")
+                    ' req.CurrentExecutionFilePath
+                    'System.Web.HttpRequestBase
+                    Dim data As New System.Collections.Hashtable()
+                    ' adding values in gash table for data post
+                    data.Add("hash", hash1)
+                    data.Add("txnid", PgDtls.TransactionID)
+                    data.Add("key", Pgcrd.Merchant_Key)
+                    data.Add("amount", PgDtls.AmountPaid.ToString("g29"))
+                    ' eliminating trailing zeros
+                    data.Add("firstname", PgDtls.FirstName)
+                    data.Add("email", PgDtls.Emailid)
+                    data.Add("phone", PgDtls.Phone)
+                    data.Add("productinfo", PgDtls.ProductInfo)
+                    data.Add("surl", baseUrl + Pgcrd.SuccessUrl)
+                    data.Add("furl", baseUrl + Pgcrd.FailureUrl)
+                    data.Add("lastname", "")
+                    data.Add("curl", "")
+                    data.Add("address1", "")
+                    data.Add("address2", "")
+                    data.Add("city", "")
+                    data.Add("state", "")
+                    data.Add("country", "")
+                    data.Add("zipcode", "")
+                    data.Add("udf1", PgDtls.OrderID)
+                    data.Add("udf2", "")
+                    data.Add("udf3", "")
+                    data.Add("udf4", "")
+                    data.Add("udf5", "")
+                    data.Add("pg", "")
+
+
+                    PgDtls.OutputForm = PreparePOSTForm(action1, data)
+                Else
+                    'no hash
+
+
+
+                    '#End Region
+
+                End If
+            Catch ex As Exception
+                Throw ex
+            End Try
+
+
+            Return PgDtls
+
+        End Function
+
+        Public Function Generatehash512(ByVal text As String) As String
+
+            Dim message As Byte() = Encoding.UTF8.GetBytes(text)
+
+            Dim UE As New UnicodeEncoding()
+            Dim hashValue As Byte()
+            Dim hashString As New SHA512Managed()
+            Dim hex As String = ""
+            hashValue = hashString.ComputeHash(message)
+            For Each x As Byte In hashValue
+                hex += [String].Format("{0:x2}", x)
+            Next
+            Return hex
+
+        End Function
+
+        Private Function PreparePOSTForm(ByVal url As String, ByVal data As System.Collections.Hashtable) As String
+            'Set a name for the form
+            Dim formID As String = "PostForm"
+            'Build the form using the specified data to be posted.
+            Dim strForm As New StringBuilder()
+            strForm.Append("<form id=""" & formID & """ name=""" & formID & """ action=""" & url & """ method=""POST"">")
+
+            For Each key As System.Collections.DictionaryEntry In data
+
+                strForm.Append("<input type=""hidden"" name=""" & Convert.ToString(key.Key) & """ value=""" & Convert.ToString(key.Value) & """>")
+            Next
+
+
+            strForm.Append("</form>")
+            'Build the JavaScript which will do the Posting operation.
+            Dim strScript As New StringBuilder()
+            strScript.Append("<script language='javascript'>")
+            strScript.Append("var v" & formID & " = document." & formID & ";")
+            strScript.Append("v" & formID & ".submit();")
+            strScript.Append("</script>")
+            'Return the form and the script concatenated.
+            '(The order is important, Form then JavaScript)
+            Return strForm.ToString() & strScript.ToString()
+        End Function
+
+    End Class
+End Namespace

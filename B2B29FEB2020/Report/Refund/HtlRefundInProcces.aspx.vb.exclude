@@ -1,0 +1,93 @@
+﻿Imports System.Data
+Partial Class HtlRefundInProcces
+    Inherits System.Web.UI.Page
+    Private ST As New HtlLibrary.HtlSqlTrans()
+    Dim GrdDS As New DataSet()
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            Response.Cache.SetCacheability(HttpCacheability.NoCache)
+            If Session("UID") = "" Or Session("UID") Is Nothing Then
+                Response.Redirect("~/Login.aspx")
+            End If
+            If Not IsPostBack Then
+                BindGrid()
+            End If
+
+        Catch ex As Exception
+            HtlLibrary.HtlLog.InsertLogDetails(ex)
+        End Try
+    End Sub
+
+    Private Sub BindGrid()
+        Try
+            GrdDS = ST.HtlRefundDetail("InProcess", "", Session("UID").ToString, "InproceGET", "")
+            InproccesGrd.DataSource = GrdDS
+            InproccesGrd.DataBind()
+            Session("GridDS") = GrdDS
+            InproccesGrd.Columns(18).Visible = False
+            InproccesGrd.Columns(19).Visible = False
+        Catch ex As Exception
+            HtlLibrary.HtlLog.InsertLogDetails(ex)
+        End Try
+    End Sub
+    Protected Sub lnkupdate_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim lnkupdate As String = CType(sender, LinkButton).CommandArgument.ToString
+        Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "window.open('HtlRefundUpdate.aspx?OrderID=" & lnkupdate & "','Print','scrollbars=yes,width=938,height=380,top=20,left=150');", True)
+        BindGrid()
+    End Sub
+
+    Protected Sub lnkHides_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        InproccesGrd.Columns(18).Visible = False
+        InproccesGrd.Columns(19).Visible = False
+    End Sub
+
+    Protected Sub btnCanFee_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Dim RowIndex As Integer = ViewState("RowIndex")
+            Dim txtRemark As TextBox = DirectCast(InproccesGrd.Rows(RowIndex).FindControl("txtRemark"), TextBox)
+            Dim i As Integer = ST.UpdateHltRefund("Rejected", ViewState("OrderID"), Session("UID").ToString, "RejInproce", txtRemark.Text.Trim, 0, 0, 0)
+            If i = 1 Then
+                Page.ClientScript.RegisterStartupScript(GetType(Page), "MessagePopUp", "alert('Reject succesfully'); ", True)
+            Else
+                Page.ClientScript.RegisterStartupScript(GetType(Page), "MessagePopUp", "alert('This ticket No has Allready Refunded'); ", True)
+            End If
+            BindGrid()
+
+        Catch ex As Exception
+            HtlLibrary.HtlLog.InsertLogDetails(ex)
+        End Try
+    End Sub
+
+    Protected Sub InproccesGrd_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles InproccesGrd.RowCommand
+        If e.CommandName = "Reject" Then
+            Try
+                ViewState("OrderID") = e.CommandArgument
+                InproccesGrd.Columns(18).Visible = True
+                InproccesGrd.Columns(19).Visible = True
+                Dim lb As LinkButton = TryCast(e.CommandSource, LinkButton)
+                Dim gvr As GridViewRow = TryCast(lb.Parent.Parent, GridViewRow)
+                Dim RowIndex As Integer = gvr.RowIndex
+                ViewState("RowIndex") = RowIndex
+                Dim txtRemark As TextBox = DirectCast(InproccesGrd.Rows(RowIndex).FindControl("txtRemark"), TextBox)
+                Dim lnkSubmit As LinkButton = DirectCast(InproccesGrd.Rows(RowIndex).FindControl("lnkSubmit"), LinkButton)
+                Dim lnkHides As LinkButton = DirectCast(InproccesGrd.Rows(RowIndex).FindControl("lnkHides"), LinkButton)
+                lnkHides.Visible = True
+                txtRemark.Visible = True
+                lnkSubmit.Visible = True
+                gvr.BackColor = System.Drawing.Color.Yellow
+
+            Catch ex As Exception
+                HtlLibrary.HtlLog.InsertLogDetails(ex)
+            End Try
+            If e.CommandName = "lnkupdate" Then
+                Try
+                    Dim lb As LinkButton = TryCast(e.CommandSource, LinkButton)
+                    Dim gvr As GridViewRow = TryCast(lb.Parent.Parent, GridViewRow)
+                    gvr.BackColor = System.Drawing.Color.GreenYellow
+                Catch ex As Exception
+                    HtlLibrary.HtlLog.InsertLogDetails(ex)
+                End Try
+            End If
+        End If
+    End Sub
+End Class

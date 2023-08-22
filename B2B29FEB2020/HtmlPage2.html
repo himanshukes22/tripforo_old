@@ -1,0 +1,985 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="large-12 medium-12 small-12" style="margin-top: -6px;">
+        <span class="hidden-md hidden-lg hidden-sm fliters " onclick="openNav()"><i class="fa fa-filter" aria-hidden="true"></i>Filter</span>
+        <div id="mysidenavssss" class="sidenavssss">
+            <a href="javascript:void(0)" class="closebtnsss" onclick="closeNav()">X </a>
+            <div id="FilterBox lft">
+                <div class="jplist-panel">
+                    <div class="row passengersss  wht w210 lft asbc lftflt " id="passengersss" style="border: 1px solid #dad8d8; box-shadow: 0 2px 0 0px rgba(0,0,0,.08); -webkit-box-shadow: 0 2px 0 0px rgba(0,0,0,.08); -moz-box-shadow: 0 2px 0 0px rgba(0,0,0,.08); border-radius: 4px;">
+                        <div class="clear">
+                        </div>
+                        <div id="dsplm" class="large-12 medium-12 small-12 columns" style="height: 59px; background: #0c66b3; padding-top: 20px; padding-left: 20px!important; width: 100%; margin-top: -6px; border-radius: 4px 4px 0px 0px;">
+                            <%--<input type="button" id="ModifySearch" value="Modify Search" onclick="DiplayMsearch1('DivMsearch');" class="pnday daybtn f10" />--%>
+                            <a href="#" id="ModifySearch" class="pnday msearch" style="display: none;">Modify Search</a>
+                            <a href="#" style="font-size: x-large; margin-top: -9px; position: absolute; color: #fff;">Filter</a>
+
+
+                            <a href="#" class="" data-control-type="reset" data-control-name="reset" data-control-action="reset" style="float: right; margin-right: 9px; color: orange;">Reset All </a>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div class="w95 auto OnewayReturn" style="padding-top: 10px;">
+
+
+                            <div class="large-12 medium-12 small-12 columns passenger">
+                                <%--<button type="button" class="jplist-reset-btn cursorpointer bld" data-control-type="reset" data-control-name="reset" data-control-action="reset" style="border: none; background: none;">
+                                    <img src="../images/reset.png" style="position: relative; top: 3px;" />  &nbsp; Reset All Filters
+
+                                </button>--%>
+                            </div>
+
+
+                            <div class="large-12 medium-12 small-12">
+                                <div id="flterTab" style="display: none">
+                                    <div id="flterTabO" class="spn1">
+                                        Outbound
+                                    </div>
+                                    <div class="lft w2">&nbsp;</div>
+                                    <div id="flterTabR" class="spn">
+                                        Inbound
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="large-12 medium-12 small-12 columns" id="FltrPrice">
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBP" style="color: #005999 !important;">
+                                    <i>
+                                        <img src="../Images/hd_icons/price-tag-icon.png" style="width: 22px;" />
+                                    </i>  Price
+                                </div>
+                                <div id="FBP1" class="w100 lft " style="display: none;">
+                                    <div class="clear2"></div>
+                                    <div class="fo">
+                                        <div class="clsone">
+                                            <div class="jplist-range-slider" data-control-type="range-slider" data-control-name="range-slider"
+                                                 data-control-action="filter" data-path=".price" style="left: 12px; position: relative;">
+                                                <div class="clear1"></div>
+                                                <div class="ui-slider w90 mauto" data-type="ui-slider">
+                                                </div>
+                                                <div class="clear1"></div>
+                                                <div class="lft w45">
+                                                    <span class="lft">₹&nbsp;</span>
+                                                    <span class="value lft" data-type="prev-value"></span>
+                                                </div>
+                                                <div class="rgt w45" style="margin-right: 12px;">
+                                                    <span class="value rgt" data-type="next-value"></span>
+                                                    <span class="rgt">₹&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort"
+                                                 data-path=".price" data-order="asc" data-type="number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="jplist-range-slider" data-control-type="range-sliderR" data-control-name="range-slider"
+                                             data-control-action="filter" data-path=".price">
+                                            <div class="clear1"></div>
+                                            <div class="ui-slider w90 mauto" data-type="ui-slider">
+                                            </div>
+                                            <div class="clear1"></div>
+                                            <div class="lft w45">
+                                                <span class="lft">
+                                                    <img src="../images/rs.png" style="height: 13px;" />&nbsp;
+                                                </span>
+                                                <span class="value lft" data-type="prev-value"></span>
+                                            </div>
+                                            <div class="rgt w45">
+                                                <span class="value rgt" data-type="next-value"></span>
+                                                <span class="rgt">
+                                                    <img src="../images/rs.png" class="rgt" style="height: 13px;" />&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort"
+                                             data-path=".price" data-order="desc" data-type="number">
+                                        </div>
+                                    </div>
+
+                                    <div class="clear">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr />
+                            <div class="col-md-12 col-sm-12 col-xs-12 columns" id="fltrTime">
+
+                                <div class="bld closeopen closeopen1" onclick="fltrclick(this.id)" id="FBDT" style="color: #005999 !important;">
+                                    <i>
+                                        <img src="../Images/hd_icons/Airplane_Time-512.png" style="width: 22px;" />
+                                    </i>Departure Time
+                                </div>
+                                <div id="FBDT1" class="w100 lft" style="overflow: hidden;">
+                                    <div class="fo">
+                                        <div class="jplist-group" data-control-type="DTimefilterO" data-control-action="filter" data-control-name="DTimefilterO" data-path=".dtime" data-logic="or" style="position: relative;">
+                                            <div class="clear"></div>
+                                            <div class="row">
+                                                <div class="lft wss20 abc1 bdrs">
+                                                    <input value="0_6" id="CheckboxT1" type="checkbox" title="Early Morning" />
+                                                    <label for="CheckboxT1"></label>
+                                                    <span>00 - 06</span>
+                                                </div>
+                                                <div class="lft wss20 abc2t bdrs">
+                                                    <input value="6_12" id="CheckboxT2" type="checkbox" title="Morning" />
+                                                    <label for="CheckboxT2"></label>
+                                                    <span>06 - 12</span>
+                                                </div>
+
+                                                <div class="lft wss20 abc3t bdrs">
+                                                    <input value="12_18" id="CheckboxT3" type="checkbox" title="Mid Day" />
+                                                    <label for="CheckboxT3"></label>
+                                                    <span>12 - 18</span>
+                                                </div>
+                                                <div class="lft wss20 abc4t bdrs">
+                                                    <input value="18_0" id="CheckboxT4" type="checkbox" title="Evening" />
+                                                    <label for="CheckboxT4"></label>
+                                                    <span>18 - 00</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fr" style="display: none;">
+                                        <div class="jplist-group" data-control-type="DTimefilterR" data-control-action="filter" data-control-name="DTimefilterR" data-path=".atime" data-logic="or">
+
+                                            <div class="lft wss20 abc1 bdrs">
+                                                <input value="0_6" id="CheckboxT1R" type="checkbox" title="Early Morning">
+                                                <label for="CheckboxT1"></label>
+                                                <span>00 - 06</span>
+                                            </div>
+                                            <div class="lft wss20 abc2t bdrs">
+                                                <input value="6_12" id="CheckboxT2R" type="checkbox" title="Morning">
+                                                <label for="CheckboxT2"></label>
+                                                <span>06 - 12</span>
+                                            </div>
+
+                                            <div class="lft wss20 abc3t bdrs">
+                                                <input value="12_18" id="CheckboxT3R" type="checkbox" title="Mid Day">
+                                                <label for="CheckboxT3"></label>
+                                                <span>12 - 18</span>
+                                            </div>
+                                            <div class="lft wss20 abc4t bdrs">
+                                                <input value="18_0" id="CheckboxT4R" type="checkbox" title="Evening">
+                                                <label for="CheckboxT4"></label>
+                                                <span>18 - 00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <%--<div class="large-12 medium-12 small-12 columns" id="fltrTime">
+
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBDT"><i class="fa fa-clock-o" aria-hidden="true"></i>  Departure Time</div>
+                                <div id="FBDT1" class="w100 lft">
+                                    <div class="fo">
+                                        <div class="jplist-group"
+                                             data-control-type="DTimefilterO"
+                                             data-control-action="filter"
+                                             data-control-name="DTimefilterO"
+                                             data-path=".dtime" data-logic="or">
+                                            <div class="clear"></div>
+
+                                            <div class="lft wss20 abc1 bdrs bdrss">
+                                                <input value="0_6" id="CheckboxT1" type="checkbox" title="Early Morning" />
+                                                <label for="CheckboxT1"></label>
+                                                <span>Early Morning</span><span style="float:right;">00 - 06</span>
+                                            </div>
+                                            <div class="lft wss20 abc2t bdrs">
+
+                                                <input value="6_12" id="CheckboxT2" type="checkbox" title="Morning" />
+                                                <label for="CheckboxT2"></label>
+                                                <span>Morning</span><span style="float:right;">06 - 12</span>
+                                            </div>
+
+                                            <div class="lft wss20 abc3t bdrs">
+                                                <input value="12_18" id="CheckboxT3" type="checkbox" title="Mid Day" />
+                                                <label for="CheckboxT3"></label>
+                                                <span>Mid-Day</span><span style="float:right;">12 - 18</span>
+                                            </div>
+                                            <div class="lft wss20 abc4t bdrs">
+                                                <input value="18_0" id="CheckboxT4" type="checkbox" title="Evening" />
+                                                <label for="CheckboxT4"></label>
+                                                <span>Evening</span><span style="float:right;">18 - 00</span>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="fr">
+                                    <div class="jplist-group"
+                                         data-control-type="DTimefilterR"
+                                         data-control-action="filter"
+                                         data-control-name="DTimefilterR"
+                                         data-path=".atime" data-logic="or">
+
+                                        <div class="lft wss20 abc1 bdrs">
+                                            <input value="0_6" id="CheckboxT1R" type="checkbox" title="Early Morning" />
+                                            <label for="CheckboxT1"></label>
+                                            <span>00 - 06</span>
+                                        </div>
+                                        <div class="lft wss20 abc2t bdrs">
+                                            <input value="6_12" id="CheckboxT2R" type="checkbox" title="Morning" />
+                                            <label for="CheckboxT2"></label>
+                                            <span>06 - 12</span>
+                                        </div>
+
+                                        <div class="lft wss20 abc3t bdrs">
+                                            <input value="12_18" id="CheckboxT3R" type="checkbox" title="Mid Day" />
+                                            <label for="CheckboxT3"></label>
+                                            <span>12 - 18</span>
+                                        </div>
+                                        <div class="lft wss20 abc4t bdrs">
+                                            <input value="18_0" id="CheckboxT4R" type="checkbox" title="Evening" />
+                                            <label for="CheckboxT4"></label>
+                                            <span>18 - 00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clear">
+                                </div>
+                            </div>--%>
+                            <div class="clear">
+                            </div>
+
+                            <hr />
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 columns">
+                                <div class="bld closeopen closeopen1" onclick="fltrclick(this.id)" id="FBA" style="color: #005999 !important;">
+                                    <i>
+                                        <img src="../Images/hd_icons/plane-hiysd.png" style="width: 22px;" />
+                                    </i>  Airline
+                                </div>
+                                <div class="w100 lft " id="FBA1">
+                                    <div class="clear"></div>
+                                    <div id="airlineFilter" class="fo" style="overflow-y: auto; max-height: 270px; overflow-x: hidden; white-space: nowrap; left: 12px; position: relative;">
+                                        <div class="jplist-group" data-control-type="AirlinefilterO" data-control-action="filter" data-control-name="AirlinefilterO" data-path=".airlineImage" data-logic="or">
+                                            <div class="lft w8">
+                                                <input value="Air Asia" id="CheckboxAO01" type="checkbox">
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px;">
+                                                <label for="Air Asia">Air Asia</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="Air India" id="CheckboxAO11" type="checkbox">
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px;">
+                                                <label for="Air India">Air India</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="Goair" id="CheckboxAO21" type="checkbox">
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px;">
+                                                <label for="Goair">Goair</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="Indigo" id="CheckboxAO31" type="checkbox">
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px;">
+                                                <label for="Indigo">Indigo</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="SpiceJet" id="CheckboxAO41" type="checkbox">
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px;">
+                                                <label for="SpiceJet">SpiceJet</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="Vistara" id="CheckboxAO51" type="checkbox">
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px;">
+                                                <label for="Vistara">Vistara</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div id="airlineFilterR" class="fr" style="overflow: hidden auto; max-height: 270px; white-space: nowrap; display: none; left: 12px; position: relative;"></div>
+                                    <div class="clear"></div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <%--                                            <div class="large-12 medium-12 small-12 columns">
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBA"><i class="fa fa-plane" aria-hidden="true"></i>  Airline</div>
+                                <div class="w100 lft " id="FBA1">
+                                    <div class="clear"></div>
+                                    <div id="airlineFilter" class="fo" style="overflow-y: auto; max-height: 270px; overflow-x: hidden; white-space: nowrap;"></div>
+                                    <div id="airlineFilterR" class="fr" style="overflow-y: auto; max-height: 270px; overflow-x: hidden; white-space: nowrap;"></div>
+                                    <div class="clear"></div>
+                                </div>
+
+                            </div>--%>
+                            <hr />
+
+
+                            <div class="large-12 medium-12 small-12 columns">
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBS" style="color: #005999 !important;">
+                                    <i>
+                                        <img src="../Images/hd_icons/xxx036-2-512.png" style="width: 23px;" />
+                                    </i>  Stops
+                                </div>
+                                <div class="w100 lft" id="FBS1">
+                                    <div class="clear"></div>
+                                    <div id="stopFlter" class="fo" style="overflow-y: auto; max-height: 170px; overflow-x: hidden; white-space: nowrap; left: 12px; position: relative;"></div>
+                                    <div id="stopFlterR" class="fr" style="overflow-y: auto; max-height: 170px; overflow-x: hidden; white-space: nowrap; left: 12px; position: relative;"></div>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="large-12 medium-12 small-12 columns">
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBFT" style="color: #005999 !important;">
+                                    <i>
+                                        <img src="../Images/hd_icons/Pass_Programs_Icon_No_Circle.png" style="width: 22px;" />
+                                    </i>  Fare Rule
+                                </div>
+
+                                <div class="w100 lft" id="FBFT1" style="display: none;">
+                                    <div class="fo">
+                                        <div class="jplist-group"
+                                             data-control-type="RfndfilterO"
+                                             data-control-action="filter"
+                                             data-control-name="RfndfilteO"
+                                             data-path=".rfnd" data-logic="or" style="left: 12px; position: relative;">
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="r" id="CheckboxR1" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxR1">Refundable</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="n" id="CheckboxR2" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxR2">Non Refundable</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="jplist-group"
+                                             data-control-type="RfndfilterR"
+                                             data-control-action="filter"
+                                             data-control-name="RfndfilterR"
+                                             data-path=".rfnd" data-logic="or">
+                                            <div class="clear2"></div>
+                                            <div class="lft w8">
+                                                <input value="r" id="Checkbox1" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxR1">Refundable</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="n" id="Checkbox2" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxR2">Non Refundable</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="large-12 medium-12 small-12" id="IdFareType">
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBTY">Fare Type</div>
+                                <div class="clsone lft w100" id="FBTY1">
+                                    <div class="fo">
+                                        <div class="jplist-group"
+                                             data-control-type="FareTypefilterO"
+                                             data-control-action="filter"
+                                             data-control-name="FareTypefilterO"
+                                             data-path=".srf" data-logic="or" style="left: 12px; position: relative;">
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="NRMLF" id="CheckboxFTY1" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxFTY1">Normal Fare</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="SRF" id="CheckboxFTY2" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxFTY2">Special Return Fare</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="fr">
+                                        <hr />
+                                        <br />
+                                        <div class="jplist-group"
+                                             data-control-type="FareTypefilterR"
+                                             data-control-action="filter"
+                                             data-control-name="FareTypefilterR"
+                                             data-path=".srf" data-logic="or">
+                                            <div class="clear2"></div>
+                                            <div class="lft w8">
+                                                <input value="NRMLF" id="CheckboxFTYR1" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxFTYR1">Normal Fare</label>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="lft w8">
+                                                <input value="SRF" id="CheckboxFTYR2" type="checkbox" />
+                                            </div>
+                                            <div class="lft w80" style="padding-top: 3px">
+                                                <label for="CheckboxFTYR2">Special Return Fare</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear">
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="large-12 medium-12 small-12 columns">
+                                <div class="bld closeopen" onclick="fltrclick(this.id)" id="DAFT" style="color: #005999 !important;">
+                                    <i>
+                                        <img src="../Images/hd_icons/unnamed.png" style="width: 22px;" />
+                                    </i>  Airline Fare Type
+                                </div>
+                                <div class="w100 lft " id="DAFT1">
+                                    <div class="clear"></div>
+                                    <div id="AirlineFareType" class="FareTypeO fo" style="overflow-y: auto; max-height: 270px; overflow-x: hidden; white-space: nowrap; left: 9px; position: relative;"></div>
+                                    <div id="AirlineFareTypeR" class="FareTypeR fr" style="overflow-y: auto; max-height: 270px; overflow-x: hidden; white-space: nowrap; left: 9px; position: relative;"></div>
+                                    <div class="clear1">
+                                    </div>
+
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="w95 auto SpecialRTF" id="divFilterRTF" style="padding-top: 10px; display: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 ">
+        <div class="sticky-col _mob-h">
+            <div class="theme-search-results-sidebar">
+                <div class="theme-search-results-sidebar-sections _mb-20 _br-2 theme-search-results-sidebar-sections-white-wrap">
+
+                    <span class="hidden-md hidden-lg hidden-sm fliters " onclick="openNav()"><i class="fa fa-filter" aria-hidden="true"></i>Filter</span>
+                    <div id="mysidenavssss" class="sidenavssss">
+                        <%--                                <a href="javascript:void(0)" class="closebtnsss" onclick="closeNav()">X </a>--%>
+                        <div id="FilterBox lft">
+                            <div class="jplist-panel">
+                                <div class="passengersss  wht w210 lft asbc lftflt " id="passengersss">
+                                    <div class="clear">
+                                    </div>
+                                    <div id="dsplm" class="large-12 medium-12 small-12 columns">
+                                        <%--<input type="button" id="ModifySearch" value="Modify Search" onclick="DiplayMsearch1('DivMsearch');" class="pnday daybtn f10" />--%>
+
+
+
+
+                                        <a href="#" class="" data-control-type="reset" data-control-name="reset" data-control-action="reset" style="float: right; margin-right: 9px; color: orange;">Reset All </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                    <div class="w95 auto OnewayReturn" style="padding-top: 10px;">
+
+
+                                        <div class="large-12 medium-12 small-12 columns passenger">
+                                            <%--<button type="button" class="jplist-reset-btn cursorpointer bld" data-control-type="reset" data-control-name="reset" data-control-action="reset" style="border: none; background: none;">
+                                                <img src="../images/reset.png" style="position: relative; top: 3px;" />  &nbsp; Reset All Filters
+
+                                            </button>--%>
+                                        </div>
+
+
+                                        <div class="theme-search-results-sidebar-section">
+                                            <div id="flterTab" style="display: none">
+                                                <div id="flterTabO" class="spn1">
+                                                    Outbound
+                                                </div>
+                                                <div class="lft w2">&nbsp;</div>
+                                                <div id="flterTabR" class="spn">
+                                                    Inbound
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="theme-search-results-sidebar-section" id="FltrPrice">
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="FBP">Price</h5>
+
+                                            <div class="theme-search-results-sidebar-section-price">
+                                                <div id="FBP1" class="w100 lft ">
+                                                    <div class="clear2"></div>
+                                                    <div class="fo">
+                                                        <div class="clsone">
+                                                            <div class="jplist-range-slider" data-control-type="range-slider" data-control-name="range-slider"
+                                                                 data-control-action="filter" data-path=".price">
+                                                                <div class="clear1"></div>
+                                                                <div class="ui-slider w90 mauto" data-type="ui-slider">
+                                                                </div>
+                                                                <div class="clear1"></div>
+                                                                <div class="">
+                                                                    <div style="float: left">
+                                                                        <span class="lft">₹&nbsp; <span class="value lft" data-type="prev-value"></span></span>
+
+                                                                    </div>
+                                                                    <div style="float: right">
+
+                                                                        <span class="rgt">₹&nbsp;<span class="value rgt" data-type="next-value"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort"
+                                                                 data-path=".price" data-order="asc" data-type="number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fr">
+                                                        <div class="jplist-range-slider" data-control-type="range-sliderR" data-control-name="range-slider"
+                                                             data-control-action="filter" data-path=".price">
+                                                            <div class="clear1"></div>
+                                                            <div class="ui-slider w90 mauto" data-type="ui-slider">
+                                                            </div>
+                                                            <div class="clear1"></div>
+                                                            <div class="lft w45" style="float:left;">
+                                                                <span class="lft">
+                                                                    ₹&nbsp;
+                                                                </span>
+                                                                <span class="value lft" data-type="prev-value"></span>
+                                                            </div>
+                                                            <div class="rgt " style="float:right;">
+
+                                                                <span class="rgt">
+                                                                    ₹&nbsp;
+                                                                </span>
+                                                                <span class="value rgt" data-type="next-value"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort"
+                                                             data-path=".price" data-order="desc" data-type="number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="clear">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="theme-search-results-sidebar-section" id="fltrTime">
+
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="FBDT">
+                                                Departure Time
+                                            </h5>
+                                            <div id="FBDT1" class="w100 lft" style="overflow: hidden;">
+                                                <div class="fo">
+                                                    <div class="jplist-group" data-control-type="DTimefilterO" data-control-action="filter" data-control-name="DTimefilterO" data-path=".dtime" data-logic="or" style="position: relative;">
+                                                        <div class="clear"></div>
+                                                        <div class="row">
+                                                            <div class="lft wss20 abc1 bdrs">
+                                                                <input value="0_6" id="CheckboxT1" type="checkbox" title="Early Morning" style="display: none;" />
+                                                                <label for="CheckboxT1"></label>
+                                                                <%-- <span>00 - 06</span>--%>
+                                                            </div>
+                                                            <div class="lft wss20 abc2t bdrs">
+                                                                <input value="6_12" id="CheckboxT2" type="checkbox" title="Morning" style="display: none;" />
+                                                                <label for="CheckboxT2"></label>
+                                                                <%-- <span>06 - 12</span>--%>
+                                                            </div>
+
+                                                            <div class="lft wss20 abc3t bdrs">
+                                                                <input value="12_18" id="CheckboxT3" type="checkbox" title="Mid Day" style="display: none;" />
+                                                                <label for="CheckboxT3"></label>
+                                                                <%-- <span>12 - 18</span>--%>
+                                                            </div>
+                                                            <div class="lft wss20 abc4t bdrs">
+                                                                <input value="18_0" id="CheckboxT4" type="checkbox" title="Evening" style="display: none;" />
+                                                                <label for="CheckboxT4"></label>
+                                                                <%-- <span>18 - 00</span>--%>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fr" style="display: none;">
+                                                    <div class="jplist-group" data-control-type="DTimefilterR" data-control-action="filter" data-control-name="DTimefilterR" data-path=".atime" data-logic="or">
+                                                        <div class="row">
+                                                            <div class="lft wss20 abc1 bdrs">
+                                                                <input value="0_6" id="CheckboxT1R" type="checkbox" title="Early Morning" style="display:none;">
+                                                                <label for="CheckboxT1"></label>
+                                                                <%--<span>00 - 06</span>--%>
+                                                            </div>
+                                                            <div class="lft wss20 abc2t bdrs">
+                                                                <input value="6_12" id="CheckboxT2R" type="checkbox" title="Morning" style="display:none;">
+                                                                <label for="CheckboxT2"></label>
+                                                                <%--<span>06 - 12</span>--%>
+                                                            </div>
+
+                                                            <div class="lft wss20 abc3t bdrs">
+                                                                <input value="12_18" id="CheckboxT3R" type="checkbox" title="Mid Day" style="display:none;">
+                                                                <label for="CheckboxT3"></label>
+                                                                <%-- <span>12 - 18</span>--%>
+                                                            </div>
+                                                            <div class="lft wss20 abc4t bdrs">
+                                                                <input value="18_0" id="CheckboxT4R" type="checkbox" title="Evening" style="display:none;">
+                                                                <label for="CheckboxT4"></label>
+                                                                <%--<span>18 - 00</span>--%>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="clear">
+                                                </div>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </div>
+                                        <%--<div class="large-12 medium-12 small-12 columns" id="fltrTime">
+
+                                            <div class="bld closeopen" onclick="fltrclick(this.id)" id="FBDT"><i class="fa fa-clock-o" aria-hidden="true"></i>  Departure Time</div>
+                                            <div id="FBDT1" class="w100 lft">
+                                                <div class="fo">
+                                                    <div class="jplist-group"
+                                                         data-control-type="DTimefilterO"
+                                                         data-control-action="filter"
+                                                         data-control-name="DTimefilterO"
+                                                         data-path=".dtime" data-logic="or">
+                                                        <div class="clear"></div>
+
+                                                        <div class="lft wss20 abc1 bdrs bdrss">
+                                                            <input value="0_6" id="CheckboxT1" type="checkbox" title="Early Morning" />
+                                                            <label for="CheckboxT1"></label>
+                                                            <span>Early Morning</span><span style="float:right;">00 - 06</span>
+                                                        </div>
+                                                        <div class="lft wss20 abc2t bdrs">
+
+                                                            <input value="6_12" id="CheckboxT2" type="checkbox" title="Morning" />
+                                                            <label for="CheckboxT2"></label>
+                                                            <span>Morning</span><span style="float:right;">06 - 12</span>
+                                                        </div>
+
+                                                        <div class="lft wss20 abc3t bdrs">
+                                                            <input value="12_18" id="CheckboxT3" type="checkbox" title="Mid Day" />
+                                                            <label for="CheckboxT3"></label>
+                                                            <span>Mid-Day</span><span style="float:right;">12 - 18</span>
+                                                        </div>
+                                                        <div class="lft wss20 abc4t bdrs">
+                                                            <input value="18_0" id="CheckboxT4" type="checkbox" title="Evening" />
+                                                            <label for="CheckboxT4"></label>
+                                                            <span>Evening</span><span style="float:right;">18 - 00</span>
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="fr">
+                                                <div class="jplist-group"
+                                                     data-control-type="DTimefilterR"
+                                                     data-control-action="filter"
+                                                     data-control-name="DTimefilterR"
+                                                     data-path=".atime" data-logic="or">
+
+                                                    <div class="lft wss20 abc1 bdrs">
+                                                        <input value="0_6" id="CheckboxT1R" type="checkbox" title="Early Morning" />
+                                                        <label for="CheckboxT1"></label>
+                                                        <span>00 - 06</span>
+                                                    </div>
+                                                    <div class="lft wss20 abc2t bdrs">
+                                                        <input value="6_12" id="CheckboxT2R" type="checkbox" title="Morning" />
+                                                        <label for="CheckboxT2"></label>
+                                                        <span>06 - 12</span>
+                                                    </div>
+
+                                                    <div class="lft wss20 abc3t bdrs">
+                                                        <input value="12_18" id="CheckboxT3R" type="checkbox" title="Mid Day" />
+                                                        <label for="CheckboxT3"></label>
+                                                        <span>12 - 18</span>
+                                                    </div>
+                                                    <div class="lft wss20 abc4t bdrs">
+                                                        <input value="18_0" id="CheckboxT4R" type="checkbox" title="Evening" />
+                                                        <label for="CheckboxT4"></label>
+                                                        <span>18 - 00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="clear">
+                                            </div>
+                                        </div>--%>
+                                        <div class="clear">
+                                        </div>
+
+                                        <hr />
+
+                                        <div class="theme-search-results-sidebar-section">
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="FBA">
+                                                Airline
+                                            </h5>
+                                            <div class="w100 lft " id="FBA1">
+
+                                                <div id="airlineFilter" class="theme-search-results-sidebar-section-checkbox-list">
+                                                    <div class="jplist-group" data-control-type="AirlinefilterO" data-control-action="filter" data-control-name="AirlinefilterO" data-path=".airlineImage" data-logic="or">
+
+
+                                                        <div class="lft w8">
+                                                            <input value="Air Asia" id="CheckboxAO01" type="checkbox">
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px;">
+                                                            <label for="Air Asia">Air Asia</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="Air India" id="CheckboxAO11" type="checkbox">
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px;">
+                                                            <label for="Air India">Air India</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="Goair" id="CheckboxAO21" type="checkbox">
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px;">
+                                                            <label for="Goair">Goair</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="Indigo" id="CheckboxAO31" type="checkbox">
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px;">
+                                                            <label for="Indigo">Indigo</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="SpiceJet" id="CheckboxAO41" type="checkbox">
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px;">
+                                                            <label for="SpiceJet">SpiceJet</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="Vistara" id="CheckboxAO51" type="checkbox">
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px;">
+                                                            <label for="Vistara">Vistara</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                                <div id="airlineFilterR" class="fr" style="overflow: hidden auto; max-height: 270px; white-space: nowrap; display: none; left: 12px; position: relative;"></div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        </div>
+                                        <hr />
+                                        <div class="theme-search-results-sidebar-section">
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="FBS">
+                                                Stops
+                                            </h5>
+                                            <div class="w100 lft" id="FBS1">
+                                                <div class="clear"></div>
+                                                <div id="stopFlter" class="theme-search-results-sidebar-section-checkbox-list"></div>
+                                                <div id="stopFlterR" class="theme-search-results-sidebar-section-checkbox-list"></div>
+                                            </div>
+                                        </div>
+
+                                        <hr />
+
+                                        <div class="theme-search-results-sidebar-section">
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="FBFT">
+                                                Fare Rule
+                                            </h5>
+
+                                            <div class="w100 lft" id="FBFT1" style="display: none;">
+                                                <div class="fo">
+                                                    <div class="jplist-group"
+                                                         data-control-type="RfndfilterO"
+                                                         data-control-action="filter"
+                                                         data-control-name="RfndfilteO"
+                                                         data-path=".rfnd" data-logic="or" style="left: 12px; position: relative;">
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="r" id="CheckboxR1" type="checkbox" />
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px">
+                                                            <label for="CheckboxR1">Refundable</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="n" id="CheckboxR2" type="checkbox" />
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px">
+                                                            <label for="CheckboxR2">Non Refundable</label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="fr">
+                                                    <div class="jplist-group"
+                                                         data-control-type="RfndfilterR"
+                                                         data-control-action="filter"
+                                                         data-control-name="RfndfilterR"
+                                                         data-path=".rfnd" data-logic="or">
+                                                        <div class="clear2"></div>
+                                                        <div class="lft w8">
+                                                            <input value="r" id="Checkbox1" type="checkbox" />
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px">
+                                                            <label for="CheckboxR1">Refundable</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="n" id="Checkbox2" type="checkbox" />
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px">
+                                                            <label for="CheckboxR2">Non Refundable</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="theme-search-results-sidebar-section">
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="FBTY">Fare Type</h5>
+                                            <div class="theme-search-results-sidebar-section-checkbox-list" id="FBTY1">
+                                                <div class="fo">
+                                                    <div class="jplist-group"
+                                                         data-control-type="FareTypefilterO"
+                                                         data-control-action="filter"
+                                                         data-control-name="FareTypefilterO"
+                                                         data-path=".srf" data-logic="or">
+                                                        <div class="clear"></div>
+
+                                                        <div class="lft w80">
+                                                            <label for="CheckboxFTY1" style="width: 100%;">
+                                                                <input value="NRMLF" id="CheckboxFTY1" type="checkbox" />&nbsp;Normal Fare
+                                                            </label>
+                                                        </div>
+                                                        <div class="clear"></div>
+
+                                                        <div class="lft w80">
+                                                            <label for="CheckboxFTY2" style="width: 100%;">
+                                                                <input value="SRF" id="CheckboxFTY2" type="checkbox" />&nbsp;Special Return Fare
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="fr">
+                                                    <hr />
+                                                    <br />
+                                                    <div class="jplist-group"
+                                                         data-control-type="FareTypefilterR"
+                                                         data-control-action="filter"
+                                                         data-control-name="FareTypefilterR"
+                                                         data-path=".srf" data-logic="or">
+                                                        <div class="clear2"></div>
+                                                        <div class="lft w8">
+                                                            <input value="NRMLF" id="CheckboxFTYR1" type="checkbox" />
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px">
+                                                            <label for="CheckboxFTYR1">Normal Fare</label>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="lft w8">
+                                                            <input value="SRF" id="CheckboxFTYR2" type="checkbox" />
+                                                        </div>
+                                                        <div class="lft w80" style="padding-top: 3px">
+                                                            <label for="CheckboxFTYR2">Special Return Fare</label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+
+                                        </div>
+
+                                        <hr />
+
+
+                                        <div class="theme-search-results-sidebar-section">
+                                            <h5 class="theme-search-results-sidebar-section-title" onclick="fltrclick(this.id)" id="DAFT">
+                                                Airline Fare Type
+                                            </h5>
+                                            <div class="theme-search-results-sidebar-section-checkbox-list" id="DAFT1">
+                                                <div class="clear"></div>
+                                                <div id="AirlineFareType" class="FareTypeO theme-search-results-sidebar-section-checkbox-list"></div>
+                                                <div id="AirlineFareTypeR" class="FareTypeR theme-search-results-sidebar-section-checkbox-list"></div>
+                                                <div class="clear1">
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="w95 auto SpecialRTF" id="divFilterRTF" style="padding-top: 10px; display: none;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

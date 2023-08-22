@@ -1,0 +1,3144 @@
+﻿.date input
+{
+	width: 80px;
+}
+
+.search_btn
+{
+	float: right;
+}
+.gobtn
+{
+	height: 20px;
+	width: 90px;
+	float: right;
+	margin: 5px;
+	color: #ff4800;
+	font-weight: bold;
+	background: url(images/gobtn.jpg) no-repeat;
+	border: 0px;
+	cursor: pointer;
+}
+.gobtn:hover
+{
+	color: #ff4800;
+	background: url(images/gobtn_hover.jpg) no-repeat;
+	text-decoration: none;
+}
+#viewall
+{
+	float: right;
+	padding: 5px;
+}
+
+#prevnext
+{
+	background: #fff;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+.booknow a
+{
+	display: block;
+	width: 100px;
+	height: 47px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	line-height: 45px;
+	background: url(../imgs/booknow.png) no-repeat;
+}
+
+.booknow a:hover
+{
+	color: #fffc00;
+	background: url(../imgs/booknow_hover.png) no-repeat;
+}
+.textboxhotel
+{
+	border: 1px #b0c4de solid;
+	color: #333333;
+	font-size: 11px;
+	text-transform: uppercase;
+	width: 165px;
+	height: 15px;
+	background-color: #f3fff3;
+}
+.elementholder
+{
+	width: 100%;
+	margin-top: 2px;
+	float: left;
+}
+/*.element
+{
+	float: left;
+	padding: 0px;
+	width: 50px;
+}
+.element2
+{
+	width: auto;
+	float: left;
+	padding: auto 0px;
+	width: 100%;
+}
+.element3
+{
+	float: left;
+	padding: 0px;
+	width: 50px;
+}
+#hot-search-params
+{
+	float: left;
+	width: 100%;
+}
+*/
+ul#icons
+{
+	margin: 0;
+	padding: 0;
+}
+ul#icons li
+{
+	margin: 2px;
+	position: relative;
+	padding: 4px 0;
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+ul#icons span.ui-icon
+{
+	float: left;
+	margin: 0 4px;
+}
+#buttonAddOpt
+{
+	text-decoration: none;
+	margin-bottom: 5px;
+	color: #333333;
+}
+
+.ui-autocomplete-loading
+{
+	background: white url(    'images/ui-anim_basic_16x16.gif' ) right center no-repeat;
+}
+
+#form
+{
+	border: 1px solid #dbe7f7;
+	padding: 0;
+	margin: 0;
+}
+#form h4
+{
+	background-color: #e1ecfe;
+	color: #13419e;
+	padding: 2px;
+	margin: 0;
+}
+#form input
+{
+	border: 1px solid #d8dae4;
+	width: 100px;
+}
+#form input.date
+{
+	width: 80px;
+}
+#form div
+{
+	margin: 1px 0;
+}
+span.label
+{
+	width: 70px;
+	text-align: left;
+	display: block;
+}
+h1, h2, h3, h4
+{
+	color: #fff;
+	font-family: arial;
+	text-align: center;
+}
+a
+{
+	outline: none;
+	color: #3e3c3c;
+	text-decoration: none;
+	font-weight: normal;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+a.newmore
+{
+	padding: 0 14px 0 0;
+	font-weight: bold;
+	background: url(images/more2.png) no-repeat right;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+}
+a.newmore:hover
+{
+	text-decoration: none;
+}
+a.more
+{
+	color: Blue;
+	font-size: 12px;
+	text-decoration: none;
+}
+a.more:hover
+{
+	color: Blue;
+	font-size: 12px;
+	text-decoration: underline;
+	clear: both;
+	background-color: #9C9B9D;
+}
+.style1
+{
+	width: 10%;
+}
+.style2
+{
+	width: 11%;
+}
+.style3
+{
+	width: 64px;
+}
+
+.t1
+{
+	border: 1px solid #223e53;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-o-border-radius: 10px 10px 0 0;
+	-khtml-border-radius: 10px 10px 0 0;
+	margin: 0 auto;
+	width: 70%;
+	padding: 10px;
+	line-height: 22px;
+	text-align: justify;
+	background-color: White;
+	font-size: 12px;
+}
+.textboxd
+{
+	font-size: 13px;
+}
+.t2
+{
+	margin: 0 auto;
+	width: 99%;
+	line-height: 22px;
+	text-align: justify;
+}
+.finalbtn
+{
+	height: 23px;
+	width: 78px;
+	background: url(Images/finalbtn.png);
+	float: right;
+	cursor: pointer;
+	border: none;
+}
+.finalbtn:hover
+{
+	background-position: 0 -23px;
+}
+
+.legend
+{
+	border: thin solid #006600;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #006600;
+}
+.fieldset
+{
+	padding: 5px;
+	border: 2px solid #006600;
+}
+.hoteltext
+{
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 20px;
+}
+
+.htltext
+{
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 20px;
+	font-weight: bold;
+}
+.hoteltextinner
+{
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 10px;
+	height: 20px;
+}
+.fl span
+{
+	float: left;
+	margin: 0 8px;
+	font-size: 18px;
+	color: #9b2c29;
+	font-weight: bold;
+}
+
+.fl img
+{
+	clear: both;
+	padding-top: 3px;
+	float: right;
+}
+
+.tch
+{
+	color: #014768;
+	font-size: 18px;
+}
+.cic_htl
+{
+	font-weight: bold;
+	font-size: 12px;
+	margin: 4px 0px 4px 10px;
+}
+.cic
+{
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 4px 0px 4px 10px;
+}
+.cic2
+{
+	float: left;
+	width: 50px;
+}
+
+.psb_dd
+{
+	background-color: #f3fff3;
+	border: #b0c4de 1px solid;
+	font-size: 11px;
+	padding: 0 4px;
+	width: 92px;
+}
+.h2
+{
+	font-weight: bold;
+	color: #5b5a59;
+}
+.psgoptionhtl
+{
+	border: 0px #b0c4de solid;
+	margin: 0px auto;
+	width: 100%;
+	float: left;
+	padding: 2px 0px 5px 0px;
+}
+.hoteltitleul
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 3px 0px;
+	list-style: none;
+	float: left;
+	width: 100%;
+	background-color: #f3f5f5;
+	height: 18px;
+}
+.hoteltitleli3
+{
+	list-style-type: none;
+	margin: 3px 0px 0px 0px;
+	display: inline;
+	float: left;
+	text-align: right;
+	padding-left: 5px;
+	color: #333333;
+	font-weight: bold;
+}
+.passengerul
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+.passengerli
+{
+	margin: 2px 0px 0px 0px;
+	float: left;
+	padding-bottom: 5px;
+	width: 200px;
+}
+.combobox
+{
+	border: 1px #b0c4de solid;
+	background-color: #f3fff3;
+	color: #333333;
+	font-size: 11px;
+}
+.mainselector
+{
+	margin: auto;
+	padding: inherit;
+}
+.element
+{
+	float: left;
+	padding: 0;
+	width: 80px;
+	text-align: center;
+}
+.element2
+{
+	width: auto;
+	float: left;
+	padding: auto 0px;
+	width: 100%;
+}
+.element3
+{
+	float: left;
+	padding: 0px;
+	width: 50px;
+}
+#hot-search-params
+{
+	float: left;
+	width: 100%;
+}
+.list ul
+{
+	margin: 0px;
+}
+.list li
+{
+	margin: 5px 0 5px -40px;
+	padding-left: 10px;
+	list-style-type: none;
+	background: #ffefc2;
+	cursor: pointer;
+	height: 23px;
+	line-height: 23px;	
+}
+.list li:hover
+{
+	background: #feba02;
+	color: #a70107;
+}
+.list li a
+{
+	color: #ffccff;
+}
+.admin a
+{
+	font-size: 16px;
+	font-style: italic;
+	color: Aqua;
+}
+
+.admin a:hover
+{
+	text-decoration: none;
+	color: #ffde00;
+}
+
+.Text
+{
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.TextBig
+{
+	font-family: 'trebuchet MS';
+	font-size: 12px;
+	text-transform: capitalize;
+}
+.Heading
+{
+	font-size: 30px;
+	color: #0066CC;
+}
+.btn
+{
+	height: 28px;
+	width: 105px;
+	line-height: 27px;
+	text-align: center;
+	background: url(Image/button.png);
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover
+{
+	background-position: 0 -28px;
+}
+.Grid
+{
+	background-position: url(   'Image/mbg1.png' );
+	height: 35px;
+	line-height: 35px;
+	background: url(   'Image/mbg1.png' );
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: bold;
+	font-family: 'trebuchet MS';
+	font-size: 13px;
+}
+.GridContent
+{
+	color: #000000;
+	font-family: 'trebuchet MS';
+	font-size: 12px;
+}
+.Proxy
+{
+	padding: 4px 2px;
+	color: #fff;
+	background-color: #006600;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: arial, Helvetica, sans-serif;
+	border-left-color: #006600;
+}
+.Hotel_2_1
+{
+	border: 1px solid #b1c8f1;
+}
+
+
+.hotel_2_1_main
+{
+	height: 20px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.hotel_2_1_top
+{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 5px;
+	background: url(Images/btnbgk.jpg);
+	color: #fff;
+	font-weight: bold;
+}
+
+.hotel_2_1_top_i
+{
+	padding: 5px 0px;
+	margin-bottom: 13px;
+	height: auto;
+}
+.Hotel_2_2
+{
+	width: 76%;
+	margin-left: 1%;
+	float: left;
+}
+.Hotel_Div
+{
+	border: 1px solid #9B9B9B;
+	-khtml-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	margin: 0 0 5px 0;
+	padding: 5px 0px;
+	width: 99%;
+}
+.Hotel_Div_T
+{
+	background: url(tbd.gif);
+	width: 98%;
+	height: 25px;
+	clear: both;
+	padding: 0 1%;
+	line-height: 25px;
+}
+.Hotel_Div_T img
+{
+	vertical-align: text-top;
+}
+
+.Hotel_Div_B_1
+{
+	width: 65%;
+	height: 22px;
+	margin: 1%;
+	float: left;
+}
+
+.Hotel_Div_B_1 img
+{
+	border: 3px solid #e9e5e5;
+}
+
+.Hotel_Div_B_2
+{
+	width: 26%;
+	float: right;
+	height: auto;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: right;
+	background: #f3f5f5;
+}
+.abcd
+{
+	vertical-align: text-top;
+	height: 15px;
+}
+
+.SMALLCAPS
+{
+	text-transform: capitalize;
+}
+.hotel_sort
+{
+	float: left;
+	width: 90%;
+	background: url(images/sort12.jpg);
+	height: 75px;
+	margin-bottom: 5px;
+	line-height: 25px;
+}
+
+.hotel_sort_I
+{
+	margin: 0 4px;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	font-weight: bold;
+	color: #223e53;
+}
+
+.hotel_sort_I img
+{
+	vertical-align: middle;
+	top: 100px;
+}
+
+.buttonnew
+{
+	height: 25px;
+	width: 106px;
+	line-height: 25px;
+	background: url('../Images/btnnew.png');
+	cursor: pointer;
+	border: 0px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.buttonnew:hover
+{
+	background-position: 0 -30px;
+	text-decoration: underline;
+}
+
+.ButtonAvalibilty
+{
+	height: 24px;
+	width: 80px;
+	line-height: 24px;
+	background: url('../Images/btnbgk.jpg');
+	cursor: pointer;
+	border: 0px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	margin-right: 10px;
+	float: left;
+	-ms-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-khtml-border-radius: 5px 5px 0 0;
+}
+
+.ButtonAvalibilty:hover
+{
+	background-position: 0 -0px;
+	text-decoration: underline;
+	color: #fff;
+}
+.Go
+{
+	height: 30px;
+	width: 48px;
+	line-height: 30px;
+	background: url('../Images/Go.png' );
+	cursor: pointer;
+	border: 0px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.Go:hover
+{
+	background-position: 0 -30px;
+	text-decoration: underline;
+}
+.red
+{
+	color: #ffffff;
+}
+#container
+{
+	width: 980px;
+	margin: 0 auto;
+}
+.top_left
+{
+	float: left;
+	width: 721px;
+}
+.top_right
+{
+	width: 250px;
+	float: right;
+	margin-left: 5px;
+}
+.header
+{
+	height: 221px;
+}
+.pic_trans
+{
+	float: left;
+	width: 716px;
+	height: 186px;
+}
+.flsh_part
+{
+	float: left;
+	width: 422px;
+	height: 172px;
+	margin-left: 5px;
+}
+#MainMenu
+{
+	width: 80%;
+	height: 28px;
+	border-top: 1px solid #ffb700;
+	background: url(images/menubg.jpg);
+}
+#tab
+{
+	top: 0;
+	height: 0;
+	background: repeat-x top;
+	margin: 0;
+}
+#tab ul
+{
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#tab li
+{
+	display: inline;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#tab a
+{
+	text-decoration: none;
+	border: 0;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#tab a span
+{
+	display: block;
+	font-size: 11px;
+	color: #3e3c3c;
+	font-weight: bold;
+	line-height: 25px;
+	padding: 0 13px;
+}
+
+#tab a:hover, #tab li.item_active a
+{
+	background: #fdd637;
+}
+#tab a:hover span, #tab li.item_active a span
+{
+	background-position: left bottom;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+.dropmenudiv
+{
+	position: absolute;
+	top: 0;
+	float: left;
+	display: block;
+	visibility: hidden;
+	border: 0;
+	background: #fdd637;
+	z-index: 1000;
+	text-decoration: none;
+	padding: 0;
+}
+.dropmenudiv ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.dropmenudiv li
+{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.dropmenudiv img
+{
+	display: inline;
+	margin-top: 9px;
+	margin-right: 2px;
+}
+.dropmenudiv a:link, .dropmenudiv a:visited
+{
+	width: 188px;
+	display: block;
+	border: 0;
+	color: #3b3a3a;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+.dropmenudiv a span
+{
+	display: block;
+	line-height: 25px;
+	font-family: tahoma;
+	font-size: 11px;
+	float: none;
+	padding: 0 13px;
+}
+.dropmenudiv a:hover
+{
+	border: 0;
+	background: #ffb700;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+.dropmenudiv a:hover span
+{
+	background-position: right bottom;
+	color: #fff;
+	font-weight: 700;
+}
+.form
+{
+	width: 696px;
+	margin-top: 40px;
+}
+.tab
+{
+	width: auto;
+	height: 25px;
+	background-color: #223e53;
+	font-family: tahoma;
+	position: absolute;
+	top: -35px;
+	z-index: 80;
+	display: inline;
+	left: 0px;
+}
+ul.tab_menu
+{
+	list-style-type: none;
+	display: block;
+	width: 500px;
+	height: 25px;
+	margin: 0px;
+	padding-left: 15px;
+	background: none;
+}
+
+ul.tab_menu li
+{
+	display: inline;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+a.hotel_form_tab:link, a.hotel_form_tab:visited
+{
+	display: block;
+	float: left;
+	padding: 0px;
+	margin: 0;
+	width: 169px;
+	height: 42px;
+	margin-left: 3px;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+}
+
+a.hotel_form_tab_selected:link, a.hotel_form_tab_selected:visited
+{
+	display: block;
+	float: left;
+	padding: 0px;
+	margin: 0;
+	width: 169px;
+	height: 42px;
+	margin-left: 3px;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+}
+
+a.flight_form_tab:link, a.flight_form_tab:visited
+{
+	display: block;
+	float: left;
+	padding: 0px;
+	margin: 0;
+	width: 169px;
+	height: 42px;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+}
+
+a.flight_form_tab_selected:link, a.flight_form_tab_selected:visited
+{
+	display: block;
+	float: left;
+	padding: 0px;
+	margin: 0;
+	width: 169px;
+	height: 42px;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+}
+a.hotel_form_tab:hover
+{
+	color: #000;
+}
+a.flight_form_tab:hover
+{
+	color: #000;
+}
+.form_active
+{
+	margin-left: 20px;
+	width: 696px;
+	height: 300px;
+	position: relative;
+	margin-top: 25px;
+}
+
+/*-------------------for flight--------------------*/
+
+.input
+{
+	width: 87px;
+	height: 12px;
+	margin-left: 5px;
+}
+
+.roundcityinput
+{
+	width: 80px;
+	height: 12px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.input1
+{
+	width: 47px;
+	height: 13px;
+	margin-left: 5px;
+	vertical-align: top;
+}
+
+.formtext
+{
+	padding-left: 5px;
+}
+
+.checkbox
+{
+	padding-left: 15px;
+}
+
+.formtext_to
+{
+	padding-left: 15px;
+}
+
+.list
+{
+	font-family: tahoma;
+	font-size: 10px;
+	vertical-align: middle;
+	width: 90px;
+	height: 20px;
+}
+
+.listtime
+{
+	font-family: tahoma;
+	font-size: 12px;
+	padding-left: 5px;
+	vertical-align: middle;
+	width: 90px;
+	height: 17px;
+}
+
+.cabin
+{
+	font-family: Tahoma;
+	font-size: 11px;
+	vertical-align: middle;
+	width: 120px;
+	height: 20px;
+}
+.listdate
+{
+	font-size: 10px;
+	vertical-align: middle;
+	width: 35px;
+	height: 20px;
+}
+
+.hotels
+{
+	font-family: tahoma;
+	font-size: 24px;
+	float: left;
+	padding-left: 10px;
+	color: #CC6600;
+}
+
+.hotelstext
+{
+	padding-left: 25px;
+}
+
+.hotelsinput
+{
+	width: 120px;
+	height: 20px;
+	margin-left: 25px;
+	vertical-align: middle;
+}
+
+.hotelsinput1
+{
+	width: 120px;
+	height: 15px;
+	margin-left: 25px;
+	vertical-align: middle;
+}
+
+.border
+{
+	border-bottom: #CC9900 dotted 1px;
+	border-top: #CC9900 dotted 1px;
+	border-left: #CC9900 dotted 1px;
+	border-right: #CC9900 dotted 1px;
+}
+
+/*-----------------------right------------*/
+.ticket_book
+{
+	width: auto;
+	height: 142px;
+}
+.ticket_book ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	display: block;
+	float: left;
+}
+.ticket_book ul li
+{
+	display: inline;
+}
+.ticket_book img
+{
+	display: block;
+	float: left;
+}
+.book_image
+{
+	clear: both;
+	display: block;
+	width: 205px;
+	height: 31px;
+}
+
+.logo img
+{
+	clear: both;
+	display: block;
+}
+
+/*	section_two-------------*/
+.section_two
+{
+	margin-top: 10px;
+}
+
+.best_seller
+{
+	clear: both;
+	display: inline;
+	float: left;
+	width: 601px;
+	background: #ffffff;
+	margin-left: 20px;
+}
+
+.best_seller h1
+{
+	font-size: 20px;
+	color: #42150f;
+	font-family: Verdana, Tahoma;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-weight: normal;
+	border-bottom: 1px dashed #42150f;
+}
+.transition
+{
+	width: 602px;
+	height: 259px;
+	position: relative;
+}
+.links
+{
+	position: absolute;
+	top: 16px;
+	left: 211px;
+	width: 348px;
+	height: 94px;
+	z-index: 1;
+}
+.float_link
+{
+	display: inline;
+	float: left;
+	width: 92px;
+	margin-top: 12px;
+	margin-left: 23px;
+}
+.float_link ul
+{
+	list-style-type: none;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+.float_link ul li
+{
+	padding-bottom: 3px;
+}
+.float_link a
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.float_link a:hover
+{
+	color: #000;
+	text-decoration: underline;
+}
+
+.currency_con
+{
+	width: 206px;
+	display: block;
+	margin-top: 10px;
+	background: #f9de85;
+	border: 1px solid #775e06;
+}
+
+.latest_promo
+{
+	float: right;
+	width: 350px;
+	margin-right: 5px;
+}
+.latest_promo_head
+{
+	margin-left: 5px;
+	width: 324px;
+	height: 39px;
+}
+.latest_promo_head h1
+{
+	font-size: 20px;
+	color: #ffffff;
+	font-family: Verdana, Tahoma;
+	padding-bottom: 10px;
+	padding-top: 8px;
+	padding-left: 10px;
+	font-weight: normal;
+}
+.latest_news
+{
+	margin-left: 5px;
+	width: 304px;
+	background: #fff;
+	color: #000;
+	font-size: 10px;
+	font: Tahoma;
+	padding: 10px;
+}
+.news_block
+{
+	padding: 2px;
+	margin-bottom: 2px;
+}
+.news_block p
+{
+	padding-top: 20px;
+	padding-left: 5px;
+}
+.blank
+{
+	margin-top: 10px;
+	width: 199px;
+	height: 150px;
+}
+.connecting_culture
+{
+	width: 180px;
+	height: 66px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/*----------------------flash section boxes------------*/
+.boxes
+{
+	width: 915px;
+	height: 155px;
+	margin-left: 20px;
+	margin-top: 15px;
+}
+.boxes div
+{
+	width: 173px;
+	height: 147px;
+	float: left;
+	padding-left: 10px;
+}
+.boxes img
+{
+	border: none;
+}
+
+/*-----------------------------------------------------footer----------------*/
+.footer
+{
+	width: 100%;
+	height: auto;
+	border-top: 2px solid #ffffff;
+	padding-bottom: 30px;
+}
+.news_letter
+{
+	margin-top: 10px;
+	width: auto;
+	height: 34px;
+}
+.news_forms
+{
+	display: inline;
+	float: left;
+	width: 450px;
+	margin-top: 7px;
+	margin-left: 200px;
+}
+.b_b
+{
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	width: 270px;
+	color: #ffffff;
+}
+
+.footer_nav
+{
+	width: 810px;
+	margin: 13px auto;
+	clear: both;
+	font-size: 12px;
+	font-family: Verdana, Tahoma;
+}
+
+.footer_nav ul
+{
+	display: block;
+	list-style-type: none;
+}
+
+.footer_nav ul li
+{
+	float: left;
+	width: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-left: 1px solid #ffffff;
+}
+.footer_nav a
+{
+	color: #fbb838;
+	text-decoration: none;
+}
+.footer_nav a:hover
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+.para
+{
+	width: 933px;
+	margin-left: 23px;
+	margin-top: 5px;
+	color: #ffffff;
+}
+.my_web
+{
+	width: 423px;
+	clear: both;
+	margin: 35px auto 0px auto;
+	font-size: 9px;
+}
+.my_web ul
+{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.my_web li
+{
+	display: block;
+	float: left;
+	padding-left: 15px;
+}
+
+.my_web a
+{
+	color: #ffffff;
+	font-size: 9px;
+	text-decoration: none;
+}
+.my_web a:hover
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+/*-------------------------inner_images------------------*/
+.inner_curve_images
+{
+	width: 690px;
+	height: 265px;
+	margin: 0 auto;
+}
+.inner_images
+{
+	width: 683px;
+	height: 318px;
+	margin: 0 auto;
+}
+.vision
+{
+	margin: 15px auto 0px auto;
+	width: 682px;
+	height: 89px;
+}
+.vision p
+{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: tahoma;
+	color: #471601;
+	padding-left: 18px;
+	padding-top: 27px;
+}
+.inner_contents
+{
+	margin: 15px auto 20px auto;
+	padding: 25px 0px 25px 0px;
+	width: 683px;
+	border: 2px solid #c5ae5e;
+	background: #fff;
+}
+.heading
+{
+	width: 93%;
+	height: 35px;
+	margin: 0 auto;
+	border-bottom: 1px dashed #531c01;
+}
+.heading img
+{
+	margin-top: 0px;
+	cursor: pointer;
+}
+.heading h2
+{
+	float: left;
+	padding-top: 10px;
+	padding-left: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff9000;
+}
+.inner_para
+{
+	width: 93%;
+	padding: 0px;
+	margin: 8px auto 0px auto;
+	color: #531c01;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+	clear: both;
+}
+.inner_para img
+{
+	padding: 8px 10px 0px 0px;
+}
+.updates
+{
+	width: auto;
+	margin-top: 15px;
+}
+.updates_head
+{
+	width: 206px;
+	height: 31px;
+	border: 2px solid #c5ae5e;
+}
+.updates_head h2
+{
+	padding-left: 15px;
+	padding-top: 5px;
+	font-size: 16px;
+	color: #491701;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.updates_news
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 5px;
+	background: #fff;
+	width: 206px;
+	border: 2px solid #ffd14a;
+}
+.updates_news ul
+{
+	width: 170px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+.updates_news ul li
+{
+	list-style: disc;
+	font-size: 13px;
+	color: #491701;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px dashed #430b00;
+}
+.small
+{
+	font-size: 10px;
+	color: #ff9000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.small_head
+{
+	font-weight: bold;
+	font-size: 13px;
+	color: #ff9000;
+	padding-left: 0px;
+	padding-top: 10px;
+	border-bottom: 1px solid;
+	width: 93%;
+	margin: 0 auto;
+}
+.light_brown
+{
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 93%;
+	border-bottom: 1px dashed #531c01;
+	padding-top: 10px;
+}
+.packages_image
+{
+	float: left;
+	width: 165px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.packages_cont
+{
+	float: left;
+	width: 98%;
+}
+ul.ul_list
+{
+	padding-left: 35px;
+	padding-top: 15px;
+	margin-left: 5px;
+	float: left;
+	clear: both;
+	width: 89%;
+	text-align: justify;
+	padding-bottom: 15px;
+}
+ul.ul_list li
+{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: #531d01;
+	font-size: 13px;
+}
+.head_main
+{
+	width: 683px;
+	margin: 0px auto;
+	height: 31px;
+	border: 2px solid #c5ae5e;
+}
+.head_main h2
+{
+	padding-left: 15px;
+	padding-top: 5px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #430b00;
+}
+.bread_cremb
+{
+	width: 680px;
+	margin: 5px auto 5px auto;
+	background: #ddbecf393;
+	border: 2px solid #ccb76e;
+	height: 27px;
+}
+.bread_cremb ul
+{
+	margin: 0 auto;
+	padding-left: 20px;
+	display: block;
+	float: left;
+}
+.bread_cremb ul li
+{
+	display: inline;
+	list-style-type: none;
+	float: left;
+	margin-top: 7px;
+	padding-left: 10px;
+	padding-right: 10px; /*	border-left:1px solid #ccb76e;*/
+}
+.bread_cremb ul li img
+{
+	padding-left: 10px;
+}
+/*currency*/
+.graybox
+{
+	border: solid 1px gray;
+}
+
+#graybox
+{
+	border: solid 1px gray;
+}
+
+.rateText
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	color: #333399;
+	text-align: center;
+}
+
+#smlink
+{
+	font-size: .6em;
+	color: #dedede;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#smlink a:link, #smlink a:visited
+{
+	color: #7e7e7e; /*Was #dedede.*/
+	text-decoration: none;
+}
+
+#smlink a:hover
+{
+	color: #7e7e7e;
+	text-decoration: underline;
+}
+
+.table
+{
+	width: 100%;
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+	display: inline;
+	border-bottom: none;
+	margin-bottom: 5px;
+}
+.section_table
+{
+	height: 30px;
+	width: 200px;
+	float: left;
+	border: none;
+}
+.italics
+{
+	width: 95%;
+	margin: 0 auto;
+	font-size: 13px;
+	font-style: italic;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #531c01;
+	line-height: 1.5;
+	text-align: justify;
+}
+.section_table p
+{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.img_frame
+{
+	display: block;
+	width: 187px;
+	height: 200px;
+	float: left;
+	padding-left: 22px;
+}
+.bodytext
+{
+	font-family: Verdana;
+	font-size: 13px;
+}
+
+.textboxflight
+{
+	border: 1px #223e53 solid;
+	color: #000;
+	font-size: 10px;
+	text-transform: uppercase;
+	width: 100px;
+	height: 13px;
+	padding-left: 3px;
+}
+/*.footerdata{font-family:Verdana; font-size:8pt; color:#999999; line-height:18px; text-align:justify; }*/
+
+.title_profile
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #616161;
+	font-weight: 400;
+}
+.tableborder
+{
+	border: #000000 1px solid;
+	padding: 5px;
+}
+
+
+.tttd
+{
+	height: 18px;
+	padding-left: 5px;
+}
+.ttlink
+{
+	color: #0a9ae5;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: underline;
+	font-weight: normal;
+}
+a.ttlink
+{
+	color: #0a9ae5;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: underline;
+	font-weight: normal;
+}
+a.ttlink:hover
+{
+	color: #0a9ae5;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+.ttlink2
+{
+	color: #0376a6;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.ttlink2
+{
+	color: #0376a6;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.ttlink2:hover
+{
+	color: #01587d;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.greylnk
+{
+	color: #979797;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.greylnk
+{
+	color: #979797;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.greylnk:hover
+{
+	color: #4f4f4f;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.redlnk
+{
+	color: #223e53;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.redlnk
+{
+	color: #223e53;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.redlnk:hover
+{
+	color: #223e53;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+
+.searchflight-wait
+{
+	font-family: Arial, Tahoma, Helvetica, sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	color: #223e53;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 45px;
+}
+.arial13blue
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #223e53;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 54px;
+}
+
+.tablebk2
+{
+	padding-right: 3px;
+	margin-top: 0px;
+	padding-left: 3px;
+	font-weight: normal;
+	font-size: 12px;
+	padding-bottom: 2px;
+	width: auto;
+	color: gray;
+	padding-top: 2px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	height: 20px;
+	background-color: #dcdcdc;
+	text-decoration: none;
+}
+
+.tblcont
+{
+	margin: 5px auto;
+	border: 0px;
+}
+.tblcont2
+{
+	margin: 15px auto;
+	border: 0px;
+}
+.tblcont2td1
+{
+	text-align: left;
+}
+.tblcont2td2
+{
+	text-align: right;
+}
+.divlinehght
+{
+	line-height: 18px;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+.gridhdr
+{
+	font-family: tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #223e53;
+}
+.grid
+{
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	background-color: #ffffff;
+	text-align: center;
+}
+.lnkbtn
+{
+	color: #223e53;
+	font-size: 12px;
+	text-decoration: none;
+}
+.lnkbtn:hover
+{
+	color: #223e53;
+	font-size: 12px;
+	text-decoration: underline;
+	background-color: #ffffff;
+}
+.textboxflight1
+{
+	border: 1px #000059 solid;
+	color: #000;
+	font-size: 12px;
+	text-transform: uppercase;
+	width: 60px;
+	height: 20px;
+	padding-left: 3px;
+}
+.textboxflight2
+{
+	border: 1px #000059 solid;
+	color: #000;
+	font-size: 12px;
+	text-transform: uppercase;
+	width: 80px;
+	height: 20px;
+	padding-left: 3px;
+}
+
+.mGrid
+{
+	width: 100%;
+	background-color: #fff;
+	margin: 5px 0 10px 0;
+	border: solid 1px #223e53;
+	border-collapse: collapse;
+	font: 11px Tahoma;
+	text-align: center;
+	text-transform: uppercase;
+}
+.mGrid td
+{
+	padding: 2px;
+	border: solid 1px #223e53;
+	color: #000;
+}
+.mGrid th
+{
+	padding: 4px 2px;
+	color: #fff;
+	background-color: #223e53;
+	border-left: solid 1px #223e53;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+.mGrid .alt
+{
+	background-color: #fcfcfc;
+}
+.mGrid .pgr
+{
+	background-color: #ffffff;
+	text-align: left;
+}
+.mGrid .pgr table
+{
+	margin: 5px 0;
+	font-size: 0.9em;
+}
+.mGrid .pgr td
+{
+	border-width: 0;
+	padding: 0 6px;
+	font-weight: bold;
+	color: #000;
+	line-height: 12px;
+}
+.mGrid .pgr a
+{
+	color: #666;
+	text-decoration: none;
+}
+.mGrid .pgr a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+
+.mGrid .hdr
+{
+	color: #ffffff;
+}
+
+.mGrid .hdr a
+{
+	color: #ffffff;
+	background-color: #223e53;
+	text-decoration: none;
+}
+.mGrid .hdr a:hover
+{
+	color: #ffffff;
+	background-color: #223e53;
+	text-decoration: none;
+}
+
+.divcls
+{
+	padding: 10px;
+	width: 930px;
+	margin: auto;
+	background: #fff;
+	margin: auto;
+}
+
+.lgntextbox1
+{
+	color: #003366;
+	font-size: 11px;
+	text-transform: uppercase;
+	width: 120px;
+	height: 16px;
+	padding: 3px;
+}
+.gridv
+{
+	background: #223e53;
+	height: 25px;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.searchdiv
+{
+	border: 1px #AA1A95 solid;
+	width: 340px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.serchenginetbl
+{
+	width: 100%;
+}
+.serchreqtbl
+{
+	width: 100%;
+}
+.bgimg
+{
+	background: url(Images/hr-white-line.jpg) repeat-x left center;
+	height: 5px;
+}
+
+.serchtd2
+{
+	text-align: left;
+	padding: 0px auto 0px 5px;
+}
+.inttxtbox
+{
+	border: 1px #AA1A95 solid;
+	height: 18px;
+	width: 90px;
+}
+.datebox
+{
+	height: 15px;
+	width: 60px;
+	font-size: 11px;
+	padding: 0 5px;
+}
+.datepickerimg
+{
+	cursor: pointer;
+}
+
+
+.maindiv
+{
+	border: #223e53 1px solid;
+	margin: 10px auto 10px auto;
+	width: 650px;
+	font-size: 12px;
+	font-family: tahoma,Arial;
+}
+.text1
+{
+	color: #223e53;
+	font-weight: bold;
+}
+.pnrdtls
+{
+	font-size: 12px;
+	color: #223e53;
+	text-align: left;
+	font-weight: bold;
+}
+.pnrdtls1
+{
+	font-size: 12px;
+	color: #223e53;
+	text-align: left;
+}
+.bookdate
+{
+	font-size: 11px;
+	color: #CC6600;
+	text-align: left;
+}
+.flthdr
+{
+	font-size: 11px;
+	color: #CC6600;
+	text-align: left;
+	font-weight: bold;
+}
+.fltdtls
+{
+	font-size: 11px;
+	color: #223e53;
+	text-align: left;
+}
+.text3
+{
+	font-size: 11px;
+	padding: 5px;
+	color: #223e53;
+	text-align: right;
+}
+.hdrtext
+{
+	padding-left: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.hdrtd
+{
+	background-color: #223e53;
+}
+.lnk
+{
+	color: #223e53;
+	text-decoration: underline;
+}
+.lnk:hover
+{
+	color: #223e53;
+	text-decoration: none;
+}
+.contdtls
+{
+	font-size: 12px;
+	padding-top: 8px;
+	padding-bottom: 3px;
+	color: #223e53;
+	font-weight: bold;
+}
+.hrcss
+{
+	color: #CC6600;
+	height: 1px;
+	text-align: left;
+	width: 450px;
+}
+
+.headone
+{
+	float: left;
+	background: #223e53;
+	height: 25px;
+	width: 150px;
+	text-align: center;
+	color: #fff;
+	line-height: 25px;
+	border-right: 1px solid #fff;
+}
+
+.headone a
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+.headone a:hover
+{
+	text-decoration: underline;
+}
+
+.Static_Content
+{
+	width: 920px;
+	padding: 0 30px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	color: #5b5a59;
+	clear: both;
+}
+
+.TktAgency
+{
+	float: right;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	height: 20px;
+	padding-left: 20px;
+}
+
+.TktAgencyHeading
+{
+	font-size: 13px;
+	color: #000000;
+	height: 20px;
+	padding-left: 20px;
+	font-weight: bold;
+}
+.TktHeding
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+	width: 92px;
+	font-weight: bold;
+}
+
+.TktData
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+	width: 245px;
+}
+
+.TktData1
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+}
+
+.HtlTkthead
+{
+	background-color: #223e53;
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: bold;
+	height: 25px;
+	padding-left: 10px;
+}
+
+.TktHtlHeading
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+	font-weight: bold;
+	width: 92px;
+	padding-left: 10px;
+}
+
+.TktHtl
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+	padding-left: 10px;
+}
+
+.HtlRoomHeading
+{
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	height: 29px;
+	width: 74px;
+	padding-left: 10px;
+}
+
+.HtlRoom
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+	width: 20px;
+}
+
+.htlAdtCount
+{
+	font-size: 11px;
+	color: #000000;
+	height: 29px;
+	width: 40px;
+}
+
+.HtltktReference
+{
+	background-color: #F0F0F0;
+	color: #006600;
+	font-size: 13px;
+	font-weight: bold;
+	height: 25px;
+	padding-left: 10px;
+	border: thin solid #000000;
+}
+
+.HtlDayFare
+{
+	background-color: #F5F5F5;
+	font-size: 13px;
+	font-weight: bold;
+}
+.cut
+{
+	text-decoration: line-through;
+}
+.cut1
+{
+	text-decoration: line-through;
+	padding-right: 50px;
+}
+
+#sidelbl
+{
+	float: right;
+	line-height: 22px;
+	height: 22px;
+	padding: 0 10px;
+	color: #101d3f;
+	display: none;
+}
+
+
+.book a
+{
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	width: 80px;
+	float:right;
+	height: 25px;
+	line-height: 25px;
+	background: url(../Images/bookbg.jpg);
+	text-align: center;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-khtml-border-radius: 3px;
+}
+
+.book a:hover
+{
+	text-decoration: underline;
+}
+
+.roomMsg1
+{
+	float: right;
+	position: relative;
+	left: 20px;
+	top:-5px;
+	height:35px;
+}
+
+.roomMsg2
+{
+	background: url(../images/d2.png);
+	width: 10px;
+	float: right;
+	height: 35px;
+	position:relative;
+	top:-5px;
+}
+
+.roomMsg3
+{
+	float: right;
+	background: url(../images/d1.png);
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px 0 5px;
+	color:#fff;
+	position:relative;
+	top:-5px;
+}
+.roomMsg4
+{
+	background: url(../images/d3.png);
+	width: 10px;
+	float: right;
+	height: 35px;
+	position:relative;
+	top:-5px;
+}
+.roomMsg5
+{
+	float: right;
+	margin-right:5px;
+	width: 15px;
+	color:#fff;
+	left: -40px;
+	position: relative;
+}
+.overview
+{
+	width: 98%;
+	font-family: Tahoma;
+	font-size: 11px;
+	padding-left: 10px;
+}
+#image
+{
+	float: right;
+	width: 390px;
+	padding: 5px;
+}
+.image1
+{
+	width: 390px;
+	height: 80px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	margin-left: 0px;
+	margin-top: 0px;
+	scrollbar-height: 3px;
+}
+.gallery_text
+{
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 5px;
+	line-height: 140%;
+	font-size: 14px;
+}
+.TabbedPanels
+{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	clear: none;
+	width: 100%; /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+	background-color: White;
+}
+
+.TabbedPanelsTabGroup
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabbedPanelsTab
+{
+	position: relative;
+	top: 1px;
+	float: left;
+	padding: 4px 10px;
+	margin: 0px 1px 0px 0px;
+	background-color: #DDD;
+	list-style: none;
+	border-left: solid 1px #dbecf3;
+	border-bottom: solid 1px #999;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+.TabbedPanelsTabHover
+{
+	background-color: #dbecf3;
+}
+
+.TabbedPanelsTabSelected
+{
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.TabbedPanelsTab a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.TabbedPanelsContentGroup
+{
+	clear: both;
+	border-left: solid 1px #dbecf3;
+	border-bottom: solid 1px #dbecf3;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+}
+
+.TabbedPanelsContent
+{
+	padding: 10px 15px;
+	text-align: justify;
+	clear: both;
+}
+
+.TabbedPanelsContent p
+{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.TabbedPanelsContentVisible
+{
+}
+
+.VTabbedPanels .TabbedPanelsTabGroup
+{
+	float: left;
+	width: 10em;
+	height: 20em;
+	background-color: #EEE;
+	position: relative;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+	border-left: solid 1px #dbecf3;
+	border-bottom: solid 1px #dbecf3;
+}
+
+.VTabbedPanels .TabbedPanelsTab
+{
+	float: none;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+VTabbedPanels .TabbedPanelsTabSelected
+{
+	background-color: #EEE;
+	border-bottom: solid 1px #999;
+}
+
+.VTabbedPanels .TabbedPanelsContentGroup
+{
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 30em;
+	height: 20em;
+}
+
+/* main css */
+.main
+{
+	width: 100%;
+	background: #f7f7f7;
+	line-height: 20px;
+}
+
+.main_1
+{
+	float: left;
+	padding: 10px 5px;
+	font-size: 12px;
+	line-height: 25px;
+	color: #253869;
+	text-align: left;
+}
+
+.main_1 p
+{
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0px;
+	color: #253869;
+}
+.pic
+{
+	width: 400px;
+	float: left;
+	overflow: auto;
+}
+.pic1
+{
+	width: 40px;
+	float: left;
+	border: 1px solid #C7CFEF;
+	margin: 5px;
+	padding: 2px;
+}
+.pic2
+{
+	padding: 10px;
+	float: left;
+	border: 1px solid #C7CFEF;
+	width: auto;
+	height: auto;
+}
+.maind1
+{
+	border: 2px solid #eee;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	clear: both;
+	margin: 5px 0;
+}
+.d1
+{
+	width: 100%;
+	text-indent: 20px;
+	background: url(../images/b.jpg);
+	font-weight: bold;
+	font-size: 12px;
+	clear: both;
+	height: 25px;
+	line-height: 25px;
+}
+.tddiv
+{
+	float: left;
+	margin: 10px;
+	height: auto;
+	line-height: 25px;
+	text-align: justify;
+	vertical-align:top;
+}
+
+.tddiv a
+{
+	text-align: center;
+	text-decoration: none;
+	line-height: 26px;
+}
+
+.tddiv a:hover
+{
+	color: #000;
+	text-decoration: underline;
+}
+
+#MapPopup_box
+{
+	display: none; /* Hide the DIV */
+	height: 100%;	width: 100%;
+	font-size: 15px;
+	background-image: url(../../Hotel/Images/bg.png);
+	position:absolute;
+	top:130px;	left:0px;
+}
+#Mapcontainer
+{
+	/*background: #d2d2d2; Sample         width:100%;         height:100%;*/
+	color: #000000;	background-color: #F4F4F4;
+	border: 4px solid #444;
+	margin: 0 auto;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	background: url(../../images/button.png);
+}
+a
+{
+	cursor: pointer;
+	text-decoration: none;
+}
+/* This is for the positioning of the Close Link */
+#mappopupBoxClose
+{
+	font-size: 20px;font-weight: 500;
+	line-height: 15px;
+	right: 5px;	top: 5px;	
+	position: absolute;
+	color: #6fa5e2;
+	
+}
+/* start css for verticle center */
+#Mapmnfvc
+{
+	display: table;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+#Mapmnfvc .Mapmnfvc1
+{ #position:absolute;#top:50%;display:table-cell;vertical-align:middle;
+}
+#Mapmnfvc .Mapmnfvc1 .Mapmnfvc2
+{ #position:relative;#top:-50%
+}
+
+/* close css for verticle center */
+
+
+
+#MapPopup_box1
+{
+	display: none;  /* Hide the DIV */
+	 position: absolute;
+	top:803px;	left:470px;
+	height: 200px;	width: 308px;
+	font-size: 15px;
+	background-image: url(../../common/images/bg.png);
+}
+#mapContainer1
+{
+	/*background: #d2d2d2; Sample         width:100%;         height:100%;*/
+	color: #000000;	background-color: #F4F4F4;
+	border: 4px solid #444;
+	margin: 0 auto;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	background: url(../../images/button.png);
+}
+a
+{
+	cursor: pointer;
+	text-decoration: none;
+}
+/* This is for the positioning of the Close Link */
+#MappopupBoxClose1
+{
+	font-size: 20px;font-weight: 500;
+	line-height: 15px;
+	right: 5px;	top: 5px;
+	position: absolute;
+	color: #6fa5e2;
+}
+/* start css for verticle center */
+#Mapmnfvc10
+{
+	display: table;
+	height: 8200px;width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#Mapmnfvc10 .Mapmnfvc11
+{ display:table-cell;vertical-align:middle;
+}
+#Mapmnfvc10 .Mapmnfvc11 .Mapmnfvc12
+{
+    /* #position:relative;#top:-50% */
+}
+
+
+.IconSize
+{
+  width: 20px; height: 20px; 
+}
+.rtng
+ {
+   float: left;
+   margin-left: 20px;
+ }
+ .rtngi
+ {
+  position: relative;
+  top: -7px;
+ }
+.t{width: 67%;}
+
+.txtBox
+    {
+        width: 110px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid;
+        font-size: 11px;
+        -webkit-border-radius: 3px 3px 3px 3px;
+        -moz-border-radius: 3px 3px 3px 3px;
+        -o-border-radius: 3px 3px 3px 3px;
+        padding:0 2px;
+    }
+
+.CheckoutDDL
+{
+	border: 1px solid;
+	font-size: 11px;
+	width: 47px;
+	height:20px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
+}
+
+
+#htlRfndPopup
+{
+  position: absolute;
+  z-index: 3999;
+  visibility: hidden;
+  background: url(../Images/BG.png);
+  top:0px;
+  left:0px;
+  width: 100%;
+  height:200%;
+ }
+.refundbox
+{
+  background: #FFF;
+  margin: auto;
+  margin-top:94px;
+  width:67%;
+  line-height:22px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #272727;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 4px solid #eee;
+  padding:13px;
+}
+
+.txtCalander
+    {
+        width: 100px;
+        background-image: url(../Images/cal.gif);
+        background-repeat: no-repeat;
+        background-position: right;
+        cursor: pointer;
+        border: 1px #D6D6D6 solid;
+        height:22px;
+    }
+
+
+.adult
+{
+    text-align:center;
+    float: left;
+    padding-right: 22px;
+    margin-right: 5px;
+    background:url(../Images/adult.png) no-repeat;
+    background-position:right;
+}
+.child
+{
+    text-align:left;
+    float: right;
+    padding-right: 16px;
+    background:url(../Images/child.png) no-repeat ;
+    font-size: 10px; 
+ background-position:right;
+}
+.CancelLinkDiv
+{
+   width:110px;height: 20px; 
+}
+.Cancellink
+{
+  text-decoration:underline;font-style:italic;font-weight:bold; margin-left:11px;margin-right:11px;
+}
+.CancelDetail
+{
+width:605px; float:right; display: none;    
+}
+.Roomdiscp
+{
+width:443px; float: left; padding-top:2px;
+}
+.FreeCancelletion
+{
+     background:url(../Images/OK.ico) no-repeat ;
+     text-align:right; padding-left: 20px;text-align:right;color:Green;
+}
+.ResultCancele
+{
+     float: right; cursor: pointer; margin-top:11px;font-style:italic; padding-right:11px;
+}
+  /* New CSS Strat from below Date 25/12/13 */
+  .HtlThumbImage
+  {
+     -webkit-border-radius: 10px; -moz-border-radius: 10px;
+     -o-border-radius: 10px; -khtml-border-radius: 10px; 
+     width: 150px; height: 100px; float:left; 
+  }
+ .attraction
+ {
+     width: 443px; padding: 4px 4px 4px 4px; float: left; 
+ }
+ .RoomFacility
+ {
+     width: 211px; padding: 4px 4px 4px 4px; float: left; font-size:11px; font-weight:normal;
+ }
+ .HotelFacilty
+ {
+     width: 211px; padding: 4px 4px 4px 4px; float: left;
+ }
+ 
+ /* new CSS for b2bITZ */
+.Htldiscountrgt {
+	width: 99%;
+	text-indent: 40px;
+	font-weight: bold;
+	height: 20px;
+	line-height:20px;
+	color: #962521;
+	background: #f1f1f1 url(../../hotel/images/deal1.png) left no-repeat;
+	border-bottom: none;
+}
+
+.boxshadow {
+    box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    -o-box-shadow: 0px 0px 3px #888;
+    -moz-box-shadow: 0px 0px 3px #888;
+    -khtml-box-shadow: 0px 0px 3px #888;
+}
+.htlbxmn {
+	text-align: right;
+	width: 99.8%;
+	padding: 0 0 5px 0;
+	margin: 0 0 5px 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+	.htlbxmn .htlbx .htlbximg {
+		float: left;
+		
+		width: 17%;
+		border: 1px solid #f00;
+		border-left: none;
+		border-right: none;
+	}
+
+		.htlbxmn .htlbx .htlbximg img {
+			height: 130px;
+			width: 98%;
+			border: 5px solid #f00;
+			box-shadow: 0px 0px 3px #272727;
+		}
+
+	.htlbxmn .htlbx .htlbx1 {
+		border: 1px solid #d1d1d1;
+		float: left;
+		width: 80%;
+		padding: 5px 1%;
+		min-height: 92px;
+		background: #fff;
+	}
+/*f7f7f7*/
+		.htlbxmn .htlbx .htlbx1:hover {
+			border: 1px solid #ccc;
+			background: #f7f7f7;
+		}
+
+	.htlbxmn .htlbx .htlttl {
+		font-weight: bold;
+		font-size: 16px;
+		text-align: left;
+		color: #494949;
+	}
+
+	.htlbxmn .htlbx .htlvw {
+		width: 20%;
+		float: left;
+	}
+
+	.htlbxmn .htlbx .htlvw .price {
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+	.htlbxmn .htlbx .htlbx1 .htlsrcbx {
+		border: 1px solid #d1d1d1;
+		border-top: none;
+		border-bottom: none;
+		width: 74%;
+		text-align: left;
+		float: left;
+		padding: 0 1.5%;
+		margin:0;
+	}
+
+	.htlbxmn .htlbx .htlbx1 .htlsrcbx span {
+			font-weight: bold;
+		}
+
+	.htlbxmn .htlbx .htlbx1 .bstby {
+		float: right;width: 9px;
+	}
+.discprice {
+	text-decoration: line-through;
+	font-size: 15px; 
+	margin-bottom: 4px;
+}
+.imageHtlDetailsshow
+{
+    margin:.5%; width:15%;height:74px;float:left;vertical-align: top;
+}
+.ffd
+{
+	float: left;
+}
+.lft {
+    float: left;
+}
+.rgt {
+    float: right;
+}
+.br
+{
+	clear: both;
+}
+.clear
+{
+	clear: both;
+}
+.clear1 {
+    clear: both;
+    height: 10px;
+}
+.clear_1
+{
+	clear: both;
+	margin: 5px 0px;
+	height: 5px;
+	border-bottom: 1px dotted #d5d5d5;
+}
+.bld
+{
+ font-weight:bold;
+}
+.underlineitalic {
+    text-decoration: underline;
+    font-style: italic;
+}
+.cursorpointer {
+    cursor: pointer;
+}
+
+.sortoption
+{
+ padding: 4px 10px;
+ border:2px solid #eeeeee;  
+ color:#888888;  
+ line-height:140px;
+}
+.pagingSize
+{
+    width:13px;
+    height:13px;    
+}
+
+.Hoteldisssss
+{
+ color: #101d3f; font-style: italic; font-weight:bold;
+}
+.Htldisssss
+{
+ padding:1%; width:97%; text-align:justify; font-size:12px; font-weight:normal;
+ line-height:20px;
+}
+.allHotelmap
+{
+    margin: auto; background: #fff;border: 1px solid #0066CC;
+    -webkit-border-radius: 10px; -o-border-radius: 10px; -moz-border-radius: 10px;
+}
+
+.FareBreakups
+{
+  position: absolute;
+  z-index: 3999;
+  font-weight:bold;
+  top:29%;
+  left:74%;
+  width: 11%;
+  height:22%;
+  background: #FFF;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #272727;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 4px solid #eee;
+  padding:13px;
+}
+
+.DtlFareBreakups
+{
+  position: absolute;
+  display:none;
+  z-index: 3999;
+  top:65%;
+  left:49%;
+  width: 40%;
+  height:31%;
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px #272727;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border: 2px solid #eee;
+  padding:4px;
+}
+
+.asddfd
+{
+   
+    background-color:#fff;float:right;z-index:9999;padding:15px;font-size:12px; overflow:visible; border-radius: 4px; line-height:130%; border:thin solid #333;
+   
+}
+
+
+.IMG123
+{
+	width:140px;
+	padding: 5px;
+	text-align: center;
+}
+.EXDetailsBreakup
+{
+  position: absolute;
+  z-index: 3999;
+  font-weight:bold;
+  top:16%;
+  left:74%;
+  width: 18%;
+  height:32%;
+  background: #FFF;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #272727;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 4px solid #eee;
+  padding:13px;
+}

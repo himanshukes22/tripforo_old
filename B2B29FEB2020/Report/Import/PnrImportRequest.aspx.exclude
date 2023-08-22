@@ -1,0 +1,297 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterAfterLogin.master" AutoEventWireup="false"
+    CodeFile="PnrImportRequest.aspx.vb" Inherits="Reports_Import_PnrImportRequest" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <link href="../../css/main2.css" rel="stylesheet" type="text/css" />
+    <link href="../../CSS/style.css" rel="stylesheet" type="text/css" />
+    <div class="divcls">
+        <asp:UpdatePanel ID="up1" runat="server">
+            <ContentTemplate>
+                <table cellspacing="5" cellpadding="0" border="0" align="center" class="tbltbl">
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="left" style="width: 60%">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td style="color: #004b91; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+                                                    GDS :
+                                                </td>
+                                                <td align="left" style="font-size: 12px; font-weight: bold; color: #000000; font-family: arial, Helvetica, sans-serif;"
+                                                    colspan="3">
+                                                    <asp:RadioButtonList ID="Imp_Source" runat="server" RepeatDirection="Horizontal"
+                                                        CellPadding="4" CellSpacing="4">
+                                                        <asp:ListItem Selected="True" Value="1A">Amadeus</asp:ListItem>
+                                                        <asp:ListItem Value="1G">Galileo</asp:ListItem>
+                                                        <asp:ListItem Value="1B">Abacus</asp:ListItem>
+                                                    </asp:RadioButtonList>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #004b91; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+                                                    Choose Your Trip :
+                                                </td>
+                                                <td align="left" style="font-size: 12px; font-weight: bold; color: #000000; font-family: arial, Helvetica, sans-serif;"
+                                                    colspan="3">
+                                                    <asp:RadioButtonList ID="rdb_import" runat="server" RepeatDirection="Horizontal"
+                                                        CellPadding="4" CellSpacing="4">
+                                                        <asp:ListItem Selected="True" Value="Domestic">Domestic</asp:ListItem>
+                                                        <asp:ListItem Value="International">International</asp:ListItem>
+                                                    </asp:RadioButtonList>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #004b91; font-size: 12px; font-weight: bold;">
+                                                    Choose Your Trip Type :
+                                                </td>
+                                                <td align="left" style="font-size: 12px; font-weight: bold; color: #000000; font-family: arial, Helvetica, sans-serif;"
+                                                    colspan="3">
+                                                    <asp:RadioButtonList ID="rdb_Triptype" runat="server" RepeatDirection="Horizontal"
+                                                        CellPadding="4" CellSpacing="4">
+                                                        <asp:ListItem Selected="True" Value="O">OneWay</asp:ListItem>
+                                                        <asp:ListItem Value="R">Round Trip</asp:ListItem>
+                                                    </asp:RadioButtonList>
+                                                </td>
+                                            </tr>
+                                            <tr id="TBL_Projects" runat="server">
+                                                <td style="color: #004b91; font-size: 12px; font-weight: bold;">
+                                                    Choose Project :
+                                                </td>
+                                                <td align="left" style="font-size: 14px; font-weight: bold; color: #000000; font-family: arial, Helvetica, sans-serif;"
+                                                    width="120px">
+                                                    <asp:DropDownList ID="DropDownListProject" runat="server" CssClass="textboxflight"
+                                                        Height="20px" Width="120px">
+                                                    </asp:DropDownList>
+                                                </td>
+                                                <td style="padding-left: 5px; color: #004b91; font-size: 13px; font-weight: bold;">
+                                                    Booked By :
+                                                </td>
+                                                <td align="left" style="font-size: 14px; font-weight: bold; color: #000000; font-family: arial, Helvetica, sans-serif;">
+                                                    <asp:DropDownList ID="DropDownListBookedBy" runat="server" CssClass="textboxflight"
+                                                        Height="20px" Width="120px">
+                                                    </asp:DropDownList>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" style="color: #004b91; font-size: 13px; font-weight: normal;">
+                                                    <strong>Pnr Number : </strong>&nbsp;
+                                                </td>
+                                                <td width="50%" colspan="3">
+                                                    &nbsp;&nbsp;
+                                                    <asp:TextBox ID="Txt_pnr" runat="server" CssClass="textboxflight" Width="100px" Height="20px"></asp:TextBox>
+                                                </td>
+                                            </tr>
+                                            <tr style="display: none">
+                                                <td align="right">
+                                                    <strong>ES Office ID :</strong> &nbsp;
+                                                </td>
+                                                <td height="35px" colspan="3">
+                                                    <asp:TextBox ID="txtOfficeid" runat="server"></asp:TextBox>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" width="40%">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="color: #000;
+                                            font-size: 13px; font-weight: bold;">
+                                            
+                                            <tr>
+                                                <td height="25px" style="font-size: 14px; color: #004b91;">
+                                                    Notes :
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    1:- <span style="font-family: arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold;
+                                                        color: #FF3300; height: 20px;">Cash agents will be charged Rs. 50 extra in case
+                                                        of Import being issued without sufficient balance</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25px" style="font-size: 14px; color: #004b91;">
+                                                    Galileo Pnr Import :
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    2:- Domestic Pnr Queue Command : QEB/1ZB/50
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    3:- International Pnr Queue Command : QEB/1ZB/45
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25px" style="font-size: 14px; color: #004b91;">
+                                                    Abacus Pnr Import :
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    4:- Domestic/International Pnr Queue Command : 5WT-8KX8/ON
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="98%">
+                                            <tr>
+                                                <td align="center" colspan="2" height="5px">
+                                                    <asp:UpdateProgress ID="updateprogress" runat="server" AssociatedUpdatePanelID="UP1">
+                                                        <ProgressTemplate>
+                                                            <div style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; overflow: hidden;
+                                                                padding: 0; margin: 0; background-color: #000; filter: alpha(opacity=50); opacity: 0.5;
+                                                                z-index: 1000;">
+                                                            </div>
+                                                            <div style="position: fixed; top: 30%; left: 43%; padding: 10px; width: 20%; text-align: center;
+                                                                z-index: 1001; background-color: #fff; border: solid 1px #000; font-size: 12px;
+                                                                font-weight: bold; color: #000000">
+                                                                Please Wait....<br />
+                                                                <br />
+                                                                <img alt="loading" src="<%= ResolveUrl("~/images/loadingAnim.gif")%>" />
+                                                                <br />
+                                                            </div>
+                                                        </ProgressTemplate>
+                                                    </asp:UpdateProgress>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <%--<span style="font-family: arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold;
+                                            color: #FF3300; height: 20px;">Note: Cash agents will be charged Rs. 50 extra in
+                                            case of Import being issued without sufficient balance<br />
+                                            &nbsp;</span>--%>
+                                        <asp:Button ID="Btn_find" runat="server" CssClass="button" Text="Import" OnClientClick="return validateimport();" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" style="font-weight: bold; font-size: 12px">
+                                        <asp:Label ID="lbl_Errormsg" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding-top: 10px">
+                                        <asp:GridView ID="GridViewshow" runat="server" AutoGenerateColumns="false" CssClass="GridViewStyle"
+                                            GridLines="None">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="Orgin">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_orgin" runat="server" Text='<%#Eval("loc1") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Destination">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_destination" runat="server" Text='<%#Eval("loc2") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Departuredate">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_depdate" runat="server" Text='<%#Eval("Depdate") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Departuretime">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_depttime" runat="server" Text='<%#Eval("Deptime") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Arrivaldate">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_arrdate" runat="server" Text='<%#Eval("ArrDate") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Arrivaltime">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_arrtime" runat="server" Text='<%#Eval("Arrtime") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Airline">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_Airline" runat="server" Text='<%#Eval("Airline") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="FlightNo">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_flno" runat="server" Text='<%#Eval("FlightNumber") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="RBD">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbl_rbd" runat="server" Text='<%#Eval("RBD") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                            <RowStyle CssClass="RowStyle" />
+                                            <EmptyDataRowStyle CssClass="EmptyRowStyle" />
+                                            <PagerStyle CssClass="PagerStyle" />
+                                            <SelectedRowStyle CssClass="SelectedRowStyle" />
+                                            <HeaderStyle CssClass="HeaderStyle" />
+                                            <EditRowStyle CssClass="EditRowStyle" />
+                                            <AlternatingRowStyle CssClass="AltRowStyle" />
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="paxdiv" runat="server">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <asp:Button ID="btn_update" runat="server" Text="Update" CssClass="button" Visible="False" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+        <script type="text/javascript">
+            function validateimport() {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Txt_pnr").value == "") {
+
+                    alert('Please enter PNR NO.');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Txt_pnr").focus();
+                    return false;
+
+                }
+                if (document.getElementById("ctl00_lblCamt").innerHTML.replace("INR", "") < 5000) {
+
+                    alert('your minimum account balance should be greater than or equal to INR. 5000 to send import request.');
+                    return false;
+
+
+                }
+
+                if ($("#ctl00_ContentPlaceHolder1_DropDownListProject option:selected").val() == "Select") {
+                    alert("Please Select Project Id");
+                    $("#ctl00_ContentPlaceHolder1_DropDownListProject").focus();
+                    return false;
+                }
+
+
+                if ($("#ctl00_ContentPlaceHolder1_DropDownListBookedBy option:selected").val() == "Select") {
+                    alert("Please Select Booked By");
+                    $("#ctl00_ContentPlaceHolder1_DropDownListBookedBy").focus();
+                    return false;
+                }
+
+
+            }
+        </script>
+</asp:Content>

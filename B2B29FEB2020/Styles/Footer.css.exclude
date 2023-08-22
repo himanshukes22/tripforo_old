@@ -1,0 +1,23 @@
+﻿#triqui_container
+{
+	/* This is for Container Contiaing the Text*/
+	width: 200%;
+	height: 100px;
+	position: fixed;
+	bottom: 0;
+}
+
+#Footer
+{
+	background-color: Silver;
+	border-top: 1px solid black;
+	height: 150px;
+	text-align: center;
+	display: none;
+}
+
+#triqui_ad_close
+{
+	cursor: pointer;
+	text-decoration: underline;
+}

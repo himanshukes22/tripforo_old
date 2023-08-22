@@ -1,0 +1,1035 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="FltSearch.ascx.vb" Inherits="UserControl_FltSearch" %>
+
+<%@ Register Src="~/UserControl/HotelSearch.ascx" TagPrefix="uc1" TagName="HotelSearch" %>
+<%@ Register Src="~/UserControl/HotelDashboard.ascx" TagPrefix="uc1" TagName="HotelDashboard" %>
+
+<link type="text/css" href="<%=ResolveUrl("~/Styles/jquery-ui-1.8.8.custom.css") %>"
+    rel="stylesheet" />
+
+<style type="text/css">
+    /*.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 0 0;
+}*/
+
+div#ui-datepicker-div.ui-datepicker {
+    width: auto !important;
+}
+
+    .dropdown {
+        /*background: #f8f8f8;*/
+        padding: 20px;
+        /*border-radius: 3px;
+  width: 140px;*/
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.1rem;
+        cursor: pointer;
+        /*box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);*/
+    }
+
+    .fa-angle-down {
+        position: relative;
+        top: 2px;
+        font-size: 1.3rem;
+        transition: transform 0.3s ease;
+    }
+
+    .rotate-dropdown-arrow {
+        transform: rotate(-180deg);
+    }
+
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        border-radius: 4px;
+        margin-top: 8px;
+        width: 160px;
+        padding: 10px;
+        box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.3);
+        background: #fafafa;
+        transform-origin: top left;
+    }
+
+        .dropdown-menu span {
+            padding: 10px;
+            flex-grow: 1;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            .dropdown-menu span:last-child {
+                border: none;
+            }
+
+            .dropdown-menu span:hover {
+                background: #eee;
+            }
+
+    #openDropdown:checked + .dropdown-menu {
+        display: flex;
+        animation: openDropDown 0.4s ease;
+    }
+
+    @keyframes openDropDown {
+        from {
+            transform: rotateX(50deg);
+        }
+
+        to {
+            transform: rotateX(0deg);
+        }
+    }
+</style>
+
+
+<style>
+    .alert-box {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        display: none;
+    }
+
+    .failure {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        display: none;
+    }
+
+    .warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+        display: none;
+    }
+</style>
+
+<style>
+    .circle {
+        border-radius: 50%;
+        margin: -32px;
+        font-size: 2em;
+        z-index: 1011;
+        position: relative;
+        margin-left: -247px;
+        margin-top: 14px;
+        cursor: pointer;
+        border: 2px solid #fff;
+    }
+
+    .fa-exchange {
+        background: #000;
+        color: #FFFFFF;
+        padding: 6px;
+        font-size: 15px;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+        .dis {
+            display: none;
+        }
+    }
+</style>
+
+
+<style type="text/css">
+
+
+    .inp {
+        width: 30px;
+        text-align: center;
+        color: #000;
+        background: none;
+        border: none;
+    }
+
+    .main_dv {
+        width: 100%;
+        float: left;
+        margin-bottom: 13px;
+    }
+
+    .ttl_col {
+        width: 35%;
+        float: left;
+    }
+
+        .ttl_col span {
+            font-size: 10px;
+            color: #a3a2a2;
+            display: block;
+        }
+
+        .ttl_col p {
+            font-size: 13px;
+            color: #000;
+            display: block;
+        }
+
+    .dn_btn {
+        cursor: pointer;
+        background: #ff0000;
+        float: right;
+        text-align: center;
+        padding: 4px 12px;
+        display: block;
+        color: #fff;
+        font-size: 11px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    }
+
+    .innr_pnl {
+        width: 200px;
+        position: relative;
+        /*padding: 10px;*/
+    }
+
+    .dropdown-content-n {
+        /*display:none;*/
+        position: absolute;
+        background-color: #fff;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.45);
+        z-index: 1;
+        top: 497px;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        right: 142px
+    }
+
+    .innr_pnl::before {
+        content: '';
+        position: absolute;
+        left: 2%;
+        top: -15px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #fff;
+        clear: both;
+    }
+
+    .clear {
+        clear: both;
+    }
+</style>
+
+<style type="text/css">
+    .topways > label.active {
+        background: #ffffff;
+        color: #504e70 !important;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 20px;
+        width: 126px;
+    }
+
+    .mail {
+        cursor: pointer;
+    }
+</style>
+
+<script type="text/javascript">
+    $(".btn").click(function () {
+
+        var lable = $(".div").text().trim();
+
+        if (lable == "Hide") {
+            $(".div").text("Show");
+            $(".myText").hide();
+        }
+        else {
+            $(".div").text("Hide");
+            $(".myText").show();
+        }
+
+    });
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        var selector = '.topways label';
+        $(selector).bind('click', function () {
+            $(selector).removeClass('active');
+            $(this).addClass('active');
+        });
+
+    });
+</script>
+
+
+
+
+
+<div class="tab-content">
+
+    <div class="topways theme-search-area-options theme-search-area-options-white theme-search-area-options-dot-primary-inverse clearfix">
+
+        <label class="mail  active" style="color: #fff;">
+            <input type="radio" name="TripType" value="rdbOneWay" id="rdbOneWay" style="display: none;" />
+            One Way</label>
+        &nbsp;&nbsp;
+        <label class=" mail " style="color: #fff;">
+            <input type="radio" name="TripType" value="rdbRoundTrip" id="rdbRoundTrip" style="display: none;" />
+            Round Trip</label>
+
+        <label class="btn btn-primary mail " style="display: none;">
+            <input type="radio" name="TripType" value="rdbMultiCity" id="rdbMultiCity" />
+            Multi-City
+        </label>
+        &nbsp;&nbsp;
+         <label class=" mail " style="color: #fff;">
+            <input type="radio" name="TripType" value="fixed" id="fixed" style="display: none;"/>
+            Fixed-Departure
+        </label>
+
+    </div>
+    <script>
+        //$(document).ready(function () {
+        //    var selector = '.topways div label';
+        //    $(selector).bind('click', function () {
+        //        $(selector).removeClass('active');
+        //        $(this).addClass('active');
+        //    });
+
+        //});
+
+
+    </script>
+
+    <div class="non-fxd">
+
+    <div class="tab-pane active" id="SearchAreaTabs-3" role="tab-panel">
+        <div class="theme-search-area theme-search-area-stacked">
+            <div class="theme-search-area-form">
+                <div class="row" data-gutter="none">
+                    <div class="col-md-5 ">
+                        <div class="row" data-gutter="none">
+                            <div class="col-md-6 col-xs-6 from-des">
+                                <div class="theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr">
+                                   <label class="lb-m" for="exampleInputEmail1">Leaving From:</label>
+                                    <div class="theme-search-area-section-inner">
+                                        <i class="theme-search-area-section-icon lin lin-location-pin"></i>
+                                        <input type="text" name="txtDepCity1" class="theme-search-area-section-input typeahead" placeholder="Departure" data-provide="typeahead" onclick="this.value = '';" id="txtDepCity1" />
+                                        <input type="hidden" id="hidtxtDepCity1" class="" name="hidtxtDepCity1" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa fa-exchange circle interchange dis" id="change" style=""></i>
+                            <div class="col-md-6 col-xs-6 to-arrv">
+                                <div class="theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr">
+                                        <label class="lb-m" for="exampleInputEmail1">Going To:</label>
+                                    <div class="theme-search-area-section-inner">
+                                        <i class="theme-search-area-section-icon lin lin-location-pin"></i>
+                                        <input type="text" name="txtArrCity1" onclick="this.value = '';" id="txtArrCity1" class="theme-search-area-section-input typeahead" data-provide="typeahead" placeholder="Arrival" />
+                                        <input type="hidden" id="hidtxtArrCity1" name="hidtxtArrCity1" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <div class="row" data-gutter="none">
+                            <div class="col-md-4 col-xs-6 from-date" id="one">
+                                <div class="theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr">
+                              <label class="lb-m" for="exampleInputEmail1">Depart Date:</label>
+                                    <div class="theme-search-area-section-inner">
+                                        <i class="theme-search-area-section-icon lin lin-calendar"></i>
+                                        <input type="text" class="theme-search-area-section-input datePickerStart _mob-h" placeholder="dd/mm/yyyy" name="txtDepDate" id="txtDepDate" value="" readonly="readonly" />
+                                        <input type="hidden" class="theme-search-area-section-input _desk-h mobile-picker" name="hidtxtDepDate" id="hidtxtDepDate" value="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-xs-6 to-date" id="Return">
+                                <div class="theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr">
+                                    <label class="lb-m" for="exampleInputEmail1">Return Date:</label>
+                                    <div id="trRetDateRow" class="theme-search-area-section-inner wrap">
+                                        <i class="theme-search-area-section-icon lin lin-calendar"></i>
+                                        <input type="text" placeholder="dd/mm/yyyy" name="txtRetDate" id="txtRetDate" class="theme-search-area-section-input datePickerEnd _mob-h second" value="" readonly="readonly" />
+                                        <input type="hidden" class="theme-search-area-section-input _desk-h mobile-picker" name="hidtxtRetDate" id="hidtxtRetDate" value="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12" id="Traveller">
+                            
+
+                                <div class="pax-des" id="box">
+        <div class="col-md-4 col-xs-4 ad">
+            <label>Adult(12+) Yrs</label>
+            <div class="input-container">
+               
+                <select class="input-field" id="Adult" name="Adult" style="">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-4 ad">
+            <label>Child(2-12) Yrs</label>
+            <div class="input-container">
+                
+                <select class="input-field" name="Child" id="Child" style="">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+
+                </select>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-4 ad2">
+            <label>Infant(0-2) Yrs</label>
+            <div class="input-container">
+               
+                <select class="input-field" name="Infant" id="Infant" style="">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+            </div>
+        </div>
+    </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1">
+                        <button type="button" id="btnSearch" value="Search" class="theme-search-area-submit _mt-0 theme-search-area-submit-no-border theme-search-area-submit-curved ">Search</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div style="display: none;" id="two">
+            <div class="onewayss col-md-4" id="DivDepCity2">
+                <label for="exampleInputEmail1">
+                    Leaving From:</label>
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/flight_dep.png" style="width: 23px; margin-top: -6px;" /></i>
+
+                    <input type="text" name="txtDepCity2" class="input-field" placeholder="Departure City" id="txtDepCity2" />
+                    <input type="hidden" id="hidtxtDepCity2" name="hidtxtDepCity2" value="" />
+                </div>
+
+            </div>
+
+            <div class="onewayss col-md-4">
+                <label for="exampleInputEmail1">
+                    Going To:</label>
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/Flight_Arri.png" style="width: 23px; margin-top: -6px;" /></i>
+
+                    <input type="text" name="txtArrCity2" class="input-field" placeholder="Destination City" id="txtArrCity2" />
+                    <input type="hidden" id="hidtxtArrCity2" name="hidtxtArrCity2" value="" />
+                </div>
+
+            </div>
+            <div class="col-md-4" id="DivArrCity2">
+
+                <label for="exampleInputEmail1">
+                    Depart Date:</label>
+                <div class="input-container">
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+
+                    <input type="text" name="txtDepDate2" id="txtDepDate2" class="input-field" placeholder="dd/mm/yyyy" readonly="readonly" value="" />
+                    <input type="hidden" name="hidtxtDepDate2" id="hidtxtDepDate2" value="" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div style="display: none;" id="three">
+
+            <div class="onewayss col-md-4" id="DivDepCity3">
+
+
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/flight_dep.png" style="width: 23px; margin-top: -6px;" /></i>
+
+                    <input type="text" name="txtDepCity3" class="input-field" placeholder="Departure City" id="txtDepCity3" />
+                    <input type="hidden" id="hidtxtDepCity3" name="hidtxtDepCity3" value="" />
+                </div>
+
+            </div>
+            <div class="onewayss col-md-4">
+
+
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/Flight_Arri.png" style="width: 23px; margin-top: -6px;" /></i>
+                    <input type="text" name="txtArrCity3" class="input-field" placeholder="Destination City" id="txtArrCity3" />
+                    <input type="hidden" id="hidtxtArrCity3" name="hidtxtArrCity3" value="" />
+                </div>
+
+            </div>
+            <div class="col-md-4" id="DivArrCity3">
+
+
+
+
+                <div class="input-container">
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+
+                    <input type="text" name="txtDepDate3" id="txtDepDate3" class="input-field" placeholder="dd/mm/yyyy" readonly="readonly" />
+                    <input type="hidden" name="hidtxtDepDate3" id="hidtxtDepDate3" value="" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div style="display: none;" id="four">
+            <div class="onewayss col-md-4" id="DivDepCity4">
+
+
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/flight_dep.png" style="width: 23px; margin-top: -6px;" /></i>
+
+                    <input type="text" name="txtDepCity4" class="input-field" placeholder="Departure City" id="txtDepCity4" />
+                    <input type="hidden" id="hidtxtDepCity4" name="hidtxtDepCity4" value="" />
+                </div>
+
+            </div>
+            <div class="onewayss col-md-4">
+
+
+                <div class="input-container">
+
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/Flight_Arri.png" style="width: 23px; margin-top: -6px;" /></i>
+
+                    <input type="text" name="txtArrCity4" class="input-field" placeholder="Destination City" id="txtArrCity4" />
+                    <input type="hidden" id="hidtxtArrCity4" name="hidtxtArrCity4" value="" />
+                </div>
+
+            </div>
+            <div class="col-md-4" id="DivArrCity4">
+
+                <div class="input-container">
+
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+
+                    <input type="text" name="txtDepDate4" id="txtDepDate4" class="input-field" placeholder="dd/mm/yyyy" readonly="readonly" />
+                    <input type="hidden" name="hidtxtDepDate4" id="hidtxtDepDate4" value="" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div style="display: none;" id="five">
+            <div class="onewayss col-md-4" id="DivDepCity5">
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/flight_dep.png" style="width: 23px; margin-top: -6px;" /></i>
+                    <input type="text" name="txtDepCity5" class="input-field" placeholder="Departure City" id="txtDepCity5" />
+                    <input type="hidden" id="hidtxtDepCity5" name="hidtxtDepCity5" value="" />
+                </div>
+
+            </div>
+            <div class="onewayss col-md-4">
+                <div class="form-group">
+                    <div class="input-container">
+                        <i class="icon" aria-hidden="true">
+                            <img src="../Images/icons/Flight_Arri.png" style="width: 23px; margin-top: -6px;" /></i>
+                        <input type="text" name="txtArrCity5" class="input-field" placeholder="Destination City" onclick="this.value = '';" id="txtArrCity5" />
+                        <input type="hidden" id="hidtxtArrCity5" name="hidtxtArrCity5" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="DivArrCity5">
+
+                <div class="input-container">
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    <input type="text" name="txtDepDate5" id="txtDepDate5" class="input-field" placeholder="dd/mm/yyyy" readonly="readonly" />
+                    <input type="hidden" name="hidtxtDepDate5" id="hidtxtDepDate5" value="" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div style="display: none;" id="six">
+            <div class="onewayss col-md-4" id="DivDepCity6">
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/flight_dep.png" style="width: 23px; margin-top: -6px;" /></i>
+                    <input type="text" name="txtDepCity6" class="input-field" placeholder="Departure City" id="txtDepCity6" />
+                    <input type="hidden" id="hidtxtDepCity6" name="hidtxtDepCity6" value="" />
+                </div>
+
+            </div>
+
+            <div class="onewayss col-md-4">
+
+                <div class="input-container">
+                    <i class="icon" aria-hidden="true">
+                        <img src="../Images/icons/Flight_Arri.png" style="width: 23px; margin-top: -6px;" /></i>
+                    <input type="text" name="txtArrCity6" class="input-field" placeholder="Destination City" onclick="this.value = '';" id="txtArrCity6" />
+                    <input type="hidden" id="hidtxtArrCity6" name="hidtxtArrCity6" value="" />
+                </div>
+
+            </div>
+            <div class="col-md-4" id="ArrCity6">
+
+                <div class="input-container">
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    <input type="text" name="txtDepDate6" id="txtDepDate6" class="input-field" placeholder="dd/mm/yyyy" readonly="readonly" />
+                    <input type="hidden" name="hidtxtDepDate6" id="hidtxtDepDate6" value="" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" style="display: none;">
+            <div class="col-md-6" id="add">
+                <div class="col-md-4">
+                    <a id="plus" class="pulse btn btn-danger">Add City</a>
+                </div>
+                <div class="col-md-2">
+                    <a id="minus" class="pulse btn btn-danger">Remove City</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12" id="advtravel" onclick="moreoptions()" style="text-align: right; margin-top: 10px; color: #fff;">
+            <div class="">Click here for Class of travel & Airline preference <i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+            &nbsp
+           
+        </div>
+      
+        <div class="advopt" id="advtravelss" style="display: none;">
+            <div class="row-col-gap" data-gutter="10">
+                <div class="col-md-3">
+                    <label style="font-weight: 600;">
+                        Airlines</label>
+                    <div class="theme-payment-page-form-item form-group">
+
+
+                        <input type="text" placeholder="Search By Airlines" class="form-control" name="txtAirline" value="" id="txtAirline" />
+                        <input type="hidden" id="hidtxtAirline" name="hidtxtAirline" value="" />
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+
+                    <label style="font-weight: 600;">
+                        Class Type</label>
+                    <div class="theme-payment-page-form-item form-group">
+                        <i class="fa fa-angle-down"></i>
+                        <select name="Cabin" class="form-control" id="Cabin">
+                            <option value="" selected="selected">--All--</option>
+                            <option value="C">Business</option>
+                            <option value="Y">Economy</option>
+                            <option value="F">First</option>
+                            <option value="W">Premium Economy</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <%--<div id="box" style="display: none;">
+    <div id="div_Adult_Child_Infant" class="dropdown-content-n myText">
+        <div class="innr_pnl">
+            <div class="main_dv">
+                <div class="ttl_col">
+                    <p>Adult</p>
+                    <span>(12+ yrs)</span>
+                </div>
+                <div class="number">
+                    <span class="minus">-</span>
+                    <input type="text" class="inp" value="1" min="1" name="Adult" id="Adult" />
+                    <span class="plus">+</span>
+                </div>
+
+            </div>
+            <div class="main_dv">
+                <div class="ttl_col">
+                    <p>Children</p>
+                    <span>(2+ 12 yrs)</span>
+                </div>
+
+                <div class="number">
+                    <span class="minus">-</span>
+                    <input type="text" class="inp" value="0" min="0" name="Child" id="Child" />
+                    <span class="plus">+</span>
+                </div>
+
+            </div>
+            <div class="main_div">
+
+                <div class="ttl_col">
+                    <p>Infant(s)</p>
+                    <span>(below 2 yrs)</span>
+                </div>
+
+                <div class="number">
+                    <span class="minus">-</span>
+                    <input type="text" class="inp" value="0" min="0" name="Infant" id="Infant" />
+                    <span class="plus Infant">+</span>
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <a href="#" onclick="plus()" class="dn_btn" id="serachbtn">Done</a>
+
+
+        </div>
+    </div>
+</div>--%>
+
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="clear1"></div>
+
+
+<div class="col-md-3 col-xs-12 text-search" id="trAdvSearchRow" style="display: none">
+    <div class="lft ptop10">
+        All Fare Classes
+    </div>
+    <div class="lft mright10">
+        <input type="checkbox" name="chkAdvSearch" id="chkAdvSearch" value="True" />
+    </div>
+    <div class="large-4 medium-4 small-12 columns">
+        Gds Round Trip Fares
+                                
+                                <span class="lft mright10">
+                                    <input type="checkbox" name="GDS_RTF" id="GDS_RTF" value="True" />
+                                </span>
+    </div>
+
+    <div class="large-4 medium-4 small-12 columns">
+        Lcc Round Trip Fares
+                                
+                                <span class="lft mright10">
+                                    <input type="checkbox" name="LCC_RTF" id="LCC_RTF" value="True" />
+                                </span>
+    </div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+    jQuery(function () {
+
+        jQuery('#rdbOneWay').click(function () {
+            jQuery('.fxd').hide();
+            jQuery('.non-fxd').show();
+        });
+
+        jQuery('#rdbRoundTrip').click(function () {
+            jQuery('.fxd').hide();
+            jQuery('.non-fxd').show();
+        });
+
+
+        jQuery('#fixed').click(function () {
+            jQuery('.non-fxd').hide();
+            jQuery('.fxd').show();
+            //jQuery('#div' + $(this).attr('target')).show();
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#advtravel").click(function () {
+            $("#advtravelss").Toggle();
+        });
+
+
+        //$("#Traveller").click(function () {
+        //    $("#box").slideToggle();
+        //});
+        //$("#serachbtn").click(function () {
+        //    $("#box").slideToggle();
+        //});
+
+    });
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#advtravel").click(function () {
+            $("#advtravelss").slideToggle();
+        });
+
+
+        //$("#Traveller").click(function () {
+        //    $("#box").slideToggle();
+        //});
+        //$("#serachbtn").click(function () {
+        //    $("#box").slideToggle();
+        //});
+
+    });
+</script>
+<%--<script type="text/javascript">
+    function plus() {
+        document.getElementById("sapnTotPax").value = (parseInt(document.getElementById("Adult").value.split(' ')[0]) + parseInt(document.getElementById("Child").value.split(' ')[0]) + parseInt(document.getElementById("Infant").value.split(' ')[0])).toString() + ' Traveller';
+    }
+    plus();
+</script>--%>
+
+<script>
+    $(document).ready(function () {
+
+        // $(".interchange").on('click', function () {
+        $(".interchange").unbind().click(function () {
+
+            var pickup = $('#hidtxtDepCity1').val();
+            $('#hidtxtDepCity1').val($('#hidtxtArrCity1').val());
+            $('#hidtxtArrCity1').val(pickup);
+
+            var pickup = $('#txtDepCity1').val();
+            $('#txtDepCity1').val($('#txtArrCity1').val());
+            $('#txtArrCity1').val(pickup);
+
+
+        });
+
+
+
+    });
+</script>
+
+
+
+<script>
+    $('#basic').flagStrap();
+
+    $('.select-country').flagStrap({
+        countries: {
+            "US": "USD",
+            "AU": "AUD",
+            "CA": "CAD",
+            "SG": "SGD",
+            "GB": "GBP",
+        },
+        buttonSize: "btn-sm",
+        buttonType: "btn-info",
+        labelMargin: "10px",
+        scrollable: false,
+        scrollableHeight: "350px"
+    });
+
+    $('#advanced').flagStrap({
+        buttonSize: "btn-lg",
+        buttonType: "btn-primary",
+        labelMargin: "20px",
+        scrollable: false,
+        scrollableHeight: "350px"
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        //$("#advtravel").click(function () {
+        //    $("#advtravelss").slideToggle();
+        //});
+
+
+        $("#Traveller").click(function () {
+            $("#box").show();
+        });
+        $("#serachbtn").click(function () {
+            $("#box").hide();
+        });
+
+    });
+</script>
+
+
+<script>
+    function moreoptions() {
+        var x = document.getElementById("advtravelss");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#countries").msDropdown();
+    })
+</script>
+
+
+
+<script>
+    $(".selectall").click(function () {
+        $(".individual").prop("checked", $(this).prop("checked"));
+    });
+</script>
+
+
+<script type="text/javascript">
+    function plus() {
+        document.getElementById("sapnTotPax").value = (parseInt(document.getElementById("Adult").value.split(' ')[0]) + parseInt(document.getElementById("Child").value.split(' ')[0]) + parseInt(document.getElementById("Infant").value.split(' ')[0])).toString() + ' Traveller';
+    }
+    plus();
+</script>
+<script type="text/javascript">
+    var myDate = new Date();
+    var currDate = (myDate.getDate()) + '/' + (myDate.getMonth() + 1) + '/' + myDate.getFullYear();
+    document.getElementById("txtDepDate").value = currDate;
+    document.getElementById("hidtxtDepDate").value = currDate;
+    document.getElementById("txtRetDate").value = currDate;
+    document.getElementById("hidtxtRetDate").value = currDate;
+    var UrlBase = '<%=ResolveUrl("~/") %>';
+</script>
+
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.4.4.min.js") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-ui-1.8.8.custom.min.js")%>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/change.min.js") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/search3.js?v=1")%>"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+        $("#CB_GroupSearch").click(function () {
+            debugger;
+            if ($(this).is(":checked")) {
+                // $("#box").hide();
+                $("#Traveller").hide();
+                $("#rdbRoundTrip").attr("checked", true);
+                $("#rdbOneWay").attr("checked", false);
+
+            } else {
+                // $("#box").show();
+                $("#Traveller").show();
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+<!--Rotate-->
+
+<!--Rotate-->

@@ -1,0 +1,415 @@
+﻿
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 37px;
+}
+
+.icon {
+    padding: 13px;
+    background: #f1f1f1;
+    color: #272727;
+    min-width: 40px;
+    text-align: center;
+    border-bottom: 0.5px solid #a7a7a7;
+    border-top: 0.5px solid #a7a7a7;
+    border-left: 0.5px solid #a7a7a7;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+    .input-field:focus {
+        border: 0.5px solid dodgerblue;
+        box-shadow: 0px 0px 30px rgba(0, 99, 222, 0.8);
+    }
+
+
+.heading {
+    background-image: url(../Images/menubg.jpg);
+    background-repeat: repeat-x;
+    padding: 5px;
+    border: thin solid #ccc;
+    border-radius: 5px !important;
+}
+
+.bld1 {
+    font-weight: 600;
+}
+
+.CfltFare1 {
+    padding: 1%;
+    width: 25%;
+    border-radius: 10px;
+    margin: auto;
+    top: 0;
+    left: 40%;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 3px 5px #000;
+    margin-top: 200px;
+    border: 2px solid #f1f1f1;
+    z-index: 99999;
+    position: fixed;
+}
+
+.hidepo {
+    display: none !important;
+}
+
+#SeatDetails bld {
+    font-weight: bold;
+}
+
+
+
+
+.gst {
+    width: 100%;
+    border-radius: 4px;
+    float: left;
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    margin-top: 10px;
+    /*padding: 15px 0;*/
+    border-bottom: 3px solid #d2d2d2;
+}
+
+.padTB10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.borderBtm {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.flt-details {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90%;
+}
+
+.padTB10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.padL10 {
+    padding-left: 10px;
+}
+
+.brRadius2 {
+    border-radius: 2px;
+}
+
+.greenBgLt {
+    background-color: #ff5f57;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.white {
+    color: #fff;
+}
+
+.borderAll {
+    border: 1px solid #e6e6e6;
+}
+
+.posRel {
+    position: relative;
+}
+
+.whiteBg {
+    background: #fff;
+}
+
+.bkHalfCirctop {
+    top: -1px;
+    right: 127px;
+}
+
+.bkHalfCircleTop {
+    width: 20px;
+    height: 10px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-top-color: #fff;
+}
+
+.posAbs {
+    position: absolute;
+}
+
+.bkHalfCircbot {
+    bottom: -1px;
+    right: 127px;
+}
+
+.bkHalfCircle {
+    width: 20px;
+    height: 10px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-bottom-color: #fff;
+}
+
+
+.padB5 {
+    padding-bottom: 5px;
+}
+
+.db {
+    display: block;
+}
+
+.ico12 {
+    font-size: 12px;
+}
+
+.ico11 {
+    font-size: 11px;
+}
+
+.greyLter {
+    color: #b3b3b3;
+}
+
+.padT2 {
+    padding-top: 2px;
+}
+
+.padT10 {
+    padding-top: 10px;
+}
+
+.padB5 {
+    padding-bottom: 5px;
+}
+
+.flightImagesNew {
+    max-height: 30px;
+}
+
+.flightImagesNew {
+    max-width: 100%;
+    max-height: 30px;
+    padding-right: 10px;
+}
+
+.greyLt {
+    color: #999;
+}
+
+.padT2 {
+    padding-top: 2px;
+}
+
+.padL20 {
+    padding-left: 20px;
+}
+
+.grey {
+    color: #666;
+}
+
+.padT5 {
+    padding-top: 5px;
+}
+
+.padB10 {
+    padding-bottom: 10px;
+}
+
+.ico13 {
+    font-size: 13px;
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.padLR10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.padLR20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.padT20 {
+    padding-top: 20px;
+}
+
+.backgroundLn {
+    position: relative;
+    z-index: 1;
+}
+
+
+    .backgroundLn:before {
+        border-top: 1px dashed #dfdfdf;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 98%;
+        z-index: -1;
+    }
+
+.oval-2 {
+    width: 7px;
+    height: 7px;
+    background-color: #366db0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.ico20 {
+    font-size: 20px;
+}
+
+.fb {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.fl {
+    float: left;
+}
+
+.brRadius5 {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.crdShdw {
+    -webkit-box-shadow: 0 1px 10px rgb(0 0 0 / 24%);
+    -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 10px rgb(0 0 0 / 24%);
+}
+
+.marginT10 {
+    margin-top: 10px;
+}
+
+.flightImagesNew {
+    max-height: 30px;
+}
+
+.ico18 {
+    font-size: 18px;
+}
+
+.txtTransUpper {
+    text-transform: uppercase;
+}
+
+.fr {
+    float: right;
+}
+
+.alert_msg.info_msg {
+    color: #000;
+    background: #9ad75a38;
+    border-radius: 4px;
+}
+
+    .alert_msg.info_msg .status_info {
+        background: #9ad75a;
+    }
+
+.alert_msg .status_cont {
+    line-height: 18px;
+}
+
+.alert_msg .status_info {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 3px 7px 1px;
+}
+
+.borderBtm {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.greyBg {
+    background: #f5f5f5;
+}
+
+
+.curPoint {
+    cursor: pointer;
+}
+
+.padR5 {
+    padding-right: 5px;
+}
+
+.ico24 {
+    font-size: 24px;
+}
+
+.pad1 {
+    padding: 1px;
+}
+
+.padL0 {
+    padding-left: 0;
+}
+
+.marginB5 {
+    margin-bottom: 5px;
+}
+
+.pad0 {
+    padding: 0 !important;
+}
+
+.alert_msg {
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.posRel {
+    position: relative;
+}

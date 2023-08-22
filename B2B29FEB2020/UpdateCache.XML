@@ -1,0 +1,614 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetItineraryPriceResponse xmlns="http://tempuri.org/">
+      <GetItineraryPriceResult xmlns:a="http://schemas.datacontract.org/2004/07/ACE.Entities" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:ExceptionMessage i:nil="true"/>
+        <a:NSProcessTime>2248</a:NSProcessTime>
+        <a:ProcessTime>2411</a:ProcessTime>
+        <a:Booking>
+          <a:ExceptionMessage i:nil="true"/>
+          <a:NSProcessTime>0</a:NSProcessTime>
+          <a:ProcessTime>0</a:ProcessTime>
+          <a:State>Modified</a:State>
+          <a:RecordLocator/>
+          <a:CurrencyCode>INR</a:CurrencyCode>
+          <a:PaxCount>1</a:PaxCount>
+          <a:SystemCode/>
+          <a:BookingID>0</a:BookingID>
+          <a:BookingParentID>0</a:BookingParentID>
+          <a:ParentRecordLocator/>
+          <a:BookingChangeCode/>
+          <a:GroupName/>
+          <a:BookingInfo>
+            <a:State>Modified</a:State>
+            <a:BookingDate>2018-06-18T07:49:46.47531Z</a:BookingDate>
+            <a:BookingStatus>Default</a:BookingStatus>
+            <a:BookingType/>
+            <a:ChangeAllowed>true</a:ChangeAllowed>
+            <a:ChannelType>Default</a:ChannelType>
+            <a:CreatedAgentID>0</a:CreatedAgentID>
+            <a:CreatedDate>9999-12-31T00:00:00Z</a:CreatedDate>
+            <a:ExpiredDate>9999-12-31T00:00:00Z</a:ExpiredDate>
+            <a:ModifiedAgentID>0</a:ModifiedAgentID>
+            <a:ModifiedDate>9999-12-31T00:00:00Z</a:ModifiedDate>
+            <a:OwningCarrierCode/>
+            <a:PaidStatus>UnderPaid</a:PaidStatus>
+            <a:PriceStatus>Valid</a:PriceStatus>
+            <a:ProfileStatus>Default</a:ProfileStatus>
+          </a:BookingInfo>
+          <a:POS>
+            <a:State>New</a:State>
+            <a:AgentCode>APIINSEVSE</a:AgentCode>
+            <a:OrganizationCode i:nil="true"/>
+            <a:DomainCode>EXT</a:DomainCode>
+            <a:LocationCode>API</a:LocationCode>
+          </a:POS>
+          <a:SourcePOS>
+            <a:State>New</a:State>
+            <a:AgentCode>APIINSEVSE</a:AgentCode>
+            <a:OrganizationCode i:nil="true"/>
+            <a:DomainCode>EXT</a:DomainCode>
+            <a:LocationCode>API</a:LocationCode>
+          </a:SourcePOS>
+          <a:TypeOfSale>
+            <a:State>New</a:State>
+            <a:FareTypes i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <a:PaxResidentCountry>MY</a:PaxResidentCountry>
+            <a:PromotionCode/>
+          </a:TypeOfSale>
+          <a:BookingHold i:nil="true"/>
+          <a:BookingSum>
+            <a:BalanceDue>10018.00000</a:BalanceDue>
+            <a:AuthorizedBalanceDue>10018.00000</a:AuthorizedBalanceDue>
+            <a:SegmentCount>2</a:SegmentCount>
+            <a:PassiveSegmentCount>0</a:PassiveSegmentCount>
+            <a:TotalCost>10018.00000</a:TotalCost>
+            <a:PointsBalanceDue>0</a:PointsBalanceDue>
+            <a:TotalPointCost>0</a:TotalPointCost>
+            <a:AlternateCurrencyCode/>
+            <a:AlternateCurrencyBalanceDue>0</a:AlternateCurrencyBalanceDue>
+          </a:BookingSum>
+          <a:ReceivedBy>
+            <a:State>Clean</a:State>
+            <a:ReceivedBy/>
+            <a:ReceivedReference/>
+            <a:ReferralCode/>
+            <a:LatestReceivedBy/>
+            <a:LatestReceivedReference/>
+          </a:ReceivedBy>
+          <a:RecordLocators i:nil="true"/>
+          <a:Passengers>
+            <a:Passenger>
+              <a:State>New</a:State>
+              <a:PassengerPrograms i:nil="true"/>
+              <a:CustomerNumber/>
+              <a:PassengerNumber>0</a:PassengerNumber>
+              <a:FamilyNumber>0</a:FamilyNumber>
+              <a:PaxDiscountCode/>
+              <a:Names i:nil="true"/>
+              <a:Infant i:nil="true"/>
+              <a:PassengerInfo>
+                <a:State>New</a:State>
+                <a:BalanceDue>0</a:BalanceDue>
+                <a:Gender>Male</a:Gender>
+                <a:Nationality/>
+                <a:ResidentCountry/>
+                <a:TotalCost>0</a:TotalCost>
+                <a:WeightCategory>Male</a:WeightCategory>
+              </a:PassengerInfo>
+              <a:PassengerProgram i:nil="true"/>
+              <a:PassengerFees i:nil="true"/>
+              <a:PassengerAddresses i:nil="true"/>
+              <a:PassengerTravelDocuments i:nil="true"/>
+              <a:PassengerBags i:nil="true"/>
+              <a:PassengerID>0</a:PassengerID>
+              <a:PassengerTypeInfos>
+                <a:PassengerTypeInfo>
+                  <a:State>New</a:State>
+                  <a:DOB>9999-12-31T00:00:00Z</a:DOB>
+                  <a:PaxType>ADT</a:PaxType>
+                </a:PassengerTypeInfo>
+              </a:PassengerTypeInfos>
+              <a:PassengerInfos>
+                <a:PassengerInfo>
+                  <a:State>New</a:State>
+                  <a:BalanceDue>0</a:BalanceDue>
+                  <a:Gender>Male</a:Gender>
+                  <a:Nationality/>
+                  <a:ResidentCountry/>
+                  <a:TotalCost>0</a:TotalCost>
+                  <a:WeightCategory>Male</a:WeightCategory>
+                </a:PassengerInfo>
+              </a:PassengerInfos>
+              <a:PassengerInfants i:nil="true"/>
+              <a:PseudoPassenger>false</a:PseudoPassenger>
+              <a:PassengerTypeInfo>
+                <a:State>New</a:State>
+                <a:DOB>9999-12-31T00:00:00Z</a:DOB>
+                <a:PaxType>ADT</a:PaxType>
+              </a:PassengerTypeInfo>
+            </a:Passenger>
+          </a:Passengers>
+          <a:Journeys>
+            <a:Journey>
+              <a:State>New</a:State>
+              <a:NotForGeneralUse>false</a:NotForGeneralUse>
+              <a:Segments>
+                <a:Segment>
+                  <a:State>Unmapped</a:State>
+                  <a:ActionStatusCode>NNKK</a:ActionStatusCode>
+                  <a:ArrivalStation>CCU</a:ArrivalStation>
+                  <a:CabinOfService> </a:CabinOfService>
+                  <a:ChangeReasonCode/>
+                  <a:DepartureStation>DEL</a:DepartureStation>
+                  <a:PriorityCode/>
+                  <a:SegmentType/>
+                  <a:STA>2018-07-28T07:15:00</a:STA>
+                  <a:STD>2018-07-28T04:55:00</a:STD>
+                  <a:International>false</a:International>
+                  <a:FlightDesignator>
+                    <a:State>New</a:State>
+                    <a:CarrierCode>I5</a:CarrierCode>
+                    <a:FlightNumber> 548</a:FlightNumber>
+                    <a:OpSuffix> </a:OpSuffix>
+                  </a:FlightDesignator>
+                  <a:XrefFlightDesignator i:nil="true"/>
+                  <a:Fares>
+                    <a:Fare>
+                      <a:State>New</a:State>
+                      <a:ClassOfService>Z</a:ClassOfService>
+                      <a:ClassType/>
+                      <a:RuleTariff/>
+                      <a:CarrierCode>AK</a:CarrierCode>
+                      <a:RuleNumber>AAB1</a:RuleNumber>
+                      <a:FareBasisCode>Z01H00</a:FareBasisCode>
+                      <a:FareSequence>6</a:FareSequence>
+                      <a:FareClassOfService>Z</a:FareClassOfService>
+                      <a:FareStatus>Default</a:FareStatus>
+                      <a:FareApplicationType>Route</a:FareApplicationType>
+                      <a:OriginalClassOfService>Z</a:OriginalClassOfService>
+                      <a:XrefClassOfService/>
+                      <a:PaxFares>
+                        <a:PaxFare>
+                          <a:State>New</a:State>
+                          <a:PaxType>ADT</a:PaxType>
+                          <a:PaxDiscountCode/>
+                          <a:FareDiscountCode/>
+                          <a:ServiceCharges>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>FarePrice</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode/>
+                              <a:TicketCode/>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>4404.0000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail/>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>4404.0000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>CUTE</a:ChargeCode>
+                              <a:TicketCode>CUT</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>75.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>DEL-CCU</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>75.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>SGI</a:ChargeCode>
+                              <a:TicketCode>SGI</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>100.000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>DEL-CCU</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>100.000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>PSF</a:ChargeCode>
+                              <a:TicketCode>PSF</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>153.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>DEL-CCU</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>153.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>UDF</a:ChargeCode>
+                              <a:TicketCode>UDF</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>12.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>DEL-CCU</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>12.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>Tax</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>CGST</a:ChargeCode>
+                              <a:TicketCode>CST</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>114.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>DEL-CCU</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>114.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>Tax</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>SGST</a:ChargeCode>
+                              <a:TicketCode>SST</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>114.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>DEL-CCU</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>114.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                          </a:ServiceCharges>
+                        </a:PaxFare>
+                      </a:PaxFares>
+                      <a:ProductClass>EC</a:ProductClass>
+                      <a:IsAllotmentMarketFare>false</a:IsAllotmentMarketFare>
+                      <a:TravelClassCode> </a:TravelClassCode>
+                      <a:FareSellKey>0~Z~~Z01H00~AAB1~~6~X</a:FareSellKey>
+                      <a:InboundOutbound>Both</a:InboundOutbound>
+                      <a:AvailableCount>0</a:AvailableCount>
+                      <a:Status>Active</a:Status>
+                      <a:SSRIndexes i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                    </a:Fare>
+                  </a:Fares>
+                  <a:Legs>
+                    <a:Leg>
+                      <a:State>New</a:State>
+                      <a:ArrivalStation>CCU</a:ArrivalStation>
+                      <a:DepartureStation>DEL</a:DepartureStation>
+                      <a:STA>2018-07-28T07:15:00</a:STA>
+                      <a:STD>2018-07-28T04:55:00</a:STD>
+                      <a:FlightDesignator>
+                        <a:State>New</a:State>
+                        <a:CarrierCode>I5</a:CarrierCode>
+                        <a:FlightNumber> 548</a:FlightNumber>
+                        <a:OpSuffix> </a:OpSuffix>
+                      </a:FlightDesignator>
+                      <a:LegInfo>
+                        <a:State>New</a:State>
+                        <a:AdjustedCapacity>0</a:AdjustedCapacity>
+                        <a:EquipmentType/>
+                        <a:EquipmentTypeSuffix/>
+                        <a:ArrivalTerminal/>
+                        <a:ArrvLTV>330</a:ArrvLTV>
+                        <a:Capacity>0</a:Capacity>
+                        <a:CodeShareIndicator> </a:CodeShareIndicator>
+                        <a:DepartureTerminal/>
+                        <a:DeptLTV>330</a:DeptLTV>
+                        <a:ETicket>false</a:ETicket>
+                        <a:FlifoUpdated>false</a:FlifoUpdated>
+                        <a:IROP>false</a:IROP>
+                        <a:Status>Canceled</a:Status>
+                        <a:Lid>0</a:Lid>
+                        <a:OnTime> </a:OnTime>
+                        <a:PaxSTA>2018-06-18T07:49:46.47531</a:PaxSTA>
+                        <a:PaxSTD>2018-06-18T07:49:46.47531</a:PaxSTD>
+                        <a:PRBCCode/>
+                        <a:ScheduleServiceType> </a:ScheduleServiceType>
+                        <a:Sold>0</a:Sold>
+                        <a:OutMoveDays>0</a:OutMoveDays>
+                        <a:BackMoveDays>0</a:BackMoveDays>
+                        <a:LegNests i:nil="true"/>
+                        <a:LegSSRs/>
+                        <a:OperatingFlightNumber/>
+                        <a:OperatedByText/>
+                        <a:OperatingCarrier/>
+                        <a:OperatingOpSuffix> </a:OperatingOpSuffix>
+                        <a:SubjectToGovtApproval>false</a:SubjectToGovtApproval>
+                        <a:MarketingCode/>
+                        <a:ChangeOfDirection>false</a:ChangeOfDirection>
+                        <a:MarketingOverride>false</a:MarketingOverride>
+                      </a:LegInfo>
+                      <a:OperationsInfo i:nil="true"/>
+                      <a:InventoryLegID>0</a:InventoryLegID>
+                    </a:Leg>
+                  </a:Legs>
+                  <a:PaxBags i:nil="true"/>
+                  <a:PaxSeats i:nil="true"/>
+                  <a:PaxSSRs i:nil="true"/>
+                  <a:PaxSegments>
+                    <a:PaxSegment>
+                      <a:State>New</a:State>
+                      <a:BoardingSequence/>
+                      <a:CreatedDate>9999-12-31T00:00:00Z</a:CreatedDate>
+                      <a:LiftStatus>Default</a:LiftStatus>
+                      <a:OverBookIndicator/>
+                      <a:PassengerNumber>0</a:PassengerNumber>
+                      <a:PriorityDate>9999-12-31T00:00:00Z</a:PriorityDate>
+                      <a:TripType>None</a:TripType>
+                      <a:TimeChanged>false</a:TimeChanged>
+                      <a:POS i:nil="true"/>
+                      <a:SourcePOS i:nil="true"/>
+                      <a:VerifiedTravelDocs/>
+                      <a:ModifiedDate>9999-12-31T00:00:00Z</a:ModifiedDate>
+                      <a:ActivityDate>9999-12-31T00:00:00Z</a:ActivityDate>
+                      <a:BaggageAllowanceWeight>0</a:BaggageAllowanceWeight>
+                      <a:BaggageAllowanceWeightType>Default</a:BaggageAllowanceWeightType>
+                      <a:BaggageAllowanceUsed>false</a:BaggageAllowanceUsed>
+                    </a:PaxSegment>
+                  </a:PaxSegments>
+                  <a:PaxTickets i:nil="true"/>
+                  <a:PaxSeatPreferences i:nil="true"/>
+                  <a:SalesDate>9999-12-31T00:00:00Z</a:SalesDate>
+                  <a:SegmentSellKey>I5~ 548~ ~~DEL~07/28/2018 04:55~CCU~07/28/2018 07:15~</a:SegmentSellKey>
+                  <a:PaxScores i:nil="true"/>
+                  <a:ChannelType>Default</a:ChannelType>
+                </a:Segment>
+              </a:Segments>
+              <a:JourneySellKey>I5~ 548~ ~~DEL~07/28/2018 04:55~CCU~07/28/2018 07:15~</a:JourneySellKey>
+            </a:Journey>
+            <a:Journey>
+              <a:State>New</a:State>
+              <a:NotForGeneralUse>false</a:NotForGeneralUse>
+              <a:Segments>
+                <a:Segment>
+                  <a:State>Unmapped</a:State>
+                  <a:ActionStatusCode>NNKK</a:ActionStatusCode>
+                  <a:ArrivalStation>DEL</a:ArrivalStation>
+                  <a:CabinOfService> </a:CabinOfService>
+                  <a:ChangeReasonCode/>
+                  <a:DepartureStation>CCU</a:DepartureStation>
+                  <a:PriorityCode/>
+                  <a:SegmentType/>
+                  <a:STA>2018-08-01T01:40:00</a:STA>
+                  <a:STD>2018-07-31T23:20:00</a:STD>
+                  <a:International>false</a:International>
+                  <a:FlightDesignator>
+                    <a:State>New</a:State>
+                    <a:CarrierCode>I5</a:CarrierCode>
+                    <a:FlightNumber> 547</a:FlightNumber>
+                    <a:OpSuffix> </a:OpSuffix>
+                  </a:FlightDesignator>
+                  <a:XrefFlightDesignator i:nil="true"/>
+                  <a:Fares>
+                    <a:Fare>
+                      <a:State>New</a:State>
+                      <a:ClassOfService>Z</a:ClassOfService>
+                      <a:ClassType/>
+                      <a:RuleTariff/>
+                      <a:CarrierCode>AK</a:CarrierCode>
+                      <a:RuleNumber>AAB1</a:RuleNumber>
+                      <a:FareBasisCode>Z01H00</a:FareBasisCode>
+                      <a:FareSequence>5</a:FareSequence>
+                      <a:FareClassOfService>Z</a:FareClassOfService>
+                      <a:FareStatus>Default</a:FareStatus>
+                      <a:FareApplicationType>Route</a:FareApplicationType>
+                      <a:OriginalClassOfService>Z</a:OriginalClassOfService>
+                      <a:XrefClassOfService/>
+                      <a:PaxFares>
+                        <a:PaxFare>
+                          <a:State>New</a:State>
+                          <a:PaxType>ADT</a:PaxType>
+                          <a:PaxDiscountCode/>
+                          <a:FareDiscountCode/>
+                          <a:ServiceCharges>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>FarePrice</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode/>
+                              <a:TicketCode/>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>3910.0000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail/>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>3910.0000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>CUTE</a:ChargeCode>
+                              <a:TicketCode>CUT</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>45.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>CCU-DEL</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>45.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>SGI</a:ChargeCode>
+                              <a:TicketCode>SGI</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>100.000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>CCU-DEL</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>100.000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>PSF</a:ChargeCode>
+                              <a:TicketCode>PSF</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>153.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>CCU-DEL</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>153.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>TravelFee</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>UDF</a:ChargeCode>
+                              <a:TicketCode>UDF</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>636.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>CCU-DEL</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>636.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>Tax</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>CGST</a:ChargeCode>
+                              <a:TicketCode>CST</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>101.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>CCU-DEL</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>101.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                            <a:BookingServiceCharge>
+                              <a:ChargeType>Tax</a:ChargeType>
+                              <a:CollectType>SellerChargeable</a:CollectType>
+                              <a:ChargeCode>SGST</a:ChargeCode>
+                              <a:TicketCode>SST</a:TicketCode>
+                              <a:BaseCurrencyCode i:nil="true"/>
+                              <a:CurrencyCode>INR</a:CurrencyCode>
+                              <a:Amount>101.00000</a:Amount>
+                              <a:BaseAmount>0</a:BaseAmount>
+                              <a:ChargeDetail>CCU-DEL</a:ChargeDetail>
+                              <a:ForeignCurrencyCode>INR</a:ForeignCurrencyCode>
+                              <a:ForeignAmount>101.00000</a:ForeignAmount>
+                            </a:BookingServiceCharge>
+                          </a:ServiceCharges>
+                        </a:PaxFare>
+                      </a:PaxFares>
+                      <a:ProductClass>EC</a:ProductClass>
+                      <a:IsAllotmentMarketFare>false</a:IsAllotmentMarketFare>
+                      <a:TravelClassCode> </a:TravelClassCode>
+                      <a:FareSellKey>0~Z~~Z01H00~AAB1~~5~X</a:FareSellKey>
+                      <a:InboundOutbound>Both</a:InboundOutbound>
+                      <a:AvailableCount>0</a:AvailableCount>
+                      <a:Status>Active</a:Status>
+                      <a:SSRIndexes i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                    </a:Fare>
+                  </a:Fares>
+                  <a:Legs>
+                    <a:Leg>
+                      <a:State>New</a:State>
+                      <a:ArrivalStation>DEL</a:ArrivalStation>
+                      <a:DepartureStation>CCU</a:DepartureStation>
+                      <a:STA>2018-08-01T01:40:00</a:STA>
+                      <a:STD>2018-07-31T23:20:00</a:STD>
+                      <a:FlightDesignator>
+                        <a:State>New</a:State>
+                        <a:CarrierCode>I5</a:CarrierCode>
+                        <a:FlightNumber> 547</a:FlightNumber>
+                        <a:OpSuffix> </a:OpSuffix>
+                      </a:FlightDesignator>
+                      <a:LegInfo>
+                        <a:State>New</a:State>
+                        <a:AdjustedCapacity>0</a:AdjustedCapacity>
+                        <a:EquipmentType/>
+                        <a:EquipmentTypeSuffix/>
+                        <a:ArrivalTerminal/>
+                        <a:ArrvLTV>330</a:ArrvLTV>
+                        <a:Capacity>0</a:Capacity>
+                        <a:CodeShareIndicator> </a:CodeShareIndicator>
+                        <a:DepartureTerminal/>
+                        <a:DeptLTV>330</a:DeptLTV>
+                        <a:ETicket>false</a:ETicket>
+                        <a:FlifoUpdated>false</a:FlifoUpdated>
+                        <a:IROP>false</a:IROP>
+                        <a:Status>Canceled</a:Status>
+                        <a:Lid>0</a:Lid>
+                        <a:OnTime> </a:OnTime>
+                        <a:PaxSTA>2018-06-18T07:49:46.47531</a:PaxSTA>
+                        <a:PaxSTD>2018-06-18T07:49:46.47531</a:PaxSTD>
+                        <a:PRBCCode/>
+                        <a:ScheduleServiceType> </a:ScheduleServiceType>
+                        <a:Sold>0</a:Sold>
+                        <a:OutMoveDays>0</a:OutMoveDays>
+                        <a:BackMoveDays>0</a:BackMoveDays>
+                        <a:LegNests i:nil="true"/>
+                        <a:LegSSRs/>
+                        <a:OperatingFlightNumber/>
+                        <a:OperatedByText/>
+                        <a:OperatingCarrier/>
+                        <a:OperatingOpSuffix> </a:OperatingOpSuffix>
+                        <a:SubjectToGovtApproval>false</a:SubjectToGovtApproval>
+                        <a:MarketingCode/>
+                        <a:ChangeOfDirection>false</a:ChangeOfDirection>
+                        <a:MarketingOverride>false</a:MarketingOverride>
+                      </a:LegInfo>
+                      <a:OperationsInfo i:nil="true"/>
+                      <a:InventoryLegID>0</a:InventoryLegID>
+                    </a:Leg>
+                  </a:Legs>
+                  <a:PaxBags i:nil="true"/>
+                  <a:PaxSeats i:nil="true"/>
+                  <a:PaxSSRs i:nil="true"/>
+                  <a:PaxSegments>
+                    <a:PaxSegment>
+                      <a:State>New</a:State>
+                      <a:BoardingSequence/>
+                      <a:CreatedDate>9999-12-31T00:00:00Z</a:CreatedDate>
+                      <a:LiftStatus>Default</a:LiftStatus>
+                      <a:OverBookIndicator/>
+                      <a:PassengerNumber>0</a:PassengerNumber>
+                      <a:PriorityDate>9999-12-31T00:00:00Z</a:PriorityDate>
+                      <a:TripType>None</a:TripType>
+                      <a:TimeChanged>false</a:TimeChanged>
+                      <a:POS i:nil="true"/>
+                      <a:SourcePOS i:nil="true"/>
+                      <a:VerifiedTravelDocs/>
+                      <a:ModifiedDate>9999-12-31T00:00:00Z</a:ModifiedDate>
+                      <a:ActivityDate>9999-12-31T00:00:00Z</a:ActivityDate>
+                      <a:BaggageAllowanceWeight>0</a:BaggageAllowanceWeight>
+                      <a:BaggageAllowanceWeightType>Default</a:BaggageAllowanceWeightType>
+                      <a:BaggageAllowanceUsed>false</a:BaggageAllowanceUsed>
+                    </a:PaxSegment>
+                  </a:PaxSegments>
+                  <a:PaxTickets i:nil="true"/>
+                  <a:PaxSeatPreferences i:nil="true"/>
+                  <a:SalesDate>9999-12-31T00:00:00Z</a:SalesDate>
+                  <a:SegmentSellKey>I5~ 547~ ~~CCU~07/31/2018 23:20~DEL~08/01/2018 01:40~</a:SegmentSellKey>
+                  <a:PaxScores i:nil="true"/>
+                  <a:ChannelType>Default</a:ChannelType>
+                </a:Segment>
+              </a:Segments>
+              <a:JourneySellKey>I5~ 547~ ~~CCU~07/31/2018 23:20~DEL~08/01/2018 01:40~</a:JourneySellKey>
+            </a:Journey>
+          </a:Journeys>
+          <a:BookingComments i:nil="true"/>
+          <a:BookingQueueInfos i:nil="true"/>
+          <a:BookingContacts i:nil="true"/>
+          <a:Payments i:nil="true"/>
+          <a:BookingComponents i:nil="true"/>
+          <a:NumericRecordLocator/>
+        </a:Booking>
+      </GetItineraryPriceResult>
+    </GetItineraryPriceResponse>
+  </s:Body>
+</s:Envelope>

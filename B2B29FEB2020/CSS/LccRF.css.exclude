@@ -1,0 +1,143 @@
+﻿.maintbl
+{
+	width: 1004px;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	line-height: 22px;
+}
+.fltdtlstbl
+{
+	border-collapse: collapse;
+	border-right: 1px solid #CCCCCC;
+}
+.maintd
+{
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+	font-family: Arial;
+	background: url(./images/body_top.png);
+	background: #eee;
+	padding-left: 10px;
+}
+.tbl
+{
+	border-collapse: collapse;
+}
+.tr
+{
+	border-bottom: 1px solid #CCCCCC;
+}
+.tralt
+{
+	border-bottom: 1px solid #CCCCCC;
+	background: #F4F7FF;
+}
+body
+{
+	margin: 5px 5px 5px 5px;
+	font-family: tahoma;
+}
+.hdr
+{
+	padding-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333333;
+}
+.item
+{
+	padding-left: 5px;
+	font-size: 11px;
+	color: #333333;
+}
+.prc
+{
+	padding-left: 5px;
+	font-size: 12px;
+	color: #990000;
+}
+.refnd
+{
+	padding-left: 5px;
+	font-size: 11px;
+	color: #666666;
+	font-style:italic;
+	font-weight:bold;
+}
+.lccfrdiv
+{
+	display: block;
+	position: absolute;
+	border: 1px #ccc solid;
+	background-color: #eee;
+	padding: 5px;
+	font-size: 11px;
+	z-index: 9999;
+	line-height: 22px;
+	font-family: Arial;
+}
+/*width:150px*/
+.hyprlnk
+{
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+.frule
+{
+	font-size: 11px;
+	color: #990000;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration: none;
+}
+.frule:hover
+{
+	font-size: 11px;
+	color: #990000;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration: underline;
+}
+.textbox
+{
+	width: 170px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px #414171 solid;
+	height: 20px;
+	background-color: #FFFFFF;
+}
+.dropbox
+{
+	width: 85px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px #414171 solid;
+	height: 20px;
+	background-color: #FFFFFF;
+}
+.dobbox
+{
+	width: 100px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px #414171 solid;
+	height: 20px;
+	background-color: #FFFFFF;
+}
+.crdlmt
+{
+	width: 150px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px #414171 solid;
+	height: 20px;
+	background-color: #FFFFFF;
+}
+/********Check Out start
+

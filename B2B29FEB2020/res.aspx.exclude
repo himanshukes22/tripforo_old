@@ -1,0 +1,19 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterAfterLogin.master" AutoEventWireup="false" CodeFile="res.aspx.vb" Inherits="res" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+</asp:Content>
+
+   res += '<div  style="width: 100%;font-size:11px;">
+       <div class="w100 rgt">
+           <input type="radio" name="radioPrice" title="' + mainLineNo + '" id="' + OF.items[0].LineNumber + '_radio" value="' + OF.items[0].LineNumber + '" checked>
+           <span style="font-size:13px;font-weight:600;color:#000;"> ₹ ' + OF.items[0].TotalFare + '</span>
+           
+           <span class="spnDiscountShowHide" style="display:none;font-size: 11px;font-weight:400;color:#969696;">|  Net : ₹ ' + OF.items[0].NetFare + ' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                | </span> Inv :' + OF.items[0].TotDis + ' </span>
+
+       </div>'; //' + OB.items[0].NetFare + '
+
+
+
+
+   res += '<div class="row" style="position: inherit;margin-left: 1px;"><span style="font-size:10px;font-weight:900;color: #7a00ff;">' + OF.items[0].AdtFar + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span> | </span><span style="font-size:12px;font-weight:400;color:#969696;">' + OF.items[0].AdtFareType + '</span> |  <i><img src="../Images/icons/airline-seat.png" style="width: 12px;margin-top: -5px;"/></i><span style="font-size:12px;color:orange;font-weight:400;"> ' + OF.items[0].AvailableSeats1 + ' left</span> &nbsp;&nbsp;<a><i><img src="../Images/icons/12-200.png" style="width:12px;    margin-top: -5px;"/></i></a></div><hr style="width: 265px;margin-left: 0px;border-bottom: dotted #848484;position: absolute;"><i><img src="../Images/icons/img_259251.png" style="width: 16px;margin-left: 254px;margin-top: -2px;"/></i></div>'

@@ -1,0 +1,1339 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false"
+    CodeFile="regs.aspx.vb" Inherits="regs" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+
+    <style type="text/css">
+        .logo-holder {
+            width: 210px;
+            height: 210px;
+            position: absolute;
+            left: 43%;
+            top: 6px;
+            background: #f3f3f3;
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px !important;
+        }
+
+        h4:after {
+                background-color: #e4e4e4;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 83%;
+    /*left: 0.5em;
+    margin-right: -50%;*/
+        
+        }
+
+    </style>
+
+
+<%--    <style type="text/css">
+        .w40 {
+            width: 40% !important;
+        }
+
+        .rthead {
+            font-size: 25px;
+            color: #fff;
+            background-color: #ed131c;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .rtmainbgs {
+            /*background: #fff;*/
+            border-radius: 4px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .rtbg {
+            background-color: #0e4ca2;
+        }
+
+        .form-controlrt {
+            display: block;
+            width: 100%;
+            height: 40px !important;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
+        .whtbg {
+            background-color: #fff;
+        }
+
+        .headingregs {
+            background-color: #e2e2e2;
+            height: 40px;
+            width: 100% !important;
+            padding: 1px 10px;
+            color: #000;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>--%>
+
+    <%--<link rel="stylesheet" href="chosen/chosen.css" />
+
+    <script src="chosen/jquery-1.6.1.min.js" type="text/javascript"></script>
+
+    <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+    <link href="CSS/jquery-ui-1.8.8.custom.css" rel="stylesheet" />--%>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+        });
+    </script>
+
+    <script type="text/javascript">
+        function RefreshCaptcha() {
+            var img = document.getElementById("imgCaptcha");
+            img.src = "CAPTCHA.ashx?query=" + Math.random();
+        }
+    </script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.7.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-ui-1.8.8.custom.min.js")%>"></script>
+    <%-- <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.7.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-ui-1.8.8.custom.min.js")%>"></script>
+    ---%>
+
+    <script language="javascript" type="text/javascript">
+        function validateSearch() {
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Fname_txt").value == "") {
+                alert('Specify First Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Fname_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Lname_txt").value == "") {
+                alert('Specify Last Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Lname_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Add_txt").value == "") {
+                alert('Specify Address');
+                document.getElementById("ctl00_ContentPlaceHolder1_Add_txt").focus();
+                return false;
+            }
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_country").value == "India") {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_state").value == "--Select State--") {
+                    alert('Please Select State');
+                    document.getElementById("ctl00_ContentPlaceHolder1_ddl_state").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_ddl_city").value == "") {
+                    alert('Please Select City');
+                    document.getElementById("ctl00_ContentPlaceHolder1_ddl_city").focus();
+                    return false;
+                }
+
+            }
+            else {
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Coun_txt").value == "") {
+                    alert('Specify Country Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Coun_txt").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Stat_txt").value == "") {
+                    alert('Specify State Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Stat_txt").focus();
+                    return false;
+                }
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Other_City").value == "") {
+                    alert('Specify City Name');
+                    document.getElementById("ctl00_ContentPlaceHolder1_Other_City").focus();
+                    return false;
+
+                }
+
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pin_txt").value == "") {
+                alert('Specify Pincode');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pin_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Mob_txt").value == "") {
+                alert('Specify Mobile Number');
+                document.getElementById("ctl00_ContentPlaceHolder1_Mob_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").value == "") {
+                alert('Specify EmailID');
+                document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").focus();
+                return false;
+            }
+
+            var emailPat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            var emailid = document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").value;
+            var matchArray = emailid.match(emailPat);
+            if (matchArray == null) {
+                alert("Your email address seems incorrect. Please try again.");
+                document.getElementById("ctl00_ContentPlaceHolder1_Email_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Agn_txt").value == "") {
+                alert('Specify Agency Name');
+                document.getElementById("ctl00_ContentPlaceHolder1_Agn_txt").focus();
+                return false;
+            }
+            //bipin
+            if (document.getElementById("ctl00_ContentPlaceHolder1_TextBox_NameOnPard").value == "") {
+                alert('Specify Name on Pan Card');
+                document.getElementById("ctl00_ContentPlaceHolder1_TextBox_NameOnPard").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pan_txt").value == "") {
+                alert('Specify Pan No');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pan_txt").focus();
+                return false;
+            }
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Ans_txt").value == "") {
+                alert('Specify Answer');
+                document.getElementById("ctl00_ContentPlaceHolder1_Ans_txt").focus();
+                return false;
+            }
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_TxtUserId").value == "") {
+                alert('Specify Userid');
+                document.getElementById("ctl00_ContentPlaceHolder1_TxtUserId").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value == "") {
+                alert('Specify Password');
+                document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").focus();
+                return false;
+            }
+            else {
+                var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,16}$/;
+                if (!regex.test(document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value)) {
+                    alert("Password must contain:8 To 16 characters atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character'");
+                    document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").focus();
+                    return false;
+                }
+
+                // var patt = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8}");
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value == "") {
+                alert('Specify Confirm Password');
+                document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value != "") {
+                debugger;
+                if (document.getElementById("ctl00_ContentPlaceHolder1_Pass_text").value != document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").value) {
+                    alert("Confirm Password is same as Password");
+                    document.getElementById("ctl00_ContentPlaceHolder1_cpass_txt").focus();
+                    return false;
+                }
+
+                if (confirm("Are you sure!"))
+                    return true;
+                return false;
+            }
+
+        }
+        function phone_vali() {
+            if ((event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32) || (event.keyCode == 45))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+        function vali() {
+            if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 32) || (event.keyCode == 45))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+
+        function vali1() {
+            if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 32) || (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32))
+                event.returnValue = true;
+            else
+                event.returnValue = false;
+        }
+
+        function getKeyCode(e) {
+            if (window.event)
+                return window.event.keyCode;
+            else if (e)
+                return e.which;
+            else
+                return null;
+        }
+        function keyRestrict(e, validchars) {
+            var key = '', keychar = '';
+            key = getKeyCode(e);
+            if (key == null) return true;
+            keychar = String.fromCharCode(key);
+            keychar = keychar.toLowerCase();
+            validchars = validchars.toLowerCase();
+            if (validchars.indexOf(keychar) != -1)
+                return true;
+            if (key == null || key == 0 || key == 8 || key == 9 || key == 13 || key == 27)
+                return true;
+            return false;
+        }
+
+    </script>
+
+
+
+    <section>
+		<div class="tr-register">
+            <div class="logo-holder">
+                <a href="<%ResolveUrl("~/Search.aspx")%>">
+                                    <img src="<%=ResolveUrl("Custom_Design/images/logo_new.png")%>" alt="" style="width: 150px;margin-top: 6px;"/>
+                                </a>
+            </div>
+			<div class="tr-regi-form" style="width:70% !important;background-color: #f3f3f3;box-shadow:none !important;">
+				<h4 style="font-weight: 100;font-size: 30px !important;float:left;border-bottom:1px solid #000">Join Us at richaworldtravels.com for Business</h4>
+                
+				<br />
+			<form>
+                   <h4 style="font-size:16px;float:left;">Personal Information</h4>
+                <div class="col-md-12">
+                        
+					<div class="row">
+                        
+                        
+						<div class="col-md-2">
+							
+                                        <asp:DropDownList ID="tit_drop" CssClass="form-control" runat="server">
+                                            <asp:ListItem Value="Mr.">Mr.</asp:ListItem>
+                                            <asp:ListItem Value="Ms.">Ms.</asp:ListItem>
+                                            <asp:ListItem Value="Mrs.">Mrs.</asp:ListItem>
+                                        </asp:DropDownList>
+                                 
+							
+						</div>
+						<div class="col-md-5">
+							<asp:TextBox ID="Fname_txt" CssClass="psb_dd form-control" runat="server" placeholder="First Name" MaxLength="30"
+                                            onkeypress="return keyRestrict(event,' abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+						</div>
+
+                        <div class="col-md-5">
+							<asp:TextBox ID="Lname_txt" CssClass="psb_dd form-control" placeholder="Last Nmae" runat="server" MaxLength="30"
+                                            onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+						</div>
+
+                        
+                        </div>
+					</div>
+              
+                <div class="col-md-12">
+					<div class="row">
+
+                        <div class="col-md-4">
+							 <asp:TextBox ID="Add_txt" runat="server" CssClass="form-control" placeholder="Address"></asp:TextBox>
+						</div>
+
+                        <div class="col-md-4">
+							 <asp:DropDownList ID="ddl_country" runat="server" CssClass="form-control" AutoPostBack="True">
+                                <%-- <asp:ListItem Selected="True">--Select Country--</asp:ListItem>--%>
+                                            <asp:ListItem Selected="True" Value="India">India</asp:ListItem>
+                                            <asp:ListItem Value="Other">Other</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Coun_txt" CssClass="psb_dd form-control " runat="server" 
+                                            Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+						</div>
+
+
+						<div class="col-md-4">
+							<asp:DropDownList ID="ddl_state" runat="server" AutoPostBack="True" CssClass=" form-control">
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Stat_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"
+                                            Visible="false"></asp:TextBox>
+						</div>
+					</div>
+                    </div>
+
+                <div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4">
+							<input type="text" id="ddl_city" runat="server" class="psb_dd form-control" placeholder="City" style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" />
+                                        <asp:TextBox ID="Other_City" CssClass="psb_dd form-control " runat="server" Style="position: static"
+                                            Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+						</div>
+
+                        <div class="col-md-4">
+							 <asp:TextBox ID="TextBox_Area" CssClass="psb_dd form-control" runat="server" placeholder="Area" MaxLength="20" Style="position: static"
+                                            onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>
+						</div>
+
+                        <div class="col-md-4">
+							<asp:TextBox ID="Pin_txt" CssClass="psb_dd form-control" runat="server" placeholder="Pin Code" MaxLength="8" Style="position: static"
+                                            onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+						</div>
+
+
+					</div>
+                    </div>
+
+
+                
+                <div class="col-md-12">
+                    
+					<div class="row">
+                        <h4 style="font-size:16px;float:left;">Contact Information</h4>
+
+						<div class="col-md-4">
+							<asp:TextBox ID="Ph_txt" CssClass="psb_dd form-control" placeholder="Phone No." runat="server" MaxLength="15" 
+                                                onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+						</div>
+
+                        <div class="col-md-4">
+                             <asp:TextBox ID="Mob_txt" CssClass="psb_dd form-control" placeholder="Mobile No." runat="server" MaxLength="10" 
+                                                onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+                        </div>
+
+                        <div class="col-md-4">
+                             <asp:TextBox ID="Email_txt" CssClass="psb_dd form-control" placeholder="Email" runat="server" ></asp:TextBox>
+                        </div>
+
+					</div>
+                    </div>
+
+                <div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4">
+							<asp:TextBox ID="Aemail_txt" CssClass="psb_dd form-control" runat="server" placeholder="Email 2"></asp:TextBox>
+						</div>
+
+                        <div class="col-md-4">
+                         <asp:TextBox ID="Fax_txt" CssClass="psb_dd form-control" placeholder="Fax No." runat="server" Style="position: static" onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>
+                        </div>
+
+
+					</div>
+                    </div>
+
+
+               
+                <div class="col-md-12">
+                    
+					<div class="row">
+                         <h4 style="font-size:16px;float:left;">Business Information</h4>
+						<div class="col-md-4">
+                            <asp:TextBox ID="Agn_txt" CssClass="psb_dd form-control" placeholder="Business Name" runat="server" MaxLength="50" onkeypress="return keyRestrict(event,' .abcdefghijklmnopqrstuvwxyz1234567890');"></asp:TextBox>
+							</div>
+
+                        <div class="col-md-4">
+                            <asp:TextBox ID="Web_txt" CssClass="psb_dd form-control" placeholder="WebSite" runat="server"></asp:TextBox>
+                        </div>
+
+                        <div class="col-md-4">
+                            <asp:TextBox ID="Stax_txt" CssClass="psb_dd form-control" placeholder="S-Tax No." runat="server" Style="position: static"></asp:TextBox>
+                        </div>
+					</div>
+                </div>
+
+                <div class="col-md-12">
+                <div class="row">
+						<div class="col-md-4">
+                             <asp:TextBox ID="Pan_txt" CssClass="psb_dd form-control" placeholder="PAN No." runat="server"></asp:TextBox>
+							</div>
+
+                    <div class="col-md-4">
+                        <asp:TextBox ID="TextBox_NameOnPard" CssClass="psb_dd form-control" placeholder="Name On PAN" runat="server" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"  MaxLength="20"></asp:TextBox>
+							</div>
+
+                    <div class="col-md-4">
+                        <asp:FileUpload ID="fld_pan" runat="server" CssClass="psb_dd form-control"  />
+
+                                            <div style="display: none;">
+                                                <asp:DropDownList ID="Stat_drop" CssClass="form-control" runat="server" Height="20px" Width="150px">
+                                                    <asp:ListItem Value="TA" Selected="True">Travel Agent</asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="" style="font-size: 11px; color: #0e4faa; font-weight: bold">
+                                                ( Pancard image must be in JPG formate )
+                                            </div>
+							</div>
+					</div>
+			</div>
+
+                 <div class="col-md-12">
+                <div class="row">
+						<div class="col-md-4">
+                            <asp:DropDownList ID="Sales_DDL" runat="server" CssClass="form-control">
+                                <asp:ListItem Value="--Refer By--">--Refer By--</asp:ListItem>
+                            </asp:DropDownList>
+							</div>
+
+                    <div class="col-md-4">
+                        <asp:TextBox ID="Rem_txt" CssClass="psb_dd form-control" placeholder="Remark" runat="server" Style="position: static"></asp:TextBox>
+							</div>
+
+                    <div class="col-md-4">
+                        <asp:FileUpload ID="fld_1" runat="server" CssClass="psb_dd form-control" />
+                       <div style="font-size: 11px; color: #0e4faa; font-weight: bold">( Logo must be in PNG formate and  Size should be (90*70) pixels)</div>
+							</div>
+
+					</div>
+			</div>
+
+
+
+                
+                   <div class="col-md-12">
+                       
+                <div class="row">
+                    <h4 style="font-size:16px;float:left;">Authentication Information</h4>
+						<div class="col-md-4">
+                            <asp:TextBox ID="TxtUserId" runat="server" Style="position: static" MaxLength="20" CssClass="psb_dd form-control" placeholder="User Id" oncopy="return false" onpaste="return false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz1234567890');"></asp:TextBox>
+							</div>
+                    <div class="col-md-4">
+                        <asp:TextBox ID="Pass_text" runat="server" Style="position: static"
+                                                TextMode="Password" MaxLength="16" CssClass="psb_dd form-control" placeholder="Password"></asp:TextBox>
+							</div>
+                    <div class="col-md-4">
+                        <asp:TextBox ID="cpass_txt" CssClass="psb_dd form-control" placeholder="Confirm Password" runat="server" Style="position: static"
+                                                TextMode="Password" MaxLength="16"></asp:TextBox>
+							</div>
+					</div>
+			</div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                         <asp:Button ID="submit" runat="server" Text="Submit" OnClientClick="return validateSearch()"
+                                                CssClass="btn btn-danger" />
+                    </div>
+                </div>
+                </form>
+
+				<p>Are you a already member ? <a href="login.html">Click to Login</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+
+    <div class="rtbg"  style="display:none;">
+        <div class="container" style="line-height: 25px; padding-bottom: 10px;">
+            <div class="row rtmainbgs">
+               
+                <div class="w100" id="table_reg" runat="server"
+                    visible="true" style="margin-top: 0px; padding-bottom: 20px;">
+                    <div class="row">
+
+                        <div class="heading w80 auto">
+                            <div align="center">
+                                <asp:Label ID="lbl_msg" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="20px"
+                                    ForeColor="#FF3300"></asp:Label>
+                            </div>
+                            <div class="clear1"></div>
+
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+
+                                <div class="w100 whtbg">
+                                    <div class="headingregs">
+                                        <h4>Personal Information</h4>
+                                    </div>
+                                    <div class="col-md-12">
+                                    </div>
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        Title:<span style="color: #990000">*</span>
+                                    </div>
+                                    <%--<div class="col-lg-3 col-sm-3 col-xs-9">
+                                        <asp:DropDownList ID="tit_drop" runat="server" CssClass="lft w40 form-controlrt">
+                                            <asp:ListItem Value="Mr.">Mr.</asp:ListItem>
+                                            <asp:ListItem Value="Ms.">Ms.</asp:ListItem>
+                                            <asp:ListItem Value="Mrs.">Mrs.</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>--%>
+
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        First Name:<span style="color: #990000">*</span>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                        <%--<asp:TextBox ID="Fname_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="30" Style="position: static"
+                                            onkeypress="return keyRestrict(event,' abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>--%>
+                                    </div>
+
+
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        Last Name:<span style="color: #990000">*</span>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                        <%--<asp:TextBox ID="Lname_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="30" Style="position: static;"
+                                            onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>--%>
+                                    </div>
+                                    <div class="clear1">
+                                    </div>
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        Address:<span style="color: #990000">*</span>
+                                    </div>
+
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                       <%-- <asp:TextBox ID="Add_txt" runat="server" CssClass="form-controlrt" Style="height: 50px;"></asp:TextBox>--%>
+                                    </div>
+
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        Country:
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                       <%-- <asp:DropDownList ID="ddl_country" runat="server" CssClass="form-controlrt" AutoPostBack="True">
+                                            <asp:ListItem Selected="True" Value="India">India</asp:ListItem>
+                                            <asp:ListItem Value="Other">Other</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Coun_txt" CssClass="psb_dd form-controlrt " runat="server" Style="position: static"
+                                            Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>--%>
+                                    </div>
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        State*:
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                        <%--<asp:DropDownList ID="ddl_state" runat="server" AutoPostBack="True" CssClass=" form-controlrt">
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Stat_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"
+                                            Visible="false"></asp:TextBox>--%>
+                                    </div>
+
+                                    <div class="clear1"></div>
+
+
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        City:<span style="color: #990000">*</span>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                        <%--<input type="text" id="ddl_city" runat="server" class="psb_dd form-controlrt" style="position: static" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" />
+                                        <asp:TextBox ID="Other_City" CssClass="psb_dd form-controlrt " runat="server" Style="position: static"
+                                            Visible="false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>--%>
+                                    </div>
+
+
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        Area:
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                       <%-- <asp:TextBox ID="TextBox_Area" CssClass="psb_dd form-controlrt" runat="server" MaxLength="20" Style="position: static"
+                                            onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');"></asp:TextBox>--%>
+                                    </div>
+
+                                    <div class="col-lg-1 col-sm-1 col-xs-3">
+                                        Pincode*:
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 col-xs-9">
+                                        <%--<asp:TextBox ID="Pin_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="8" Style="position: static"
+                                            onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>--%>
+                                    </div>
+
+                                    <div class="clear1">
+                                    </div>
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="w100 whtbg">
+                                    <div class="headingregs">
+                                        <h4>Contact Information</h4>
+                                    </div>
+                                    <div class="col-md-12">
+
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Phone No.:
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Ph_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="15" Style="position: static"
+                                                onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>--%>
+
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Mobile:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                           <%-- <asp:TextBox ID="Mob_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="10" Style="position: static"
+                                                onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>--%>
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-3 col-xs-3">
+                                            Email Id:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                           <%-- <asp:TextBox ID="Email_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>--%>
+                                        </div>
+
+                                        <div class="clear1"></div>
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Email 2:
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Aemail_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>--%>
+                                        </div>
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Fax No.:
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+<%--                                            <asp:TextBox ID="Fax_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static" onkeypress="return keyRestrict(event,'0123456789');"></asp:TextBox>--%>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+
+                                <div class="w100 whtbg">
+                                    <div class="headingregs">
+                                        <h4>Business Information</h4>
+                                    </div>
+                                    <div class="col-md-12">
+
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Business Name:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3  col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Agn_txt" CssClass="psb_dd form-controlrt" runat="server" MaxLength="50" onkeypress="return keyRestrict(event,' .abcdefghijklmnopqrstuvwxyz1234567890');"></asp:TextBox>--%>
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Website:
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Web_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>--%>
+                                        </div>
+
+                                        <div class="col-lg-1  col-sm-1 col-xs-3">
+                                            Stax No:
+                                        </div>
+
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Stax_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>--%>
+                                        </div>
+                                        <div class="clear1"></div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Pan No:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                           <%-- <asp:TextBox ID="Pan_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>--%>
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Name On Pan Card:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="TextBox_NameOnPard" CssClass="psb_dd form-controlrt" runat="server" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz');" Style="position: static" MaxLength="20"></asp:TextBox>--%>
+                                        </div>
+
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Pan Image*:  
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:FileUpload ID="fld_pan" runat="server" CssClass="psb_dd" Height="22px" />
+
+                                            <div style="display: none;">
+                                                <asp:DropDownList ID="Stat_drop" CssClass="form-controlrt" runat="server" Height="20px" Width="150px">
+                                                    <asp:ListItem Value="TA" Selected="True">Travel Agent</asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="" style="font-size: 11px; color: #0e4faa; font-weight: bold">
+                                                ( Pancard image must be in JPG formate )
+                                            </div>--%>
+
+                                        </div>
+                                        <div class="clear1"></div>
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Ref. By :
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                         <%--   <asp:DropDownList ID="Sales_DDL" runat="server" CssClass="form-controlrt">
+                                            </asp:DropDownList>--%>
+                                        </div>
+
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Remark:
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Rem_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>--%>
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Upload Logo : 
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:FileUpload ID="fld_1" runat="server" CssClass="psb_dd" />
+                                            <div style="font-size: 11px; color: #0e4faa; font-weight: bold">( Image must be in JPG formate and  Size should be (90*70) pixels)</div>--%>
+
+                                        </div>
+
+                                        <div class="clear1"></div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Security Question:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-9 col-xs-9">
+                                            <asp:DropDownList ID="SecQ_drop" CssClass="form-controlrt" runat="server">
+                                                <asp:ListItem Value="What is Your Pet Name?">Mr.What is Your Pet Name?</asp:ListItem>
+                                                <asp:ListItem Value="What is your Favourite Color?">What is your Favourite Color?</asp:ListItem>
+                                                <asp:ListItem Value="What is Your Date of Birth">What is Your Date of Birth</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Security Answer:<span style="color: #990000">*</span>&nbsp;
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <asp:TextBox ID="Ans_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"></asp:TextBox>
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Branch:<span style="color: #990000"></span>&nbsp;
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <asp:DropDownList ID="DD_Branch" runat="server" CssClass="form-controlrt"></asp:DropDownList>
+                                        </div>
+                                        <div class="clear1"></div>
+
+                                    </div>
+
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+
+                                <div class="w100 whtbg">
+                                    <div class="headingregs">
+                                        <h4>Authentication Information</h4>
+                                    </div>
+                                    <div class="col-md-12">
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            User Id:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="TxtUserId" runat="server" Style="position: static" MaxLength="20" CssClass="psb_dd form-controlrt" oncopy="return false" onpaste="return false" onkeypress="return keyRestrict(event,'abcdefghijklmnopqrstuvwxyz1234567890');"></asp:TextBox>--%>
+                                        </div>
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Password:<span style="color: #990000">*</span>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="Pass_text" runat="server" Style="position: static"
+                                                TextMode="Password" MaxLength="16" CssClass="psb_dd form-controlrt"></asp:TextBox>--%>
+
+                                            <div style="font-size: 11px; color: #0e4faa; font-weight: bold">Eg. PaSS@123(not more than 8-16 charecter)</div>
+                                        </div>
+
+                                        <div class="col-lg-1 col-sm-1 col-xs-3">
+                                            Confirm Password:<span style="color: #990000">*</span>&nbsp;
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-9">
+                                            <%--<asp:TextBox ID="cpass_txt" CssClass="psb_dd form-controlrt" runat="server" Style="position: static"
+                                                TextMode="Password" MaxLength="16"></asp:TextBox>--%>
+                                        </div>
+                                        <div class="clear1"></div>
+                                        <div class="col-lg-2 col-sm-2 col-xs-6">Captcha Information:*</div>
+                                        <div class="col-lg-2 col-sm-2 col-xs-6">
+                                            <img src="CAPTCHA.ashx" id="imgCaptcha" />
+                                            &nbsp;<a onclick="javascript:RefreshCaptcha();" style="cursor: pointer"><img src="Images/refresh.png" /></a>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-2 col-xs-6">Enter Text from Image*</div>
+                                        <div class="col-lg-2 col-sm-2 col-xs-6" style="margin-bottom: 21px;">
+                                            <asp:TextBox ID="TextBox1" CssClass="form-controlrt" runat="server"></asp:TextBox>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-3 col-xs-6 col-lg-push-1">
+                                            <%--<asp:Button ID="submit" Width="250" runat="server" Text="Submit" OnClientClick="return validateSearch()"
+                                                CssClass="btnsss" />--%>
+                                        </div>
+
+                                    </div>
+                                    <div class="clear1"></div>
+                                </div>
+
+                                <div class="clear"></div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="table_Message" runat="server" visible="false">
+                    
+      </div>
+
+                <table width='650' border='0' cellspacing='0' cellpadding='0' align='center' style='border-right:#CCC 1px solid; border-left:#CCC 1px solid; font-family:Arial, Helvetica, sans-serif;'>
+
+  <tr>
+    <td align='left' style='line-height:0px;' valign='top'><img src='http://www.RWT.com/emm/registerd-17-11-18-01.jpg' width='650' height='3' /></td>
+  </tr>
+  <tr>
+    <td align='center' style='' valign='middle' height='60'><a href='http://www.RWT.com/' target='_blank'><img src='http://www.RWT.com/emm/registerd-17-11-18-02.jpg' width='219' alt='Welcome to' height='53' border='0' /></a></td>
+  </tr>
+  <tr>
+    <td align='center' style='line-height:0px;' valign='top'><a href='http://www.RWT.com/' target='_blank'><img src='http://www.RWT.com/emm/registerd-17-11-18-04.jpg' width='311' height='87' alt='RWT.com' border='0' /></a></td>
+  </tr>
+  <tr>
+    <td align='center' style='line-height:0px;' valign='middle' height='74'><a href='http://www.RWT.com/' target='_blank'><img src='http://www.RWT.com/emm/registerd-17-11-18-05.jpg' width='531' height='64' alt='Thank you for Choosing us' border='0' /></a></td>
+  </tr>
+  <tr>
+    <td align='center' style='' valign='top'><table width='450' border='0' cellspacing='0' cellpadding='0' height='84' style='background-color:#0e4ca1;  border-radius: 15px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:22px;'>
+      <tr align='center' valign='middle'>
+        <td>USER NAME:  <%=CID%> </td>
+      </tr>
+      <tr align='center' valign='middle'>
+        <td>PASSWORD: <%=Password%></td>
+      </tr>
+        
+    </table></td>
+  </tr>
+  <tr>
+    <td align='center' style='line-height:0px;' valign='middle' height='75'><img src='http://www.RWT.com/emm/registerd-17-11-18-03.jpg' width='523' alt=''Great Offers' and 'Holiday Packages'
+Your EXPERIENCE is our PRIORITY
+' height='54' /></td>
+  </tr>
+  <tr>
+    <td align='left' style=' padding:10px 0;' valign='top'><table width='100%' border='0' cellspacing='0' cellpadding='0'>
+      <tr>
+        <td width='50%' style='font-size:24px; color:#333030; padding-right:5px;' align='right'>And please send us</td>
+        <td style='padding-left:5px;'><a href='#' target='_blank'><img src='http://www.RWT.com/emm/registerd-17-11-18-06.jpg' width='164' height='32' alt='Feedback' border='0' /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='left' style='font-size:25px; padding-left:50px; color:#0e4ca1;' valign='top'>Let us know what you think about RWT so we<br /> can make it even better!</td>
+  </tr>
+  <tr>
+    <td align='center' style='font-size:25px; padding:8px 0; color:#000000; font-weight:500;' valign='top'>Please do not hesitate to contact our 24x7 helpdesk</td>
+  </tr>
+  <tr>
+    <td align='center' style='' valign='top'><table width='270' border='0' cellspacing='0' cellpadding='0'>
+      <tr>
+        <td align='center' height='32' style='background-color:#074b7d; color:#FFF; font-size:22px; font-weight:bold; border-radius:10px 10px 0px 0px;'>Escalation Details...</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='center' style='' valign='top'><table width='634' border='0' cellspacing='0' cellpadding='0' style='background:#032f4f;'>
+      <tr valign='middle' height='40' style='font-size:16px; color:#fddc00; '>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>DEPARTMENT</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>RESPONSIBILITES</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>LAND LINE</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>MOBILE</td>
+        <td style='border-bottom:1px solid #4f6e84;' align='center'>EMAIL-ID</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>TICKETING DEPTT.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>DOMESTIC BOOKING- GDS</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677740</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540674222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>dom@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>022-40773333</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>domestic@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>INTERNATIONAL BOOKING</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677783</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540658222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>intl@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>NUTAN</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677778</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9718169222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>intl@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>022-40773333</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>7835082251</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>int@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>GROUPS BOOKING</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677765/66</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9718324222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>groupdesk@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>022-40773333</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>7835082252</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>groups@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>CANCELLATION</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677701</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540613222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>cancellation@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>PACKAGES</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677703</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9718139222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>packages@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>holidays@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>FOR NIGHT SHIFT</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>INTERNATIONAL BOOKING</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677781</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9718284222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>sevenseaztravelz@gmail.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>FOR NIGHT SHIFT</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>DOMESTIC BOOKING</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677722</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540574222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>dom@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>FOR NIGHT SHIFT</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>CANCELLATION</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677729</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540574222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>cancellation@RWT.com</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>ESCALATION</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>OPERATION - HEAD</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677742</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540657222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>intl@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>ACCOUNTS</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>ACCOUNTS - HEAD</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677772</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9718016222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>accountsouthex@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>PROCESS REFUND</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>022-40773333<br />
+          47677732</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>7835082253</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>finance@RWT.com<br />
+          accounts@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>PROCESS COMMISSION</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677771</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>refunds@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>TECHNICAL </td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>PAYMENT UPLOAD</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677730</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>&nbsp;</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>upload@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>ASSISTANCE</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>IT- HEAD &amp; DISTRIBUTION<br />
+CHANNEL</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677763<br /></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9540222666</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>subhash@RWT.com</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'></td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Customer Support</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>47677756/57</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>9718050222</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>support@RWT.com</td>
+      </tr>
+      
+    </table></td>
+  </tr>
+  <tr>
+    <td align='left' style='' valign='top'>&nbsp;</td>
+  </tr>
+   <tr>
+    <td align='center' style='' valign='top'><table width='270' border='0' cellspacing='0' cellpadding='0'>
+      <tr>
+        <td align='center' height='32' style='background-color:#074b7d; color:#FFF; font-size:22px; font-weight:bold; border-radius:10px 10px 0px 0px;'>Bank Details...</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='center' style='' valign='top'><table width='634' border='0' cellspacing='0' cellpadding='0' style='background:#032f4f;'>
+      <tr valign='middle' height='40' style='font-size:16px; color:#fddc00; '>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>&nbsp;</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>Canara Bank</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>ICICI Bank Ltd.</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>Bank of Baroda</td>
+        <td style='border-bottom:1px solid #4f6e84;' align='center'>Axis Bank</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; color:#fddc00; border-right:1px solid #4f6e84;'>A/C No</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>0270201006360</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>039605001710</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>19920200000643</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>913020021620860</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; color:#fddc00; border-right:1px solid #4f6e84;'>A/C <br />
+          Name</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; color:#fddc00; border-right:1px solid #4f6e84;'>Branch</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>GOLE MARKET<br />
+          NEW DELHI - <br />
+          110001</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>D -16 SOUTH <br />
+          EXTENSION PART 2 <br />
+          NEW DELHI - 110024</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>BHICAJI CAMA <br />
+          PLACE NEW DELHI -<br />
+          110066</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>DEFENCE COLONY,<br />
+          NEW DELHI - 110024</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84; color:#fddc00;'>IFSC Code</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>CNRB0000270</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>ICIC0000396</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>BARB0BHICKA</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>UTIB0000357</td>
+      </tr>
+       
+       
+      
+    </table></td>
+  </tr>
+  <tr>
+    <td align='left' style='' valign='top'>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align='center' style='' valign='top'><table width='634' border='0' cellspacing='0' cellpadding='0' style='background:#032f4f;'>
+      <tr valign='middle' height='40' style='font-size:16px; color:#fddc00; '>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>&nbsp;</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>Kotak Bank</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'> HDFC Bank</td>
+        <td style='border-bottom: 1px solid #4f6e84;' align='center'>State Bank of India</td>
+        <td style='border-bottom:1px solid #4f6e84;' align='center'>IDBI Bank</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; color:#fddc00; border-right:1px solid #4f6e84;'>A/C No</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>4511178135</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>05842020000243</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>33196436902</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>0011102000080945</td>
+      </tr>
+       <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; color:#fddc00; border-right:1px solid #4f6e84;'>A/C <br />
+          Name</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>Seven Seaz <br />
+          Vacations Pvt. Ltd.</td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; color:#fddc00; border-right:1px solid #4f6e84;'>Branch</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>M-57,LAJPAT NAGAR <br />
+          PART 2 GRO.  FLR<br />
+          NEW DELHI - 110024</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>GOLE MARKET NEW<br />
+          DELHI - 110001</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>M-2,SOUTH EXT<br />
+          PART-2 City NEW <br />
+          DELHI - 110049 </td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>SURYA KIRAN <br />
+          BUILDING, K.G MARG<br />
+          NEW DELHI </td>
+      </tr>
+      <tr style=' font-size:13px; color:#FFF; font-family:Arial, Helvetica, sans-serif;'>
+        <td height='24px' style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84; color:#fddc00;'>IFSC Code</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>KKBK0000198</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>HDFC0000584</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84; border-right:1px solid #4f6e84;'>SBIN0003219</td>
+        <td style='padding-left:6px; border-bottom:1px solid #4f6e84;'>IBKL0000011</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='left' style='' valign='top'>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align='center' style=' background:#000; padding-top:10px;' valign='top' ><table width='634' border='0' cellspacing='0' cellpadding='0'>
+      <tr >
+        <td align='center' width='78' style='background:#ed1c24; font-size:20px; color:#FFF;'>Delhi</td>
+        <td align='left' style='font-size:13px; padding-left:15px; color:#FFF;'>A-188-189, 2nd Floor, Bhishm Pitamaha Marg, Kotla Mubarakpur, New Delhi-110003</td>
+      </tr>
+      <tr>
+        <td align='center' style='background:#ed1c24; font-size:20px; color:#FFF; '>Office</td>
+        <td align='left' style='font-size:20px; padding-left:15px; color:#FFF;'><table width='100%' border='0' cellspacing='0' cellpadding='0'>
+          <tr>
+            <td><img src='http://www.RWT.com/emm/registerd-17-11-18-08.jpg' width='25' height='23' /></td>
+            <td>support@RWT.com</td>
+            <td><img src='http://www.RWT.com/emm/registerd-17-11-18-07.jpg' width='26' height='25' /></td>
+            <td> + 91-11-47 67 77 77</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='center' style=' background:#000; padding-top:10px;' valign='top' ><table width='634' border='0' cellspacing='0' cellpadding='0'>
+      <tr >
+        <td align='center' width='78' style='background:#0e4ca1; font-size:20px; color:#FFF;'>Mumbai</td>
+        <td align='left' style='font-size:13px; padding-left:15px; color:#FFF;'>A-401, 4th  Floor, Universal Business Park, Chandivali Farm Road, Off Saki Vihar Road,<br />
+          Andheri (East), Mumbai - 400 072</td>
+      </tr>
+      <tr>
+        <td align='center' style='background:#0e4ca1; font-size:20px; color:#FFF; '>Office</td>
+        <td align='left' style='font-size:20px; padding-left:15px; color:#FFF;'><table width='100%' border='0' cellspacing='0' cellpadding='0'>
+          <tr>
+            <td><img src='http://www.RWT.com/emm/registerd-17-11-18-08.jpg' width='25' height='23' /></td>
+            <td>enquiry@RWT.com</td>
+            <td><img src='http://www.RWT.com/emm/registerd-17-11-18-07.jpg' width='26' height='25' /></td>
+            <td>+91-22-40 77 33 33</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='left' style=' background:#000;' valign='top' >&nbsp;</td>
+  </tr>
+  <tr>
+    <td align='left' style='line-height:0px;' valign='top'><img src='http://www.RWT.com/emm/registerd-17-11-18-01.jpg' width='650' height='3' /></td>
+  </tr>
+ 
+</table>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+          
+    <%--<script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.7.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-ui-1.8.8.custom.min.js")%>"></script>--%>
+    <script type="text/javascript">
+        var UrlBase = '<%=ResolveUrl("~/") %>';
+        var autoCity = UrlBase + "AutoComplete.asmx/GETCITYSTATE";
+        $("#ctl00_ContentPlaceHolder1_ddl_city").autocomplete({
+            source: function (request, response) {
+
+                //if ($("#ctl00_ContentPlaceHolder1_ddl_city").val()!=data.d.item) {
+                //    $("#ctl00_ContentPlaceHolder1_ddl_city").focus();
+                //    alert("Please Select appropriate city");
+                //    return false;
+                //}
+                $.ajax({
+                    url: autoCity,
+                    data: "{ 'INPUT': '" + $("#ctl00_ContentPlaceHolder1_ddl_state").val() + "','SEARCH': '" + request.term + "' }",
+                    dataType: "json", type: "POST",
+                    contentType: "application/json; charset=utf-8",
+
+                    success: function (data) {
+
+                        if (data.d.length > 0) {
+                            response($.map(data.d, function (item) {
+                                return { label: item, value: item, id: $("#ctl00_ContentPlaceHolder1_ddl_state").val() }
+                            }))
+
+                        }
+                        else {
+                            response([{ label: 'City Not Found', val: -1 }]);
+                        }
+                        //response($.map(data.d, function (item) {
+                        //    return { label: item, value: item, id: $("#ctl00_ContentPlaceHolder1_ddl_state").val() }
+                        //}))
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                        alert(textStatus);
+                    }
+                })
+            },
+            autoFocus: true,
+            minLength: 3,
+            select: function (event, ui) {
+                if (ui.item.val == -1) {
+                    $(this).val("");
+                    return false;
+                }
+            },
+            autoFocus: true,
+            minLength: 3,
+            change: function (event, ui) {
+                if (ui.item == null) {
+                    this.value = '';
+                    alert('Please select City from the City list');
+                }
+            }
+        });
+
+    </script>
+
+</asp:Content>
+

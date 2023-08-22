@@ -1,0 +1,74 @@
+﻿
+Imports System.Collections.Generic
+Imports System.Configuration
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Linq
+Imports System.Web
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+
+Partial Public Class SprReports_LogTrack
+    Inherits System.Web.UI.Page
+    Private constr As String = ConfigurationManager.ConnectionStrings("myAmdDB").ConnectionString
+    Private dr As SqlDataReader = Nothing
+    Private OrderID As String = "", PNRNo As String = "", ProviderName As String = ""
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btn_logtrack_Click(sender As Object, e As EventArgs)
+        OrderID = txt_orderid.Text.Trim().ToString()
+        PNRNo = txt_pnrno.Text.Trim().ToString()
+        If OrderID = "" OrElse PNRNo = "" Then
+            Dim sqlcmd As New SqlCommand()
+            Dim con As New SqlConnection(constr)
+            sqlcmd.Connection = con
+            con.Open()
+            sqlcmd.CommandTimeout = 900
+            sqlcmd.CommandType = CommandType.StoredProcedure
+            sqlcmd.CommandText = "USP_LOGTRACKER"
+            sqlcmd.Parameters.Add("@PNRNO", SqlDbType.VarChar).Value = PNRNo
+            sqlcmd.Parameters.Add("@ORDERID", SqlDbType.VarChar).Value = OrderID
+            sqlcmd.Parameters.Add("@STATUS", SqlDbType.VarChar).Value = "RETRIVE"
+            Dim da As New SqlDataAdapter(sqlcmd)
+            Dim ds As New DataSet()
+            da.Fill(ds)
+            con.Close()
+            If ds.Tables(0).Rows.Count > 0 Then
+                Panel1.Visible = True
+                Panel2.Visible = False
+                DataList1.DataSource = ds.Tables(0)
+                DataList1.DataBind()
+            ElseIf ds.Tables(1).Rows.Count > 0 Then
+                Panel2.Visible = True
+                Panel1.Visible = False
+                DataList2.DataSource = ds.Tables(1)
+                DataList2.DataBind()
+            End If
+        Else
+            lbl_error.Text = "Please fill the right value"
+        End If
+    End Sub
+
+
+
+    Public Function Getval(divid As String, val As String) As String
+
+
+        val = val.Replace("soap:", "").Replace("<?xml version=1.0 encoding=utf-8?>", "").Replace("xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance", "").Replace("xmlns:soap=http://schemas.xmlsoap.org/soap/envelope/", "").Replace("xmlns:xsd=http://www.w3.org/2001/XMLSchema", "").Replace("xmlns=http://webservices.galileo.com", "").Replace("xmlns=", "")
+        val = val.Replace("soapenv:", "").Replace("<?xml version=1.0 encoding=utf-8?>", "").Replace("xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance", "").Replace("xmlns:soap=http://schemas.xmlsoap.org/soap/envelope/", "").Replace("xmlns:xsd=http://www.w3.org/2001/XMLSchema", "").Replace("xmlns=http://webservices.galileo.com", "").Replace("xmlns=", "")
+
+
+        Return "return GetXMLDetails(""GetXML_Details"" ,""" + val + """)"
+
+    End Function
+
+End Class
+
+'=======================================================
+'Service provided by Telerik (www.telerik.com)
+'Conversion powered by NRefactory.
+'Twitter: @telerik
+'Facebook: facebook.com/telerik
+'=======================================================

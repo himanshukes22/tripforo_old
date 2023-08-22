@@ -1,0 +1,9 @@
+D:\Tripforo\PG\obj\Release\PG.csproj.AssemblyReference.cache
+D:\Tripforo\PG\obj\Release\PG.csproj.CoreCompileInputs.cache
+D:\Tripforo\PG\bin\Release\PG.dll
+D:\Tripforo\PG\bin\Release\PG.pdb
+D:\Tripforo\PG\bin\Release\Newtonsoft.Json.dll
+D:\Tripforo\PG\bin\Release\Newtonsoft.Json.xml
+D:\Tripforo\PG\obj\Release\PG.csproj.CopyComplete
+D:\Tripforo\PG\obj\Release\PG.dll
+D:\Tripforo\PG\obj\Release\PG.pdb

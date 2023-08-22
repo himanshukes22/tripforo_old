@@ -1,0 +1,216 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterAfterLogin.master" AutoEventWireup="true"
+    CodeFile="CustomerInfo.aspx.cs" Inherits="BS_CustomerInfo" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <link href="../CSS/main2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%=ResolveUrl("~/BS/CSS/CommonCss.css")%>" rel="stylesheet" type="text/css" />
+
+     <script type="text/javascript">
+         function phone_vali() {
+             if ((event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 32) || (event.keyCode == 45))
+                 event.returnValue = true;
+             else
+                 event.returnValue = false;
+         }
+    </script>
+    <div style="width: 30%; margin: auto;">
+        <div id="ghxsgh" runat="server">
+        </div>
+        <div id="hideGs" align="center" runat="server">
+            <div id="ordrId" runat="server" style="display: none"></div>
+            <asp:Button ID="btnbookGs" class="button33" runat="server" Text="OK" OnClick="btnbookGs_Click" />
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <table id="tblhidefalse" runat="server" style="width: 67%; margin: auto;">
+        <tr>
+            <td>
+                <div align="center" id="divUpper" runat="server">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" id="tbl_pax" border="0">
+                    <tr>
+                        <td rowspan="2" valign="top" width="40%">
+                            <div id="divfarebrk" runat="server">
+                            </div>
+                            <div id="divComm">
+                            </div>
+                        </td>
+                        <td valign="top" width="60%">
+                            <asp:Repeater ID="rep_Pax" runat="server">
+                                <ItemTemplate>
+                                    <table width="100%" cellpadding="10" cellspacing="5" border="0" style="line-height: 20px; border: 1px solid #eee; margin-bottom: 10px;">
+                                        <tr>
+                                            <td align="left" class="pcls">
+                                                <asp:Label ID="lblpax" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "PaxTP")%>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table cellpadding="0" cellspacing="15" border="0" align="center" style="width: 100%;">
+                                                    <tr>
+                                                        <td>Title:
+                                                            <asp:DropDownList ID="dptitle" CssClass="drpBox" Style='width: 70px;' runat="server">
+                                                                <asp:ListItem Value="Mr">Mr</asp:ListItem>
+                                                                <asp:ListItem Value="Ms">Ms</asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </td>
+                                                        <td>
+                                                            <div style='float: left;'>
+                                                                Full Name: &nbsp;
+                                                            </div>
+                                                            <div style='float: left;'>
+                                                                <asp:TextBox ID="txtpaxname" runat="server" CssClass="txtBox"></asp:TextBox>
+                                                            </div>
+                                                            <div style='float: left;'>
+                                                                <div class="divERR" id='divtxtpaxname' runat="server"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style="float: left;">
+                                                                Age: &nbsp;
+                                                            </div>
+                                                            <div style="float: left;">
+                                                                <asp:TextBox ID="txtpaxage" runat="server" CssClass="txtBox" Style="width: 50px;"
+                                                                    MaxLength="3" onkeypress="phone_vali();"></asp:TextBox>
+                                                            </div>
+                                                            <div style="float: left;">
+                                                                <div class="divERR" id="divtxtpaxage" runat="server">
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Gender:
+                                                            <asp:DropDownList ID="dpgender" CssClass="drpBox" Style='width: 70px;' runat="server">
+                                                                <asp:ListItem Value="M">Male</asp:ListItem>
+                                                                <asp:ListItem Value="F">Female</asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </td>
+                                                        <td>Seat:
+                                                            <img src='Images/2.png' /><asp:Label ID="lblseat" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "seat")%>'></asp:Label></td>
+                                                        <td>Fare:
+                                                            <img src='images/rupee1.png' /><asp:Label ID="lblfare" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "fare")%>'></asp:Label><asp:Label ID="Label1" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Originalfare")%>'
+                                                                Visible="false"></asp:Label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table cellpadding="0" cellspacing="10" border="0" width="80%" style="line-height: 20px; border: 1px solid #eee;">
+                                <tr>
+                                    <td align="left" class="pcls" colspan="5">Primary Passenger Contact Details:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="pPaxId" runat="server">
+                                        <div>
+                                            Full Name:
+                                        </div>
+                                        <div>
+                                            <input type="hidden" id="hidprovider" runat="server" />
+                                        </div>
+                                        <div>
+                                            <input type="text" id="txtprimarypax" name="txtprimarypax" class="txtBox" style="width: 200px;" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            Mobile:
+                                        </div>
+                                        <div>
+                                            <input type="text" id="txtmob" name="txtmob" class="txtBox" style="width: 200px;" placeholder="Mobile Number" maxlength="10" onkeypress="validatenumber(event,this.id)" />
+                                        </div>
+                                        <div>
+                                            <div class="divERR" id="divtxtmob"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            Email:
+                                        </div>
+                                        <div>
+                                            <input type="text" id="txtemail" name="txtemail" class="txtBox" style="width: 200px;" placeholder="Email Address" onblur="validateEmail(this.id)" />
+                                        </div>
+                                        <div>
+                                            <div class="divERR" id="divtxtemail">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            Address:
+                                        </div>
+                                        <div>
+                                            <input type="text" id="txtaddress" name="txtaddress" style="width: 200px;" class="txtBox"
+                                                placeholder="Address" />
+                                        </div>
+                                        <div>
+                                            <div class="divERR" id="divtxtaddress">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td id="tdid1" runat="server" visible="false">
+                                        <div>ID Proof:</div>
+                                        <div>
+                                            <select id='idproof' name='idproof' class='drpBox'>
+                                                <option value='PAN_CARD'>Pan Card</option>
+                                                <option value='VOTER_CARD'>Votter Id</option>
+                                                <option value='DRIVING_LICENCE'>Driving Licence</option>
+                                                <option value='RATION_CARD'>Ration Card</option>
+                                                <option value='AADHAR'>Aadhar Card</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td id="tdid2" runat="server" visible="false">
+                                        <div>ID Number: </div>
+                                        <div>
+                                            <input type="text" id="txtcard" name="txtcard" class="txtBox" style="width: 200px;"
+                                                placeholder="ID Number" />
+                                        </div>
+                                        <div>
+                                            <div class="divERR" id="divtxtcard">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" colspan="5">
+                                        <asp:Button ID="btnbook" runat="server" Text="Book" CssClass="button33" OnClick="btnbook_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div id="wait" style="display: none; margin-top: 100px;" class="wait">
+        <div style="padding: 2% 2%; width: 46%; margin: 100px auto 0; border: 5px solid #ccc; background: #fff; text-align: center; font-family: Arial;">
+            <strong>Booking is on Process..Please Wait</strong><br />
+            <img src="Images/loaderB64.gif" /><br />
+        </div>
+        <div style="clear: both;">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var UrlBase = '<%=ResolveUrl("~/") %>';
+    </script>
+
+    <script src="<%= ResolveUrl("~/BS/JS/jquery-1.9.1.js")%>" type="text/javascript"></script>
+
+    <script src="<%= ResolveUrl("~/BS/JS/Common.js")%>" type="text/javascript"></script>
+
+</asp:Content>

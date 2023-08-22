@@ -1,0 +1,162 @@
+/* SLIMBOX */
+
+#lbOverlay
+{
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	cursor: pointer;
+}
+
+#lbCenter, #lbBottomContainer
+{
+	position: absolute;
+	z-index: 9999;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.lbLoading
+{
+	background: #fff url(../images/loading.gif) no-repeat center;
+}
+
+#lbImage
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 10px solid #fff;
+	background-repeat: no-repeat;
+}
+
+#lbPrevLink, #lbNextLink
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 50%;
+	outline: none;
+}
+
+#lbPrevLink
+{
+	left: 0;
+}
+
+#lbPrevLink:hover
+{
+	background: transparent url(../images/prevlabel.gif) no-repeat 0 15%;
+}
+
+#lbNextLink
+{
+	right: 0;
+}
+
+#lbNextLink:hover
+{
+	background: transparent url(../images/nextlabel.gif) no-repeat 100% 15%;
+}
+
+#lbBottom
+{
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	
+	color: #666;
+	line-height: 1.4em;
+	text-align: left;
+	border: 10px solid #fff;
+	border-top-style: none;
+}
+
+#lbCloseLink
+{
+	display: block;
+	float: right;
+	width: 66px;
+	height: 22px;
+	background: transparent url(../images/closelabel.gif) no-repeat center;
+	margin: 5px 0;
+	outline: none;
+}
+
+#lbCaption, #lbNumber
+{
+	margin-right: 71px;
+}
+
+#lbCaption
+{
+	font-weight: bold;
+}
+
+
+.col_w900
+{
+	width: 700px;
+	margin-bottom: 0;
+	background: url(images/content_divider.jpg) repeat-x bottom;
+}
+
+.col_w900_last
+{
+	padding: 0 10px;
+	margin: 0;
+	background: none;
+}
+#gallery
+{
+	margin: 0;
+	padding: 0;
+}
+#gallery .gallery_box
+{
+	display: block;
+	float: left;
+	width: 210px;
+	margin: 0 20px 40px 0;
+}
+#gallery .lmb
+{
+	margin: 0 0 20px 0;
+}
+
+.gallery_box h3
+{
+	margin-bottom: 10px;
+}
+.gallery_box h3 a
+{
+	font-size: 18px;
+	font-weight: normal;
+	color: #1184df;
+}
+.gallery_box p
+{
+	font-style: italic;
+	font-size: 11px;
+	font-weight: bold;
+}
+.gallery_box a img
+{
+	border: 1px solid #ccc;
+	width: 190px;
+	height: 130px;
+	padding: 8px;
+}
+.gallery_box a img:hover
+{
+	background: #ccc;
+}
+
+#gallery a.more
+{
+	float: left;
+	margin-right: 10px;
+}
+

@@ -1,0 +1,89 @@
+﻿<%@ Page Language="VB" MasterPageFile="~/MasterAfterLogin.master" AutoEventWireup="false" CodeFile="HtlRefundInProcces.aspx.vb" Inherits="HtlRefundInProcces"  %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <table style="width: 70%; margin: 0 auto;" align="center">
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" align="center" style="margin: 0 auto; width: 500px;">
+                    <tr>
+                        <td style="background: url(../Hotel/images/a.png) no-repeat; height: 11px; width: 14px;">
+                        </td>
+                        <td style="background: url(../Hotel/images/a1.png) repeat; height: 11px;">
+                        </td>
+                        <td style="background: url(../Hotel/images/b.png) no-repeat; height: 11px; width: 14px;">
+                        </td>
+                    </tr>
+                    <tr>
+                    <td style="background: url(../Hotel/images/m1.png); width: 14px;">
+                        </td>
+                    <td align="center">
+                <asp:GridView ID="InproccesGrd" runat="server" AutoGenerateColumns="False" CssClass="mGrid"
+                     BackColor="White" BorderColor="#3366CC" BorderStyle="None"
+                    BorderWidth="1px" CellPadding="4">
+                    
+                    <Columns>
+                        <asp:TemplateField HeaderText="Order ID">
+                            <ItemTemplate>
+                             <asp:LinkButton ID="lnkupdate" runat="server" Text='<%#Eval("OrderID") %>' ForeColor="Red" CommandName="lnkupdate"
+                                    CommandArgument='<%#Eval("OrderID")%>' onclick="lnkupdate_Click"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Booking ID">
+                            <ItemTemplate>
+                               <a href='../../Hotel/BookingSummaryHtl.aspx?OrderId=<%#Eval("OrderId")%> &BID=<%#Eval("BookingID")%>'
+                                 rel="lyteframe" rev="width: 830px; height: 400px; overflow:hidden;" target="_blank"
+                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #004b91">
+                                 <asp:Label ID="lblBID" runat="server" Text= '<%#Eval("BookingID")%>'></asp:Label><br />(Detail)</a>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                         <asp:BoundField DataField="StarRating" HeaderText="Star" />
+                         <asp:BoundField DataField="HtlName" HeaderText="Hotel Name" />
+                         <asp:BoundField DataField="RoomName" HeaderText="Room Name" />
+                        <asp:BoundField  DataField ="Agency_Name" HeaderText ="Agency Name" />
+                        <asp:BoundField DataField="AgentID" HeaderText="Agent ID " />
+                        <asp:BoundField DataField="PgFName" HeaderText="Frist Name" />
+                         <asp:BoundField DataField="PgLName" HeaderText="Last Name" />
+                        <asp:BoundField DataField="TotalCost" HeaderText="Total Cost" />
+                        <asp:BoundField DataField="NetCost" HeaderText="Net Cost" />
+                        <asp:BoundField DataField="RoomCount" HeaderText="No.of Room" />
+                        <asp:BoundField DataField="NightCount" HeaderText="No.of Night" />
+                        <asp:BoundField DataField="BookingDate" HeaderText="Booking Date" />
+                        <asp:BoundField HeaderText="Submit Date" DataField="SubmitDate" />
+                        <asp:BoundField HeaderText="Accept Date" DataField="AcceptDate" />
+                        <asp:TemplateField HeaderText="">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnlreject" runat="server" Text="Reject" ForeColor="Red" CommandName="Reject"
+                                    CommandArgument='<%#Eval("OrderID") %>'></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Reject Remark">
+                            <ItemTemplate>
+                                <asp:TextBox ID="txtRemark" runat="server" Height="47px" TextMode="MultiLine" Width="250px"
+                                    Visible="false"></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkSubmit" runat="server" OnClick="btnCanFee_Click" Visible="false">
+                                    <img src="../../Images/Submit.png" alt="Ok" /></asp:LinkButton>
+                                <asp:LinkButton ID="lnkHides" runat="server" OnClick="lnkHides_Click" Visible="false">
+                                    <img src="../../Images/Cancel.png" alt="Cancel" /></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                    <RowStyle BackColor="White" ForeColor="#003399" />
+                    <FooterStyle BackColor="#dbecf3" ForeColor="#003399" />
+                    <PagerStyle BackColor="#dbecf3" ForeColor="#003399" HorizontalAlign="Left" />
+                    <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                    <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#dbecf3" />
+                </asp:GridView>
+            </td>
+            <td style="background: url(../images/m2.png); width: 14px;">
+                        </td>
+                    </tr>
+                    </table>
+                    </td>
+                    </tr>
+                    </table>
+    </asp:Content>

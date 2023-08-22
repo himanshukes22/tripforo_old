@@ -1,0 +1,2167 @@
+﻿<?xml version="1.0"?>
+<UpdateContactsRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ContractVersion>420</ContractVersion>
+  <EnableExceptionStackTrace>false</EnableExceptionStackTrace>
+  <Signature>i9kwtAadgds=|f4A3AgR+YIckI/xRNZQv0ICG4dbXlGyZZpQgAjzwM25PXa3m+wWnDCUQ7IqrAgq6fObk3CDN8ggfv9cRTe0MRzfT/RCr4RGhgJ+oB39RPQXWdWFfZTuGhYVJR9ufRWSe1HYAoq0hfNLR0wfXZgeZVQ==</Signature>
+  <updateContactsRequestData>
+    <BookingContactList>
+      <BookingContact>
+        <State>New</State>
+        <TypeCode>I</TypeCode>
+        <EmailAddress>ACCOUNTS@TRAVEL-9.COM</EmailAddress>
+        <CompanyName>TRAVEL9</CompanyName>
+        <DistributionOption>None</DistributionOption>
+        <CustomerNumber>27AAOFT4644B1Z3</CustomerNumber>
+        <NotificationPreference>None</NotificationPreference>
+      </BookingContact>
+    </BookingContactList>
+  </updateContactsRequestData>
+</UpdateContactsRequest>
+
+
+
+
+
+
+<?xml version="1.0"?>
+<UpdateContactsResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BookingUpdateResponseData>
+    <ExtensionData />
+    <Success>
+      <ExtensionData />
+      <RecordLocator />
+      <PNRAmount>
+        <ExtensionData />
+        <BalanceDue>0</BalanceDue>
+        <AuthorizedBalanceDue>0</AuthorizedBalanceDue>
+        <SegmentCount>0</SegmentCount>
+        <PassiveSegmentCount>0</PassiveSegmentCount>
+        <TotalCost>0</TotalCost>
+        <PointsBalanceDue>0</PointsBalanceDue>
+        <TotalPointCost>0</TotalPointCost>
+        <AlternateCurrencyCode />
+        <AlternateCurrencyBalanceDue>0</AlternateCurrencyBalanceDue>
+      </PNRAmount>
+    </Success>
+  </BookingUpdateResponseData>
+</UpdateContactsResponse>
+
+
+
+
+
+<?xml version="1.0"?>
+<GetBookingFromStateRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ContractVersion>420</ContractVersion>
+  <EnableExceptionStackTrace>false</EnableExceptionStackTrace>
+  <Signature>i9kwtAadgds=|f4A3AgR+YIckI/xRNZQv0ICG4dbXlGyZZpQgAjzwM25PXa3m+wWnDCUQ7IqrAgq6fObk3CDN8ggfv9cRTe0MRzfT/RCr4RGhgJ+oB39RPQXWdWFfZTuGhYVJR9ufRWSe1HYAoq0hfNLR0wfXZgeZVQ==</Signature>
+</GetBookingFromStateRequest>
+
+
+
+<?xml version="1.0"?>
+<GetBookingFromStateResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BookingData>
+    <ExtensionData />
+    <OtherServiceInfoList />
+    <State>New</State>
+    <RecordLocator />
+    <CurrencyCode>INR</CurrencyCode>
+    <PaxCount>2</PaxCount>
+    <SystemCode />
+    <BookingID>0</BookingID>
+    <BookingParentID>0</BookingParentID>
+    <ParentRecordLocator />
+    <BookingChangeCode />
+    <GroupName />
+    <BookingInfo>
+      <ExtensionData />
+      <State>New</State>
+      <BookingStatus>Default</BookingStatus>
+      <BookingType />
+      <ChannelType>Default</ChannelType>
+      <CreatedDate>9999-12-31T00:00:00Z</CreatedDate>
+      <ExpiredDate>9999-12-31T00:00:00Z</ExpiredDate>
+      <ModifiedDate>9999-12-31T00:00:00Z</ModifiedDate>
+      <PriceStatus>Valid</PriceStatus>
+      <ProfileStatus>Default</ProfileStatus>
+      <ChangeAllowed>true</ChangeAllowed>
+      <CreatedAgentID>0</CreatedAgentID>
+      <ModifiedAgentID>0</ModifiedAgentID>
+      <BookingDate>2019-08-01T07:51:51.1315533Z</BookingDate>
+      <OwningCarrierCode />
+      <PaidStatus>UnderPaid</PaidStatus>
+      <ActivityDate>9999-12-31T00:00:00Z</ActivityDate>
+    </BookingInfo>
+    <POS>
+      <ExtensionData />
+      <State>Clean</State>
+      <AgentCode>OTI132</AgentCode>
+      <OrganizationCode>OTI132</OrganizationCode>
+      <DomainCode>WWW</DomainCode>
+      <LocationCode>WWW</LocationCode>
+    </POS>
+    <SourcePOS>
+      <ExtensionData />
+      <State>New</State>
+      <AgentCode>AG</AgentCode>
+      <OrganizationCode>OTI132</OrganizationCode>
+      <DomainCode>www</DomainCode>
+      <LocationCode>www</LocationCode>
+    </SourcePOS>
+    <TypeOfSale>
+      <ExtensionData />
+      <State>New</State>
+      <PaxResidentCountry>IN</PaxResidentCountry>
+      <PromotionCode />
+      <FareTypes />
+      <PromotionSold>false</PromotionSold>
+    </TypeOfSale>
+    <BookingHold>
+      <ExtensionData />
+      <State>New</State>
+      <HoldDateTime>9999-12-31T00:00:00Z</HoldDateTime>
+    </BookingHold>
+    <BookingSum>
+      <ExtensionData />
+      <BalanceDue>7690.00000</BalanceDue>
+      <AuthorizedBalanceDue>7690.00000</AuthorizedBalanceDue>
+      <SegmentCount>1</SegmentCount>
+      <PassiveSegmentCount>0</PassiveSegmentCount>
+      <TotalCost>7690.00000</TotalCost>
+      <PointsBalanceDue>0</PointsBalanceDue>
+      <TotalPointCost>0</TotalPointCost>
+      <AlternateCurrencyCode />
+      <AlternateCurrencyBalanceDue>0</AlternateCurrencyBalanceDue>
+    </BookingSum>
+    <ReceivedBy>
+      <ExtensionData />
+      <State>New</State>
+      <ReceivedBy />
+      <ReceivedReference />
+      <ReferralCode />
+      <LatestReceivedBy />
+      <LatestReceivedReference />
+    </ReceivedBy>
+    <RecordLocators />
+    <Passengers>
+      <Passenger>
+        <ExtensionData />
+        <State>New</State>
+        <CustomerNumber />
+        <PassengerNumber>0</PassengerNumber>
+        <FamilyNumber>0</FamilyNumber>
+        <PaxDiscountCode />
+        <Names />
+        <PassengerInfo>
+          <ExtensionData />
+          <State>New</State>
+          <BalanceDue>0</BalanceDue>
+          <Gender>Male</Gender>
+          <Nationality />
+          <ResidentCountry />
+          <TotalCost>0</TotalCost>
+          <WeightCategory>Male</WeightCategory>
+        </PassengerInfo>
+        <PassengerFees />
+        <PassengerAddresses />
+        <PassengerTravelDocuments />
+        <PassengerBags />
+        <PassengerID>0</PassengerID>
+        <PassengerTypeInfos>
+          <PassengerTypeInfo>
+            <ExtensionData />
+            <State>New</State>
+            <DOB>9999-12-31T00:00:00Z</DOB>
+            <PaxType>ADT</PaxType>
+          </PassengerTypeInfo>
+        </PassengerTypeInfos>
+        <PassengerInfos>
+          <PassengerInfo>
+            <ExtensionData />
+            <State>New</State>
+            <BalanceDue>0</BalanceDue>
+            <Gender>Male</Gender>
+            <Nationality />
+            <ResidentCountry />
+            <TotalCost>0</TotalCost>
+            <WeightCategory>Male</WeightCategory>
+          </PassengerInfo>
+        </PassengerInfos>
+        <PassengerInfants />
+        <PseudoPassenger>false</PseudoPassenger>
+        <PassengerTypeInfo>
+          <ExtensionData />
+          <State>New</State>
+          <DOB>9999-12-31T00:00:00Z</DOB>
+          <PaxType>ADT</PaxType>
+        </PassengerTypeInfo>
+        <PassengerEMDCouponList />
+      </Passenger>
+      <Passenger>
+        <ExtensionData />
+        <State>New</State>
+        <CustomerNumber />
+        <PassengerNumber>1</PassengerNumber>
+        <FamilyNumber>0</FamilyNumber>
+        <PaxDiscountCode />
+        <Names />
+        <PassengerInfo>
+          <ExtensionData />
+          <State>New</State>
+          <BalanceDue>0</BalanceDue>
+          <Gender>Male</Gender>
+          <Nationality />
+          <ResidentCountry />
+          <TotalCost>0</TotalCost>
+          <WeightCategory>Male</WeightCategory>
+        </PassengerInfo>
+        <PassengerFees />
+        <PassengerAddresses />
+        <PassengerTravelDocuments />
+        <PassengerBags />
+        <PassengerID>0</PassengerID>
+        <PassengerTypeInfos>
+          <PassengerTypeInfo>
+            <ExtensionData />
+            <State>New</State>
+            <DOB>9999-12-31T00:00:00Z</DOB>
+            <PaxType>ADT</PaxType>
+          </PassengerTypeInfo>
+        </PassengerTypeInfos>
+        <PassengerInfos>
+          <PassengerInfo>
+            <ExtensionData />
+            <State>New</State>
+            <BalanceDue>0</BalanceDue>
+            <Gender>Male</Gender>
+            <Nationality />
+            <ResidentCountry />
+            <TotalCost>0</TotalCost>
+            <WeightCategory>Male</WeightCategory>
+          </PassengerInfo>
+        </PassengerInfos>
+        <PassengerInfants />
+        <PseudoPassenger>false</PseudoPassenger>
+        <PassengerTypeInfo>
+          <ExtensionData />
+          <State>New</State>
+          <DOB>9999-12-31T00:00:00Z</DOB>
+          <PaxType>ADT</PaxType>
+        </PassengerTypeInfo>
+        <PassengerEMDCouponList />
+      </Passenger>
+    </Passengers>
+    <Journeys>
+      <Journey>
+        <ExtensionData />
+        <State>Clean</State>
+        <NotForGeneralUse>false</NotForGeneralUse>
+        <Segments>
+          <Segment>
+            <ExtensionData />
+            <State>Clean</State>
+            <ActionStatusCode>KK</ActionStatusCode>
+            <ArrivalStation>BOM</ArrivalStation>
+            <CabinOfService>Y</CabinOfService>
+            <ChangeReasonCode />
+            <DepartureStation>ATQ</DepartureStation>
+            <PriorityCode />
+            <SegmentType />
+            <STA>2019-09-03T16:20:00</STA>
+            <STD>2019-09-03T13:35:00</STD>
+            <International>false</International>
+            <FlightDesignator>
+              <ExtensionData />
+              <CarrierCode>6E</CarrierCode>
+              <FlightNumber> 448</FlightNumber>
+              <OpSuffix></OpSuffix>
+            </FlightDesignator>
+            <Fares>
+              <Fare>
+                <ExtensionData />
+                <State>Clean</State>
+                <ClassOfService>J</ClassOfService>
+                <ClassType></ClassType>
+                <RuleTariff />
+                <CarrierCode>6E</CarrierCode>
+                <RuleNumber>1057</RuleNumber>
+                <FareBasisCode>J0IP</FareBasisCode>
+                <FareSequence>2</FareSequence>
+                <FareClassOfService>J</FareClassOfService>
+                <FareStatus>Default</FareStatus>
+                <FareApplicationType>Route</FareApplicationType>
+                <OriginalClassOfService>J</OriginalClassOfService>
+                <XrefClassOfService />
+                <PaxFares>
+                  <PaxFare>
+                    <ExtensionData />
+                    <State>New</State>
+                    <PaxType>ADT</PaxType>
+                    <PaxDiscountCode />
+                    <FareDiscountCode />
+                    <ServiceCharges>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>FarePrice</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode />
+                        <TicketCode />
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>2738.0000</Amount>
+                        <ChargeDetail />
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>2738.0000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>PHF</ChargeCode>
+                        <TicketCode>PHF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>50.0000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>50.0000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>RCF</ChargeCode>
+                        <TicketCode>RCF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>50.0000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>50.0000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>YQ</ChargeCode>
+                        <TicketCode>YQ</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>400.000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>400.000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>ASF</ChargeCode>
+                        <TicketCode>ASF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>177.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>177.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>PSF</ChargeCode>
+                        <TicketCode>PSF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>91.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>91.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>UDF</ChargeCode>
+                        <TicketCode>UDF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>177.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>177.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>Tax</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>03IGST</ChargeCode>
+                        <TicketCode>IGT</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>162.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>162.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                    </ServiceCharges>
+                    <TicketFareBasisCode />
+                    <ProofOfStatusRequired>false</ProofOfStatusRequired>
+                  </PaxFare>
+                </PaxFares>
+                <ProductClass>R</ProductClass>
+                <IsAllotmentMarketFare>false</IsAllotmentMarketFare>
+                <TravelClassCode>Y</TravelClassCode>
+                <FareSellKey>0~J~ ~6E~J0IP~1057~~0~2~~X</FareSellKey>
+                <InboundOutbound>None</InboundOutbound>
+                <FareLink>0</FareLink>
+                <FareDesignator>
+                  <ExtensionData />
+                  <FareTypeIndicator />
+                  <CityCode />
+                  <TravelCityCode />
+                  <RuleFareTypeCode />
+                  <BaseFareFareClassCode />
+                  <DowType />
+                  <SeasonType />
+                  <RoutingNumber>0</RoutingNumber>
+                  <OneWayRoundTrip />
+                  <OpenJawAllowed>false</OpenJawAllowed>
+                  <TripDirection />
+                </FareDesignator>
+              </Fare>
+            </Fares>
+            <Legs>
+              <Leg>
+                <ExtensionData />
+                <State>Clean</State>
+                <ArrivalStation>BOM</ArrivalStation>
+                <DepartureStation>ATQ</DepartureStation>
+                <STA>2019-09-03T16:20:00</STA>
+                <STD>2019-09-03T13:35:00</STD>
+                <FlightDesignator>
+                  <ExtensionData />
+                  <CarrierCode>6E</CarrierCode>
+                  <FlightNumber> 448</FlightNumber>
+                  <OpSuffix></OpSuffix>
+                </FlightDesignator>
+                <LegInfo>
+                  <ExtensionData />
+                  <State>Clean</State>
+                  <AdjustedCapacity>0</AdjustedCapacity>
+                  <EquipmentType>320</EquipmentType>
+                  <EquipmentTypeSuffix />
+                  <ArrivalTerminal>1</ArrivalTerminal>
+                  <ArrvLTV>330</ArrvLTV>
+                  <Capacity>0</Capacity>
+                  <CodeShareIndicator></CodeShareIndicator>
+                  <DepartureTerminal />
+                  <DeptLTV>330</DeptLTV>
+                  <ETicket>false</ETicket>
+                  <FlifoUpdated>false</FlifoUpdated>
+                  <IROP>false</IROP>
+                  <Status>Normal</Status>
+                  <Lid>0</Lid>
+                  <OnTime></OnTime>
+                  <PaxSTA>2019-09-03T16:20:00</PaxSTA>
+                  <PaxSTD>2019-09-03T13:35:00</PaxSTD>
+                  <PRBCCode>Y180</PRBCCode>
+                  <ScheduleServiceType>J</ScheduleServiceType>
+                  <Sold>0</Sold>
+                  <OutMoveDays>0</OutMoveDays>
+                  <BackMoveDays>0</BackMoveDays>
+                  <LegNests>
+                    <LegNest>
+                      <ExtensionData />
+                      <State>Clean</State>
+                      <ClassNest>1</ClassNest>
+                      <Lid>180</Lid>
+                      <AdjustedCapacity>180</AdjustedCapacity>
+                      <TravelClassCode>Y</TravelClassCode>
+                      <NestType>Net</NestType>
+                      <LegClasses>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>I</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>24</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>Y</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>23</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>W</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>22</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>F</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>21</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>A</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>20</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>B</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>19</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>C</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>18</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>D</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>17</ClassRank>
+                          <ClassAU>178</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>E</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>16</ClassRank>
+                          <ClassAU>175</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>H</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>15</ClassRank>
+                          <ClassAU>151</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>K</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>14</ClassRank>
+                          <ClassAU>145</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>U</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>13</ClassRank>
+                          <ClassAU>137</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>V</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>12</ClassRank>
+                          <ClassAU>129</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>M</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>11</ClassRank>
+                          <ClassAU>119</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>N</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>10</ClassRank>
+                          <ClassAU>106</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>O</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>9</ClassRank>
+                          <ClassAU>105</ClassAU>
+                          <ClassSold>1</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>T</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>8</ClassRank>
+                          <ClassAU>103</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>J</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>7</ClassRank>
+                          <ClassAU>90</ClassAU>
+                          <ClassSold>1</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>L</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>6</ClassRank>
+                          <ClassAU>46</ClassAU>
+                          <ClassSold>14</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>P</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>5</ClassRank>
+                          <ClassAU>32</ClassAU>
+                          <ClassSold>10</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>Q</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>4</ClassRank>
+                          <ClassAU>22</ClassAU>
+                          <ClassSold>13</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>R</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>3</ClassRank>
+                          <ClassAU>9</ClassAU>
+                          <ClassSold>2</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>S</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>1</ClassRank>
+                          <ClassAU>48</ClassAU>
+                          <ClassSold>5</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>G</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType>X</ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>26</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>X</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType>X</ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>25</ClassRank>
+                          <ClassAU>0</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>Z</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType>X</ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>2</ClassRank>
+                          <ClassAU>0</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                      </LegClasses>
+                    </LegNest>
+                  </LegNests>
+                  <LegSSRs>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>BEER</SSRNestCode>
+                      <SSRLid>10</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>BLND</SSRNestCode>
+                      <SSRLid>4</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>DEAF</SSRNestCode>
+                      <SSRLid>4</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>DFNS</SSRNestCode>
+                      <SSRLid>10</SSRLid>
+                      <SSRSold>2</SSRSold>
+                      <SSRValueSold>2</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>INFT</SSRNestCode>
+                      <SSRLid>12</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>MLGR</SSRNestCode>
+                      <SSRLid>69</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>MNCH</SSRNestCode>
+                      <SSRLid>40</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>RTES</SSRNestCode>
+                      <SSRLid>40</SSRLid>
+                      <SSRSold>1</SSRSold>
+                      <SSRValueSold>1</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>STCR</SSRNestCode>
+                      <SSRLid>1</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>UMNR</SSRNestCode>
+                      <SSRLid>180</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>WCHC</SSRNestCode>
+                      <SSRLid>4</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>WCHR</SSRNestCode>
+                      <SSRLid>0</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>WHSK</SSRNestCode>
+                      <SSRLid>10</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                  </LegSSRs>
+                  <OperatingFlightNumber></OperatingFlightNumber>
+                  <OperatedByText />
+                  <OperatingCarrier />
+                  <OperatingOpSuffix></OperatingOpSuffix>
+                  <SubjectToGovtApproval>false</SubjectToGovtApproval>
+                  <MarketingCode />
+                  <ChangeOfDirection>false</ChangeOfDirection>
+                  <MarketingOverride>false</MarketingOverride>
+                  <AircraftOwner />
+                </LegInfo>
+                <InventoryLegID>2562214</InventoryLegID>
+              </Leg>
+            </Legs>
+            <PaxBags />
+            <PaxSeats />
+            <PaxSSRs />
+            <PaxSegments>
+              <PaxSegment>
+                <ExtensionData />
+                <State>Clean</State>
+                <BoardingSequence />
+                <CreatedDate>9999-12-31T00:00:00Z</CreatedDate>
+                <LiftStatus>Default</LiftStatus>
+                <OverBookIndicator />
+                <PassengerNumber>0</PassengerNumber>
+                <PriorityDate>9999-12-31T00:00:00Z</PriorityDate>
+                <TripType>None</TripType>
+                <TimeChanged>false</TimeChanged>
+                <VerifiedTravelDocs />
+                <ModifiedDate>9999-12-31T00:00:00Z</ModifiedDate>
+                <ActivityDate>9999-12-31T00:00:00Z</ActivityDate>
+                <BaggageAllowanceWeight>15</BaggageAllowanceWeight>
+                <BaggageAllowanceWeightType>Kilograms</BaggageAllowanceWeightType>
+                <BaggageAllowanceUsed>false</BaggageAllowanceUsed>
+                <ReferenceNumber>0</ReferenceNumber>
+                <ServiceBundleCode />
+                <BaggageGroupNumber>0</BaggageGroupNumber>
+              </PaxSegment>
+              <PaxSegment>
+                <ExtensionData />
+                <State>Clean</State>
+                <BoardingSequence />
+                <CreatedDate>9999-12-31T00:00:00Z</CreatedDate>
+                <LiftStatus>Default</LiftStatus>
+                <OverBookIndicator />
+                <PassengerNumber>1</PassengerNumber>
+                <PriorityDate>9999-12-31T00:00:00Z</PriorityDate>
+                <TripType>None</TripType>
+                <TimeChanged>false</TimeChanged>
+                <VerifiedTravelDocs />
+                <ModifiedDate>9999-12-31T00:00:00Z</ModifiedDate>
+                <ActivityDate>9999-12-31T00:00:00Z</ActivityDate>
+                <BaggageAllowanceWeight>15</BaggageAllowanceWeight>
+                <BaggageAllowanceWeightType>Kilograms</BaggageAllowanceWeightType>
+                <BaggageAllowanceUsed>false</BaggageAllowanceUsed>
+                <ReferenceNumber>0</ReferenceNumber>
+                <ServiceBundleCode />
+                <BaggageGroupNumber>0</BaggageGroupNumber>
+              </PaxSegment>
+            </PaxSegments>
+            <PaxTickets />
+            <SalesDate>9999-12-31T00:00:00Z</SalesDate>
+            <SegmentSellKey>6E~ 448~ ~~ATQ~09/03/2019 13:35~BOM~09/03/2019 16:20~~</SegmentSellKey>
+            <PaxScores />
+            <ChannelType>API</ChannelType>
+            <AvailabilitySourceCode />
+            <InventorySourceCode />
+          </Segment>
+        </Segments>
+        <JourneySellKey>6E~ 448~ ~~ATQ~09/03/2019 13:35~BOM~09/03/2019 16:20~~</JourneySellKey>
+      </Journey>
+    </Journeys>
+    <BookingComments />
+    <BookingQueueInfos />
+    <BookingContacts>
+      <BookingContact>
+        <ExtensionData />
+        <State>New</State>
+        <TypeCode>I</TypeCode>
+        <Names />
+        <EmailAddress>ACCOUNTS@TRAVEL-9.COM</EmailAddress>
+        <HomePhone />
+        <WorkPhone />
+        <OtherPhone />
+        <Fax />
+        <CompanyName>TRAVEL9</CompanyName>
+        <AddressLine1 />
+        <AddressLine2 />
+        <AddressLine3 />
+        <City />
+        <ProvinceState />
+        <PostalCode />
+        <CountryCode />
+        <CultureCode />
+        <DistributionOption>None</DistributionOption>
+        <CustomerNumber>27AAOFT4644B1Z3</CustomerNumber>
+        <NotificationPreference>None</NotificationPreference>
+        <SourceOrganization />
+      </BookingContact>
+    </BookingContacts>
+    <Payments />
+    <BookingComponents />
+    <NumericRecordLocator />
+    <SourceBookingPOS>
+      <ExtensionData />
+      <State>New</State>
+      <AgentCode>AG</AgentCode>
+      <OrganizationCode>OTI132</OrganizationCode>
+      <DomainCode>www</DomainCode>
+      <LocationCode>www</LocationCode>
+      <ISOCountryCode />
+      <SourceSystemCode />
+    </SourceBookingPOS>
+    <ReissueCount>0</ReissueCount>
+    <PricingReissueMode>16</PricingReissueMode>
+    <BaggagePricingSystemCode>1N</BaggagePricingSystemCode>
+  </BookingData>
+</GetBookingFromStateResponse>
+
+
+<?xml version="1.0"?>
+<GetBookingFromStateResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BookingData>
+    <ExtensionData />
+    <OtherServiceInfoList />
+    <State>New</State>
+    <RecordLocator />
+    <CurrencyCode>INR</CurrencyCode>
+    <PaxCount>2</PaxCount>
+    <SystemCode />
+    <BookingID>0</BookingID>
+    <BookingParentID>0</BookingParentID>
+    <ParentRecordLocator />
+    <BookingChangeCode />
+    <GroupName />
+    <BookingInfo>
+      <ExtensionData />
+      <State>New</State>
+      <BookingStatus>Default</BookingStatus>
+      <BookingType />
+      <ChannelType>Default</ChannelType>
+      <CreatedDate>9999-12-31T00:00:00Z</CreatedDate>
+      <ExpiredDate>9999-12-31T00:00:00Z</ExpiredDate>
+      <ModifiedDate>9999-12-31T00:00:00Z</ModifiedDate>
+      <PriceStatus>Valid</PriceStatus>
+      <ProfileStatus>Default</ProfileStatus>
+      <ChangeAllowed>true</ChangeAllowed>
+      <CreatedAgentID>0</CreatedAgentID>
+      <ModifiedAgentID>0</ModifiedAgentID>
+      <BookingDate>2019-08-01T07:51:51.1315533Z</BookingDate>
+      <OwningCarrierCode />
+      <PaidStatus>UnderPaid</PaidStatus>
+      <ActivityDate>9999-12-31T00:00:00Z</ActivityDate>
+    </BookingInfo>
+    <POS>
+      <ExtensionData />
+      <State>Clean</State>
+      <AgentCode>OTI132</AgentCode>
+      <OrganizationCode>OTI132</OrganizationCode>
+      <DomainCode>WWW</DomainCode>
+      <LocationCode>WWW</LocationCode>
+    </POS>
+    <SourcePOS>
+      <ExtensionData />
+      <State>New</State>
+      <AgentCode>AG</AgentCode>
+      <OrganizationCode>OTI132</OrganizationCode>
+      <DomainCode>www</DomainCode>
+      <LocationCode>www</LocationCode>
+    </SourcePOS>
+    <TypeOfSale>
+      <ExtensionData />
+      <State>New</State>
+      <PaxResidentCountry>IN</PaxResidentCountry>
+      <PromotionCode />
+      <FareTypes />
+      <PromotionSold>false</PromotionSold>
+    </TypeOfSale>
+    <BookingHold>
+      <ExtensionData />
+      <State>New</State>
+      <HoldDateTime>9999-12-31T00:00:00Z</HoldDateTime>
+    </BookingHold>
+    <BookingSum>
+      <ExtensionData />
+      <BalanceDue>7690.00000</BalanceDue>
+      <AuthorizedBalanceDue>7690.00000</AuthorizedBalanceDue>
+      <SegmentCount>1</SegmentCount>
+      <PassiveSegmentCount>0</PassiveSegmentCount>
+      <TotalCost>7690.00000</TotalCost>
+      <PointsBalanceDue>0</PointsBalanceDue>
+      <TotalPointCost>0</TotalPointCost>
+      <AlternateCurrencyCode />
+      <AlternateCurrencyBalanceDue>0</AlternateCurrencyBalanceDue>
+    </BookingSum>
+    <ReceivedBy>
+      <ExtensionData />
+      <State>New</State>
+      <ReceivedBy />
+      <ReceivedReference />
+      <ReferralCode />
+      <LatestReceivedBy />
+      <LatestReceivedReference />
+    </ReceivedBy>
+    <RecordLocators />
+    <Passengers>
+      <Passenger>
+        <ExtensionData />
+        <State>New</State>
+        <CustomerNumber />
+        <PassengerNumber>0</PassengerNumber>
+        <FamilyNumber>0</FamilyNumber>
+        <PaxDiscountCode />
+        <Names />
+        <PassengerInfo>
+          <ExtensionData />
+          <State>New</State>
+          <BalanceDue>0</BalanceDue>
+          <Gender>Male</Gender>
+          <Nationality />
+          <ResidentCountry />
+          <TotalCost>0</TotalCost>
+          <WeightCategory>Male</WeightCategory>
+        </PassengerInfo>
+        <PassengerFees />
+        <PassengerAddresses />
+        <PassengerTravelDocuments />
+        <PassengerBags />
+        <PassengerID>0</PassengerID>
+        <PassengerTypeInfos>
+          <PassengerTypeInfo>
+            <ExtensionData />
+            <State>New</State>
+            <DOB>9999-12-31T00:00:00Z</DOB>
+            <PaxType>ADT</PaxType>
+          </PassengerTypeInfo>
+        </PassengerTypeInfos>
+        <PassengerInfos>
+          <PassengerInfo>
+            <ExtensionData />
+            <State>New</State>
+            <BalanceDue>0</BalanceDue>
+            <Gender>Male</Gender>
+            <Nationality />
+            <ResidentCountry />
+            <TotalCost>0</TotalCost>
+            <WeightCategory>Male</WeightCategory>
+          </PassengerInfo>
+        </PassengerInfos>
+        <PassengerInfants />
+        <PseudoPassenger>false</PseudoPassenger>
+        <PassengerTypeInfo>
+          <ExtensionData />
+          <State>New</State>
+          <DOB>9999-12-31T00:00:00Z</DOB>
+          <PaxType>ADT</PaxType>
+        </PassengerTypeInfo>
+        <PassengerEMDCouponList />
+      </Passenger>
+      <Passenger>
+        <ExtensionData />
+        <State>New</State>
+        <CustomerNumber />
+        <PassengerNumber>1</PassengerNumber>
+        <FamilyNumber>0</FamilyNumber>
+        <PaxDiscountCode />
+        <Names />
+        <PassengerInfo>
+          <ExtensionData />
+          <State>New</State>
+          <BalanceDue>0</BalanceDue>
+          <Gender>Male</Gender>
+          <Nationality />
+          <ResidentCountry />
+          <TotalCost>0</TotalCost>
+          <WeightCategory>Male</WeightCategory>
+        </PassengerInfo>
+        <PassengerFees />
+        <PassengerAddresses />
+        <PassengerTravelDocuments />
+        <PassengerBags />
+        <PassengerID>0</PassengerID>
+        <PassengerTypeInfos>
+          <PassengerTypeInfo>
+            <ExtensionData />
+            <State>New</State>
+            <DOB>9999-12-31T00:00:00Z</DOB>
+            <PaxType>ADT</PaxType>
+          </PassengerTypeInfo>
+        </PassengerTypeInfos>
+        <PassengerInfos>
+          <PassengerInfo>
+            <ExtensionData />
+            <State>New</State>
+            <BalanceDue>0</BalanceDue>
+            <Gender>Male</Gender>
+            <Nationality />
+            <ResidentCountry />
+            <TotalCost>0</TotalCost>
+            <WeightCategory>Male</WeightCategory>
+          </PassengerInfo>
+        </PassengerInfos>
+        <PassengerInfants />
+        <PseudoPassenger>false</PseudoPassenger>
+        <PassengerTypeInfo>
+          <ExtensionData />
+          <State>New</State>
+          <DOB>9999-12-31T00:00:00Z</DOB>
+          <PaxType>ADT</PaxType>
+        </PassengerTypeInfo>
+        <PassengerEMDCouponList />
+      </Passenger>
+    </Passengers>
+    <Journeys>
+      <Journey>
+        <ExtensionData />
+        <State>Clean</State>
+        <NotForGeneralUse>false</NotForGeneralUse>
+        <Segments>
+          <Segment>
+            <ExtensionData />
+            <State>Clean</State>
+            <ActionStatusCode>KK</ActionStatusCode>
+            <ArrivalStation>BOM</ArrivalStation>
+            <CabinOfService>Y</CabinOfService>
+            <ChangeReasonCode />
+            <DepartureStation>ATQ</DepartureStation>
+            <PriorityCode />
+            <SegmentType />
+            <STA>2019-09-03T16:20:00</STA>
+            <STD>2019-09-03T13:35:00</STD>
+            <International>false</International>
+            <FlightDesignator>
+              <ExtensionData />
+              <CarrierCode>6E</CarrierCode>
+              <FlightNumber> 448</FlightNumber>
+              <OpSuffix></OpSuffix>
+            </FlightDesignator>
+            <Fares>
+              <Fare>
+                <ExtensionData />
+                <State>Clean</State>
+                <ClassOfService>J</ClassOfService>
+                <ClassType></ClassType>
+                <RuleTariff />
+                <CarrierCode>6E</CarrierCode>
+                <RuleNumber>1057</RuleNumber>
+                <FareBasisCode>J0IP</FareBasisCode>
+                <FareSequence>2</FareSequence>
+                <FareClassOfService>J</FareClassOfService>
+                <FareStatus>Default</FareStatus>
+                <FareApplicationType>Route</FareApplicationType>
+                <OriginalClassOfService>J</OriginalClassOfService>
+                <XrefClassOfService />
+                <PaxFares>
+                  <PaxFare>
+                    <ExtensionData />
+                    <State>New</State>
+                    <PaxType>ADT</PaxType>
+                    <PaxDiscountCode />
+                    <FareDiscountCode />
+                    <ServiceCharges>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>FarePrice</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode />
+                        <TicketCode />
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>2738.0000</Amount>
+                        <ChargeDetail />
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>2738.0000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>PHF</ChargeCode>
+                        <TicketCode>PHF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>50.0000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>50.0000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>RCF</ChargeCode>
+                        <TicketCode>RCF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>50.0000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>50.0000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>YQ</ChargeCode>
+                        <TicketCode>YQ</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>400.000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>400.000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>ASF</ChargeCode>
+                        <TicketCode>ASF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>177.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>177.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>PSF</ChargeCode>
+                        <TicketCode>PSF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>91.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>91.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>TravelFee</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>UDF</ChargeCode>
+                        <TicketCode>UDF</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>177.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>177.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                      <BookingServiceCharge>
+                        <ExtensionData />
+                        <State>New</State>
+                        <ChargeType>Tax</ChargeType>
+                        <CollectType>SellerChargeable</CollectType>
+                        <ChargeCode>03IGST</ChargeCode>
+                        <TicketCode>IGT</TicketCode>
+                        <CurrencyCode>INR</CurrencyCode>
+                        <Amount>162.00000</Amount>
+                        <ChargeDetail>ATQ-BOM</ChargeDetail>
+                        <ForeignCurrencyCode>INR</ForeignCurrencyCode>
+                        <ForeignAmount>162.00000</ForeignAmount>
+                      </BookingServiceCharge>
+                    </ServiceCharges>
+                    <TicketFareBasisCode />
+                    <ProofOfStatusRequired>false</ProofOfStatusRequired>
+                  </PaxFare>
+                </PaxFares>
+                <ProductClass>R</ProductClass>
+                <IsAllotmentMarketFare>false</IsAllotmentMarketFare>
+                <TravelClassCode>Y</TravelClassCode>
+                <FareSellKey>0~J~ ~6E~J0IP~1057~~0~2~~X</FareSellKey>
+                <InboundOutbound>None</InboundOutbound>
+                <FareLink>0</FareLink>
+                <FareDesignator>
+                  <ExtensionData />
+                  <FareTypeIndicator />
+                  <CityCode />
+                  <TravelCityCode />
+                  <RuleFareTypeCode />
+                  <BaseFareFareClassCode />
+                  <DowType />
+                  <SeasonType />
+                  <RoutingNumber>0</RoutingNumber>
+                  <OneWayRoundTrip />
+                  <OpenJawAllowed>false</OpenJawAllowed>
+                  <TripDirection />
+                </FareDesignator>
+              </Fare>
+            </Fares>
+            <Legs>
+              <Leg>
+                <ExtensionData />
+                <State>Clean</State>
+                <ArrivalStation>BOM</ArrivalStation>
+                <DepartureStation>ATQ</DepartureStation>
+                <STA>2019-09-03T16:20:00</STA>
+                <STD>2019-09-03T13:35:00</STD>
+                <FlightDesignator>
+                  <ExtensionData />
+                  <CarrierCode>6E</CarrierCode>
+                  <FlightNumber> 448</FlightNumber>
+                  <OpSuffix></OpSuffix>
+                </FlightDesignator>
+                <LegInfo>
+                  <ExtensionData />
+                  <State>Clean</State>
+                  <AdjustedCapacity>0</AdjustedCapacity>
+                  <EquipmentType>320</EquipmentType>
+                  <EquipmentTypeSuffix />
+                  <ArrivalTerminal>1</ArrivalTerminal>
+                  <ArrvLTV>330</ArrvLTV>
+                  <Capacity>0</Capacity>
+                  <CodeShareIndicator></CodeShareIndicator>
+                  <DepartureTerminal />
+                  <DeptLTV>330</DeptLTV>
+                  <ETicket>false</ETicket>
+                  <FlifoUpdated>false</FlifoUpdated>
+                  <IROP>false</IROP>
+                  <Status>Normal</Status>
+                  <Lid>0</Lid>
+                  <OnTime></OnTime>
+                  <PaxSTA>2019-09-03T16:20:00</PaxSTA>
+                  <PaxSTD>2019-09-03T13:35:00</PaxSTD>
+                  <PRBCCode>Y180</PRBCCode>
+                  <ScheduleServiceType>J</ScheduleServiceType>
+                  <Sold>0</Sold>
+                  <OutMoveDays>0</OutMoveDays>
+                  <BackMoveDays>0</BackMoveDays>
+                  <LegNests>
+                    <LegNest>
+                      <ExtensionData />
+                      <State>Clean</State>
+                      <ClassNest>1</ClassNest>
+                      <Lid>180</Lid>
+                      <AdjustedCapacity>180</AdjustedCapacity>
+                      <TravelClassCode>Y</TravelClassCode>
+                      <NestType>Net</NestType>
+                      <LegClasses>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>I</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>24</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>Y</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>23</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>W</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>22</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>F</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>21</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>A</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>20</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>B</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>19</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>C</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>18</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>D</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>17</ClassRank>
+                          <ClassAU>178</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>E</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>16</ClassRank>
+                          <ClassAU>175</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>H</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>15</ClassRank>
+                          <ClassAU>151</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>K</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>14</ClassRank>
+                          <ClassAU>145</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>U</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>13</ClassRank>
+                          <ClassAU>137</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>V</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>12</ClassRank>
+                          <ClassAU>129</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>M</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>11</ClassRank>
+                          <ClassAU>119</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>N</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>10</ClassRank>
+                          <ClassAU>106</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>O</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>9</ClassRank>
+                          <ClassAU>105</ClassAU>
+                          <ClassSold>1</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>T</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>8</ClassRank>
+                          <ClassAU>103</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>J</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>7</ClassRank>
+                          <ClassAU>90</ClassAU>
+                          <ClassSold>1</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>L</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>6</ClassRank>
+                          <ClassAU>46</ClassAU>
+                          <ClassSold>14</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>P</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>5</ClassRank>
+                          <ClassAU>32</ClassAU>
+                          <ClassSold>10</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>Q</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>4</ClassRank>
+                          <ClassAU>22</ClassAU>
+                          <ClassSold>13</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>R</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>3</ClassRank>
+                          <ClassAU>9</ClassAU>
+                          <ClassSold>2</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>S</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType></ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>1</ClassRank>
+                          <ClassAU>48</ClassAU>
+                          <ClassSold>5</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>G</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType>X</ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>26</ClassRank>
+                          <ClassAU>180</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>X</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType>X</ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>25</ClassRank>
+                          <ClassAU>0</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                        <LegClass>
+                          <ExtensionData />
+                          <State>Clean</State>
+                          <ClassNest>1</ClassNest>
+                          <ClassOfService>Z</ClassOfService>
+                          <Status>Active</Status>
+                          <ClassType>X</ClassType>
+                          <ClassAllotted>0</ClassAllotted>
+                          <ClassRank>2</ClassRank>
+                          <ClassAU>0</ClassAU>
+                          <ClassSold>0</ClassSold>
+                          <NonStopSold>0</NonStopSold>
+                          <ThruSold>0</ThruSold>
+                          <CnxSold>0</CnxSold>
+                          <LatestAdvRes>0</LatestAdvRes>
+                        </LegClass>
+                      </LegClasses>
+                    </LegNest>
+                  </LegNests>
+                  <LegSSRs>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>BEER</SSRNestCode>
+                      <SSRLid>10</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>BLND</SSRNestCode>
+                      <SSRLid>4</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>DEAF</SSRNestCode>
+                      <SSRLid>4</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>DFNS</SSRNestCode>
+                      <SSRLid>10</SSRLid>
+                      <SSRSold>2</SSRSold>
+                      <SSRValueSold>2</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>INFT</SSRNestCode>
+                      <SSRLid>12</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>MLGR</SSRNestCode>
+                      <SSRLid>69</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>MNCH</SSRNestCode>
+                      <SSRLid>40</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>RTES</SSRNestCode>
+                      <SSRLid>40</SSRLid>
+                      <SSRSold>1</SSRSold>
+                      <SSRValueSold>1</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>STCR</SSRNestCode>
+                      <SSRLid>1</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>UMNR</SSRNestCode>
+                      <SSRLid>180</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>WCHC</SSRNestCode>
+                      <SSRLid>4</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>WCHR</SSRNestCode>
+                      <SSRLid>0</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                    <LegSSR>
+                      <ExtensionData />
+                      <SSRNestCode>WHSK</SSRNestCode>
+                      <SSRLid>10</SSRLid>
+                      <SSRSold>0</SSRSold>
+                      <SSRValueSold>0</SSRValueSold>
+                    </LegSSR>
+                  </LegSSRs>
+                  <OperatingFlightNumber></OperatingFlightNumber>
+                  <OperatedByText />
+                  <OperatingCarrier />
+                  <OperatingOpSuffix></OperatingOpSuffix>
+                  <SubjectToGovtApproval>false</SubjectToGovtApproval>
+                  <MarketingCode />
+                  <ChangeOfDirection>false</ChangeOfDirection>
+                  <MarketingOverride>false</MarketingOverride>
+                  <AircraftOwner />
+                </LegInfo>
+                <InventoryLegID>2562214</InventoryLegID>
+              </Leg>
+            </Legs>
+            <PaxBags />
+            <PaxSeats />
+            <PaxSSRs />
+            <PaxSegments>
+              <PaxSegment>
+                <ExtensionData />
+                <State>Clean</State>
+                <BoardingSequence />
+                <CreatedDate>9999-12-31T00:00:00Z</CreatedDate>
+                <LiftStatus>Default</LiftStatus>
+                <OverBookIndicator />
+                <PassengerNumber>0</PassengerNumber>
+                <PriorityDate>9999-12-31T00:00:00Z</PriorityDate>
+                <TripType>None</TripType>
+                <TimeChanged>false</TimeChanged>
+                <VerifiedTravelDocs />
+                <ModifiedDate>9999-12-31T00:00:00Z</ModifiedDate>
+                <ActivityDate>9999-12-31T00:00:00Z</ActivityDate>
+                <BaggageAllowanceWeight>15</BaggageAllowanceWeight>
+                <BaggageAllowanceWeightType>Kilograms</BaggageAllowanceWeightType>
+                <BaggageAllowanceUsed>false</BaggageAllowanceUsed>
+                <ReferenceNumber>0</ReferenceNumber>
+                <ServiceBundleCode />
+                <BaggageGroupNumber>0</BaggageGroupNumber>
+              </PaxSegment>
+              <PaxSegment>
+                <ExtensionData />
+                <State>Clean</State>
+                <BoardingSequence />
+                <CreatedDate>9999-12-31T00:00:00Z</CreatedDate>
+                <LiftStatus>Default</LiftStatus>
+                <OverBookIndicator />
+                <PassengerNumber>1</PassengerNumber>
+                <PriorityDate>9999-12-31T00:00:00Z</PriorityDate>
+                <TripType>None</TripType>
+                <TimeChanged>false</TimeChanged>
+                <VerifiedTravelDocs />
+                <ModifiedDate>9999-12-31T00:00:00Z</ModifiedDate>
+                <ActivityDate>9999-12-31T00:00:00Z</ActivityDate>
+                <BaggageAllowanceWeight>15</BaggageAllowanceWeight>
+                <BaggageAllowanceWeightType>Kilograms</BaggageAllowanceWeightType>
+                <BaggageAllowanceUsed>false</BaggageAllowanceUsed>
+                <ReferenceNumber>0</ReferenceNumber>
+                <ServiceBundleCode />
+                <BaggageGroupNumber>0</BaggageGroupNumber>
+              </PaxSegment>
+            </PaxSegments>
+            <PaxTickets />
+            <SalesDate>9999-12-31T00:00:00Z</SalesDate>
+            <SegmentSellKey>6E~ 448~ ~~ATQ~09/03/2019 13:35~BOM~09/03/2019 16:20~~</SegmentSellKey>
+            <PaxScores />
+            <ChannelType>API</ChannelType>
+            <AvailabilitySourceCode />
+            <InventorySourceCode />
+          </Segment>
+        </Segments>
+        <JourneySellKey>6E~ 448~ ~~ATQ~09/03/2019 13:35~BOM~09/03/2019 16:20~~</JourneySellKey>
+      </Journey>
+    </Journeys>
+    <BookingComments />
+    <BookingQueueInfos />
+    <BookingContacts>
+      <BookingContact>
+        <ExtensionData />
+        <State>New</State>
+        <TypeCode>I</TypeCode>
+        <Names />
+        <EmailAddress>ACCOUNTS@TRAVEL-9.COM</EmailAddress>
+        <HomePhone />
+        <WorkPhone />
+        <OtherPhone />
+        <Fax />
+        <CompanyName>TRAVEL9</CompanyName>
+        <AddressLine1 />
+        <AddressLine2 />
+        <AddressLine3 />
+        <City />
+        <ProvinceState />
+        <PostalCode />
+        <CountryCode />
+        <CultureCode />
+        <DistributionOption>None</DistributionOption>
+        <CustomerNumber>27AAOFT4644B1Z3</CustomerNumber>
+        <NotificationPreference>None</NotificationPreference>
+        <SourceOrganization />
+      </BookingContact>
+    </BookingContacts>
+    <Payments />
+    <BookingComponents />
+    <NumericRecordLocator />
+    <SourceBookingPOS>
+      <ExtensionData />
+      <State>New</State>
+      <AgentCode>AG</AgentCode>
+      <OrganizationCode>OTI132</OrganizationCode>
+      <DomainCode>www</DomainCode>
+      <LocationCode>www</LocationCode>
+      <ISOCountryCode />
+      <SourceSystemCode />
+    </SourceBookingPOS>
+    <ReissueCount>0</ReissueCount>
+    <PricingReissueMode>16</PricingReissueMode>
+    <BaggagePricingSystemCode>1N</BaggagePricingSystemCode>
+  </BookingData>
+</GetBookingFromStateResponse>

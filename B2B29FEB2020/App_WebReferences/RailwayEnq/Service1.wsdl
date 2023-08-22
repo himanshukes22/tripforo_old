@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getAllTrainDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTrainDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTrainDetailsResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAllFareNAvalaibility">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllFareNAvalaibilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllFareNAvalaibilityResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getItenaryDeatils">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getItenaryDeatilsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getItenaryDeatilsResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bookETicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bookETicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bookETicketResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancelETicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancelETicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancelETicketResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPNRStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPNRStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPNRStatusResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRDSBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRDSBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRDSBalanceResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRouteDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRouteDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRouteDetailsResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBookingSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="methodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBookingSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBookingSearchResult" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getAllTrainDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTrainDetails" />
+  </wsdl:message>
+  <wsdl:message name="getAllTrainDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTrainDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllFareNAvalaibilitySoapIn">
+    <wsdl:part name="parameters" element="tns:getAllFareNAvalaibility" />
+  </wsdl:message>
+  <wsdl:message name="getAllFareNAvalaibilitySoapOut">
+    <wsdl:part name="parameters" element="tns:getAllFareNAvalaibilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="getItenaryDeatilsSoapIn">
+    <wsdl:part name="parameters" element="tns:getItenaryDeatils" />
+  </wsdl:message>
+  <wsdl:message name="getItenaryDeatilsSoapOut">
+    <wsdl:part name="parameters" element="tns:getItenaryDeatilsResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookETicketSoapIn">
+    <wsdl:part name="parameters" element="tns:bookETicket" />
+  </wsdl:message>
+  <wsdl:message name="bookETicketSoapOut">
+    <wsdl:part name="parameters" element="tns:bookETicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelETicketSoapIn">
+    <wsdl:part name="parameters" element="tns:cancelETicket" />
+  </wsdl:message>
+  <wsdl:message name="cancelETicketSoapOut">
+    <wsdl:part name="parameters" element="tns:cancelETicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPNRStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:getPNRStatus" />
+  </wsdl:message>
+  <wsdl:message name="getPNRStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:getPNRStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRDSBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:getRDSBalance" />
+  </wsdl:message>
+  <wsdl:message name="getRDSBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:getRDSBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRouteDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getRouteDetails" />
+  </wsdl:message>
+  <wsdl:message name="getRouteDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getRouteDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBookingSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:getBookingSearch" />
+  </wsdl:message>
+  <wsdl:message name="getBookingSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:getBookingSearchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="getAllTrainDetails">
+      <wsdl:input message="tns:getAllTrainDetailsSoapIn" />
+      <wsdl:output message="tns:getAllTrainDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllFareNAvalaibility">
+      <wsdl:input message="tns:getAllFareNAvalaibilitySoapIn" />
+      <wsdl:output message="tns:getAllFareNAvalaibilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getItenaryDeatils">
+      <wsdl:input message="tns:getItenaryDeatilsSoapIn" />
+      <wsdl:output message="tns:getItenaryDeatilsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bookETicket">
+      <wsdl:input message="tns:bookETicketSoapIn" />
+      <wsdl:output message="tns:bookETicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelETicket">
+      <wsdl:input message="tns:cancelETicketSoapIn" />
+      <wsdl:output message="tns:cancelETicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPNRStatus">
+      <wsdl:input message="tns:getPNRStatusSoapIn" />
+      <wsdl:output message="tns:getPNRStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRDSBalance">
+      <wsdl:input message="tns:getRDSBalanceSoapIn" />
+      <wsdl:output message="tns:getRDSBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRouteDetails">
+      <wsdl:input message="tns:getRouteDetailsSoapIn" />
+      <wsdl:output message="tns:getRouteDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBookingSearch">
+      <wsdl:input message="tns:getBookingSearchSoapIn" />
+      <wsdl:output message="tns:getBookingSearchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllTrainDetails">
+      <soap:operation soapAction="http://tempuri.org/getAllTrainDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllFareNAvalaibility">
+      <soap:operation soapAction="http://tempuri.org/getAllFareNAvalaibility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItenaryDeatils">
+      <soap:operation soapAction="http://tempuri.org/getItenaryDeatils" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookETicket">
+      <soap:operation soapAction="http://tempuri.org/bookETicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelETicket">
+      <soap:operation soapAction="http://tempuri.org/cancelETicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPNRStatus">
+      <soap:operation soapAction="http://tempuri.org/getPNRStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRDSBalance">
+      <soap:operation soapAction="http://tempuri.org/getRDSBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRouteDetails">
+      <soap:operation soapAction="http://tempuri.org/getRouteDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBookingSearch">
+      <soap:operation soapAction="http://tempuri.org/getBookingSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllTrainDetails">
+      <soap12:operation soapAction="http://tempuri.org/getAllTrainDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllFareNAvalaibility">
+      <soap12:operation soapAction="http://tempuri.org/getAllFareNAvalaibility" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItenaryDeatils">
+      <soap12:operation soapAction="http://tempuri.org/getItenaryDeatils" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookETicket">
+      <soap12:operation soapAction="http://tempuri.org/bookETicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelETicket">
+      <soap12:operation soapAction="http://tempuri.org/cancelETicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPNRStatus">
+      <soap12:operation soapAction="http://tempuri.org/getPNRStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRDSBalance">
+      <soap12:operation soapAction="http://tempuri.org/getRDSBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRouteDetails">
+      <soap12:operation soapAction="http://tempuri.org/getRouteDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBookingSearch">
+      <soap12:operation soapAction="http://tempuri.org/getBookingSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://springtravels.com/irctcsrvc/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://springtravels.com/irctcsrvc/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetFlightDetails_new_fltr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agentid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ddmonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ddyear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VPNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VPAXNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEPCITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ARRCITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AIRLINE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlightDetails_new_fltrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFlightDetails_new_fltrResult" type="tns:ArrayOfFltDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFltDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FltDetails" nillable="true" type="tns:FltDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FltDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DepDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pnr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sector" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFlightDetails_new">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlightDetails_newResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFlightDetails_newResult" type="tns:ArrayOfFltDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlightDetailsFare_new_fltr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agentid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ddmonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ddyear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VPNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VPAXNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEPCITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ARRCITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AIRLINE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlightDetailsFare_new_fltrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFlightDetailsFare_new_fltrResult" type="tns:ArrayOfFltDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFlightDetails_new_fltrSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlightDetails_new_fltr" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightDetails_new_fltrSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlightDetails_new_fltrResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightDetails_newSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlightDetails_new" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightDetails_newSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlightDetails_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightDetailsFare_new_fltrSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlightDetailsFare_new_fltr" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightDetailsFare_new_fltrSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlightDetailsFare_new_fltrResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TravelCalSrvSoap">
+    <wsdl:operation name="GetFlightDetails_new_fltr">
+      <wsdl:input message="tns:GetFlightDetails_new_fltrSoapIn" />
+      <wsdl:output message="tns:GetFlightDetails_new_fltrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDetails_new">
+      <wsdl:input message="tns:GetFlightDetails_newSoapIn" />
+      <wsdl:output message="tns:GetFlightDetails_newSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDetailsFare_new_fltr">
+      <wsdl:input message="tns:GetFlightDetailsFare_new_fltrSoapIn" />
+      <wsdl:output message="tns:GetFlightDetailsFare_new_fltrSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TravelCalSrvSoap" type="tns:TravelCalSrvSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFlightDetails_new_fltr">
+      <soap:operation soapAction="http://tempuri.org/GetFlightDetails_new_fltr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDetails_new">
+      <soap:operation soapAction="http://tempuri.org/GetFlightDetails_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDetailsFare_new_fltr">
+      <soap:operation soapAction="http://tempuri.org/GetFlightDetailsFare_new_fltr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TravelCalSrvSoap12" type="tns:TravelCalSrvSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFlightDetails_new_fltr">
+      <soap12:operation soapAction="http://tempuri.org/GetFlightDetails_new_fltr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDetails_new">
+      <soap12:operation soapAction="http://tempuri.org/GetFlightDetails_new" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDetailsFare_new_fltr">
+      <soap12:operation soapAction="http://tempuri.org/GetFlightDetailsFare_new_fltr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TravelCalSrv">
+    <wsdl:port name="TravelCalSrvSoap" binding="tns:TravelCalSrvSoap">
+      <soap:address location="http://localhost:28076/TravelCalSrv.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TravelCalSrvSoap12" binding="tns:TravelCalSrvSoap12">
+      <soap12:address location="http://localhost:28076/TravelCalSrv.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

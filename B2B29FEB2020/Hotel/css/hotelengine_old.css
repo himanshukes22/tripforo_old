@@ -1,0 +1,668 @@
+﻿.w43 {
+    width: 43%;
+    vertical-align: top;
+}
+.w3 {
+	width: 3%;
+}
+.htldt {
+	background: #fcfcfc url(../images/calender.png) right no-repeat;
+	border: 1px solid #ccc;
+	padding: 8px 4%;
+	padding-right: 12%;
+	width: 84%;
+}
+
+.htlct {
+	border: 1px solid #ccc;
+	padding: 8px 4%;
+	background: #fcfcfc url(../images/search.png) right no-repeat;
+	padding-right: 12%;
+	width: 85%;
+}
+
+.viewv {
+	color: #133563;
+	background: #fff;
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px;
+	margin: 3px 0 0 3px;
+	cursor: pointer;
+}
+
+.viewv1 {
+	color: #fff;
+	background: #004b91;
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px;
+	margin: 3px 0 0 3px;
+	cursor: pointer;
+	box-shadow: 0px 0px 3px #272727;
+}
+
+.sort1 {
+	padding-top: 5px;
+	line-height: 25px;
+	font-weight: bold;
+	margin: 10px 0;
+	width: 100%;
+}
+
+	.sort1 div {
+		float: left;
+		margin: 1px 5px;
+		line-height: 50px;
+	}
+
+		.sort1 div input[type=select] {
+			position: relative;
+			top: -5px;
+		}
+
+	.sort1 span {
+		border: 1px solid #d6d6d6;
+		float: right;
+		margin-left: 5px;
+		background: #f1f1f1;
+		padding: 2px 10px;
+		font-weight: bold;
+	}
+
+.htlbxmn {
+	width: 99.8%;
+	padding: 0 0 5px 0;
+	margin: 0 0 5px 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+	.htlbxmn .htlbx .htlbximg {
+		float: left;
+		width: 17%;
+		border: 1px solid #f1f1f1;
+		border-left: none;
+		border-right: none;
+	}
+
+		.htlbxmn .htlbx .htlbximg img {
+			height: 100px;
+			width: 90%;
+			border: 5px solid #fff;
+			box-shadow: 0px 0px 3px #272727;
+		}
+
+	.htlbxmn .htlbx .htlbx1 {
+		border: 1px solid #d1d1d1;
+		float: left;
+		width: 80%;
+		padding: 5px 1%;
+		min-height: 100px;
+		background: #f7f7f7;
+	}
+
+		.htlbxmn .htlbx .htlbx1:hover {
+			border: 1px solid #ccc;
+			background: #fff;
+		}
+
+	.htlbxmn .htlbx .htlttl {
+		font-weight: bold;
+		font-size: 16px;
+		text-align: left;
+		color: #494949;
+	}
+
+	.htlbxmn .htlbx .htlvw {
+		width: 19%;
+		float: left;
+	}
+
+		.htlbxmn .htlbx .htlvw .price {
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+	.htlbxmn .htlbx .htlbx1 .htlsrcbx {
+		border: 1px solid #d1d1d1;
+		border-top: none;
+		border-bottom: none;
+		width: 55%;
+		text-align: left;
+		float: left;
+		padding: 0 1.5%;
+		margin: 0 1.5%;
+	}
+
+		.htlbxmn .htlbx .htlbx1 .htlsrcbx span {
+			font-weight: bold;
+		}
+
+	.htlbxmn .htlbx .htlbx1 .bstby {
+		float: right;
+		width: 9px;
+	}
+
+.buttonHtlbk {
+	background: #335481;
+	color: #fff;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin: auto;
+	border: none;
+	border-radius: 5px;
+}
+
+	.buttonHtlbk:hover {
+		box-shadow: 1px 1px 5px #888;
+	}
+
+.HtlDisciption {
+	bottom: 2px;
+	display: none;
+	cursor: pointer;
+}
+
+.htlServisess {
+	float: left;
+	width: 100%;
+}
+
+.htlServisess1 img {
+	float: left;
+	border: 2px solid #888;
+}
+
+
+.Childadult {
+	width: 110px;
+	border: 1px;
+	font: bold;
+}
+
+#AllMapPopup {
+	display: none;
+	width: 760px;
+	margin: auto;
+	margin-top: 4px;
+	border: 2px solid #ccc;
+	background: #fafafa;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#SingleMapPopup {
+	display: none;
+	width: 760px;
+	margin: auto;
+	margin-top: 4px;
+	border: 2px solid #ccc;
+	background: #fafafa;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#SingleMap_canvas {
+	width: 760px;
+	height: 623px;
+	float: left;
+	background: url(../Images/Hotel/Busy.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#AllMap_canvas {
+	width: 760px;
+	height: 623px;
+	background: url(../Images/Hotel/Busy.gif) no-repeat;
+	background-position: center;
+}
+
+.closex {
+	float: right;
+	position: relative;
+	top: -20px;
+	right: -31px;
+	width: 20px;
+}
+
+.closex2 {
+	float: right;
+	position: relative;
+	top: -11px;
+	right: -5px;
+	width: 20px;
+}
+
+/*Copy and past from flightsearch strat*/
+#RoomMap_canvas {
+	width: 100%;
+	height: 400px;
+	background: url(../Images/Hotel/Busy.gif) no-repeat center;
+}
+
+#pngrsmr .lft {
+	float: left;
+	width: 80px;
+}
+
+.ResultCancele {
+	float: left;
+	cursor: pointer;
+	margin-top: 11px;
+	font-style: italic;
+}
+
+.FreeCancelletion {
+	background: url(../Images/Hotel/OK.ico) no-repeat;
+	text-align: right;
+	padding-left: 20px;
+	text-align: right;
+	color: Green;
+}
+
+.discprice {
+	text-decoration: line-through;
+	font-size: 13px;
+    font-weight: bold;
+	text-align: center;
+	margin-bottom: 4px;
+}
+
+.HotelDetailsMaintbl {
+	width: 100%;
+	border: 1px solid #d1d1d1;
+	box-shadow: 0px 0px 5px #888;
+	text-align: justify;
+}
+
+	.HotelDetailsMaintbl table tr td {
+		padding: 5px 10px;
+	}
+
+.HtlRoomtbl {
+	width: 100%;
+}
+
+.Htldisciptiontd {
+	width: 96%;
+	padding: 1% 2%;
+}
+
+.HtlRoomtd {
+	border: 1px solid #ccc;
+	font-weight: bold;
+	background: #eee;
+	font-weight: bold;
+}
+
+.HtlRoomtd1 {
+	width: 80%;
+	border: 1px solid #ccc;
+}
+
+.HtlRoomtd2 {
+	width: 20%;
+	border: 1px solid #ccc;
+}
+
+	.HtlRoomtd2 span {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+.Htldiscountlft {
+	float: right;
+	background: #335481 url(../images/hotel/plusminus.png) left top no-repeat;
+	padding-right: 10px;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	text-align: right;
+	cursor: pointer;
+	width: 103px;
+	height: 22px; font-weight:bold;
+}
+
+	.Htldiscountlft:hover {
+		box-shadow: 0px 0px 5px #272727;
+	}
+
+.Htldiscountrgt {
+	width: 99%;
+	text-indent: 40px;
+	height: 30px;
+	line-height:30px;
+	font-size:12px;
+	color: #335481;
+	font-weight:bold;
+	background: #f1f1f1 url(../../Images/deal.png) left no-repeat;
+	border-bottom: none;
+}
+
+.ui-autocomplete {
+	padding-top: 2px;
+	background-color: White;
+	width: 290px;
+	list-style: none;
+}
+
+	.ui-autocomplete a.ui-menu-item-alternate {
+		background-color: #eee;
+	}
+
+	.ui-autocomplete a.ui-state-hover {
+		font-weight: normal !important;
+	}
+
+#RoomDetals {
+	width: 100%;
+	padding: 0%;
+}
+
+#RoomPopup_box {
+	display: none; /* Hide the DIV */
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/fade.png);
+	z-index: 999;
+}
+
+#RoomPopup {
+	position: fixed;
+	bottom: 0;
+	left: 15%;
+	width: 70%;
+	height: 94%;
+	background: #f1f1f1;
+	box-shadow: 0px 4px 8px #272727;
+	display: none;
+}
+
+	#RoomPopup .head span {
+		font-size: 20px;
+		color: #335481;
+		font-weight: bold;
+	}
+
+.rtngi {
+	position: relative;
+	top: -7px;
+}
+
+#RoomInformation {
+	width: 100%;
+	background: #335481;
+	border-bottom: 2px solid #133563;
+}
+
+.roomtab {
+	float: left;
+	padding: 8px 15px;
+	border-right: 1px solid #133563;
+	cursor: pointer;
+	color: #FFF;
+}
+
+.roomtab1 {
+	float: left;
+	padding:8px 15px;
+	cursor: pointer;
+	background: #133563;
+	color: #FFF;
+}
+
+#RoomDtl {
+	display: none;
+	height: 99%;
+	width: 99%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/fade.png);
+	z-index: 999;
+}
+
+.dspl {
+	display: none;
+	background: #fff;
+	border-bottom: 2px solid #D1D1D1;
+	padding: 5px;
+}
+
+.inclu {
+	padding: 1%;
+	background: #fff;
+	width: 97.5%;
+}
+
+.dscmsg {
+	text-indent: 40px;
+	line-height: 25px;
+	background: #f1f1f1 url(../images/hotel/deal1.png) no-repeat left;
+}
+
+.rsprst {
+	margin-bottom: 10px;
+    font-weight: bold;
+	text-decoration: line-through;
+}
+
+.rspr {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+	.rspr img {
+		margin-right: 5px;
+	}
+
+.rmdtl {
+	text-indent: 30px;
+	float: left;
+	background: url(../images/hotel/plusminus.png) no-repeat left top;
+}
+
+.rmdtl1 {
+	text-indent: 30px;
+	float: left;
+	background: url(../images/hotel/plusminus.png) no-repeat left bottom;
+}
+
+#RoomRatesDtl {
+	height: 481px;
+	overflow-y: scroll;
+}
+
+.roomppboxall {
+	height: 479px;
+	overflow-y: scroll;
+}
+
+.roomhed {
+	width: 80%;
+	padding: 1% 0;
+	float: right;
+}
+
+.RoomImg {
+	width: 18%;
+	float: left;
+}
+
+	.RoomImg img {
+		width: 95%;
+		height: 120px;
+		border: 2px solid #fff;
+		box-shadow: 0px 0px 5px #272727;
+	}
+
+.roomPrice {
+	float: right;
+	font-weight: bold;
+}
+
+.ShowhideRoomsss {
+	width: 100%;
+	float: left;
+}
+
+.pbreakup {
+	width: 100%;
+}
+
+	.pbreakup div {
+		border-bottom: 1px solid #d1d1d1;
+		line-height: 25px;
+		clear: both;
+	}
+
+.gallery_text {
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 5px;
+	line-height: 140%;
+	font-size: 14px;
+}
+
+#SingleHotelMapPopup_box {
+	display: none; /* Hide the DIV */
+	height: 100%;
+	width: 100%;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/fade.png);
+	z-index: 999;
+}
+
+#AllHotelMapPopup_box_new {
+	display: none; /* Hide the DIV */
+	height: 100%;
+	width: 100%;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/fade.png);
+	z-index: 999;
+}
+
+#AllMapPopup_New {
+	width: 74%;
+	margin: auto;
+	margin-top: 4px;
+	border: 2px solid #ccc;
+	background: #fafafa;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.plus {
+	/* background: url(../images/plus.png); */
+	width: 20px;
+	height: 20px;
+	border: 0;
+	float: right;
+	cursor: pointer;
+}
+
+.minus {
+	/*background: url(../images/minus.png);*/
+	width: 20px;
+	height: 20px;
+	border: 0;
+	float: left;
+	cursor: pointer;
+}
+
+.plus1 {
+	/*background: url(../images/plus.png);*/
+	width: 20px;
+	height: 20px;
+	border: 0;
+	float: right;
+	cursor: pointer;
+}
+
+.minus1 {
+	/*background: url(../images/minus.png);*/
+	width: 20px;
+	height: 20px;
+	border: 0;
+	float: left;
+	cursor: pointer;
+}
+
+.plus2 {
+	/*background: url(../images/plus.png);*/
+	width: 20px;
+	height: 20px;
+	border: 0;
+	float: right;
+	cursor: pointer;
+}
+
+.minus2 {
+	/*background: url(../images/minus.png);*/
+	width: 20px;
+	height: 20px;
+	border: 0;
+	float: left;
+	cursor: pointer;
+}
+
+.ChangeCss2 {
+	background: #335481 url(../images/hotel/plusminus.png) left bottom no-repeat;
+	float: right;
+	padding-right: 10px;
+	border-radius: 4px;
+	height: 22px;font-weight:bold;
+	color: #fff;
+	width: 103px;
+	cursor: pointer;
+	text-align: right;
+	cursor: pointer;
+}
+
+	.ChangeCss2:hover {
+		box-shadow: 0px 0px 3px #888;
+	}
+
+.ResultPageLoding
+{
+    height: 13%;
+	width: 22%;
+	position: fixed;
+	top: 31%;bottom: 0;
+	left: 49%;
+    padding: 20px;
+	border-radius: 20px;
+    background: #fff ;
+    /*background: #f1f1f1 url(../images/loading.gif) left bottom no-repeat;*/ 
+	z-index: 999;
+   
+}
+.ResultPageLoding_box {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/fade.png);
+	z-index: 999;
+}

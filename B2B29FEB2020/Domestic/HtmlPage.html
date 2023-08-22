@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="../Styles/flightsearch.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <div id="fltselct12" style="display: block;">
+
+        <div id="fltbtn" class="w70 rgt">
+
+
+
+
+            <div class="bld w33 lft difffare" id="FareDiff"></div>
+
+            <div class="lft w60 msg1" id="msg1"></div>
+
+
+
+            <div id="Divproc" class="bld" style="display: none;">
+                <img alt="Booking In Progress" src="~/Images/loading_bar.gif">
+            </div>
+            <div class="gridViewToolTip1 hide" id="fareBrkup" title="">ss</div>
+        </div>
+
+        <div class="detls">
+
+
+            <div id="selctcntnt" class="mauto" style="display: block !important;">
+                <div class="flexCol width70 justifyEnd">
+                    <div class="ico12 fb padB10 quicks" style="margin-bottom:10px;color:#fff;">Your Selection</div>
+                    <div class="dF">
+                        <div class="dF justifyBetween alignItemsEnd  padLR0 borderRight">
+
+                            <div id="fltgo" class="sec1" style="border-right: 1px solid #aeaeae; color: #fff;width: 355px;"><div class="col-md-3 col-xs-3"><img src="../AirLogo/smUK.gif"><br>UK-715<br></div><div class="col-md-3 col-xs-3"><div class="theme-search-results-item-flight-section-meta"><p class="theme-search-results-item-flight-section-meta-time">DEL</p><p class="theme-search-results-item-flight-section-meta-date">1600</p></div></div><div class="col-md-3 col-xs-2"><div class="fly"><div class="fly1"><span class="jtm">28 Feb</span></div><div class="fly2"></div></div></div><div class="col-md-3 col-xs-3" style="text-align: end;"><div class="theme-search-results-item-flight-section-meta"><p class="theme-search-results-item-flight-section-meta-time">PAT</p><p class="theme-search-results-item-flight-section-meta-date">1750</p></div></div><div class="large-3 medium-3 small-3 columns f16 blue bld hide">INR 2955/-</div></div>
+
+                        </div>
+
+                        <div class="dF justifyBetween alignItemsEnd padLR0 borderRight">
+                            <div id="fltbk" class="sec1" style="border-right: 1px solid #aeaeae; color: #fff;width: 355px;">
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-4" style="color: #fff;">
+                            <div class="">
+
+                                <div class="">
+                                    <div class="bld w33 lft prevfare" id="prevfare" style="font-size: 13px; color: #fff;"></div>
+                                </div>
+
+
+                                <div class="">
+                                    <div class="bld w28 lft currentfare" id="totalPay" style="font-size: 13px; color: #fff;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="display:none;">
+                            <div class="gridViewToolTipSRF bld w5 lft" id="showfare" style="display: none;">
+
+                                <a type="button" class="btn btn-default">Fare Breakup</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="col-md-3">
+                                <input type="button" class="detls1 falsebookbutton" value="Book" id="FinalBook" style="Float: left;">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
